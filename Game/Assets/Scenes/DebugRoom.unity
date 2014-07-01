@@ -263,7 +263,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e5713e09f2fff4baeb978065f80c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  CharacterAnimation:
+    IdleAnimation: {fileID: 0}
+    WalkAnimation: {fileID: 0}
+    TrotAnimation: {fileID: 0}
+    RunAnimation: {fileID: 0}
+    IdleMaxAnimationSpeed: 1
+    WalkMaxAnimationSpeed: .75
+    TrotMaxAnimationSpeed: 1
+    RunMaxAnimationSpeed: 1
+  CharacterMovement:
+    WalkSpeed: 2.5
+    TrotSpeed: 5
+    RunSpeed: 8
+    RotationSpeed: 500
+    TrotAfterSeconds: 3
 --- !u!1 &1811552202
 GameObject:
   m_ObjectHideFlags: 0
