@@ -232,6 +232,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1642474748}
   - 114: {fileID: 1642474749}
+  - 143: {fileID: 1642474750}
   m_Layer: 0
   m_Name: MainCharacter
   m_TagString: Untagged
@@ -258,7 +259,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1642474747}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25e5713e09f2fff4baeb978065f80c7f, type: 3}
   m_Name: 
@@ -278,6 +279,20 @@ MonoBehaviour:
     RunSpeed: 8
     RotationSpeed: 500
     TrotAfterSeconds: 3
+--- !u!143 &1642474750
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1642474747}
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: .5
+  m_SlopeLimit: 45
+  m_StepOffset: .300000012
+  m_SkinWidth: .0799999982
+  m_MinMoveDistance: 0
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1811552202
 GameObject:
   m_ObjectHideFlags: 0

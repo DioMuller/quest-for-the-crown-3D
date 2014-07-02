@@ -122,6 +122,11 @@ public class ControllableScript : MonoBehaviour
     /// Character current animation.
     /// </summary>
     private Animation _animation = null;
+
+    /// <summary>
+    /// Character controller.
+    /// </summary>
+    private CharacterController _controller = null;
     #endregion Attributes
 
     #region Editor Variables
@@ -153,6 +158,9 @@ public class ControllableScript : MonoBehaviour
             return;
         }
 
+        // Loads Character Controller
+        _controller = GetComponent<CharacterController>();
+
         // Turns out animations if any animation is null.
         if ( CharacterAnimation.IdleAnimation == null ||
              CharacterAnimation.WalkAnimation == null ||
@@ -167,13 +175,10 @@ public class ControllableScript : MonoBehaviour
 	/// <summary>
 	/// Called every frame.
 	/// </summary>
-	void Update () 
+	void Update ()
 	{
-		Vector2 axis = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
-		axis.Normalize();
-		axis *= CharacterMovement.WalkSpeed * Time.deltaTime;
+	    Vector3 movement = _moveDirection * _moveSpeed * Time.deltaTime;
 
-		transform.position += new Vector3 (axis.x, 0, axis.y);
 	}
 	#endregion MonoBehaviour Methods
 }
