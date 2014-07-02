@@ -98,7 +98,15 @@ public class Controllable : MonoBehaviour
 	/// </summary>
 	void Update ()
 	{
-	    Vector3 movement = _moveDirection * _moveSpeed * Time.deltaTime;
+        // Applies Gravity.
+        _controller.SimpleMove(Physics.gravity);
+
+        // Rotation.
+        transform.Rotate(new Vector3(0, Input.GetAxis("Horizontal") * RotationSpeed * Time.deltaTime, 0));
+
+        // Move
+        _moveSpeed = Input.GetAxis("Vertical") * WalkSpeed;
+        Vector3 movement = _moveDirection * _moveSpeed * Time.deltaTime; 
         _controller.Move(movement);
 	}
 	#endregion MonoBehaviour Methods
