@@ -27,11 +27,6 @@ public class Controllable : MonoBehaviour
     private float _moveSpeed = 10.0f;
 
     /// <summary>
-    /// // The last collision flags returned from controller.Move
-    /// </summary>
-    private CollisionFlags _collisionFlags;
-
-    /// <summary>
     /// Is the user pressing any keys?
     /// </summary>
     private bool _isMoving = false;
@@ -42,14 +37,14 @@ public class Controllable : MonoBehaviour
     private float _walkTimeStart = 0.0f;
 
     /// <summary>
-    /// Character current animation.
-    /// </summary>
-    private Animation _animation = null;
-
-    /// <summary>
     /// Character controller.
     /// </summary>
     private CharacterController _controller = null;
+
+    /// <summary>
+    /// Character animator.
+    /// </summary>
+    private Animator _animator = null;
     #endregion Attributes
 
     #region Editor Variables
@@ -77,6 +72,11 @@ public class Controllable : MonoBehaviour
     /// Time for the character to start trotting.
     /// </summary>
     public float TrotAfterSeconds = 3.0f;
+
+    /// <summary>
+    /// Player Avatar.
+    /// </summary>
+    public Transform Avatar = null;
     #endregion  Editor Variables
 
     #region MonoBehaviour Methods
@@ -88,9 +88,9 @@ public class Controllable : MonoBehaviour
         // Sets initial direction
         _moveDirection = transform.TransformDirection(Vector3.forward);
 
-        // Loads Character Controller
+        // Loads Character Controller and Animator.
         _controller = GetComponent<CharacterController>();
-
+        _animator = Avatar.GetComponent<Animator>();
 	}
 	
 	/// <summary>
@@ -101,13 +101,26 @@ public class Controllable : MonoBehaviour
         // Applies Gravity.
         _controller.SimpleMove(Physics.gravity);
 
-        // Rotation.
-        transform.Rotate(new Vector3(0, Input.GetAxis("Horizontal") * RotationSpeed * Time.deltaTime, 0));
-
         // Move
-        _moveSpeed = Input.GetAxis("Vertical") * WalkSpeed;
-        Vector3 movement = _moveDirection * _moveSpeed * Time.deltaTime; 
+        _moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+
+        if( _moveDirection != Vector3.zero )
+        {
+            _moveDirection.Normalize();
+        }
+
+        _moveSpeed = Time.deltaTime * WalkSpeed;
+        
+        Vector3 movement = _moveDirection * _moveSpeed; 
         _controller.Move(movement);
+
+        if (_animator != null)
+        {
+            _animator.SetFloat("Speed", _moveSpeed);
+            float dir = Vector2.Angle(Vector2.up, new Vector2(_moveDirection.x, _moveDirection.z));
+            //_animator.SetFloat("Direction", dir);
+            Avatar.rotation = Quaternion.Euler(0.0f, dir, 0.0f);
+        }
 	}
 	#endregion MonoBehaviour Methods
 }
