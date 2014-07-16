@@ -102,24 +102,25 @@ public class Controllable : MonoBehaviour
         _controller.SimpleMove(Physics.gravity);
 
         // Move
-        _moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+        _moveDirection = new Vector3(Input.GetAxis("Left-Horizontal"), 0.0f, Input.GetAxis("Left-Vertical"));
 
         if( _moveDirection != Vector3.zero )
         {
             _moveDirection.Normalize();
         }
 
-        _moveSpeed = Time.deltaTime * WalkSpeed;
+        _moveSpeed = Time.deltaTime * (Input.GetButton("Run") ? RunSpeed : WalkSpeed);
         
         Vector3 movement = _moveDirection * _moveSpeed; 
         _controller.Move(movement);
 
         if (_animator != null)
         {
-            _animator.SetFloat("Speed", _moveSpeed);
+            _animator.SetFloat("Speed", movement.magnitude);
             float dir = Mathf.Rad2Deg * Mathf.Atan2(_moveDirection.x, _moveDirection.z);
             //_animator.SetFloat("Direction", dir);
-            Avatar.rotation = Quaternion.Euler(0.0f, dir, 0.0f);
+
+            if (_moveDirection != Vector3.zero) Avatar.rotation = Quaternion.Euler(0.0f, dir, 0.0f);
         }
 	}
 	#endregion MonoBehaviour Methods
