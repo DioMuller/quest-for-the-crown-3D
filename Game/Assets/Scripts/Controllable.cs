@@ -117,7 +117,7 @@ public class Controllable : MonoBehaviour
         if (_animator != null)
         {
             _animator.SetFloat("Speed", _moveSpeed);
-            float dir = Vector2.Angle(Vector2.up, new Vector2(_moveDirection.x, _moveDirection.z));
+            float dir = Mathf.Rad2Deg * Mathf.Atan2(_moveDirection.x, _moveDirection.z);
             //_animator.SetFloat("Direction", dir);
             Avatar.rotation = Quaternion.Euler(0.0f, dir, 0.0f);
         }
