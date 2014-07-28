@@ -1,8 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ControllableScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\..\ArkanoidPos\ArkanoidPos\Assets\BallController.cs">
     <Files>
-      <File FileName="Assets\Scripts\ControllableScript.cs" Line="26" Column="47" />
+      <File FileName="..\..\..\..\..\ArkanoidPos\ArkanoidPos\Assets\Game.cs" Line="15" Column="3" />
+      <File FileName="..\..\..\..\..\ArkanoidPos\ArkanoidPos\Assets\Block.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\..\..\ArkanoidPos\ArkanoidPos\Assets\BallController.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\..\..\ArkanoidPos\ArkanoidPos\Assets\Remover.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\..\..\ArkanoidPos\ArkanoidPos\Assets\PaddleController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
