@@ -50,6 +50,7 @@
      <Compile Include="Assets\Libs\ScriptableObject\Sample\UnitData.cs" />
      <Compile Include="Assets\Libs\ScriptableObject\ScriptableObjectHelper.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
+     <Compile Include="Assets\Scripts\Definitions\InputDefinitions.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

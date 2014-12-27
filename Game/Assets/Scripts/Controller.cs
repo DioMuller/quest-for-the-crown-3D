@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections;
 
@@ -15,6 +16,8 @@ public class Controller : MonoBehaviour
 	private CharacterController _controller;
 
 	public float speed = 5.0f;
+	public float precision = 0.01f;
+	public string input = "Joy1";
 
 	/// <summary>
 	/// Initializes MonoBehaviour.
@@ -29,9 +32,12 @@ public class Controller : MonoBehaviour
 	/// </summary>
 	void Update ()
 	{
-		float mx = Input.GetAxis("Horizontal");
-		float mz = Input.GetAxis("Vertical");
+		float mx = Input.GetAxis(input + "_" + InputDefinitions.LeftHorizontal);
+		float mz = Input.GetAxis(input + "_" + InputDefinitions.LeftVertical);
 
-		_controller.Move(new Vector3(mx, 0.0f, mz) * speed * Time.deltaTime);
+		if (Math.Abs(mx) > precision && Math.Abs(mz) > precision)
+		{
+			_controller.Move(new Vector3(mx, 0.0f, mz)*speed*Time.deltaTime);
+		}
 	}
 }
