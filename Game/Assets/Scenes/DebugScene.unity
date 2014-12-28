@@ -465,9 +465,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7b903a6b261f5e4ebae6ece87cbb56f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  precision: .00999999978
-  input: Joy1
+  Speed: 5
+  JoggingMultiplier: 2
+  SecsToJog: 1
+  RunningMultiplier: 3
+  Precision: .00999999978
 --- !u!1 &1737128320
 GameObject:
   m_ObjectHideFlags: 0
