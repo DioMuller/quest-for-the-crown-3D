@@ -11,19 +11,47 @@ enum WalkingState
 }
 
 [RequireComponent(typeof(CharacterController))]
-public class Controller : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
+	#region Private Attributes
+	/// <summary>
+	/// Character Controller component.
+	/// </summary>
 	private CharacterController _controller;
+	/// <summary>
+	/// Time passed since the character started to walk.
+	/// </summary>
 	private float _timeSinceWalk = 0.0f;
+	/// <summary>
+	/// Current character walking state.
+	/// </summary>
 	private WalkingState _walkingState = WalkingState.Idle;
+	#endregion Private Attributes
 
+	#region Public Attributes
+	/// <summary>
+	/// Character speed.
+	/// </summary>
 	public float Speed = 5.0f;
+	/// <summary>
+	/// Jogging speed multiplier.
+	/// </summary>
 	public float JoggingMultiplier = 2f;
+	/// <summary>
+	/// Seconds it takes for the character to start to jog.
+	/// </summary>
 	public float SecsToJog = 1.0f;
+	/// <summary>
+	/// Running speed multiplier.
+	/// </summary>
 	public float RunningMultiplier = 3.0f;
+	/// <summary>
+	/// Controller precision/dead zone extra protection test.
+	/// </summary>
 	public float Precision = 0.01f;
+	#endregion Public Attributes
 
-
+	#region MonoBehaviour Methods
 	/// <summary>
 	/// Initializes MonoBehaviour.
 	/// </summary>
@@ -79,4 +107,5 @@ public class Controller : MonoBehaviour
 			_timeSinceWalk = 0.0f;
 		}
 	}
+	#endregion MonoBehaviour Methods
 }
