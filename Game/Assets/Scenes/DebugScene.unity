@@ -412,6 +412,10 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 111782, guid: 900140f6dddc0ba4abb2e72e6f9426ca, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 900140f6dddc0ba4abb2e72e6f9426ca, type: 2}
   m_RootGameObject: {fileID: 1255369432}
@@ -946,6 +950,7 @@ GameObject:
   - 4: {fileID: 1134476623}
   - 136: {fileID: 1134476625}
   - 143: {fileID: 1134476624}
+  - 114: {fileID: 1134476626}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -996,6 +1001,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1134476626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1134476622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe594de356f4a049acffe94eb5e8fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TagsToSeek:
+  - Player
+  SecsToRecalculate: 3
+  Speed: 5
 --- !u!1 &1136554360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,7 +1102,7 @@ GameObject:
   - 114: {fileID: 1255369436}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
