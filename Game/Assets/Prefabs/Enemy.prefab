@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 443536}
   - 136: {fileID: 13643536}
   - 143: {fileID: 14343536}
+  - 114: {fileID: 11432786}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -116,6 +117,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143540}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &11432786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe594de356f4a049acffe94eb5e8fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TagsToSeek:
+  - Player
+  SecsToRecalculate: 3
+  Speed: 5
 --- !u!136 &13643536
 CapsuleCollider:
   m_ObjectHideFlags: 1
