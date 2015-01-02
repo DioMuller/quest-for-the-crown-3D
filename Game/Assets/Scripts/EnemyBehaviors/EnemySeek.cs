@@ -2,6 +2,7 @@ using System.Linq;
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Rigidbody))]
 public class EnemySeek : MonoBehaviour
 {
 	#region Private Attributes
@@ -10,7 +11,15 @@ public class EnemySeek : MonoBehaviour
 	/// </summary>
 	private GameObject _currentTarget;
 
+	/// <summary>
+	/// Seconds since last searched for a target.
+	/// </summary>
 	private float _secondsSinceLastTarget = 0.0f;
+
+	/// <summary>
+	/// Rigidbody.
+	/// </summary>
+	private Rigidbody _rigidbody;
 	#endregion Private Attributes
 
 	#region Public Attributes
@@ -34,8 +43,9 @@ public class EnemySeek : MonoBehaviour
 	/// <summary>
 	/// Initializes the MonoBehaviour
 	/// </summary>
-	void Start () 
+	void Start ()
 	{
+		_rigidbody = GetComponent<Rigidbody>();
 		FindNextTarget();
 	}
 	
@@ -57,7 +67,8 @@ public class EnemySeek : MonoBehaviour
 			var direction = (_currentTarget.transform.position - transform.position);
 			direction.y = 0;
 			direction.Normalize();
-			transform.position += direction * Time.deltaTime * Speed;
+			var newPosition = transform.position + direction * Time.deltaTime * Speed;
+			_rigidbody.MovePosition(newPosition);
 		}
 	}
 	#endregion MonoBehaviour Methods

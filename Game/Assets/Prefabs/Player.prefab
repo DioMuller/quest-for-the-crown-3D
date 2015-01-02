@@ -9,11 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 411782}
   - 136: {fileID: 13611784}
-  - 143: {fileID: 14311786}
   - 114: {fileID: 11411786}
+  - 54: {fileID: 5446056}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.53999996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 411784}
@@ -117,6 +117,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111784}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &5446056
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111782}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!114 &11411786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,10 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7b903a6b261f5e4ebae6ece87cbb56f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  JoggingMultiplier: 2
-  SecsToJog: 1
-  RunningMultiplier: 3
+  Speed: 10
   Precision: .00999999978
 --- !u!136 &13611784
 CapsuleCollider:
@@ -158,20 +170,6 @@ CapsuleCollider:
   m_Radius: .5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!143 &14311786
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 111782}
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: .550000012
-  m_SlopeLimit: 45
-  m_StepOffset: .300000012
-  m_SkinWidth: .0799999982
-  m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &21211786
 SpriteRenderer:
