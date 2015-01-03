@@ -51,7 +51,7 @@
      <Compile Include="Assets\Libs\ScriptableObject\ScriptableObjectHelper.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviors\EnemySeek.cs" />
-     <Compile Include="Assets\Scripts\Entity.cs" />
+     <Compile Include="Assets\Scripts\MinimapEntity.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
