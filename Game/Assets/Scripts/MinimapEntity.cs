@@ -29,7 +29,7 @@ public class MinimapEntity : MonoBehaviour
 		// Create Sprite.
 		var sprite = Sprite.Create(MinimapSprite,
 			new Rect(0, 0, MinimapSprite.width, MinimapSprite.height),
-			new Vector2(0.5f, 0.5f));
+			new Vector2(0.5f, 0.5f), MinimapSprite.height);
 
 		// Create SpriteRenderer Component.
 		minimap.AddComponent<SpriteRenderer>();
@@ -43,15 +43,7 @@ public class MinimapEntity : MonoBehaviour
 
 		// Transform Position
 		minimap.transform.localPosition = Vector3.zero;
-		minimap.transform.localRotation = Quaternion.Euler(-90, 0, 0);
-	}
-
-	/// <summary>
-	/// Called once per frame.
-	/// </summary>
-	void Update () 
-	{
-
+		minimap.transform.localRotation = Quaternion.Euler(90, 0, 0);
 	}
 	#endregion MonoBehaviour Methods
 }
