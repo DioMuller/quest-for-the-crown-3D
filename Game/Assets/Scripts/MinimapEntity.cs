@@ -45,5 +45,14 @@ public class MinimapEntity : MonoBehaviour
 		minimap.transform.localPosition = Vector3.zero;
 		minimap.transform.localRotation = Quaternion.Euler(90, 0, 0);
 	}
+
+	/// <summary>
+	/// Called once per frame.
+	/// </summary>
+	private void Update()
+	{
+		Debug.Log(1.0f / Time.deltaTime);
+	}
+
 	#endregion MonoBehaviour Methods
 }
