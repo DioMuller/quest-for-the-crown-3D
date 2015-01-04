@@ -13,6 +13,8 @@ public class MinimapEntity : MonoBehaviour
 	/// Sprite Color.
 	/// </summary>
 	public Color SpriteColor = Color.white;
+
+	public float Size = 1.0f;
 	#endregion Public Attributes
 
 	#region MonoBehaviour Methods
@@ -29,7 +31,7 @@ public class MinimapEntity : MonoBehaviour
 		// Create Sprite.
 		var sprite = Sprite.Create(MinimapSprite,
 			new Rect(0, 0, MinimapSprite.width, MinimapSprite.height),
-			new Vector2(0.5f, 0.5f), MinimapSprite.height);
+			new Vector2(0.5f, 0.5f), MinimapSprite.height / Size);
 
 		// Create SpriteRenderer Component.
 		minimap.AddComponent<SpriteRenderer>();
@@ -51,7 +53,7 @@ public class MinimapEntity : MonoBehaviour
 	/// </summary>
 	private void Update()
 	{
-		Debug.Log(1.0f / Time.deltaTime);
+		//Debug.Log(1.0f / Time.deltaTime);
 	}
 
 	#endregion MonoBehaviour Methods
