@@ -46,10 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Libs\ScriptableObject\AccessScriptableData.cs" />
+     <Compile Include="Assets\Libs\ScriptableObject\Sample\AccessScriptableData.cs" />
      <Compile Include="Assets\Libs\ScriptableObject\Sample\UnitData.cs" />
      <Compile Include="Assets\Libs\ScriptableObject\ScriptableObjectHelper.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\DialogBox.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviors\EnemySeek.cs" />
      <Compile Include="Assets\Scripts\MinimapEntity.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />

@@ -42,7 +42,10 @@ public class PlayerMovement : MonoBehaviour
 		float mz = Input.GetAxis("Vertical");
 		
 		Vector3 movementSpeed = new Vector3(mx, 0.0f, mz) * Speed * Time.deltaTime;
-		_rigidbody.MovePosition(transform.position + movementSpeed);
+		var newPos = transform.position + movementSpeed;
+		transform.LookAt(newPos);
+		_rigidbody.MovePosition(newPos);
+		
 	}
 	#endregion MonoBehaviour Methods
 }
