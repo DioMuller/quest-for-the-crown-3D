@@ -14,6 +14,9 @@ public class MinimapEntity : MonoBehaviour
 	/// </summary>
 	public Color SpriteColor = Color.white;
 
+    /// <summary>
+    /// Sprite Size
+    /// </summary>
 	public float Size = 1.0f;
 	#endregion Public Attributes
 
@@ -34,8 +37,7 @@ public class MinimapEntity : MonoBehaviour
 			new Vector2(0.5f, 0.5f), MinimapSprite.height / Size);
 
 		// Create SpriteRenderer Component.
-		minimap.AddComponent<SpriteRenderer>();
-		var component = minimap.GetComponent<SpriteRenderer>();
+		var component = minimap.AddComponent<SpriteRenderer>();
 
 		component.sprite = sprite;
 		component.color = SpriteColor;
