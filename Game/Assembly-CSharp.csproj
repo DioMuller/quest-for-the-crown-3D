@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\EnemyBehaviors\EnemySeek.cs" />
      <Compile Include="Assets\Scripts\MinimapEntity.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\DialogData.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>

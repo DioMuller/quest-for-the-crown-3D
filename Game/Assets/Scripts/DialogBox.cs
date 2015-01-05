@@ -7,6 +7,8 @@ using System.Collections;
 public class DialogBox : MonoBehaviour 
 {
 	#region Private Attributes
+
+    private DialogData _dialog;
 	#endregion Private Attributes
 
 	#region Public Attributes
@@ -43,7 +45,11 @@ public class DialogBox : MonoBehaviour
 		{
 			try
 			{
-				Debug.Log("Dialog: "); //_dialogManager.GetString(DialogName));
+                if (_dialog != null)
+                {
+                    Debug.Log(_dialog.Entries.Length);
+                    Debug.Log("Dialog: " + _dialog.GetEntry("TestDialog")); //_dialogManager.GetString(DialogName));
+                }
 			}
 			catch (Exception)
 			{
