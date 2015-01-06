@@ -4,18 +4,17 @@ using System.Resources;
 using UnityEngine;
 using System.Collections;
 
-public class DialogBox : MonoBehaviour 
+public class DialogAction : MonoBehaviour
 {
-	#region Private Attributes
+    #region Private Attributes
+    private LocalizationData _dialog;
+    #endregion Private Attributes
 
-    private DialogData _dialog;
-	#endregion Private Attributes
-
-	#region Public Attributes
-	/// <summary>
+    #region Public Attributes
+    /// <summary>
 	/// Dialog name/index on the DialogText Resource file.
 	/// </summary>
-	public string DialogName;
+	public string DialogKey;
 	#endregion Public Attributes
 
 	#region MonoBehaviour Methods
@@ -24,9 +23,9 @@ public class DialogBox : MonoBehaviour
 	/// </summary>
 	void Start()
 	{
-
+		_dialog = LocalizationManager.Instance.DialogLocalization;
 	}
-
+	
 	/// <summary>
 	/// Called once per frame.
 	/// </summary>
@@ -47,16 +46,23 @@ public class DialogBox : MonoBehaviour
 			{
                 if (_dialog != null)
                 {
-                    Debug.Log(_dialog.Entries.Length);
-                    Debug.Log("Dialog: " + _dialog.GetEntry("TestDialog")); //_dialogManager.GetString(DialogName));
+					MessageBox.Instance.ShowMessage(_dialog.GetEntry(DialogKey));
                 }
 			}
-			catch (Exception)
+			catch (Exception ex)
 			{
-				Debug.LogWarning("Error: Could not find dialog '" + DialogName + "'");
+				Debug.LogWarning(ex.Message);
 			}
 		}
 	}
 
+	/// <summary>
+	/// Called when any objects exits collision with this.
+	/// </summary>
+	/// <param name="other"></param>
+	void OnTriggerExit(Collider other) 
+	{
+		MessageBox.Instance.Hide();
+	}
 	#endregion MonoBehaviour Methods
 }

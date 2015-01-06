@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Linq;
 
-public class DialogData : ScriptableObject
+public class LocalizationData : ScriptableObject
 {
     #region Structures
     /// <summary>
@@ -80,11 +80,11 @@ public class DialogData : ScriptableObject
     /// Clones object instance.
     /// </summary>
     /// <returns>Clone object.</returns>
-    public DialogData Clone()
+    public LocalizationData Clone()
     {
-        var newLocalizationData = CreateInstance<DialogData>();
-
-        newLocalizationData.Entries = (DictionaryEntry[]) Entries.Clone();
+		var newLocalizationData = CreateInstance<LocalizationData>();
+		
+		newLocalizationData.Entries = (DictionaryEntry[]) Entries.Clone();
 
         return newLocalizationData;
     }

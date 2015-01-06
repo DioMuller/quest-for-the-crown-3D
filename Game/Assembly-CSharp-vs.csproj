@@ -50,11 +50,13 @@
      <Compile Include="Assets\Libs\ScriptableObject\Sample\UnitData.cs" />
      <Compile Include="Assets\Libs\ScriptableObject\ScriptableObjectHelper.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\DialogBox.cs" />
+     <Compile Include="Assets\Scripts\DialogAction.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviors\EnemySeek.cs" />
-     <Compile Include="Assets\Scripts\MinimapEntity.cs" />
+     <Compile Include="Assets\Scripts\GUI\MessageBox.cs" />
+     <Compile Include="Assets\Scripts\GUI\MinimapEntity.cs" />
+     <Compile Include="Assets\Scripts\Managers\LocalizationManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\DialogData.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\LocalizationData.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
