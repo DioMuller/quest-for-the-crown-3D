@@ -111,15 +111,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 78117558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15a319064bf33144aaf50660f66b6fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ebdba2e7d5569c4db4ba2a00975fd72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MinimapSprite: {fileID: 2800000, guid: be443f2dd9f625a4981777ce91f7dad5, type: 3}
-  SpriteColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  SpriteColor: {r: 1, g: 1, b: 1, a: 1}
   Size: 2
 --- !u!1 &84209373
 GameObject:
@@ -161,6 +157,7 @@ GameObject:
   - 54: {fileID: 102726863}
   - 136: {fileID: 102726862}
   - 114: {fileID: 102726861}
+  - 114: {fileID: 102726860}
   m_Layer: 0
   m_Name: NPC
   m_TagString: NPC
@@ -181,6 +178,20 @@ Transform:
   - {fileID: 1661333669}
   m_Father: {fileID: 1485624016}
   m_RootOrder: 2
+--- !u!114 &102726860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 102726858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ebdba2e7d5569c4db4ba2a00975fd72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimapSprite: {fileID: 2800000, guid: 9e04c86c2d8f8fd4fb480b11877cba3c, type: 3}
+  SpriteColor: {r: .199999809, g: 0, b: 1, a: 1}
+  Size: 1
 --- !u!114 &102726861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -783,15 +794,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 660409991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15a319064bf33144aaf50660f66b6fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ebdba2e7d5569c4db4ba2a00975fd72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MinimapSprite: {fileID: 2800000, guid: 9e04c86c2d8f8fd4fb480b11877cba3c, type: 3}
-  SpriteColor:
-    r: 1
-    g: 0
-    b: 0
-    a: 1
+  SpriteColor: {r: 1, g: 0, b: 0, a: 1}
   Size: 1
 --- !u!136 &660409994
 CapsuleCollider:
@@ -955,15 +962,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 979958599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15a319064bf33144aaf50660f66b6fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ebdba2e7d5569c4db4ba2a00975fd72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MinimapSprite: {fileID: 2800000, guid: be443f2dd9f625a4981777ce91f7dad5, type: 3}
-  SpriteColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  SpriteColor: {r: 1, g: 1, b: 1, a: 1}
   Size: 2
 --- !u!1 &1115257344
 GameObject:
@@ -1103,15 +1106,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1315451663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15a319064bf33144aaf50660f66b6fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ebdba2e7d5569c4db4ba2a00975fd72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MinimapSprite: {fileID: 2800000, guid: be443f2dd9f625a4981777ce91f7dad5, type: 3}
-  SpriteColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  SpriteColor: {r: 1, g: 1, b: 1, a: 1}
   Size: 2
 --- !u!1 &1334018723
 GameObject:
@@ -1624,15 +1623,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1641024234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15a319064bf33144aaf50660f66b6fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ebdba2e7d5569c4db4ba2a00975fd72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MinimapSprite: {fileID: 2800000, guid: 9e04c86c2d8f8fd4fb480b11877cba3c, type: 3}
-  SpriteColor:
-    r: .158620834
-    g: 1
-    b: 0
-    a: 1
+  SpriteColor: {r: .0344825983, g: 1, b: 0, a: 1}
   Size: 1
 --- !u!136 &1641024238
 CapsuleCollider:
@@ -2050,15 +2045,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1860129081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15a319064bf33144aaf50660f66b6fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ebdba2e7d5569c4db4ba2a00975fd72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MinimapSprite: {fileID: 2800000, guid: be443f2dd9f625a4981777ce91f7dad5, type: 3}
-  SpriteColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  SpriteColor: {r: 1, g: 1, b: 1, a: 1}
   Size: 2
 --- !u!1 &2132121927
 GameObject:
