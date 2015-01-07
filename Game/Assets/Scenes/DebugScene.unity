@@ -1604,6 +1604,7 @@ MonoBehaviour:
   Precision: .00999999978
   InputSchemas:
   - Keyboard
+  - GamePad1
 --- !u!114 &1641024237
 MonoBehaviour:
   m_ObjectHideFlags: 0

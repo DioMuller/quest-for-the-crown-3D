@@ -26,7 +26,10 @@
 
         public float GetAxis(string name)
         {
-            return InputSourceNames(name).Max(s => Input.GetAxis(s));
+            return InputSourceNames(name)
+                .Select(s => Input.GetAxis(s))
+                .OrderByDescending(v => Math.Abs(v))
+                .FirstOrDefault();
         }
 
         protected IEnumerable<string> InputSourceNames(string input)
