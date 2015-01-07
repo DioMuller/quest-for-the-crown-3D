@@ -1615,6 +1615,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 10
   Precision: .00999999978
+  InputSchemas:
+  - Keyboard
 --- !u!114 &1641024237
 MonoBehaviour:
   m_ObjectHideFlags: 0

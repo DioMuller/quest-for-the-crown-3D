@@ -12,3 +12,8 @@
 /*.pidb
 /*.booproj
 _ReSharper.Game-csharp
+
+# Visual Studio
+UnityVS*
+*.sln.ide
+*.suo
