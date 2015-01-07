@@ -47,17 +47,7 @@ public class DialogAction : MonoBehaviour
 
 		if (other.tag == "Player")
 		{
-			try
-			{
-                if (_dialog != null)
-                {
-					MessageBox.Instance.ShowMessage(_dialog.GetEntry(DialogKey));
-                }
-			}
-			catch (Exception ex)
-			{
-				Debug.LogWarning(ex.Message);
-			}
+			ShowDialog();
 		}
 	}
 
@@ -67,7 +57,29 @@ public class DialogAction : MonoBehaviour
 	/// <param name="other"></param>
 	void OnTriggerExit(Collider other) 
 	{
-		MessageBox.Instance.Hide();
+		HideDialog();
 	}
 	#endregion MonoBehaviour Methods
+
+	#region Methods
+	public void ShowDialog()
+	{
+		try
+		{
+			if (_dialog != null)
+			{
+				MessageBox.Instance.ShowMessage(_dialog.GetEntry(DialogKey));
+			}
+		}
+		catch (Exception ex)
+		{
+			Debug.LogWarning(ex.Message);
+		}
+	}
+
+	public void HideDialog()
+	{
+		MessageBox.Instance.Hide();
+	}
+	#endregion Methods
 }

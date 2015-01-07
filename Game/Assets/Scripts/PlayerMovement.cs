@@ -21,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
     /// Current _input attribute schema.
     /// </summary>
     private string[] _mappedInputSchemas;
+
+	/// <summary>
+	/// Can the entity move?
+	/// </summary>
+	private bool _canMove = true;
     #endregion Private Attributes
 
     #region Private Properties
@@ -72,6 +77,8 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void Update()
     {
+		if( !_canMove ) return;
+
         Vector3 movementSpeed = Input.GetMovement() * Speed * Time.deltaTime;
         var newPos = transform.position + movementSpeed;
         transform.LookAt(newPos);
@@ -79,4 +86,22 @@ public class PlayerMovement : MonoBehaviour
     }
 
     #endregion MonoBehaviour Methods
+
+	#region Methods
+	/// <summary>
+	/// Blocks the movement.
+	/// </summary>
+	public void BlockMovement()
+	{
+		_canMove = false;
+	}
+
+	/// <summary>
+	/// Unblocks the movement.
+	/// </summary>
+	public void UnblockMovement()
+	{
+		_canMove = true;
+	}
+	#endregion Methods
 }
