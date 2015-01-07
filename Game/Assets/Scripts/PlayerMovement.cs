@@ -13,15 +13,6 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private Rigidbody _rigidbody;
 
-    /// <summary>
-    /// Last mapped character input.
-    /// </summary>
-    private CharacterInput _input = new CharacterInput("");
-    /// <summary>
-    /// Current _input attribute schema.
-    /// </summary>
-    private string[] _mappedInputSchemas;
-
 	/// <summary>
 	/// Can the entity move?
 	/// </summary>
@@ -34,15 +25,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     CharacterInput Input
     {
-        get
-        {
-            if (_mappedInputSchemas != InputSchemas)
-            {
-                _input = new CharacterInput(InputSchemas);
-                _mappedInputSchemas = InputSchemas;
-            }
-            return _input;
-        }
+        get { return CharacterInput.FromSchemas(InputSchemas); }
     }
     #endregion Private Properties
 

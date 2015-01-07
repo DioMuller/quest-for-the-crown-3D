@@ -9,7 +9,7 @@
     {
         readonly string[] _inputSourcesPrefix;
 
-        public InputAggregator(params string[] schemas)
+        public InputAggregator(IEnumerable<string> schemas)
         {
             _inputSourcesPrefix = (schemas ?? new string[] { "" })
                 .Select(s => s ?? "")
