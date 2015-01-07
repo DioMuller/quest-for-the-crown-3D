@@ -40,6 +40,11 @@ public class DialogAction : MonoBehaviour
 	/// <param name="other"></param>
 	void OnTriggerEnter(Collider other)
 	{
+		if( _dialog == null )
+		{
+			_dialog = LocalizationManager.Instance.DialogLocalization;
+		}
+
 		if (other.tag == "Player")
 		{
 			try

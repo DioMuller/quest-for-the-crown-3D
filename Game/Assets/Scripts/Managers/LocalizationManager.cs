@@ -22,7 +22,7 @@ public class LocalizationManager : MonoBehaviour
     /// <summary>
     /// Initializes MonoBehaviour.
     /// </summary>
-	void Start () 
+	void Awake() 
     {
         Instance = this;
     }
