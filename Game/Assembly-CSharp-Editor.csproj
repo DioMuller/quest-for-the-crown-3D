@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}</ProjectGuid>
+	<ProjectGuid>{196F3426-96BD-E564-A156-57572DB80A48}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-CSharp-Editor</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,20 +46,20 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Code\Libs\Input\CharacterInput.cs" />
-     <Compile Include="Assets\Code\Libs\Input\InputAggregator.cs" />
-     <Compile Include="Assets\Code\Scripts\Entities\Enemy\Seek.cs" />
-     <Compile Include="Assets\Code\Scripts\Entities\General\Destructible.cs" />
-     <Compile Include="Assets\Code\Scripts\Entities\NPC\DialogAction.cs" />
-     <Compile Include="Assets\Code\Scripts\Entities\Player\PlayerMovement.cs" />
-     <Compile Include="Assets\Code\Scripts\GUI\MessageBox.cs" />
-     <Compile Include="Assets\Code\Scripts\GUI\MinimapEntity.cs" />
-     <Compile Include="Assets\Code\Scripts\Managers\LocalizationManager.cs" />
-     <Compile Include="Assets\Code\Scripts\Scene\CameraController.cs" />
-     <Compile Include="Assets\Code\Scripts\ScriptableObjects\LocalizationData.cs" />
+     <Compile Include="Assets\Code\Editor\ScriptableObjectHelper.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

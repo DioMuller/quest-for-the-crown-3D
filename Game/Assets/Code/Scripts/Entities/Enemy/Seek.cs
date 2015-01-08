@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
-public class EnemySeek : MonoBehaviour
+public class Seek : MonoBehaviour
 {
 	#region Private Attributes
 	/// <summary>
