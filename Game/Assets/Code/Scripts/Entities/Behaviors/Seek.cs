@@ -2,8 +2,8 @@ using System.Linq;
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Rigidbody))]
-public class Seek : MonoBehaviour
+
+public class Seek : MovementBehaviour
 {
 	#region Private Attributes
 	/// <summary>
@@ -15,11 +15,6 @@ public class Seek : MonoBehaviour
 	/// Seconds since last searched for a target.
 	/// </summary>
 	private float _secondsSinceLastTarget = 0.0f;
-
-	/// <summary>
-	/// Rigidbody.
-	/// </summary>
-	private Rigidbody _rigidbody;
 	#endregion Private Attributes
 
 	#region Public Attributes
@@ -32,11 +27,6 @@ public class Seek : MonoBehaviour
 	/// Seconds to recalculate next target.
 	/// </summary>
 	public float SecsToRecalculate = 3.0f;
-
-	/// <summary>
-	/// Walking Speed.
-	/// </summary>
-	public float Speed = 5.0f;
 	#endregion Public Attributes
 
 	#region MonoBehaviour Methods
@@ -45,7 +35,7 @@ public class Seek : MonoBehaviour
 	/// </summary>
 	void Start ()
 	{
-		_rigidbody = GetComponent<Rigidbody>();
+		StartBehaviour();
 		FindNextTarget();
 	}
 	
@@ -65,10 +55,8 @@ public class Seek : MonoBehaviour
 		if (_currentTarget != null)
 		{
 			var direction = (_currentTarget.transform.position - transform.position);
-			direction.y = 0;
-			direction.Normalize();
-			var newPosition = transform.position + direction * Time.deltaTime * Speed;
-			_rigidbody.MovePosition(newPosition);
+
+			MovementDirection = direction;
 		}
 	}
 	#endregion MonoBehaviour Methods

@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Destructible : MonoBehaviour
+public class Health : MonoBehaviour
 {
     bool _dead;
     float _health;
