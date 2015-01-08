@@ -51,6 +51,7 @@
      <Compile Include="Assets\Code\Scripts\Entities\Enemy\Seek.cs" />
      <Compile Include="Assets\Code\Scripts\Entities\General\Destructible.cs" />
      <Compile Include="Assets\Code\Scripts\Entities\NPC\DialogAction.cs" />
+     <Compile Include="Assets\Code\Scripts\Entities\Player\PlayerInteraction.cs" />
      <Compile Include="Assets\Code\Scripts\Entities\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Code\Scripts\GUI\MessageBox.cs" />
      <Compile Include="Assets\Code\Scripts\GUI\MinimapEntity.cs" />

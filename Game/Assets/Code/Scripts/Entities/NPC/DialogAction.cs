@@ -47,7 +47,12 @@ public class DialogAction : MonoBehaviour
 
 		if (other.tag == "Player")
 		{
-			ShowDialog();
+			var interaction = other.GetComponent<PlayerInteraction>();
+
+			if(interaction != null)
+			{
+				interaction.SetDialog(this);
+			}			
 		}
 	}
 
@@ -57,7 +62,15 @@ public class DialogAction : MonoBehaviour
 	/// <param name="other"></param>
 	void OnTriggerExit(Collider other) 
 	{
-		HideDialog();
+		if (other.tag == "Player")
+		{
+			var interaction = other.GetComponent<PlayerInteraction>();
+			
+			if(interaction != null)
+			{
+				interaction.RemoveDialog(this);
+			}			
+		}
 	}
 	#endregion MonoBehaviour Methods
 

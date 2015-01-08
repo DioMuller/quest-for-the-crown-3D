@@ -33,14 +33,5 @@ namespace Assets.Libs.Input
             var mZ = GetAxis("Vertical");
             return new Vector3(mX, 0, mZ);
         }
-
-        /// <summary>
-        /// Check if Fire1 is being pressed.
-        /// </summary>
-        /// <returns></returns>
-        public bool Fire1()
-        {
-            return GetButton("Fire1");
-        }
     }
 }
