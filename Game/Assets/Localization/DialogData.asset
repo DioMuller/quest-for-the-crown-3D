@@ -18,3 +18,9 @@ MonoBehaviour:
   - Language: Portuguese
     Key: TestDialog
     Value: "Este \xE9 um di\xE1logo teste."
+  - Language: 
+    Key: TestDialog2
+    Value: This is another test dialog.
+  - Language: Portuguese
+    Key: TestDialog2
+    Value: "Este \xE9 outro di\xE1logo teste."

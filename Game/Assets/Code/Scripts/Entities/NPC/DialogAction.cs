@@ -7,6 +7,14 @@ using System.Collections;
 public class DialogAction : MonoBehaviour
 {
     #region Private Attributes
+	/// <summary>
+	/// The next dialog to be shown.
+	/// </summary>
+	private int _nextDialog = -1;
+
+	/// <summary>
+	/// The dialog localization data file.
+	/// </summary>
     private LocalizationData _dialog;
     #endregion Private Attributes
 
@@ -14,7 +22,7 @@ public class DialogAction : MonoBehaviour
     /// <summary>
 	/// Dialog name/index on the DialogText Resource file.
 	/// </summary>
-	public string DialogKey;
+	public string[] DialogKeys;
 	#endregion Public Attributes
 
 	#region MonoBehaviour Methods
@@ -74,14 +82,17 @@ public class DialogAction : MonoBehaviour
 	}
 	#endregion MonoBehaviour Methods
 
-	#region Methods
-	public void ShowDialog()
+	#region Private Methods
+	/// <summary>
+	/// Shows the dialog.
+	/// </summary>
+	private void ShowDialog()
 	{
 		try
 		{
 			if (_dialog != null)
 			{
-				MessageBox.Instance.ShowMessage(_dialog.GetEntry(DialogKey));
+				MessageBox.Instance.ShowMessage(_dialog.GetEntry(DialogKeys[_nextDialog]));
 			}
 		}
 		catch (Exception ex)
@@ -90,9 +101,35 @@ public class DialogAction : MonoBehaviour
 		}
 	}
 
-	public void HideDialog()
+	/// <summary>
+	/// Hides the dialog.
+	/// </summary>
+	private void HideDialog()
 	{
+		_nextDialog = -1;
 		MessageBox.Instance.Hide();
+	}
+	#endregion Private Methods
+
+	#region Public Methods
+	/// <summary>
+	/// Shows next dialog, or finishes dialog..
+	/// </summary>
+	/// <returns><c>true</c>, if there was another dialog, <c>false</c> otherwise.</returns>
+	public bool NextDialog()
+	{
+		_nextDialog++;
+
+		if( _nextDialog < DialogKeys.Length )
+		{
+			ShowDialog();
+			return true;
+		}
+		else
+		{
+			HideDialog();
+			return false;
+		}
 	}
 	#endregion Methods
 }

@@ -156,7 +156,6 @@ GameObject:
   - 4: {fileID: 102726859}
   - 54: {fileID: 102726863}
   - 136: {fileID: 102726862}
-  - 114: {fileID: 102726861}
   - 114: {fileID: 102726860}
   m_Layer: 0
   m_Name: NPC
@@ -176,6 +175,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1661333669}
+  - {fileID: 1281308854}
   m_Father: {fileID: 1485624016}
   m_RootOrder: 2
 --- !u!114 &102726860
@@ -192,18 +192,6 @@ MonoBehaviour:
   MinimapSprite: {fileID: 2800000, guid: 9e04c86c2d8f8fd4fb480b11877cba3c, type: 3}
   SpriteColor: {r: .199999809, g: 0, b: 1, a: 1}
   Size: 1
---- !u!114 &102726861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 102726858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51746c3d8f96140439187fd76c5b9d24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogKey: TestDialog
 --- !u!136 &102726862
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1056,6 +1044,61 @@ MonoBehaviour:
   _distanceDifference: {x: 0, y: 0, z: 0}
   MainCamera: {fileID: 867356140}
   Target: {fileID: 1641024234}
+--- !u!1 &1281308853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1281308854}
+  - 114: {fileID: 1281308856}
+  - 135: {fileID: 1281308855}
+  m_Layer: 0
+  m_Name: ConversationRadius
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1281308854
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281308853}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 102726859}
+  m_RootOrder: 1
+--- !u!135 &1281308855
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281308853}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1281308856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281308853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51746c3d8f96140439187fd76c5b9d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogKeys:
+  - TestDialog
+  - TestDialog2
 --- !u!1 &1315451663
 GameObject:
   m_ObjectHideFlags: 0

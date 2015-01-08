@@ -61,17 +61,12 @@ public class PlayerInteraction : MonoBehaviour
 
 			if( _stackedDialog != null )
 			{
-				if( !_showingDialog )
-				{
-					_showingDialog = true;
-					_playerController.BlockMovement();
-					_stackedDialog.ShowDialog();
-				}
+				_showingDialog = _stackedDialog.NextDialog();
+
+				if( _showingDialog ) _playerController.BlockMovement();
 				else
 				{
-					_showingDialog = false;
 					_playerController.UnblockMovement();
-					_stackedDialog.HideDialog();
 
 					if( _removeAfterShowing )
 					{
