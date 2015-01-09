@@ -18,6 +18,11 @@ public class MinimapEntity : MonoBehaviour
     /// Sprite Size
     /// </summary>
 	public float Size = 1.0f;
+
+	/// <summary>
+	/// The zoom.
+	/// </summary>
+	public static float Zoom = 1.0f;
 	#endregion Public Attributes
 
 	#region MonoBehaviour Methods
@@ -34,7 +39,7 @@ public class MinimapEntity : MonoBehaviour
 		// Create Sprite.
 		var sprite = Sprite.Create(MinimapSprite,
 			new Rect(0, 0, MinimapSprite.width, MinimapSprite.height),
-			new Vector2(0.5f, 0.5f), MinimapSprite.height / Size);
+			new Vector2(0.5f, 0.5f), MinimapSprite.height / (Size * Zoom) );
 
 		// Create SpriteRenderer Component.
 		var component = minimap.AddComponent<SpriteRenderer>();

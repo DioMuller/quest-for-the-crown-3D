@@ -58,6 +58,7 @@
      <Compile Include="Assets\Code\Scripts\GUI\MessageBox.cs" />
      <Compile Include="Assets\Code\Scripts\GUI\MinimapEntity.cs" />
      <Compile Include="Assets\Code\Scripts\Managers\LocalizationManager.cs" />
+     <Compile Include="Assets\Code\Scripts\Managers\PerformanceManager.cs" />
      <Compile Include="Assets\Code\Scripts\Scene\CameraController.cs" />
      <Compile Include="Assets\Code\Scripts\ScriptableObjects\LocalizationData.cs" />
  <Reference Include="UnityEngine.UI">
