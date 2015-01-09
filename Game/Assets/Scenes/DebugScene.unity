@@ -144,8 +144,8 @@ Transform:
   m_Children:
   - {fileID: 305091009}
   - {fileID: 1131545086}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1277360304}
+  m_RootOrder: 0
 --- !u!1 &102726858
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +570,7 @@ Transform:
   - {fileID: 2132121928}
   - {fileID: 1115257345}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
 --- !u!1 &551945610
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,8 +676,8 @@ Transform:
   - {fileID: 78117559}
   - {fileID: 979958600}
   - {fileID: 1860129082}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1277360304}
+  m_RootOrder: 1
 --- !u!1 &563747231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1083,36 @@ MonoBehaviour:
   _distanceDifference: {x: 0, y: 0, z: 0}
   MainCamera: {fileID: 867356140}
   Target: {fileID: 1641024234}
+--- !u!1 &1277360303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1277360304}
+  m_Layer: 0
+  m_Name: Scene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1277360304
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1277360303}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1000, y: 1000, z: 1000}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 84209374}
+  - {fileID: 561115306}
+  - {fileID: 1485624016}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!1 &1315451663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,8 +1452,8 @@ Transform:
   - {fileID: 1641024235}
   - {fileID: 660409996}
   - {fileID: 102726859}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 1277360304}
+  m_RootOrder: 2
 --- !u!1 &1558158397
 GameObject:
   m_ObjectHideFlags: 0
