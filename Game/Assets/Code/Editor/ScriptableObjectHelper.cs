@@ -15,7 +15,7 @@ public class ScriptableObjectHelper : Editor {
 	
 	[MenuItem("Assets/Create/Scriptable Object Asset", true, 10000)]
 	public static bool CreateScriptableObjectAssetCheck (){
-		if (Selection.activeObject.GetType () != typeof(MonoScript))
+		if (Selection.activeObject == null || Selection.activeObject.GetType () != typeof(MonoScript))
 			return false;
 		MonoScript script = (MonoScript)Selection.activeObject;
 		var scriptClass = script.GetClass ();
