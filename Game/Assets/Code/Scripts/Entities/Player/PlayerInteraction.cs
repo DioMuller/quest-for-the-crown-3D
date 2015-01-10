@@ -1,118 +1,78 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using Assets.Libs.Input;
+using Assets.Code.Libs.Input;
 
 [RequireComponent(typeof(PlayerMovement))]
-public class PlayerInteraction : MonoBehaviour 
+public class PlayerInteraction : MonoBehaviour
 {
-	#region Private Attributes
-	/// <summary>
-	/// The player controller.
-	/// </summary>
-	private PlayerMovement _playerController;
+    #region Private Attributes
+    /// <summary>
+    /// Currently registered use action.
+    /// </summary>
+    EventAction _registeredAction;
 
-	/// <summary>
-	/// The nearby dialogs.
-	/// </summary>
-	private DialogAction _stackedDialog = null;
+    /// <summary>
+    /// The player controller.
+    /// </summary>
+    private PlayerMovement _playerController;
 
-	/// <summary>
-	/// Is there a dialog showing?
-	/// </summary>
-	private bool _showingDialog = false;
+    /// <summary>
+    /// Action button is currently pressed.
+    /// </summary>
+    private bool _actionPressed = false;
+    #endregion Private Attributes
 
-	/// <summary>
-	/// Remove item after showing it?
-	/// </summary>
-	private bool _removeAfterShowing = false;
+    #region MonoBehaviour Methods
+    /// <summary>
+    /// Initializes MonoBehaviour.
+    /// </summary>
+    void Start()
+    {
+        _playerController = GetComponent<PlayerMovement>();
+    }
 
-	private bool _actionPressed = false;
-	#endregion Private Attributes
+    /// <summary>
+    /// Called once per frame.
+    /// </summary>
+    void Update()
+    {
+        if (_registeredAction == null)
+            return;
 
-	#region Private Properties
-	/// <summary>
-	/// Gets the current schema Character Input.
-	/// </summary>
-	CharacterInput Input
-	{
-		get { return CharacterInput.FromSchemas(_playerController.InputSchemas); }
-	}
-	#endregion Private Properties
+        if (_playerController.Input.GetButton("Action"))
+        {
+            if (!_actionPressed)
+            {
+                if (_registeredAction.Activate())
+                    _playerController.BlockMovement();
+                else
+                    _playerController.UnblockMovement();
 
-	#region MonoBehaviour Methods
-	/// <summary>
-	/// Initializes MonoBehaviour.
-	/// </summary>
-	void Start()
-	{
-		_playerController = GetComponent<PlayerMovement>();
-	}
-	
-	/// <summary>
-	/// Called once per frame.
-	/// </summary>
-	void Update()
-	{
-		if(Input.GetButton("Action") )
-		{
-			if(_actionPressed) return;
-			_actionPressed = true;
+                _actionPressed = true;
+            }
+        }
+        else _actionPressed = false;
+    }
+    #endregion MonoBehaviour Methods
 
-			if( _stackedDialog != null )
-			{
-				_showingDialog = _stackedDialog.NextDialog();
+    #region Methods
+    /// <summary>
+    /// Sets the current available interaction.
+    /// </summary>
+    /// <param name="action">Action to be used.</param>
+    public void SetAction(EventAction action)
+    {
+        if (_registeredAction == null)
+            _registeredAction = action;
+    }
 
-				if( _showingDialog ) _playerController.BlockMovement();
-				else
-				{
-					_playerController.UnblockMovement();
-
-					if( _removeAfterShowing )
-					{
-						RemoveDialog(_stackedDialog);
-					}
-				}
-			}
-		}
-		else
-		{
-			_actionPressed = false;
-		}
-	}
-	#endregion MonoBehaviour Methods
-
-	#region Methods
-	/// <summary>
-	/// Sets the dialog.
-	/// </summary>
-	/// <param name="action">Dialog Action to be used.</param>
-	public void SetDialog(DialogAction action)
-	{
-		if( !_showingDialog )
-		{
-			_stackedDialog = action;
-		}
-	}
-
-	/// <summary>
-	/// Removes the dialog, if it's the active dialog.
-	/// </summary>
-	/// <param name="action">Dialog Action to be removed.</param>
-	public void RemoveDialog(DialogAction action)
-	{
-		if( action == _stackedDialog )
-		{
-			if( _showingDialog )
-			{
-				_removeAfterShowing = true;
-			}
-			else
-			{
-				_removeAfterShowing = false;
-				_stackedDialog = null;
-			}
-		}
-	}
-	#endregion Methods
+    /// <summary>
+    /// Unregister a specified action.
+    /// </summary>
+    /// <param name="action"></param>
+    public void ClearAction(EventAction action)
+    {
+        if (_registeredAction == action)
+            _registeredAction = null;
+    }
+    #endregion Methods
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Assets.Libs.Input
 {
-    class CharacterInput : InputAggregator
+    public class CharacterInput : InputAggregator
     {
         static readonly Dictionary<IEnumerable<string>, CharacterInput> _loadedInputs = new Dictionary<IEnumerable<string>, CharacterInput>();
 

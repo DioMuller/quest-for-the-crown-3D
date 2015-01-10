@@ -1,10 +1,8 @@
+using Assets.Code.Libs.Input;
 using System;
-using System.Globalization;
-using System.Resources;
 using UnityEngine;
-using System.Collections;
 
-public class DialogAction : MonoBehaviour
+public class DialogAction : MonoBehaviour, EventAction
 {
     #region Private Attributes
 	/// <summary>
@@ -59,7 +57,7 @@ public class DialogAction : MonoBehaviour
 
 			if(interaction != null)
 			{
-				interaction.SetDialog(this);
+				interaction.SetAction(this);
 			}			
 		}
 	}
@@ -76,7 +74,7 @@ public class DialogAction : MonoBehaviour
 			
 			if(interaction != null)
 			{
-				interaction.RemoveDialog(this);
+                interaction.ClearAction(this);
 			}			
 		}
 	}
@@ -131,5 +129,10 @@ public class DialogAction : MonoBehaviour
 			return false;
 		}
 	}
-	#endregion Methods
+
+    public bool Activate()
+    {
+        return NextDialog();
+    }
+    #endregion Methods
 }

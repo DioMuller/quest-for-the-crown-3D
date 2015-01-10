@@ -5,7 +5,7 @@
     using System.Linq;
     using Input = UnityEngine.Input;
 
-    class InputAggregator
+    public class InputAggregator
     {
         readonly string[] _inputSourcesPrefix;
 

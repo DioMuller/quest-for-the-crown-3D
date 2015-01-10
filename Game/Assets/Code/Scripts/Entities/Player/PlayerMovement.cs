@@ -19,15 +19,15 @@ public class PlayerMovement : MonoBehaviour
 	private bool _canMove = true;
     #endregion Private Attributes
 
-    #region Private Properties
+    #region Properties
     /// <summary>
     /// Gets the current schema Character Input.
     /// </summary>
-    CharacterInput Input
+    public CharacterInput Input
     {
         get { return CharacterInput.FromSchemas(InputSchemas); }
     }
-    #endregion Private Properties
+    #endregion Properties
 
     #region Public Attributes
     /// <summary>
