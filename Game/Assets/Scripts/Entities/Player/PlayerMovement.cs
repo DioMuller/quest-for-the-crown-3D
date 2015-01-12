@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 	/// <summary>
 	/// The collider component.
 	/// </summary>
-	private CapsuleCollider _collider;
+	//private CapsuleCollider _collider;
 
 	/// <summary>
 	/// Can the entity move?
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-		_collider = GetComponent<CapsuleCollider>();
+		//_collider = GetComponent<CapsuleCollider>();
 		_groundCollider = (TerrainCollider) GameObject.FindObjectOfType(typeof(TerrainCollider));
     }
 
@@ -83,7 +83,9 @@ public class PlayerMovement : MonoBehaviour
 		if( !_canMove ) return;
 
 		#region New Position
-        var movementSpeed = Input.GetMovement() * Speed * Time.fixedDeltaTime;
+		var inputValue = Input.GetMovement();
+		inputValue.Normalize();
+        var movementSpeed = inputValue * Speed * Time.fixedDeltaTime;
 
 		var newPos = transform.position + movementSpeed;
         transform.LookAt(newPos);
@@ -109,11 +111,7 @@ public class PlayerMovement : MonoBehaviour
 				if( eulerX > 180 ) eulerX = 360 - eulerX;
 				if( eulerZ > 180 ) eulerZ = 360 - eulerZ;
 
-				if( eulerX < SlopeLimit &&  eulerZ < SlopeLimit )
-				{
-					transform.rotation = rotation;
-				}
-				else
+				if( !( eulerX < SlopeLimit &&  eulerZ < SlopeLimit ) )
 				{
 					canMoveSlope = false;
 				}
