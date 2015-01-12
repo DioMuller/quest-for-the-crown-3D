@@ -9,11 +9,6 @@ public class DialogAction : MonoBehaviour, EventAction
 	/// The next dialog to be shown.
 	/// </summary>
 	private int _nextDialog = -1;
-
-	/// <summary>
-	/// The dialog localization data file.
-	/// </summary>
-    private LocalizationData _dialog;
     #endregion Private Attributes
 
     #region Public Attributes
@@ -29,7 +24,6 @@ public class DialogAction : MonoBehaviour, EventAction
 	/// </summary>
 	void Start()
 	{
-		_dialog = LocalizationManager.Instance.DialogLocalization;
 	}
 	
 	/// <summary>
@@ -46,11 +40,6 @@ public class DialogAction : MonoBehaviour, EventAction
 	/// <param name="other"></param>
 	void OnTriggerEnter(Collider other)
 	{
-		if( _dialog == null )
-		{
-			_dialog = LocalizationManager.Instance.DialogLocalization;
-		}
-
 		if (other.tag == "Player")
 		{
 			var interaction = other.GetComponent<PlayerInteraction>();
@@ -88,10 +77,7 @@ public class DialogAction : MonoBehaviour, EventAction
 	{
 		try
 		{
-			if (_dialog != null)
-			{
-				MessageBox.Instance.ShowMessage(_dialog.GetEntry(DialogKeys[_nextDialog]));
-			}
+			MessageBox.Instance.ShowMessage(LocalizationManager.GetText(DialogKeys[_nextDialog]));
 		}
 		catch (Exception ex)
 		{

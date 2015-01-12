@@ -9,18 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c0315d32e4388c4aa3a8f43df5d2597, type: 3}
-  m_Name: DialogData
+  m_Name: DialogData.Portuguese
   m_EditorClassIdentifier: 
+  Language: Portuguese
   Entries:
-  - Language: 
-    Key: TestDialog
-    Value: This is a test dialog.
-  - Language: Portuguese
-    Key: TestDialog
+  - Key: TestDialog
     Value: "Este \xE9 um di\xE1logo teste."
-  - Language: 
-    Key: TestDialog2
-    Value: This is another test dialog.
-  - Language: Portuguese
-    Key: TestDialog2
+  - Key: TestDialog2
     Value: "Este \xE9 outro di\xE1logo teste."
