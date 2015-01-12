@@ -1815,7 +1815,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 563747231}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 0, y: 100, z: 0}
+  m_LocalPosition: {x: 0, y: 550, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1131545086}
@@ -4658,7 +4658,7 @@ GameObject:
   - 114: {fileID: 1641024237}
   - 114: {fileID: 1641024236}
   - 114: {fileID: 1641024240}
-  - 65: {fileID: 1641024238}
+  - 136: {fileID: 1641024238}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4710,8 +4710,8 @@ MonoBehaviour:
   MinimapSprite: {fileID: 2800000, guid: 9e04c86c2d8f8fd4fb480b11877cba3c, type: 3}
   SpriteColor: {r: .0344825983, g: 1, b: 0, a: 1}
   Size: 20
---- !u!65 &1641024238
-BoxCollider:
+--- !u!136 &1641024238
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4719,8 +4719,9 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 20, z: 5}
+  m_Radius: 5
+  m_Height: 20
+  m_Direction: 1
   m_Center: {x: 0, y: 10, z: 0}
 --- !u!54 &1641024239
 Rigidbody:

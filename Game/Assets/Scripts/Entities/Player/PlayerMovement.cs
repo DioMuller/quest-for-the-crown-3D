@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Assets.Libs.Input;
 
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(CapsuleCollider))]
 public class PlayerMovement : MonoBehaviour
 {
     #region Private Attributes
@@ -13,6 +13,11 @@ public class PlayerMovement : MonoBehaviour
     /// Character Controller component.
     /// </summary>
     private Rigidbody _rigidbody;
+
+	/// <summary>
+	/// The collider component.
+	/// </summary>
+	private CapsuleCollider _collider;
 
 	/// <summary>
 	/// Can the entity move?
@@ -59,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-		_rigidbody.freezeRotation = true;
+		_collider = GetComponent<CapsuleCollider>();
     }
 
     /// <summary>
@@ -69,10 +74,24 @@ public class PlayerMovement : MonoBehaviour
     {
 		if( !_canMove ) return;
 
+		#region New Position
         var movementSpeed = Input.GetMovement() * Speed * Time.fixedDeltaTime;
 
 		var newPos = transform.position + movementSpeed;
         transform.LookAt(newPos);
+		#endregion New Position
+
+		#region Slope Detection
+		RaycastHit hit = new RaycastHit();
+		var ray = new Ray(transform.position, Vector3.down);
+
+		if( _collider.Raycast(ray, out hit, Speed) )
+		{
+			var slope = hit.normal;
+
+			transform.rotation = Quaternion.FromToRotation(transform.up, slope) * transform.rotation;
+		}
+		#endregion Slope Detection
 
 		_rigidbody.MovePosition(newPos);
     }
