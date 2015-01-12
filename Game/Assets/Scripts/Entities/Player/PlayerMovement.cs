@@ -96,14 +96,20 @@ public class PlayerMovement : MonoBehaviour
 			RaycastHit hit = new RaycastHit();
 			var ray = new Ray(transform.position, Vector3.down);
 
-			if( _groundCollider.Raycast(ray, out hit, 1000) )
+			if( _groundCollider.Raycast(ray, out hit, 10) )
 			{
 				var slope = hit.normal;
 
 				var rotation = Quaternion.FromToRotation(transform.up, slope) * transform.rotation;
 				var euler = rotation.eulerAngles;
 
-				if( Mathf.Abs(euler.x) < SlopeLimit && Mathf.Abs(euler.z) < SlopeLimit )
+				var eulerX = Mathf.Abs(euler.x);
+				var eulerZ = Mathf.Abs(euler.z);
+
+				if( eulerX > 180 ) eulerX = 360 - eulerX;
+				if( eulerZ > 180 ) eulerZ = 360 - eulerZ;
+
+				if( eulerX < SlopeLimit &&  eulerZ < SlopeLimit )
 				{
 					transform.rotation = rotation;
 				}
