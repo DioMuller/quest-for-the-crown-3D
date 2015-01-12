@@ -51,7 +51,8 @@ public class MinimapEntity : MonoBehaviour
 		minimap.transform.parent = this.transform;
 
 		// Transform Position
-		minimap.transform.localPosition = Vector3.zero;
+		minimap.transform.localPosition = new Vector3(0.0f, 1.0f, 0.0f);
+		minimap.transform.localScale = Vector3.one;
 		minimap.transform.localRotation = Quaternion.Euler(90, 0, 0);
 	}
 
