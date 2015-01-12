@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Assets.Libs.Input;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(BoxCollider))]
 public class PlayerMovement : MonoBehaviour
 {
     #region Private Attributes
@@ -44,6 +45,11 @@ public class PlayerMovement : MonoBehaviour
     /// Input sources prefix used for movement.
     /// </summary>
     public string[] InputSchemas;
+
+	/// <summary>
+	/// The max velocity change.
+	/// </summary>
+	public float MaxVelocityChange;
     #endregion Public Attributes
 
     #region MonoBehaviour Methods
@@ -53,19 +59,22 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+		_rigidbody.freezeRotation = true;
     }
 
     /// <summary>
     /// Called once per frame.
     /// </summary>
-    void Update()
+    void FixedUpdate()
     {
 		if( !_canMove ) return;
 
-        Vector3 movementSpeed = Input.GetMovement() * Speed * Time.deltaTime;
-        var newPos = transform.position + movementSpeed;
+        var movementSpeed = Input.GetMovement() * Speed * Time.fixedDeltaTime;
+
+		var newPos = transform.position + movementSpeed;
         transform.LookAt(newPos);
-        _rigidbody.MovePosition(newPos);
+
+		_rigidbody.MovePosition(newPos);
     }
 
     #endregion MonoBehaviour Methods
