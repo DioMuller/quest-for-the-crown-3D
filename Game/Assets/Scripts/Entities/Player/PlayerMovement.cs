@@ -23,6 +23,11 @@ public class PlayerMovement : MonoBehaviour
 	/// Can the entity move?
 	/// </summary>
 	private bool _canMove = true;
+
+	/// <summary>
+	/// The terrain collider.
+	/// </summary>
+	public TerrainCollider _groundCollider;
     #endregion Private Attributes
 
     #region Properties
@@ -55,6 +60,8 @@ public class PlayerMovement : MonoBehaviour
 	/// The max velocity change.
 	/// </summary>
 	public float MaxVelocityChange;
+
+	public float SlopeLimit = 30.0f;
     #endregion Public Attributes
 
     #region MonoBehaviour Methods
@@ -65,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
 		_collider = GetComponent<CapsuleCollider>();
+		_groundCollider = (TerrainCollider) GameObject.FindObjectOfType(typeof(TerrainCollider));
     }
 
     /// <summary>
@@ -82,18 +90,33 @@ public class PlayerMovement : MonoBehaviour
 		#endregion New Position
 
 		#region Slope Detection
-		RaycastHit hit = new RaycastHit();
-		var ray = new Ray(transform.position, Vector3.down);
-
-		if( _collider.Raycast(ray, out hit, Speed) )
+		bool canMoveSlope = true;
+		if( _groundCollider != null )
 		{
-			var slope = hit.normal;
+			RaycastHit hit = new RaycastHit();
+			var ray = new Ray(transform.position, Vector3.down);
 
-			transform.rotation = Quaternion.FromToRotation(transform.up, slope) * transform.rotation;
+			if( _groundCollider.Raycast(ray, out hit, 1000) )
+			{
+				var slope = hit.normal;
+
+				var rotation = Quaternion.FromToRotation(transform.up, slope) * transform.rotation;
+				var euler = rotation.eulerAngles;
+
+				if( Mathf.Abs(euler.x) < SlopeLimit && Mathf.Abs(euler.z) < SlopeLimit )
+				{
+					transform.rotation = rotation;
+				}
+				else
+				{
+					canMoveSlope = false;
+				}
+			}
 		}
 		#endregion Slope Detection
 
-		_rigidbody.MovePosition(newPos);
+		if( canMoveSlope )
+			_rigidbody.MovePosition(newPos);
     }
 
     #endregion MonoBehaviour Methods
