@@ -23,3 +23,9 @@ MonoBehaviour:
     Value: Carregar Jogo
   - Key: Menu.Options
     Value: "Op\xE7\xF5es"
+  - Key: Options.Title
+    Value: "Op\xE7\xF5es"
+  - Key: Options.Save
+    Value: Salvar
+  - Key: Options.Cancel
+    Value: Cancelar

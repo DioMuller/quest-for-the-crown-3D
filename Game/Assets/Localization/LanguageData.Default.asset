@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0315d32e4388c4aa3a8f43df5d2597, type: 3}
   m_Name: LanguageData.Default
   m_EditorClassIdentifier: 
-  Language: Default
+  Language: English
   Entries:
   - Key: Dialog.TestDialog
     Value: This is a test dialog.
@@ -23,3 +23,9 @@ MonoBehaviour:
     Value: Load Game
   - Key: Menu.Options
     Value: Options
+  - Key: Options.Title
+    Value: Options
+  - Key: Options.Save
+    Value: Save
+  - Key: Options.Cancel
+    Value: Cancel

@@ -18,6 +18,11 @@ public class LocalizationManager : MonoBehaviour
 	/// The dialog localization data file.
 	/// </summary>
     public LocalizationData[] DialogLocalization = null;
+
+	/// <summary>
+	/// The default language.
+	/// </summary>
+	public string DefaultLanguage = "English";
     #endregion Public Attributes
 
     #region MonoBehaviour Methods
@@ -44,7 +49,7 @@ public class LocalizationManager : MonoBehaviour
 			Debug.Log("Key not found on language, searching for it on default. " + e.Message);
 			try
 			{
-				return Instance.DialogLocalization.FirstOrDefault((l) => l.Language == "Default").GetEntry(key);
+				return Instance.DialogLocalization.FirstOrDefault((l) => l.Language == Instance.DefaultLanguage).GetEntry(key);
 			}
 			catch(Exception ex)
 			{
