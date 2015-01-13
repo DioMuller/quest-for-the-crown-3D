@@ -42,7 +42,7 @@ public class LocalizationManager : MonoBehaviour
 
 		try
 		{
-			return Instance.DialogLocalization.FirstOrDefault((l) => l.Language == Application.systemLanguage.ToString()).GetEntry(key);
+			return Instance.DialogLocalization.FirstOrDefault((l) => l.Language == GameSettings.Language).GetEntry(key);
 		}
 		catch(Exception e)
 		{

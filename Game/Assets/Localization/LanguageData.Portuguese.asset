@@ -29,3 +29,5 @@ MonoBehaviour:
     Value: Salvar
   - Key: Options.Cancel
     Value: Cancelar
+  - Key: Options.Language
+    Value: Idioma
