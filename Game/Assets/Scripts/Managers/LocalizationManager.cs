@@ -41,12 +41,14 @@ public class LocalizationManager : MonoBehaviour
 		}
 		catch(Exception e)
 		{
+			Debug.Log("Key not found on language, searching for it on default. " + e.Message);
 			try
 			{
 				return Instance.DialogLocalization.FirstOrDefault((l) => l.Language == "Default").GetEntry(key);
 			}
 			catch(Exception ex)
 			{
+				Debug.Log("Key not found on default, returning null. " + ex.Message);
 				return null;
 			}
 		}
