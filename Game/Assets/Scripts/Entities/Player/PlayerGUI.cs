@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -23,12 +23,12 @@ public class PlayerGUI : MonoBehaviour
 	/// <summary>
 	/// The health bar instance.
 	/// </summary>
-	private GUIBar _healthBar;
+	private CircleBar _healthBar;
 
 	/// <summary>
 	/// The magic bar instance.
 	/// </summary>
-	private GUIBar _magicBar;
+	private CircleBar _magicBar;
 	#endregion Private Attributes (GUI Attributes)
 
 
@@ -50,8 +50,8 @@ public class PlayerGUI : MonoBehaviour
 			var lifeBar = statusPanel.transform.FindChild("LifeBar");
 			var magicBar = statusPanel.transform.FindChild("MagicBar");
 
-			_healthBar = lifeBar.GetComponent<GUIBar>();
-			_magicBar = magicBar.GetComponent<GUIBar>();
+			_healthBar = lifeBar.GetComponent<CircleBar>();
+			_magicBar = magicBar.GetComponent<CircleBar>();
 
 			_healthBar.MaximumValue = _characterStatus.MaxHealth;
 			_healthBar.CurrentValue = _characterStatus.CurrentHealth;

@@ -1,9 +1,11 @@
-﻿using System;
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class CharacterStatus : MonoBehaviour
 {
+	private float delayTime = 0.0f;
+
 	#region Public Attributes
     public bool RemoveOnDestroy = true;
 
@@ -29,6 +31,23 @@ public class CharacterStatus : MonoBehaviour
 		if (IsDead && RemoveOnDestroy)
             PlayDestruction(null);
     }
+
+	// TODO: Remove.
+	void Update()
+	{
+		delayTime -= Time.deltaTime;
+
+		if (delayTime < 0)
+		{
+			if (Input.GetKey(KeyCode.Alpha2)) { AddHealth(1); delayTime = 0.1f; }
+			if (Input.GetKey(KeyCode.Alpha1)) { RemoveHealth(1, this); delayTime = 0.1f; }
+
+			if (Input.GetKey(KeyCode.Alpha4)) { RestoreMagic(1); delayTime = 0.1f; }
+			if (Input.GetKey(KeyCode.Alpha3)) { UseMagic(1); delayTime = 0.1f; }
+
+			
+		}
+	}
 	#endregion MonoBehaviour Methods
 
 	#region Status Methods
@@ -46,8 +65,9 @@ public class CharacterStatus : MonoBehaviour
             return;
 
 		CurrentHealth -= amount;
-		if (CurrentHealth <= 0)
-            StartCoroutine(PlayDestruction(attacker));
+		
+		//if (CurrentHealth <= 0)
+        //    StartCoroutine(PlayDestruction(attacker));
     }
 
 	public bool UseMagic(int amount)
