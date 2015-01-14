@@ -38,7 +38,7 @@ public class GUIBar : MonoBehaviour
 	/// <summary>
 	/// The value sprite renderer.
 	/// </summary>
-	private SpriteRenderer _valueSpriteRenderer;
+	private Image _valueImageRenderer;
 
 	/// <summary>
 	/// The counter label.
@@ -48,7 +48,7 @@ public class GUIBar : MonoBehaviour
 	/// <summary>
 	/// The icon sprite renderer.
 	/// </summary>
-	private SpriteRenderer _iconSpriteRenderer;
+	private Image _iconImageRenderer;
 
 	/// <summary>
 	/// The current value.
@@ -104,9 +104,9 @@ public class GUIBar : MonoBehaviour
 		if( _valueImage != null )
 		{
 			_valueRectTransform = _valueImage.GetComponent<RectTransform>();
-			_valueSpriteRenderer = _valueImage.GetComponent<SpriteRenderer>();
+			_valueImageRenderer = _valueImage.GetComponent<Image>();
 
-			_valueSpriteRenderer.color = ValueColor;
+			_valueImageRenderer.color = ValueColor;
 		}
 
 		if( _labelText != null )
@@ -116,14 +116,17 @@ public class GUIBar : MonoBehaviour
 
 		if( _iconImage != null )
 		{
-			_iconSpriteRenderer = _iconImage.GetComponent<SpriteRenderer>();
+			_iconImageRenderer = _iconImage.GetComponent<Image>();
 
 			// Create Sprite.
-			var sprite = Sprite.Create(Icon,
-			                           new Rect(0, 0, Icon.width, Icon.height),
-			                           new Vector2(0.5f, 0.5f), Icon.height );
+			if( Icon != null )
+			{
+				var sprite = Sprite.Create(Icon,
+				                           new Rect(0, 0, Icon.width, Icon.height),
+				                           new Vector2(0.5f, 0.5f), Icon.height );
 
-			_iconSpriteRenderer.sprite = sprite;
+				_iconImageRenderer.sprite = sprite;
+			}
 		}
 
 		UpdateValues();
