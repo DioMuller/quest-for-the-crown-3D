@@ -10,12 +10,13 @@ namespace Assets.Libs.Input
     {
         static readonly Dictionary<IEnumerable<string>, CharacterInput> _loadedInputs = new Dictionary<IEnumerable<string>, CharacterInput>();
 
+
         public static CharacterInput FromSchemas(IEnumerable<string> schemas)
         {
             if (!_loadedInputs.ContainsKey(schemas))
-                _loadedInputs.Add(schemas, new CharacterInput(schemas));
+				_loadedInputs.Add(schemas, new CharacterInput(schemas));
 
-            return _loadedInputs[schemas];
+			return _loadedInputs[schemas];
         }
 
         private CharacterInput(IEnumerable<string> schemas)
