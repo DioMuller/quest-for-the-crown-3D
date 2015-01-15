@@ -21,11 +21,11 @@ public class PlayerWeapons : MonoBehaviour
     /// </summary>
     bool _switchWeaponPressed = false;
 
-    IList<IWeapon> _weapons;
+    IList<Weapon> _weapons;
     #endregion Private Attributes
 
     #region Public Properties
-    public IWeapon CurrentWeapon
+    public Weapon CurrentWeapon
     {
         get { return _currentWeapon >= _weapons.Count ? null : _weapons[_currentWeapon]; }
     }
@@ -38,7 +38,7 @@ public class PlayerWeapons : MonoBehaviour
     void Start()
     {
         _playerController = GetComponent<PlayerMovement>();
-        _weapons = new List<IWeapon>();
+        _weapons = new List<Weapon>();
     }
 
     /// <summary>
@@ -67,19 +67,21 @@ public class PlayerWeapons : MonoBehaviour
             _switchWeaponPressed = false;
 
             if(CurrentWeapon != null && _playerController.Input.GetButton("Attack"))
+			{
                 CurrentWeapon.Attack();
+			}
         }
     }
     #endregion MonoBehaviour Methods
 
     #region Public Methods
-    public void AddWeapon(IWeapon weapon)
+    public void AddWeapon(Weapon weapon)
     {
         _weapons.Add(weapon);
         SetWeapon(_currentWeapon);
     }
 
-    public void RemoveWeapon(IWeapon weapon)
+    public void RemoveWeapon(Weapon weapon)
     {
         _weapons.Remove(weapon);
         SetWeapon(_currentWeapon);
@@ -106,9 +108,9 @@ public class PlayerWeapons : MonoBehaviour
         if (oldWeapon != newWeapon)
         {
             if (oldWeapon != null)
-                oldWeapon.Unequip();
+                oldWeapon.OnUnequip();
             if (newWeapon != null)
-                newWeapon.Equip();
+                newWeapon.OnEquip();
         }
     }
     #endregion Private Methods

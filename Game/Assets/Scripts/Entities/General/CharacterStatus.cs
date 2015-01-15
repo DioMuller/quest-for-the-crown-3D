@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CharacterStatus : MonoBehaviour
 {
-	private float delayTime = 0.0f;
-
 	#region Public Attributes
     public bool RemoveOnDestroy = true;
 
@@ -31,23 +29,6 @@ public class CharacterStatus : MonoBehaviour
 		if (IsDead && RemoveOnDestroy)
             PlayDestruction(null);
     }
-
-	// TODO: Remove.
-	void Update()
-	{
-		delayTime -= Time.deltaTime;
-
-		if (delayTime < 0)
-		{
-			if (Input.GetKey(KeyCode.Alpha2)) { AddHealth(1); delayTime = 0.1f; }
-			if (Input.GetKey(KeyCode.Alpha1)) { RemoveHealth(1, this); delayTime = 0.1f; }
-
-			if (Input.GetKey(KeyCode.Alpha4)) { RestoreMagic(1); delayTime = 0.1f; }
-			if (Input.GetKey(KeyCode.Alpha3)) { UseMagic(1); delayTime = 0.1f; }
-
-			
-		}
-	}
 	#endregion MonoBehaviour Methods
 
 	#region Status Methods
@@ -59,7 +40,7 @@ public class CharacterStatus : MonoBehaviour
 		CurrentHealth = Math.Min(CurrentHealth + health, MaxHealth);
     }
 
-	public void RemoveHealth(int amount, MonoBehaviour attacker)
+	public void RemoveHealth(int amount, Transform attacker)
     {
 		if (IsDead)
             return;
@@ -85,7 +66,7 @@ public class CharacterStatus : MonoBehaviour
 	#endregion Status Methods
 
 	#region Event Methods
-    IEnumerator PlayDestruction(MonoBehaviour killer)
+	IEnumerator PlayDestruction(Transform killer)
     {
 		IsDead = true;
 
