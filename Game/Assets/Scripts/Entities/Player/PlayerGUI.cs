@@ -31,7 +31,6 @@ public class PlayerGUI : MonoBehaviour
 	private CircleBar _magicBar;
 	#endregion Private Attributes (GUI Attributes)
 
-
 	#region MonoBehaviour Methods
 	/// <summary>
 	/// Called on initialization.
