@@ -31,3 +31,7 @@ MonoBehaviour:
     Value: Cancelar
   - Key: Options.Language
     Value: Idioma
+  - Key: Options.General
+    Value: Geral
+  - Key: Options.Controls
+    Value: Controles
