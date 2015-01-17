@@ -1,10 +1,8 @@
-﻿namespace Assets.Libs.Input
+namespace Assets.Libs.Input
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Input = UnityEngine.Input;
-
     public class InputAggregator
     {
         readonly string[] _inputSourcesPrefix;
@@ -21,13 +19,13 @@
         public bool GetButton(string name)
         {
             return InputSourceNames(name)
-                .Any(s => Input.GetButton(s));
+				.Any(s => cInput.GetButton(s));
         }
 
         public float GetAxis(string name)
         {
             return InputSourceNames(name)
-                .Select(s => Input.GetAxis(s))
+                .Select(s => cInput.GetAxisRaw(s))
                 .OrderByDescending(v => Math.Abs(v))
                 .FirstOrDefault();
         }

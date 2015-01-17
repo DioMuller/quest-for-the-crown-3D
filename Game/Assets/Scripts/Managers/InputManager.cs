@@ -13,27 +13,33 @@ public class InputManager : MonoBehaviour {
 
 		// cINPUT SETUP
 
-		// setting up the default inputkeys...
-		cInput.SetKey("Pause", "P"); // sets the 'Pause' input to "P" - notice we didn't set up a secondary input-this will be defaulted to 'None'
-		cInput.SetKey("Left", "A", "LeftArrow"); // sets the 'Left' primary input to 'A' and the secondary input to 'LeftArrow'
-		cInput.SetKey("Right", "D", Keys.RightArrow); // inputs can be set as string or as Key, using the Keys class
-		cInput.SetKey("Up", "W", Keys.UpArrow); // using the Keys class allows you to autocomplete the inputs
-		cInput.SetKey("Down", "S", Keys.DownArrow);
-		cInput.SetKey("Shoot", Keys.Space, Keys.X, Keys.None, Keys.LeftShift); // here we set up a default modifier key for "X" so ACTION "Shoot" will default to 'SPACE' & 'LeftShift+X' as default inputs 
+		// KEYBOARD
+		// Keys
+		cInput.SetKey("Keyboard_Pause", "P");
+		cInput.SetKey("Keyboard_Left", "A", "LeftArrow");
+		cInput.SetKey("Keyboard_Right", "D", Keys.RightArrow);
+		cInput.SetKey("Keyboard_Up", "W", Keys.UpArrow);
+		cInput.SetKey("Keyboard_Down", "S", Keys.DownArrow);
+		cInput.SetKey("Keyboard_Action", Keys.Space, Keys.X);
+		//Axis
+		cInput.SetAxis("Keyboard_Horizontal", "Keyboard_Left", "Keyboard_Right");
+		cInput.SetAxis("Keyboard_Vertical", "Keyboard_Up", "Keyboard_Down"); 
 
-		// The Keys class can be very helpful in getting the correct name.
-		cInput.SetKey("Weapon 1", Keys.Joy1Axis1Negative);
-		cInput.SetKey("Weapon 2", Keys.Joy1Axis1Positive);
-		cInput.SetKey("Weapon 3", Keys.Joy1Axis1Negative);
-		cInput.SetKey("Weapon 4", Keys.Joy1Axis1Positive);
-		cInput.SetKey("Weapon 5", Keys.Joy1Axis1Negative);
-		cInput.SetKey("Weapon 6", Keys.Joy1Axis1Positive);
-		// Note that the aboveinputs aren't actually used in this demo.
-		// They're just defined here to show you how it's done.
+		//JOYPAD
+		for (int i = 1; i <= 4; i++)
+		{
+			// KEYBOARD
+			// Keys
+			cInput.SetKey("Joy" + i + "_Pause", "Joystick" + i + "Button1");
+			cInput.SetKey("Joy" + i + "_Left", "A", "Joy"+ i +" Axis 1+");
+			cInput.SetKey("Joy" + i + "_Right", "D", "Joy" + i + " Axis 1-");
+			cInput.SetKey("Joy" + i + "_Up", "W", "Joy" + i + " Axis 2+");
+			cInput.SetKey("Joy" + i + "_Down", "S", "Joy" + i + " Axis 2-");
+			cInput.SetKey("Joy" + i + "_Action", "Joystick" + i + "Button1");
 
-		// we define an axis like this:
-		cInput.SetAxis("Horizontal", "Left", "Right"); // we set up the 'Horizontal' axis with 'Left' and 'Right'as inputs
-		cInput.SetAxis("Vertical", "Up", "Down"); // we set up 'Vertical' axis with 'Up' and 'Down' as inputs. 
-		// Notice we don't use the 'Vertical' axis in our control code in plane.cs but we don't want to allow modifier keys for inputs UP and DOWN. Any inputs that are part of an axis are ignoring modifiers
+			//Axis
+			cInput.SetAxis("Joy" + i + "_Horizontal", "Joy" + i + "_Left", "Joy" + i + "_Right");
+			cInput.SetAxis("Joy" + i + "_Vertical", "Joy" + i + "_Up", "Joy" + i + "_Down"); 
+		}
 	}
 }
