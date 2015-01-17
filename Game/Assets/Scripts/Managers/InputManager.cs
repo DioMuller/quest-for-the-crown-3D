@@ -23,7 +23,7 @@ public class InputManager : MonoBehaviour {
 		cInput.SetKey("Keyboard_Action", Keys.Space, Keys.X);
 		//Axis
 		cInput.SetAxis("Keyboard_Horizontal", "Keyboard_Left", "Keyboard_Right");
-		cInput.SetAxis("Keyboard_Vertical", "Keyboard_Up", "Keyboard_Down"); 
+		cInput.SetAxis("Keyboard_Vertical", "Keyboard_Down", "Keyboard_Up"); 
 
 		//JOYPAD
 		for (int i = 1; i <= 4; i++)
@@ -39,7 +39,7 @@ public class InputManager : MonoBehaviour {
 
 			//Axis
 			cInput.SetAxis("Joy" + i + "_Horizontal", "Joy" + i + "_Left", "Joy" + i + "_Right");
-			cInput.SetAxis("Joy" + i + "_Vertical", "Joy" + i + "_Up", "Joy" + i + "_Down"); 
+			cInput.SetAxis("Joy" + i + "_Vertical", "Joy" + i + "_Down", "Joy" + i + "_Up"); 
 		}
 	}
 }
