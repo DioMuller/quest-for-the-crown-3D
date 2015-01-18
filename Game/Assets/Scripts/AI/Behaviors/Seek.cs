@@ -27,6 +27,11 @@ public class Seek : MovementBehaviour
 	/// Seconds to recalculate next target.
 	/// </summary>
 	public float SecsToRecalculate = 3.0f;
+
+	/// <summary>
+	/// Minimum distance from target.
+	/// </summary>
+	public float MinDistanceFromTarget = 10.0f;
 	#endregion Public Attributes
 
 	#region MonoBehaviour Methods
@@ -71,7 +76,7 @@ public class Seek : MovementBehaviour
 		if (TagsToSeek.Length < 1) return;
 
 		_currentTarget = null;
-		float minDist = float.MaxValue;
+		float minDist = MinDistanceFromTarget;
 
 		foreach (var tag in TagsToSeek)
 		{
