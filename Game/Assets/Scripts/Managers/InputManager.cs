@@ -86,15 +86,15 @@ public class InputManager : MonoBehaviour {
 			//"Joy" + i + "_
 			//"Joy"+ i +" Axis 1+"
 			// Buttons
-			cInput.SetKey("Joy" + i + "_MoveLeft", "Joy" + i + " Axis 1+");
-			cInput.SetKey("Joy" + i + "_MoveRight", "Joy" + i + " Axis 1-");
-			cInput.SetKey("Joy" + i + "_MoveUp", "Joy" + i + " Axis 2+");
-			cInput.SetKey("Joy" + i + "_MoveDown", "Joy" + i + " Axis 2-");
+			cInput.SetKey("Joy" + i + "_MoveLeft", "Joy" + i + " Axis 1-");
+			cInput.SetKey("Joy" + i + "_MoveRight", "Joy" + i + " Axis 1+");
+			cInput.SetKey("Joy" + i + "_MoveUp", "Joy" + i + " Axis 2-");
+			cInput.SetKey("Joy" + i + "_MoveDown", "Joy" + i + " Axis 2+");
 
-			cInput.SetKey("Joy" + i + "_AimLeft", "Joy" + i + " Axis 4+");
-			cInput.SetKey("Joy" + i + "_AimRight", "Joy" + i + " Axis 4-");
-			cInput.SetKey("Joy" + i + "_AimUp", "Joy" + i + " Axis 5+");
-			cInput.SetKey("Joy" + i + "_AimDown", "Joy" + i + " Axis 5-");
+			cInput.SetKey("Joy" + i + "_AimLeft", "Joy" + i + " Axis 4-");
+			cInput.SetKey("Joy" + i + "_AimRight", "Joy" + i + " Axis 4+");
+			cInput.SetKey("Joy" + i + "_AimUp", "Joy" + i + " Axis 5-");
+			cInput.SetKey("Joy" + i + "_AimDown", "Joy" + i + " Axis 5+");
 
 			cInput.SetKey("Joy" + i + "_Action", "Joystick" + i + "Button0");
 			cInput.SetKey("Joy" + i + "_Confirm", "Joystick" + i + "Button0");
