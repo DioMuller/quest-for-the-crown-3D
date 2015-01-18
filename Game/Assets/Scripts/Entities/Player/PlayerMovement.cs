@@ -80,7 +80,22 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-		if( !_canMove ) return;
+		#region Aiming / LookAt Position
+		var aimValue = Input.GetTarget();
+		bool aiming = false;
+
+		if (aimValue.sqrMagnitude > 0.1)
+		{
+			aimValue.Normalize();
+			aiming = true;
+
+			var newAim = transform.position + aimValue;
+			transform.LookAt(newAim);
+		}
+		#endregion Aiming / LookAt Position
+
+		#region Movement Position
+		if (!_canMove) return;
 
 		#region New Position
 		var inputValue = Input.GetMovement();
@@ -88,8 +103,12 @@ public class PlayerMovement : MonoBehaviour
         var movementSpeed = inputValue * Speed * Time.fixedDeltaTime;
 
 		var newPos = transform.position + movementSpeed;
-        transform.LookAt(newPos);
-		#endregion New Position
+
+	    if (!aiming)
+	    {
+		    transform.LookAt(newPos);
+	    }
+	    #endregion New Position
 
 		#region Slope Detection
 		bool canMoveSlope = true;
@@ -121,6 +140,8 @@ public class PlayerMovement : MonoBehaviour
 
 		if( canMoveSlope )
 			_rigidbody.MovePosition(newPos);
+
+		#endregion Movement Position
     }
 
     #endregion MonoBehaviour Methods

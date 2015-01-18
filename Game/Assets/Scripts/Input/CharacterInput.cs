@@ -34,5 +34,16 @@ namespace Assets.Libs.Input
 			var mZ = GetAxis("MoveVertical");
             return new Vector3(mX, 0, mZ);
         }
+
+		/// <summary>
+		/// Gets the current input movement.
+		/// </summary>
+		/// <returns></returns>
+		public Vector3 GetTarget()
+		{
+			var mX = GetAxis("AimHorizontal");
+			var mZ = GetAxis("AimVertical");
+			return new Vector3(mX, 0, mZ);
+		}
     }
 }
