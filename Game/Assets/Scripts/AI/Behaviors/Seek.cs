@@ -2,37 +2,15 @@ using System.Linq;
 using UnityEngine;
 using System.Collections;
 
-
+[RequireComponent(typeof(TargetSelector))]
 public class Seek : MovementBehaviour
 {
 	#region Private Attributes
 	/// <summary>
-	/// Current Target.
+	/// Current Target Selector.
 	/// </summary>
-	private GameObject _currentTarget;
-
-	/// <summary>
-	/// Seconds since last searched for a target.
-	/// </summary>
-	private float _secondsSinceLastTarget = 0.0f;
+	private TargetSelector _targetSelector;
 	#endregion Private Attributes
-
-	#region Public Attributes
-	/// <summary>
-	/// Tags the entity will seek.
-	/// </summary>
-	public string[] TagsToSeek = {"Player"};
-
-	/// <summary>
-	/// Seconds to recalculate next target.
-	/// </summary>
-	public float SecsToRecalculate = 3.0f;
-
-	/// <summary>
-	/// Minimum distance from target.
-	/// </summary>
-	public float MinDistanceFromTarget = 10.0f;
-	#endregion Public Attributes
 
 	#region MonoBehaviour Methods
 	/// <summary>
@@ -41,7 +19,7 @@ public class Seek : MovementBehaviour
 	void Start ()
 	{
 		StartBehaviour();
-		FindNextTarget();
+		_targetSelector = GetComponent<TargetSelector>();
 	}
 	
 	/// <summary>
@@ -49,53 +27,12 @@ public class Seek : MovementBehaviour
 	/// </summary>
 	void Update ()
 	{
-		_secondsSinceLastTarget += Time.deltaTime;
-
-		if (_secondsSinceLastTarget > SecsToRecalculate)
+		if (_targetSelector.CurrentTarget != null)
 		{
-			FindNextTarget();
-			_secondsSinceLastTarget = 0.0f;
-		}
-
-		if (_currentTarget != null)
-		{
-			var direction = (_currentTarget.transform.position - transform.position);
+			var direction = (_targetSelector.CurrentTarget.transform.position - transform.position);
 
 			MovementDirection = direction;
 		}
 	}
 	#endregion MonoBehaviour Methods
-
-	#region Internal Methods
-	/// <summary>
-	/// Finds nearest GameObject and sets as target.
-	/// </summary>
-	/// <returns></returns>
-	public void FindNextTarget()
-	{
-		if (TagsToSeek.Length < 1) return;
-
-		_currentTarget = null;
-		float minDist = MinDistanceFromTarget;
-
-		foreach (var tag in TagsToSeek)
-		{
-			var objects = GameObject.FindGameObjectsWithTag(tag);
-
-			var closest = objects.OrderBy((o) => Vector3.Distance(o.transform.position, this.transform.position)).FirstOrDefault();
-			
-			if (closest != null)
-			{
-				var closestDist = Vector3.Distance(closest.transform.position, this.transform.position);
-
-				if (closestDist < minDist)
-				{
-					_currentTarget = closest;
-					minDist = closestDist;
-				}
-			}
-		}
-
-	}
-	#endregion Internal Methods
 }
