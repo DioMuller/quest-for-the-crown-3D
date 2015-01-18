@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,8 +30,8 @@ namespace Assets.Libs.Input
         /// <returns></returns>
         public Vector3 GetMovement()
         {
-            var mX = GetAxis("Horizontal");
-            var mZ = GetAxis("Vertical");
+            var mX = GetAxis("MoveHorizontal");
+			var mZ = GetAxis("MoveVertical");
             return new Vector3(mX, 0, mZ);
         }
     }
