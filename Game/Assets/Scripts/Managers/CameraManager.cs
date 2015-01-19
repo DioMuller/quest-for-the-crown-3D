@@ -29,6 +29,8 @@ public class CameraManager : MonoBehaviour
     #region Public Attributes
     public Transform CameraController1;
     public Transform CameraController2;
+
+    public Canvas Player2Canvas;
     #endregion
 
     #region MonoBehaviour Methods
@@ -93,6 +95,8 @@ public class CameraManager : MonoBehaviour
             _camera1.rect = new Rect(0, 0, 1, 1);
             _camera2Controller.enabled = false;
             _split = false;
+
+            Player2Canvas.enabled = false;
         }
     }
 
@@ -110,6 +114,8 @@ public class CameraManager : MonoBehaviour
             _camera2.rect = new Rect(0, 0, 1, 0.5f);
             _camera2Controller.enabled = true;
             _split = true;
+
+            Player2Canvas.enabled = true;
         }
     }
     #endregion Private Methods
