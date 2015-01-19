@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &108646
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 408646}
+  - 54: {fileID: 5408646}
+  - 114: {fileID: 11408644}
+  m_Layer: 0
+  m_Name: Fireball
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &152160
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 452160}
   m_Layer: 0
-  m_Name: WeaponSpawnPoint
+  m_Name: Weapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1792,6 +1809,7 @@ GameObject:
   - 114: {fileID: 11452168}
   - 114: {fileID: 11452170}
   - 114: {fileID: 11452160}
+  - 114: {fileID: 11408646}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2184,7 +2202,7 @@ GameObject:
   - 4: {fileID: 452448}
   - 95: {fileID: 9552160}
   m_Layer: 0
-  m_Name: Hero_01
+  m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2400,6 +2418,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &408646
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 12, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 452160}
+  m_RootOrder: 0
 --- !u!4 &452160
 Transform:
   m_ObjectHideFlags: 1
@@ -2407,9 +2437,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 12, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 408646}
   m_Father: {fileID: 452396}
   m_RootOrder: 1
 --- !u!4 &452162
@@ -4550,6 +4581,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152272}
   m_Mesh: {fileID: 4300004, guid: d80500ed9dfe2d947a272e8c773089f0, type: 3}
+--- !u!54 &5408646
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108646}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!54 &5452160
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -4580,6 +4626,32 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11408644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c129911cdf86d1a4e9ca4a634cefafe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Data: {fileID: 11400000, guid: 5aceb51256cb07c409bb9b5d918abdff, type: 2}
+--- !u!114 &11408646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d07473cfb93d8d4a8625f1c8139a911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapons:
+  - WeaponObject: {fileID: 11408644}
+    WeaponEnabled: 1
 --- !u!114 &11452160
 MonoBehaviour:
   m_ObjectHideFlags: 1

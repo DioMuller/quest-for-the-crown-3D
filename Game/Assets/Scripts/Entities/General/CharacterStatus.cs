@@ -45,8 +45,6 @@ public class CharacterStatus : MonoBehaviour
 		if (IsDead)
             return;
 
-        print("I was hit! Lost " + amount + " HP, of " + CurrentHealth);
-
 		CurrentHealth -= amount;
 		
 		if (CurrentHealth <= 0)
