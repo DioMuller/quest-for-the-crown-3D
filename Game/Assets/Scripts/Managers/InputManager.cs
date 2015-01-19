@@ -64,8 +64,8 @@ public class InputManager : MonoBehaviour {
 		cInput.SetKey("Keyboard_PrimaryAttack", Keys.Mouse0, Keys.LeftControl);
 		cInput.SetKey("Keyboard_SecondaryAttack", Keys.Mouse1, Keys.LeftAlt);
 
-		cInput.SetKey("Keyboard_QuickChangePrimary", Keys.Mouse0, Keys.LeftControl);
-		cInput.SetKey("Keyboard_QuickChangeSecondary", Keys.Mouse1, Keys.LeftAlt);
+		cInput.SetKey("Keyboard_QuickChangePrimary", "Q");
+		cInput.SetKey("Keyboard_QuickChangeSecondary", "E");
 
 		cInput.SetKey("Keyboard_UseItem1", "1");
 		cInput.SetKey("Keyboard_UseItem2", "2");

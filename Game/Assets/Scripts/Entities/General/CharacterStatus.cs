@@ -45,10 +45,12 @@ public class CharacterStatus : MonoBehaviour
 		if (IsDead)
             return;
 
+        print("I was hit! Lost " + amount + " HP, of " + CurrentHealth);
+
 		CurrentHealth -= amount;
 		
-		//if (CurrentHealth <= 0)
-        //    StartCoroutine(PlayDestruction(attacker));
+		if (CurrentHealth <= 0)
+            StartCoroutine(PlayDestruction(attacker));
     }
 
 	public bool UseMagic(int amount)
@@ -76,7 +78,7 @@ public class CharacterStatus : MonoBehaviour
             killer.SendMessage("Kill", this);
 
         if (RemoveOnDestroy)
-            Destroy(this);
+            Destroy(gameObject);
     }
 	#endregion Event Methods
 }

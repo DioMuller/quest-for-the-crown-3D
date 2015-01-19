@@ -8,7 +8,7 @@ public class WeaponHitbox : MonoBehaviour
 	void OnTriggerEnter(Collider other)
 	{
 		var status = other.GetComponent<CharacterStatus>();
-		
+
 		OnHit(status);
 		
 		if( ParentWeapon.Data.DestroyOnContact )

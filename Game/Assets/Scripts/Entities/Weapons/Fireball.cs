@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Fireball : MonoBehaviour {
-
+[RequireComponent(typeof(Rigidbody))]
+public class Fireball : Weapon 
+{
 	/// <summary>
 	/// Raises the attack event.
 	/// </summary>
-	public void OnAttack()
+    public override void OnAttack()
 	{
 
 	}
@@ -14,7 +15,7 @@ public class Fireball : MonoBehaviour {
 	/// <summary>
 	/// Raises the equip event.
 	/// </summary>
-	public void OnEquip()
+    public override void OnEquip()
 	{
 
 	}
@@ -22,7 +23,7 @@ public class Fireball : MonoBehaviour {
 	/// <summary>
 	/// Raises the unequip event.
 	/// </summary>
-	public void OnUnequip()
+	public override void OnUnequip()
 	{
 
 	}
