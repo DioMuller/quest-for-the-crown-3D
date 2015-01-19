@@ -4,6 +4,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Assets.Code.Libs;
 using System;
+using System.Linq;
+
+[Serializable]
+public class WeaponStatus
+{
+    public Weapon WeaponObject = null;
+    public bool WeaponEnabled = false;
+}
 
 [RequireComponent(typeof(PlayerMovement))]
 public class PlayerWeapons : MonoBehaviour
@@ -14,20 +22,22 @@ public class PlayerWeapons : MonoBehaviour
     /// </summary>
     PlayerMovement _playerController;
 
-    int _currentWeapon;
+    int _currentWeapon = -1;
 
     /// <summary>
     /// Switch weapon button is currently pressed.
     /// </summary>
     bool _switchWeaponPressed = false;
-
-    IList<Weapon> _weapons;
     #endregion Private Attributes
+
+    #region Public Attributes
+    public WeaponStatus[] Weapons;
+    #endregion Public Attributes
 
     #region Public Properties
     public Weapon CurrentWeapon
     {
-        get { return _currentWeapon >= _weapons.Count ? null : _weapons[_currentWeapon]; }
+        get { return _currentWeapon >= Weapons.Length || _currentWeapon < 0 ? null : Weapons[_currentWeapon].WeaponObject; }
     }
     #endregion
 
@@ -38,7 +48,11 @@ public class PlayerWeapons : MonoBehaviour
     void Start()
     {
         _playerController = GetComponent<PlayerMovement>();
-        _weapons = new List<Weapon>();
+
+        foreach(WeaponStatus weapon in Weapons)
+        {
+            weapon.WeaponObject.Parent = transform;
+        }
     }
 
     /// <summary>
@@ -46,7 +60,7 @@ public class PlayerWeapons : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if (_playerController.Input.GetButton("NextWeapon"))
+        if (_playerController.Input.GetButton("QuickChangePrimary"))
         {
             if (!_switchWeaponPressed)
             {
@@ -54,19 +68,11 @@ public class PlayerWeapons : MonoBehaviour
                 _switchWeaponPressed = true;
             }
         }
-        else if (_playerController.Input.GetButton("PreviousWeapon"))
-        {
-            if (!_switchWeaponPressed)
-            {
-                PreviousWeapon();
-                _switchWeaponPressed = true;
-            }
-        }
         else
         {
             _switchWeaponPressed = false;
 
-            if(CurrentWeapon != null && _playerController.Input.GetButton("Attack"))
+            if (CurrentWeapon != null && _playerController.Input.GetButton("PrimaryAttack"))
 			{
                 CurrentWeapon.Attack();
 			}
@@ -77,33 +83,48 @@ public class PlayerWeapons : MonoBehaviour
     #region Public Methods
     public void AddWeapon(Weapon weapon)
     {
-        _weapons.Add(weapon);
-        SetWeapon(_currentWeapon);
+        var wp = Weapons.FirstOrDefault((w) => w.WeaponObject.GetType() == weapon.GetType());
+
+        if (wp != null)
+        {
+            wp.WeaponEnabled = true;
+        }        
     }
 
     public void RemoveWeapon(Weapon weapon)
     {
-        _weapons.Remove(weapon);
-        SetWeapon(_currentWeapon);
+        var wp = Weapons.FirstOrDefault((w) => w.WeaponObject.GetType() == weapon.GetType());
+
+        if (wp != null)
+        {
+            wp.WeaponEnabled = false;
+        }
     }
     #endregion Public Methods
 
     #region Private Methods
     void NextWeapon()
     {
-        SetWeapon(_currentWeapon + 1);
-    }
-
-    void PreviousWeapon()
-    {
-        SetWeapon(_currentWeapon - 1);
+        
+        SetWeapon(_currentWeapon + 1);       
     }
 
     void SetWeapon(int index)
     {
         var oldWeapon = CurrentWeapon;
-        _currentWeapon = Math.Max(0, Math.Min(_weapons.Count - 1, index));
-        var newWeapon = CurrentWeapon;
+
+        if( index >= Weapons.Length ) index = 0;
+
+        while( !Weapons[index].WeaponEnabled )
+        {
+            index++;
+
+            if (Weapons[index].WeaponObject == oldWeapon) return;
+        }
+
+        _currentWeapon = index;
+        var newWeapon = Weapons[index].WeaponObject;
+        
 
         if (oldWeapon != newWeapon)
         {

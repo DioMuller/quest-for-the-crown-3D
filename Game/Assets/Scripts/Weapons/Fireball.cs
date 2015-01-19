@@ -9,7 +9,7 @@ public class Fireball : Weapon
 	/// </summary>
     public override void OnAttack()
 	{
-
+        print("Fireball ATTACK!");
 	}
 
 	/// <summary>
