@@ -51,10 +51,10 @@ public class CameraManager : MonoBehaviour
         _camera1Controller = CameraController1.GetComponent<CameraController>();
         _camera2Controller = CameraController2.GetComponent<CameraController>();
 
-        _camera1 = CameraController1.FindChild("Camera").GetComponent<Camera>();
-        _camera2 = CameraController2.FindChild("Camera").GetComponent<Camera>();
+        _camera1 = CameraController1.FindChild("Game Camera").GetComponent<Camera>();
+        _camera2 = CameraController2.FindChild("Game Camera").GetComponent<Camera>();
 
-        _minimap2 = CameraController2.FindChild("Minimap").GetComponent<Camera>();
+        _minimap2 = CameraController2.FindChild("Minimap Camera").GetComponent<Camera>();
 
         if(Player2StatusPanel != null)
             Player2StatusPanel.SetActive(_player2 != null);
