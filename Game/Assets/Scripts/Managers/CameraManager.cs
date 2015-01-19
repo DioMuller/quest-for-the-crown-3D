@@ -7,7 +7,8 @@ public class CameraManager : MonoBehaviour
 {
     #region Constants
     // TODO: Split based on camera view
-    public const float SplitDistance = 100;
+    public const float SplitDistanceX = 150;
+    public const float SplitDistanceZ = 100;
     #endregion
 
     #region Static
@@ -30,7 +31,9 @@ public class CameraManager : MonoBehaviour
     public Transform CameraController1;
     public Transform CameraController2;
 
-    public Canvas Player2Canvas;
+    public RectTransform Player1Dialog;
+    public GameObject Player2StatusPanel;
+    public GameObject Player2MinimapBg;
     #endregion
 
     #region MonoBehaviour Methods
@@ -52,6 +55,9 @@ public class CameraManager : MonoBehaviour
         _camera2 = CameraController2.FindChild("Camera").GetComponent<Camera>();
 
         _minimap2 = CameraController2.FindChild("Minimap").GetComponent<Camera>();
+
+        if(Player2StatusPanel != null)
+            Player2StatusPanel.SetActive(_player2 != null);
     }
 
     // Update is called once per frame
@@ -70,9 +76,8 @@ public class CameraManager : MonoBehaviour
         if (_player1 != null && _player2 != null)
         {
             var dist = _player1.position - _player2.position;
-            var distLen = new Vector2(dist.x, dist.z).magnitude;
 
-            if (distLen >= SplitDistance)
+            if (Math.Abs(dist.x) >= SplitDistanceX || Math.Abs(dist.z) >= SplitDistanceZ)
             {
                 SplitScreen(_player1.position, _player2.position);
                 return;
@@ -96,7 +101,9 @@ public class CameraManager : MonoBehaviour
             _camera2Controller.enabled = false;
             _split = false;
 
-            Player2Canvas.enabled = false;
+            Player2MinimapBg.SetActive(false);
+            Player1Dialog.offsetMin = new Vector2(0, 0);
+            Player1Dialog.offsetMax = new Vector2(0, 0);
         }
     }
 
@@ -115,7 +122,9 @@ public class CameraManager : MonoBehaviour
             _camera2Controller.enabled = true;
             _split = true;
 
-            Player2Canvas.enabled = true;
+            Player2MinimapBg.SetActive(true);
+            Player1Dialog.offsetMin = new Vector2(0, 270);
+            Player1Dialog.offsetMax = new Vector2(0, -270);
         }
     }
     #endregion Private Methods
@@ -130,6 +139,7 @@ public class CameraManager : MonoBehaviour
                 break;
             case 2:
                 _player2 = player;
+                Player2StatusPanel.SetActive(true);
                 break;
             default:
                 throw new ArgumentOutOfRangeException("player.GetComponent<CameraTrack>().CameraNumber");
@@ -142,7 +152,10 @@ public class CameraManager : MonoBehaviour
             _player1 = null;
 
         else if (_player2 == player)
+        {
             _player2 = null;
+            Player2StatusPanel.SetActive(false);
+        }
     }
     #endregion
 }
