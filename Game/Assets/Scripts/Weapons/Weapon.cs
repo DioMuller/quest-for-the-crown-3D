@@ -69,15 +69,21 @@ public abstract class Weapon : MonoBehaviour
 	{
 		if( _parentStatus && _parentStatus.UseMagic(Data.MagicConsumption) )
 		{
-            var obj = (Transform)Instantiate(Hitbox);//, transform.localPosition, transform.rotation);
-            obj.parent = Parent.parent;
+            var obj = (Transform)Instantiate(Hitbox);
+            
+            if (Data.MoveWithPlayer)
+                obj.parent = this.transform;
+            else
+                obj.parent = Parent.parent;
+
             obj.position = transform.position;
             obj.localRotation = Parent.localRotation;
 
             var hitbox = obj.GetComponent<FireballHitbox>();
             hitbox.ParentWeapon = this;
+            hitbox.DestroyTime = Data.LifeTime;
 
-            float angle = Parent.localRotation.ToEuler().y;
+            float angle = Parent.localRotation.eulerAngles.y;
             float sin = Mathf.Sin(angle);
             float cos = Mathf.Cos(angle);
 
