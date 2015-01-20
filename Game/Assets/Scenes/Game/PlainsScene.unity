@@ -3186,10 +3186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RemoveOnDestroy: 1
-  MaxHealth: 1
-  MaxMagic: 1
-  MagicRegenTime: 1
-  MagicRegenQuantity: 1
+  Data: {fileID: 0}
 --- !u!1 &662491708
 GameObject:
   m_ObjectHideFlags: 0
@@ -6474,10 +6471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RemoveOnDestroy: 1
-  MaxHealth: 20
-  MaxMagic: 10
-  MagicRegenTime: 1
-  MagicRegenQuantity: 1
+  Data: {fileID: 0}
 --- !u!114 &1641024242
 MonoBehaviour:
   m_ObjectHideFlags: 0

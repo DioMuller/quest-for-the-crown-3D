@@ -7,10 +7,7 @@ public class CharacterStatus : MonoBehaviour
 	#region Public Attributes
     public bool RemoveOnDestroy = true;
 
-	public int MaxHealth = 1;
-	public int MaxMagic = 1;
-    public float MagicRegenTime = 1.0f;
-    public int MagicRegenQuantity = 1;
+    public CharacterData Data;
 	#endregion Public Attributes
 
 	#region Properties
@@ -23,14 +20,14 @@ public class CharacterStatus : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-		CurrentHealth = MaxHealth;
-		CurrentMagic = MaxMagic;
+		CurrentHealth = Data.MaxHealth;
+        CurrentMagic = Data.MaxMagic;
 
-		IsDead = MaxHealth <= 0;
+        IsDead = Data.MaxHealth <= 0;
 
-        if( MagicRegenTime > 0.0f)
+        if (Data.MagicRegenTime > 0.0f)
         {
-            InvokeRepeating("MagicRegen", MagicRegenTime, MagicRegenTime);
+            InvokeRepeating("MagicRegen", Data.MagicRegenTime, Data.MagicRegenTime);
         }
 
 		if (IsDead && RemoveOnDestroy)
@@ -44,7 +41,7 @@ public class CharacterStatus : MonoBehaviour
 		if (IsDead)
             return;
 
-		CurrentHealth = Math.Min(CurrentHealth + health, MaxHealth);
+        CurrentHealth = Math.Min(CurrentHealth + health, Data.MaxHealth);
     }
 
 	public void RemoveHealth(int amount, Transform attacker)
@@ -68,12 +65,12 @@ public class CharacterStatus : MonoBehaviour
 
 	public void RestoreMagic(int amount)
 	{
-		CurrentMagic = Math.Min(CurrentMagic + amount, MaxMagic);
+        CurrentMagic = Math.Min(CurrentMagic + amount, Data.MaxMagic);
 	}
 
     public void MagicRegen()
     {
-        RestoreMagic(MagicRegenQuantity);
+        RestoreMagic(Data.MagicRegenQuantity);
     }
 	#endregion Status Methods
 
@@ -83,18 +80,6 @@ public class CharacterStatus : MonoBehaviour
 		IsDead = true;
 
         yield return null;
-
-        //if (killer != null)
-        //{
-        //    try
-        //    {
-        //        killer.SendMessage("Kill", this);
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        Debug.Log("Kill message had no receiver. (" + ex.Message + ")");
-        //    }
-        //}
 
         if (RemoveOnDestroy)
             Destroy(gameObject);

@@ -52,10 +52,10 @@ public class PlayerGUI : MonoBehaviour
 			_healthBar = lifeBar.GetComponent<CircleBar>();
 			_magicBar = magicBar.GetComponent<CircleBar>();
 
-			_healthBar.MaximumValue = _characterStatus.MaxHealth;
+            _healthBar.MaximumValue = _characterStatus.Data.MaxHealth;
 			_healthBar.CurrentValue = _characterStatus.CurrentHealth;
 
-			_magicBar.MaximumValue = _characterStatus.MaxMagic;
+            _magicBar.MaximumValue = _characterStatus.Data.MaxMagic;
 			_magicBar.CurrentValue = _characterStatus.CurrentMagic;
 		}
 		#endregion GUI Components
@@ -68,11 +68,11 @@ public class PlayerGUI : MonoBehaviour
 	{
 		// Health
 		if( _characterStatus.CurrentHealth != _healthBar.CurrentValue ) _healthBar.CurrentValue = _characterStatus.CurrentHealth;
-		if( _characterStatus.MaxHealth != _healthBar.MaximumValue ) _healthBar.MaximumValue = _characterStatus.MaxHealth;
+        if (_characterStatus.Data.MaxHealth != _healthBar.MaximumValue) _healthBar.MaximumValue = _characterStatus.Data.MaxHealth;
 
 		// Magic
 		if( _characterStatus.CurrentMagic != _magicBar.CurrentValue ) _magicBar.CurrentValue = _characterStatus.CurrentMagic;
-		if( _characterStatus.MaxMagic != _magicBar.MaximumValue ) _magicBar.MaximumValue = _characterStatus.MaxMagic;
+        if (_characterStatus.Data.MaxMagic != _magicBar.MaximumValue) _magicBar.MaximumValue = _characterStatus.Data.MaxMagic;
 	}
 	#endregion MonoBehaviour Methods
 }
