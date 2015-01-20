@@ -9,6 +9,8 @@ public class CharacterStatus : MonoBehaviour
 
 	public int MaxHealth = 1;
 	public int MaxMagic = 1;
+    public float MagicRegenTime = 1.0f;
+    public int MagicRegenQuantity = 1;
 	#endregion Public Attributes
 
 	#region Properties
@@ -25,6 +27,11 @@ public class CharacterStatus : MonoBehaviour
 		CurrentMagic = MaxMagic;
 
 		IsDead = MaxHealth <= 0;
+
+        if( MagicRegenTime > 0.0f)
+        {
+            InvokeRepeating("MagicRegen", MagicRegenTime, MagicRegenTime);
+        }
 
 		if (IsDead && RemoveOnDestroy)
             PlayDestruction(null);
@@ -63,6 +70,11 @@ public class CharacterStatus : MonoBehaviour
 	{
 		CurrentMagic = Math.Min(CurrentMagic + amount, MaxMagic);
 	}
+
+    public void MagicRegen()
+    {
+        RestoreMagic(MagicRegenQuantity);
+    }
 	#endregion Status Methods
 
 	#region Event Methods
@@ -72,8 +84,17 @@ public class CharacterStatus : MonoBehaviour
 
         yield return null;
 
-        if (killer != null)
-            killer.SendMessage("Kill", this);
+        //if (killer != null)
+        //{
+        //    try
+        //    {
+        //        killer.SendMessage("Kill", this);
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        Debug.Log("Kill message had no receiver. (" + ex.Message + ")");
+        //    }
+        //}
 
         if (RemoveOnDestroy)
             Destroy(gameObject);

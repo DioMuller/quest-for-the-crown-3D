@@ -1,12 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public class WeaponHitbox : MonoBehaviour 
 {
 	public Weapon ParentWeapon = null;
+
+    public string[] Targets = { "Player", "Enemy" };
 	
 	void OnTriggerEnter(Collider other)
 	{
+        if (!Targets.Contains(other.tag)) return;
+
 		var status = other.GetComponent<CharacterStatus>();
 
 		OnHit(status);

@@ -22,12 +22,14 @@ public class PlayerWeapons : MonoBehaviour
     /// </summary>
     PlayerMovement _playerController;
 
-    int _currentWeapon = -1;
+    int _currentWeapon = 0;
 
     /// <summary>
     /// Switch weapon button is currently pressed.
     /// </summary>
     bool _switchWeaponPressed = false;
+
+    bool _useWeaponPressed = false;
     #endregion Private Attributes
 
     #region Public Attributes
@@ -74,8 +76,16 @@ public class PlayerWeapons : MonoBehaviour
 
             if (CurrentWeapon != null && _playerController.Input.GetButton("PrimaryAttack"))
 			{
-                CurrentWeapon.Attack();
+                if (!_useWeaponPressed)
+                {
+                    CurrentWeapon.Attack();
+                    _useWeaponPressed = true;
+                }
 			}
+            else
+            {
+                _useWeaponPressed = false;
+            }
         }
     }
     #endregion MonoBehaviour Methods

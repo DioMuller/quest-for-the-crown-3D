@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Rigidbody))]
 public class Fireball : Weapon 
 {
 	/// <summary>
@@ -9,7 +8,6 @@ public class Fireball : Weapon
 	/// </summary>
     public override void OnAttack()
 	{
-        print("Fireball ATTACK!");
 	}
 
 	/// <summary>
