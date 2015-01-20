@@ -12,7 +12,7 @@ GameObject:
   - 135: {fileID: 13577114}
   - 114: {fileID: 11477116}
   m_Layer: 0
-  m_Name: Fireball
+  m_Name: FireballCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,6 +90,7 @@ MonoBehaviour:
   Targets:
   - Player
   - Enemy
+  DestroyTime: 0
   Direction: {x: 0, y: 0, z: 1}
   Speed: 150
 --- !u!135 &13577114

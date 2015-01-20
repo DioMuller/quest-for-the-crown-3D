@@ -76,23 +76,14 @@ public abstract class Weapon : MonoBehaviour
             else
                 obj.parent = Parent.parent;
 
-            obj.position = transform.position;
-            obj.localRotation = Parent.localRotation;
-
-            var hitbox = obj.GetComponent<FireballHitbox>();
+            var hitbox = obj.GetComponent<WeaponHitbox>();
             hitbox.ParentWeapon = this;
             hitbox.DestroyTime = Data.LifeTime;
 
-            float angle = Parent.localRotation.eulerAngles.y;
-            float sin = Mathf.Sin(angle);
-            float cos = Mathf.Cos(angle);
+            obj.position = transform.position;
+            obj.rotation = Parent.rotation;
 
-            float vx = (cos * hitbox.Direction.x) + (sin * hitbox.Direction.z);
-            float vz = (cos * hitbox.Direction.z) - (sin * hitbox.Direction.x);
-
-            hitbox.Direction = new Vector3(vx, 0.0f, vz);
-
-            OnAttack();
+            OnAttack(hitbox);
 		}
 	}
     #endregion Methods
@@ -101,7 +92,7 @@ public abstract class Weapon : MonoBehaviour
     /// <summary>
     /// Called when the attack button is pressed.
     /// </summary>
-    public abstract void OnAttack();
+    public abstract void OnAttack(WeaponHitbox hitbox);
 
     /// <summary>
     /// Called when the weapon is equiped.
