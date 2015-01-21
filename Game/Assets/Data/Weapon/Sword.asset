@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackPower: 1
   MagicConsumption: 0
-  LifeTime: 1
+  LifeTime: .300000012
   DestroyOnContact: 0
   MoveWithPlayer: 1
+  Icon: {fileID: 2800000, guid: c8bc5387bf04b2640b69fd6403eb6829, type: 3}

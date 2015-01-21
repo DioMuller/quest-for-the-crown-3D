@@ -26,4 +26,9 @@ public class WeaponData : ScriptableObject
     /// Does the weapon/hitbox move with the player?
     /// </summary>
     public bool MoveWithPlayer = false;
+
+    /// <summary>
+    /// Weapon Icon.
+    /// </summary>
+    public Texture2D Icon = null;
 }
