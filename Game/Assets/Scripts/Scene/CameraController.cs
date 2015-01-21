@@ -37,7 +37,7 @@ public class CameraController : MonoBehaviour
     /// <summary>
     /// Called once per frame.
     /// </summary>
-    void Update()
+    void LateUpdate()
     {
         transform.position = Target + _distanceDifference;
     }
