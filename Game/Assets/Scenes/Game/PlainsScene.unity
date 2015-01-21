@@ -7513,7 +7513,7 @@ MonoBehaviour:
   - Keyboard
   - Joy1
   MaxVelocityChange: 0
-  SlopeLimit: 15
+  SlopeLimit: 35
 --- !u!114 &1641024237
 MonoBehaviour:
   m_ObjectHideFlags: 0
