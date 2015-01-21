@@ -67,7 +67,7 @@ public abstract class Weapon : MonoBehaviour
     /// </summary>
 	public void Attack()
 	{
-		if( _parentStatus && _parentStatus.UseMagic(Data.MagicConsumption) )
+		if( _parentStatus && _parentStatus.UseMagic(Data.MagicConsumption) && CanAttack() )
 		{
             var obj = (Transform)Instantiate(Hitbox);
             
@@ -85,6 +85,10 @@ public abstract class Weapon : MonoBehaviour
 
             OnAttack(hitbox);
 		}
+        else
+        {
+            OnAttackFail();
+        }
 	}
     #endregion Methods
 
@@ -95,6 +99,11 @@ public abstract class Weapon : MonoBehaviour
     public abstract void OnAttack(WeaponHitbox hitbox);
 
     /// <summary>
+    /// Called when the weapon cannot be used.
+    /// </summary>
+    public abstract void OnAttackFail();
+
+    /// <summary>
     /// Called when the weapon is equiped.
     /// </summary>
 	public abstract void OnEquip();
@@ -103,5 +112,16 @@ public abstract class Weapon : MonoBehaviour
     /// Called when the weapon is unequiped.
     /// </summary>
 	public abstract void OnUnequip();
+
+    /// <summary>
+    /// Checks if the weapon can currently attack.
+    /// </summary>
+    /// <returns>Can the weapon attack?</returns>
+    public abstract bool CanAttack();
+
+    /// <summary>
+    /// Called when the weapon hitbox is destroyed.
+    /// </summary>
+    public abstract void OnHitboxDestroyed();
     #endregion Abstract Methods
 }

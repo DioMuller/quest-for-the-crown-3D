@@ -24,6 +24,14 @@ public class Fireball : Weapon
         }
 	}
 
+    /// <summary>
+    /// Called when the attack fails.
+    /// </summary>
+    public override void OnAttackFail()
+    {
+        
+    }
+
 	/// <summary>
 	/// Raises the equip event.
 	/// </summary>
@@ -39,4 +47,21 @@ public class Fireball : Weapon
 	{
 
 	}
+
+    /// <summary>
+    /// Can the weapon attack right now?
+    /// </summary>
+    /// <returns>If the weapon can attack.</returns>
+    public override bool CanAttack()
+    {
+        return true;
+    }
+
+    /// <summary>
+    /// Called when the hitbox is destroyed.
+    /// </summary>
+    public override void OnHitboxDestroyed()
+    {
+        
+    }
 }

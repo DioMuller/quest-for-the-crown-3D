@@ -16,6 +16,11 @@ public class WeaponHitbox : MonoBehaviour
         if( DestroyTime > 0.0f )
             StartCoroutine(DestroyAfterTime());
     }
+
+    void OnDestroy()
+    {
+        ParentWeapon.OnHitboxDestroyed();
+    }
 	
 	void OnTriggerEnter(Collider other)
 	{
