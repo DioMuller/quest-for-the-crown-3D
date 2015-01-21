@@ -6,10 +6,20 @@ using Assets.Code.Libs;
 using System;
 using System.Linq;
 
+/// <summary>
+/// Weapon Status container.
+/// </summary>
 [Serializable]
 public class WeaponStatus
 {
+    /// <summary>
+    /// Weapon Object.
+    /// </summary>
     public Weapon WeaponObject = null;
+
+    /// <summary>
+    /// Is the weapon enabled?
+    /// </summary>
     public bool WeaponEnabled = false;
 }
 
@@ -22,26 +32,55 @@ public class PlayerWeapons : MonoBehaviour
     /// </summary>
     PlayerMovement _playerController;
 
-    int _currentWeapon = 0;
+    /// <summary>
+    /// Current Weapons Index.
+    /// </summary>
+    int[] _currentWeapons = {0, 1};
 
     /// <summary>
     /// Switch weapon button is currently pressed.
     /// </summary>
     bool _switchWeaponPressed = false;
 
+    /// <summary>
+    /// Is the Use weapon button currently pressed?
+    /// </summary>
     bool _useWeaponPressed = false;
     #endregion Private Attributes
 
     #region Public Attributes
+    /// <summary>
+    /// Weapons list.
+    /// </summary>
     public WeaponStatus[] Weapons;
     #endregion Public Attributes
 
-    #region Public Properties
-    public Weapon CurrentWeapon
+    #region Weapon Instance Methods
+    /// <summary>
+    /// Get Current Weapon Indexes.
+    /// </summary>
+    /// <param name="position">Weapon Position.</param>
+    /// <returns>Weapon Index.</returns>
+    public int GetWeaponIndex(int position)
     {
-        get { return _currentWeapon >= Weapons.Length || _currentWeapon < 0 ? null : Weapons[_currentWeapon].WeaponObject; }
+        if (position < 0 || position > _currentWeapons.Length) return -1;
+
+        return _currentWeapons[position];
     }
-    #endregion
+
+    /// <summary>
+    /// Get Weapon Data.
+    /// </summary>
+    /// <param name="position">Weapon Index.</param>
+    /// <returns>Weapon instance (null if not exists).</returns>
+    public Weapon GetWeapon(int position)
+    {
+        var index = GetWeaponIndex(position);
+        if( index < 0 || index > Weapons.Length ) return null;
+        
+        return Weapons[index].WeaponObject;
+    }
+    #endregion Weapon Instance Methods
 
     #region MonoBehaviour Methods
     /// <summary>
@@ -66,7 +105,15 @@ public class PlayerWeapons : MonoBehaviour
         {
             if (!_switchWeaponPressed)
             {
-                NextWeapon();
+                NextWeapon(0);
+                _switchWeaponPressed = true;
+            }
+        }
+        else if (_playerController.Input.GetButton("QuickChangeSecondary"))
+        {
+            if (!_switchWeaponPressed)
+            {
+                NextWeapon(1);
                 _switchWeaponPressed = true;
             }
         }
@@ -74,14 +121,22 @@ public class PlayerWeapons : MonoBehaviour
         {
             _switchWeaponPressed = false;
 
-            if (CurrentWeapon != null && _playerController.Input.GetButton("PrimaryAttack"))
+            if (GetWeaponIndex(0) >= 0 && _playerController.Input.GetButton("PrimaryAttack"))
 			{
                 if (!_useWeaponPressed)
                 {
-                    CurrentWeapon.Attack();
+                    GetWeapon(0).Attack();
                     _useWeaponPressed = true;
                 }
 			}
+            else if (GetWeaponIndex(1) >= 0 && _playerController.Input.GetButton("SecondaryAttack"))
+            {
+                if (!_useWeaponPressed)
+                {
+                    GetWeapon(1).Attack();
+                    _useWeaponPressed = true;
+                }
+            }
             else
             {
                 _useWeaponPressed = false;
@@ -113,15 +168,14 @@ public class PlayerWeapons : MonoBehaviour
     #endregion Public Methods
 
     #region Private Methods
-    void NextWeapon()
+    void NextWeapon(int position)
     {
-        
-        SetWeapon(_currentWeapon + 1);       
+        SetWeapon(position, _currentWeapons[position] + 1);       
     }
 
-    void SetWeapon(int index)
+    void SetWeapon(int position, int index)
     {
-        var oldWeapon = CurrentWeapon;
+        var oldWeapon = GetWeapon(position);
 
         if( index >= Weapons.Length ) index = 0;
 
@@ -132,7 +186,7 @@ public class PlayerWeapons : MonoBehaviour
             if (Weapons[index].WeaponObject == oldWeapon) return;
         }
 
-        _currentWeapon = index;
+        _currentWeapons[position] = index;
         var newWeapon = Weapons[index].WeaponObject;
         
 
