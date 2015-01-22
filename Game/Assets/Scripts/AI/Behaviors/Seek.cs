@@ -18,21 +18,23 @@ public class Seek : MovementBehaviour
 	/// </summary>
 	void Start ()
 	{
-		StartBehaviour();
 		_targetSelector = GetComponent<TargetSelector>();
+        StartBehaviour();
 	}
-	
-	/// <summary>
-	/// Called once per frame.
-	/// </summary>
-	void Update ()
+
+    /// <summary>
+    /// Returns the direction.
+    /// </summary>
+	public override Vector3? GetDirection()
 	{
 		if (_targetSelector.CurrentTarget != null)
 		{
 			var direction = (_targetSelector.CurrentTarget.transform.position - transform.position);
 
-			MovementDirection = direction;
+			return direction;
 		}
+
+        return null;
 	}
 	#endregion MonoBehaviour Methods
 }

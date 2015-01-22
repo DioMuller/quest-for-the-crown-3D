@@ -2,18 +2,21 @@
 using System.Collections;
 
 [RequireComponent(typeof(AIMovement))]
-public class MovementBehaviour : MonoBehaviour 
+public abstract class MovementBehaviour : MonoBehaviour 
 {
 	#region Private Attributes
 	private AIMovement _movement;
 	#endregion Private Attributes
 
-	#region Properties
-	public Vector3 MovementDirection { get; protected set; }
-	#endregion Properties
+    #region MonoBehaviour Methods
+    void Start()
+    {
+        StartBehaviour();
+    }
+    #endregion MonoBehaviour Methods
 
-	#region MonoBehaviour Methods
-	/// <summary>
+    #region Methods
+    /// <summary>
 	/// Initializes the MovementBehaviour
 	/// </summary>
 	protected void StartBehaviour()
@@ -23,10 +26,8 @@ public class MovementBehaviour : MonoBehaviour
 	}
 	
 	/// <summary>
-	/// Called once per frame.
+	/// Returns the direction.
 	/// </summary>
-	void Update ()
-	{
-	}
-	#endregion MonoBehaviour Methods
+    public abstract Vector3? GetDirection();
+	#endregion Methods
 }

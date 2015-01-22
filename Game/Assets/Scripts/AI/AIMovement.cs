@@ -43,10 +43,16 @@ public class AIMovement : MonoBehaviour
 
 		foreach( var behaviour in _behaviours )
 		{
-			var movement = behaviour.MovementDirection;
-			movement.y = 0.0f;
-			movement.Normalize();
-			direction += movement;
+            
+			var movement = behaviour.GetDirection();
+
+            if (movement != null)
+            {
+                var realMovement = movement.Value;
+                realMovement.y = 0.0f;
+                realMovement.Normalize();
+                direction += realMovement;
+            }
 		}
 
 		// Y movement should not be possible.
