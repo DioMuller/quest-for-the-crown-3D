@@ -151,7 +151,7 @@ MonoBehaviour:
   - Enemy
   DestroyTime: 0
   Direction: {x: 0, y: 0, z: 1}
-  Speed: 150
+  Speed: 250
 --- !u!135 &13577114
 SphereCollider:
   m_ObjectHideFlags: 1
