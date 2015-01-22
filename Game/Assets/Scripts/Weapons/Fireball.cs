@@ -12,15 +12,7 @@ public class Fireball : Weapon
 
         if (hb != null)
         {
-            float angle = hb.transform.localRotation.eulerAngles.y;
-            float rad = Mathf.Deg2Rad * angle;
-            float sin = Mathf.Sin(rad);
-            float cos = Mathf.Cos(rad);
-
-            float vx = (cos * hb.Direction.x) + (sin * hb.Direction.z);
-            float vz = (cos * hb.Direction.z) - (sin * hb.Direction.x);
-
-            hb.Direction = new Vector3(vx, 0.0f, vz);
+            hb.Direction = hb.Direction.RotateY(hb.transform.localRotation.eulerAngles.y);
         }
 	}
 

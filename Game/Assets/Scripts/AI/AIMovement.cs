@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 [RequireComponent(typeof(Rigidbody))]
 public class AIMovement : MonoBehaviour 
@@ -40,19 +41,24 @@ public class AIMovement : MonoBehaviour
 	void Update ()
 	{
 		var direction = Vector3.zero;
+        var usedWeight = 0.0f;
 
 		foreach( var behaviour in _behaviours )
 		{
-            
 			var movement = behaviour.GetDirection();
 
             if (movement != null)
             {
                 var realMovement = movement.Value;
+                var weight = (behaviour.Weight + usedWeight) > 1.0f ? 1.0f - usedWeight : behaviour.Weight;
+
                 realMovement.y = 0.0f;
                 realMovement.Normalize();
-                direction += realMovement;
+                direction += realMovement * weight;
+                usedWeight += weight;
             }
+
+            if (usedWeight >= 1.0f) break;
 		}
 
 		// Y movement should not be possible.
@@ -73,6 +79,7 @@ public class AIMovement : MonoBehaviour
 	public void Register(MovementBehaviour behaviour)
 	{
 		_behaviours.Add(behaviour);
+        _behaviours.OrderBy((b) => b.Priority);
 	}
 	#endregion Methods
 }

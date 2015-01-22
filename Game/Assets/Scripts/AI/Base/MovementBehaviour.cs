@@ -8,6 +8,18 @@ public abstract class MovementBehaviour : MonoBehaviour
 	private AIMovement _movement;
 	#endregion Private Attributes
 
+    #region Public Attributes
+    /// <summary>
+    /// Behaviour Priority.
+    /// </summary>
+    public int Priority = 0;
+
+    /// <summary>
+    /// Behaviour Weight.
+    /// </summary>
+    public float Weight = 1.0f;
+    #endregion Public Attributes
+
     #region MonoBehaviour Methods
     void Start()
     {
@@ -19,7 +31,7 @@ public abstract class MovementBehaviour : MonoBehaviour
     /// <summary>
 	/// Initializes the MovementBehaviour
 	/// </summary>
-	protected void StartBehaviour()
+	protected virtual void StartBehaviour()
 	{
 		_movement = GetComponent<AIMovement>();
 		_movement.Register(this);

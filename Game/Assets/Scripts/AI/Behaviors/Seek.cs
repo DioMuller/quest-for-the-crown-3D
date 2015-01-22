@@ -12,14 +12,14 @@ public class Seek : MovementBehaviour
 	private TargetSelector _targetSelector;
 	#endregion Private Attributes
 
-	#region MonoBehaviour Methods
+	#region Methods
 	/// <summary>
 	/// Initializes the MonoBehaviour
 	/// </summary>
-	void Start ()
+    protected override void StartBehaviour()
 	{
 		_targetSelector = GetComponent<TargetSelector>();
-        StartBehaviour();
+        base.StartBehaviour();
 	}
 
     /// <summary>
@@ -36,5 +36,5 @@ public class Seek : MovementBehaviour
 
         return null;
 	}
-	#endregion MonoBehaviour Methods
+	#endregion Methods
 }
