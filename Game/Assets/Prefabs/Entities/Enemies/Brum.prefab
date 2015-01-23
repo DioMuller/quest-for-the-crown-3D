@@ -15,7 +15,6 @@ GameObject:
   - 114: {fileID: 11447984}
   - 114: {fileID: 11447982}
   - 114: {fileID: 11436748}
-  - 114: {fileID: 11436750}
   m_Layer: 0
   m_Name: Brum
   m_TagString: Enemy
@@ -136,22 +135,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Priority: 0
   Weight: 1
---- !u!114 &11436750
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6c37c5001dd64d479a35cc727de7283, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Priority: 1
-  Weight: 1
-  Jitter: 1.25
-  WanderDistance: 30
-  WanderRadius: 50
 --- !u!114 &11447978
 MonoBehaviour:
   m_ObjectHideFlags: 1
