@@ -15,17 +15,17 @@ public class Wander : MovementBehaviour
     /// <summary>
     /// Wander Jitter.
     /// </summary>
-    public float Jitter;
+    public float Jitter = 1.25f;
    
     /// <summary>
     /// Wander Distance.
     /// </summary>
-    public float WanderDistance;
+    public float WanderDistance = 500.0f;
 
     /// <summary>
     /// Wander Circle Radius.
     /// </summary>
-    public float WanderRadius;
+    public float WanderRadius = 150.0f;
     #endregion Public Attributes
 
     #region Methods
@@ -43,7 +43,7 @@ public class Wander : MovementBehaviour
     /// </summary>
 	public override Vector3? GetDirection()
 	{
-        float jitterThisTimeSlice = Jitter * Time.deltaTime * 0.009f;
+        float jitterThisTimeSlice = Jitter * Time.deltaTime * 0.0009f;
         Vector3 temp = new Vector3(Random.Range(-1.0f, 1.0f) * jitterThisTimeSlice, 0,
                                    Random.Range(-1.0f, 1.0f) * jitterThisTimeSlice);
 
@@ -59,7 +59,9 @@ public class Wander : MovementBehaviour
         position += (direction * WanderDistance);
         position += _target;
 
-        return position - transform.position;
+        var newPos = position - transform.position;
+        newPos.Normalize();
+        return newPos;
 	}
 	#endregion Methods
 }
