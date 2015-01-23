@@ -55,11 +55,12 @@ public class Wander : MovementBehaviour
 
         var direction = Vector3.back.RotateY(transform.eulerAngles.y);
 
-        Vector3 position = transform.position;
+        Vector3 position = new Vector3(transform.position.x, 0.0f, transform.position.z);
         position += (direction * WanderDistance);
         position += _target;
 
         var newPos = position - transform.position;
+
         newPos.Normalize();
         return newPos;
 	}

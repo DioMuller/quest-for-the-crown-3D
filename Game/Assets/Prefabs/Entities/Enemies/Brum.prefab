@@ -150,8 +150,8 @@ MonoBehaviour:
   Priority: 1
   Weight: 1
   Jitter: 1.25
-  WanderDistance: 15
-  WanderRadius: 30
+  WanderDistance: 30
+  WanderRadius: 50
 --- !u!114 &11447978
 MonoBehaviour:
   m_ObjectHideFlags: 1
