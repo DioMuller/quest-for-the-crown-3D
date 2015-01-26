@@ -8144,11 +8144,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapons:
-  - WeaponObject: {fileID: 788388473}
-    WeaponEnabled: 1
   - WeaponObject: {fileID: 133619947}
     WeaponEnabled: 1
   - WeaponObject: {fileID: 137286316}
+    WeaponEnabled: 1
+  - WeaponObject: {fileID: 788388473}
     WeaponEnabled: 1
 --- !u!1 &1643082887
 GameObject:
@@ -9273,19 +9273,19 @@ MonoBehaviour:
   m_TerrainData: {fileID: 15600000, guid: 6a39387228d8449459b733ad3b33e89a, type: 2}
   m_TreeDistance: 2000
   m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
+  m_TreeCrossFadeLength: 12
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
+  m_DetailObjectDistance: 250
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
-  m_SplatMapDistance: 253
+  m_SplatMapDistance: 666
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 1
   m_LightmapIndex: -1
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
   m_CollectDetailPatches: 1
-  m_MaterialTemplate: {fileID: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 6c3beaf780169f64d8957dd00575866e, type: 2}
 --- !u!1 &1905189507
 GameObject:
   m_ObjectHideFlags: 0
