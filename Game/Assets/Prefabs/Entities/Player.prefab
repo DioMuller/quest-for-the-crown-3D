@@ -16,6 +16,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &114738
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 414738}
+  - 114: {fileID: 11414738}
+  m_Layer: 0
+  m_Name: Bow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &152160
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,6 +2461,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 452160}
   m_RootOrder: 1
+--- !u!4 &414738
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114738}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 452160}
+  m_RootOrder: 2
 --- !u!4 &452160
 Transform:
   m_ObjectHideFlags: 1
@@ -2457,6 +2485,7 @@ Transform:
   m_Children:
   - {fileID: 495554}
   - {fileID: 408646}
+  - {fileID: 414738}
   m_Father: {fileID: 452396}
   m_RootOrder: 1
 --- !u!4 &452162
@@ -4668,6 +4697,21 @@ MonoBehaviour:
     WeaponEnabled: 1
   - WeaponObject: {fileID: 11408644}
     WeaponEnabled: 1
+  - WeaponObject: {fileID: 11414738}
+    WeaponEnabled: 1
+--- !u!114 &11414738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d4eec5dfa894d347a3c3906507bd02a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hitbox: {fileID: 411198, guid: 88a1240b8bbb1d345b4636c375040ec7, type: 2}
+  Data: {fileID: 11400000, guid: 8f1d1e0de4ffab54a87b37097112e27a, type: 2}
 --- !u!114 &11452160
 MonoBehaviour:
   m_ObjectHideFlags: 1
