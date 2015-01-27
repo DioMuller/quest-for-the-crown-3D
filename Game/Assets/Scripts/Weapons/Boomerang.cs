@@ -4,7 +4,7 @@ using System;
 
 public class Boomerang : Weapon 
 {
-    public const float FlightDuration = 2f;
+    public const float FlightDuration = 0.5f;
     public const float ExtendFlightDuration = 0.5f;
 
     bool _canControl;
@@ -55,11 +55,13 @@ public class Boomerang : Weapon
             }
 
             _hitbox.Direction = target;
+            _hitbox.Direction.Normalize();
         }
         else if (_flightDuration < 0)
         {
             _hitbox.Direction = Parent.transform.position - _hitbox.transform.position;
             _hitbox.Direction.Normalize();
+            _hitbox.Direction.y = 0;
             return;
         }
 
@@ -115,6 +117,10 @@ public class Boomerang : Weapon
         {
             Destroy(gameObject);
             _hitbox = null;
+        }
+        else
+        {
+            _flightDuration = 0;
         }
     }
 }
