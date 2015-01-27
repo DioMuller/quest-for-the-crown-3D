@@ -110,36 +110,7 @@ public class PlayerMovement : MonoBehaviour
 	    }
 	    #endregion New Position
 
-		#region Slope Detection
-		bool canMoveSlope = true;
-		if( _groundCollider != null )
-		{
-			RaycastHit hit = new RaycastHit();
-			var ray = new Ray(transform.position, Vector3.down);
-
-			if( _groundCollider.Raycast(ray, out hit, 10) )
-			{
-				var slope = hit.normal;
-
-				var rotation = Quaternion.FromToRotation(transform.up, slope) * transform.rotation;
-				var euler = rotation.eulerAngles;
-
-				var eulerX = Mathf.Abs(euler.x);
-				var eulerZ = Mathf.Abs(euler.z);
-
-				if( eulerX > 180 ) eulerX = 360 - eulerX;
-				if( eulerZ > 180 ) eulerZ = 360 - eulerZ;
-
-				if( !( eulerX < SlopeLimit &&  eulerZ < SlopeLimit ) )
-				{
-					canMoveSlope = false;
-				}
-			}
-		}
-		#endregion Slope Detection
-
-		if( canMoveSlope )
-			_rigidbody.MovePosition(newPos);
+        _rigidbody.MovePosition(newPos);
 
 		#endregion Movement Position
     }
