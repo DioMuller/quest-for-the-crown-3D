@@ -2449,6 +2449,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &197606
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 497606}
+  - 114: {fileID: 11497606}
+  m_Layer: 0
+  m_Name: Boomerang
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &408646
 Transform:
   m_ObjectHideFlags: 1
@@ -2486,6 +2502,7 @@ Transform:
   - {fileID: 495554}
   - {fileID: 408646}
   - {fileID: 414738}
+  - {fileID: 497606}
   m_Father: {fileID: 452396}
   m_RootOrder: 1
 --- !u!4 &452162
@@ -4554,6 +4571,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 452160}
   m_RootOrder: 0
+--- !u!4 &497606
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 12, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 452160}
+  m_RootOrder: 3
 --- !u!23 &2352160
 Renderer:
   m_ObjectHideFlags: 1
@@ -4699,6 +4728,8 @@ MonoBehaviour:
     WeaponEnabled: 1
   - WeaponObject: {fileID: 11414738}
     WeaponEnabled: 1
+  - WeaponObject: {fileID: 11497606}
+    WeaponEnabled: 1
 --- !u!114 &11414738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4807,6 +4838,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hitbox: {fileID: 419114, guid: ff846750994db4749b7c5a6ff888403e, type: 2}
   Data: {fileID: 11400000, guid: 84edd1b848a719a479a01b73c99d7dea, type: 2}
+--- !u!114 &11497606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3c41f298d556345b18e6d08e7e8648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hitbox: {fileID: 439982, guid: 64ddc0d8765182f488e26c0b1fed4ca2, type: 2}
+  Data: {fileID: 11400000, guid: 502491672171b5d4e9d11cd1c71a2b27, type: 2}
 --- !u!136 &13652160
 CapsuleCollider:
   m_ObjectHideFlags: 1

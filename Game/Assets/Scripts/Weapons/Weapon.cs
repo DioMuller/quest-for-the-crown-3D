@@ -8,11 +8,6 @@ public abstract class Weapon : MonoBehaviour
     /// Parent transform.
     /// </summary>
     private Transform _parent = null;
-
-    /// <summary>
-    /// Parent status.
-    /// </summary>
-	private CharacterStatus _parentStatus = null;
     #endregion Private Attributes
 
     #region Public Attributes
@@ -39,10 +34,15 @@ public abstract class Weapon : MonoBehaviour
 			_parent = value;
 			if( _parent != null )
 			{
-				_parentStatus = _parent.GetComponent<CharacterStatus>();
+                ParentStatus = _parent.GetComponent<CharacterStatus>();
 			}
 		}
 	}
+
+    /// <summary>
+    /// Parent status.
+    /// </summary>
+	public CharacterStatus ParentStatus { get; private set; }
     #endregion Properties
 
     #region MonoBehaviour Methods
@@ -53,7 +53,7 @@ public abstract class Weapon : MonoBehaviour
     {
         var parentTrans = this.transform;
 
-        while (_parentStatus == null && parentTrans != null)
+        while (ParentStatus == null && parentTrans != null)
         {
             Parent = parentTrans.parent;
             parentTrans = Parent;
@@ -67,7 +67,7 @@ public abstract class Weapon : MonoBehaviour
     /// </summary>
 	public void Attack()
 	{
-		if( _parentStatus && _parentStatus.UseMagic(Data.MagicConsumption) && CanAttack() )
+		if(ParentStatus && CanAttack() && ParentStatus.UseMagic(Data.MagicConsumption))
 		{
             var obj = (Transform)Instantiate(Hitbox);
             
