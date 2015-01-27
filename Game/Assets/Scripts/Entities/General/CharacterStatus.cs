@@ -46,6 +46,7 @@ public class CharacterStatus : MonoBehaviour
 
 	public void RemoveHealth(int amount, Transform attacker)
     {
+        if (attacker == transform) return;
 		if (IsDead)
             return;
 
