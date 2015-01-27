@@ -14,6 +14,6 @@ MonoBehaviour:
   AttackPower: 1
   MagicConsumption: 1
   LifeTime: 10
-  DestroyOnContact: 0
+  DestroyOnContact: 1
   MoveWithPlayer: 0
   Icon: {fileID: 2800000, guid: 173fa4a5d30922d49a44a7c22646e73a, type: 3}

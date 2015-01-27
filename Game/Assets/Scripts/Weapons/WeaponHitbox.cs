@@ -24,11 +24,12 @@ public class WeaponHitbox : MonoBehaviour
 	
 	void OnTriggerEnter(Collider other)
 	{
-        if (!Targets.Contains(other.tag)) return;
+        if (Targets.Contains(other.tag))
+        {
+            var status = other.GetComponent<CharacterStatus>();
 
-		var status = other.GetComponent<CharacterStatus>();
-        
-		OnHit(status);
+            OnHit(status);
+        }
 		
 		if( ParentWeapon.Data.DestroyOnContact )
 		{
