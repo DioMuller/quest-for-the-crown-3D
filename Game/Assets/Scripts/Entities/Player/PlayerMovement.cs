@@ -23,11 +23,6 @@ public class PlayerMovement : MonoBehaviour
 	/// Can the entity move?
 	/// </summary>
 	private bool _canMove = true;
-
-	/// <summary>
-	/// The terrain collider.
-	/// </summary>
-	public TerrainCollider _groundCollider;
     #endregion Private Attributes
 
     #region Properties
@@ -61,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 	/// </summary>
 	public float MaxVelocityChange;
 
-	public float SlopeLimit = 30.0f;
+	public float SlopeLimit = 15.0f;
     #endregion Public Attributes
 
     #region MonoBehaviour Methods
@@ -71,8 +66,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-		//_collider = GetComponent<CapsuleCollider>();
-		_groundCollider = (TerrainCollider) GameObject.FindObjectOfType(typeof(TerrainCollider));
     }
 
     /// <summary>
@@ -111,7 +104,6 @@ public class PlayerMovement : MonoBehaviour
 	    #endregion New Position
 
         _rigidbody.MovePosition(newPos);
-
 		#endregion Movement Position
     }
 
