@@ -17,4 +17,14 @@ public class BoomerangHitbox : WeaponHitbox
     {
         _rigidbody.MovePosition(transform.position + (Direction * Time.fixedDeltaTime * Speed));
     }
+
+    new void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == ParentWeapon.Parent.gameObject)
+            ((Boomerang)ParentWeapon).OnReturn();
+        else
+            base.OnTriggerEnter(other);
+
+        ((Boomerang)ParentWeapon).OnHit(other);
+    }
 }

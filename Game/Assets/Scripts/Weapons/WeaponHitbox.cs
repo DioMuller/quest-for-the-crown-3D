@@ -22,7 +22,7 @@ public class WeaponHitbox : MonoBehaviour
         ParentWeapon.OnHitboxDestroyed();
     }
 	
-	void OnTriggerEnter(Collider other)
+	protected void OnTriggerEnter(Collider other)
 	{
         if (Targets.Contains(other.tag))
         {

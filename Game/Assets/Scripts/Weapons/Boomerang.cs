@@ -111,16 +111,15 @@ public class Boomerang : Weapon
         
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void OnReturn()
     {
-        if (other.gameObject == Parent.gameObject)
-        {
-            Destroy(gameObject);
-            _hitbox = null;
-        }
-        else
-        {
-            _flightDuration = 0;
-        }
+        Destroy(_hitbox.gameObject);
+        _hitbox = null;
+    }
+
+    public void OnHit(Collider collider)
+    {
+        _flightDuration = 0;
+        _canControl = false;
     }
 }
