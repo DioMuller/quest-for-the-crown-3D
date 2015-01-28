@@ -42,8 +42,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
+  m_LocalPosition: {x: 1001.88416, y: 1000.5, z: 1002.63306}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 411200}
   m_Father: {fileID: 0}
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 111198}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2.5, z: 1}
+  m_LocalScale: {x: .100000001, y: .25, z: .100000001}
   m_Children: []
   m_Father: {fileID: 411198}
   m_RootOrder: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   - Enemy
   DestroyTime: 0
   Direction: {x: 0, y: 0, z: 1}
-  Speed: 300
+  Speed: 15
 --- !u!136 &13607072
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -129,8 +129,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1
-  m_Height: 5
+  m_Radius: .100000001
+  m_Height: .5
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
