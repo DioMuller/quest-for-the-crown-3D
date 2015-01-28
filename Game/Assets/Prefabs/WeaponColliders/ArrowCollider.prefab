@@ -29,7 +29,7 @@ GameObject:
   - 54: {fileID: 5411198}
   - 136: {fileID: 13607072}
   m_Layer: 0
-  m_Name: Arrow
+  m_Name: ArrowCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

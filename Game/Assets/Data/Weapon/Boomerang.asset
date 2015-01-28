@@ -16,4 +16,4 @@ MonoBehaviour:
   LifeTime: 0
   DestroyOnContact: 0
   MoveWithPlayer: 0
-  Icon: {fileID: 2800000, guid: f35da9715c5cacd45acf1395f0b39825, type: 3}
+  Icon: {fileID: 2800000, guid: 7e7d883c78287434184fa94652abf8af, type: 3}
