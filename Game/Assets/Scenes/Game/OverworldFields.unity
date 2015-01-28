@@ -5258,8 +5258,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: dd016c0cb6ca5624880b4fb21a5fd067, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4cd9529d19f0bff4baea1ea9909998c1, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -8560,6 +8560,15 @@ Prefab:
     - target: {fileID: 170642, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
       propertyPath: m_Name
       value: PlayerGUI P1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470654, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4cd9529d19f0bff4baea1ea9909998c1,
+        type: 3}
+    - target: {fileID: 11470654, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_Type
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}

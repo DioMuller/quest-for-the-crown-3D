@@ -3,9 +3,11 @@ using System.Collections;
 
 public class MainMenu : MonoBehaviour 
 {
+    public string NewGameScene = "";
+
 	public void OnNewGameClick()
 	{
-		Application.LoadLevel("PlainsScene");
+        Application.LoadLevel(NewGameScene);
 	}
 
 	public void LoadGameClick()
