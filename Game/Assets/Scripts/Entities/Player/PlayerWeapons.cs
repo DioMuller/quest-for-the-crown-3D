@@ -93,7 +93,7 @@ public class PlayerWeapons : MonoBehaviour
         foreach(WeaponStatus weapon in Weapons)
         {
             weapon.WeaponObject.Parent = transform;
-            weapon.WeaponObject.gameObject.active = false;
+            weapon.WeaponObject.gameObject.SetActive(false);
         }
     }
 
@@ -204,9 +204,9 @@ public class PlayerWeapons : MonoBehaviour
 
     IEnumerator ActivateWeapon(Weapon weapon)
     {
-        weapon.gameObject.active = true;
+        weapon.gameObject.SetActive(true);
         yield return new WaitForSeconds(weapon.Data.AnimationTime);
-        weapon.gameObject.active = false;
+        weapon.gameObject.SetActive(false);
     }
     #endregion Private Methods
 }

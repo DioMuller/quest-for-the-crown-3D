@@ -10,6 +10,7 @@ public class Teleporter : MonoBehaviour
     {
         if( other.tag == "Player" )
         {
+            NavigationManager.NextWaypoint = Waypoint;
             Application.LoadLevel(Map);
         }
     }
