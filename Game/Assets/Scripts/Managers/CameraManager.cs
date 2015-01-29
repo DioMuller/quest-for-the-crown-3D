@@ -31,6 +31,8 @@ public class CameraManager : MonoBehaviour
     public Transform CameraController1;
     public Transform CameraController2;
 
+    public Rect Bounds = new Rect(-10, -10, 10, 10);
+
     public RectTransform Player1Dialog;
     public GameObject Player2StatusPanel;
     public GameObject Player2MinimapBg;

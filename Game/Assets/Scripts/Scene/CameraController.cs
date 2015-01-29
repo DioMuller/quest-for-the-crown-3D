@@ -3,18 +3,16 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour
 {
-    #region Constants
-    public readonly static Vector3 InitialCameraDistance = new Vector3(0, 100, -70);
-    #endregion Constants
-
     #region Private Attributes
-    /// <summary>
-    /// Distance between camera and target.
-    /// </summary>
-    public Vector3 _distanceDifference = InitialCameraDistance;
+    private Rect _bounds;
     #endregion Private Attributes
 
     #region Public Attributes
+    /// <summary>
+    /// Distance between camera and target.
+    /// </summary>
+    public Vector3 DistanceDifference = new Vector3(0, 10, -10);
+
     /// <summary>
     /// Main Game Camera.
     /// </summary>
@@ -32,6 +30,12 @@ public class CameraController : MonoBehaviour
     /// </summary>
     void Start()
     {
+        _bounds = new Rect(
+            transform.position.x + CameraManager.Instance.Bounds.x,
+            transform.position.z + CameraManager.Instance.Bounds.y,
+            transform.position.x + CameraManager.Instance.Bounds.width,
+            transform.position.z + CameraManager.Instance.Bounds.height
+        );
     }
 
     /// <summary>
@@ -39,7 +43,11 @@ public class CameraController : MonoBehaviour
     /// </summary>
     void LateUpdate()
     {
-        transform.position = Target + _distanceDifference;
+        var newPos = Target + DistanceDifference;
+
+        transform.position = new Vector3(Mathf.Clamp(newPos.x, _bounds.x, _bounds.width),
+                                        transform.position.y,
+                                        Mathf.Clamp(newPos.z, _bounds.y, _bounds.height));
     }
     #endregion MonoBehaviour Methods
 
