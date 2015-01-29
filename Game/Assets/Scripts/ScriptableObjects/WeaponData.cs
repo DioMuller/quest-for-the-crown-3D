@@ -18,6 +18,11 @@ public class WeaponData : ScriptableObject
     public float LifeTime = 1.0f;
 
     /// <summary>
+    /// Weapon Animation Time.
+    /// </summary>
+    public float AnimationTime = 1.0f;
+
+    /// <summary>
     /// Will the weapon be destroyed on contact?
     /// </summary>
 	public bool DestroyOnContact = false;

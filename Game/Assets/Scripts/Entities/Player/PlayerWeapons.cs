@@ -93,6 +93,7 @@ public class PlayerWeapons : MonoBehaviour
         foreach(WeaponStatus weapon in Weapons)
         {
             weapon.WeaponObject.Parent = transform;
+            weapon.WeaponObject.gameObject.active = false;
         }
     }
 
@@ -125,6 +126,7 @@ public class PlayerWeapons : MonoBehaviour
 			{
                 if (!_useWeaponPressed)
                 {
+                    StartCoroutine(ActivateWeapon(GetWeapon(0)));
                     GetWeapon(0).Attack();
                     _useWeaponPressed = true;
                 }
@@ -133,6 +135,7 @@ public class PlayerWeapons : MonoBehaviour
             {
                 if (!_useWeaponPressed)
                 {
+                    StartCoroutine(ActivateWeapon(GetWeapon(1)));
                     GetWeapon(1).Attack();
                     _useWeaponPressed = true;
                 }
@@ -197,6 +200,13 @@ public class PlayerWeapons : MonoBehaviour
             if (newWeapon != null)
                 newWeapon.OnEquip();
         }
+    }
+
+    IEnumerator ActivateWeapon(Weapon weapon)
+    {
+        weapon.gameObject.active = true;
+        yield return new WaitForSeconds(weapon.Data.AnimationTime);
+        weapon.gameObject.active = false;
     }
     #endregion Private Methods
 }
