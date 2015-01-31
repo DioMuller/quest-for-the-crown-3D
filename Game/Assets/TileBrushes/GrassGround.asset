@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 575807087, guid: 533361e04fa896b4395cced4d33088c3, type: 3}
-  m_Name: Ground
+  m_Name: GrassGround
   m_EditorClassIdentifier: 
   _internalFlags: 1
   disableImmediatePreview: 0
-  _previewAssetId: z_70104ba3-5194-4460-8440-746b2426cdc6
+  _previewAssetId: z_2eac7a5e-4d0c-49b2-a815-3ae816796198
   customPreviewImage: {fileID: 0}
   customPreviewDesignTime: 1
   _static: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
   forceLegacySideways: 0
   overrideTransforms: 0
   scaleMode: 0
-  applyPrefabTransform: 1
+  applyPrefabTransform: 0
   transformScale: {x: 1, y: 1, z: 1}
   _userFlags: 0
   _userFlagLabels: 
@@ -40,12 +40,12 @@ MonoBehaviour:
     _type: 0
     _rotation: 0
     variations:
-    - {fileID: 0}
-    _variationWeights: 32000000
-  _materialMappingFrom:
-  - {fileID: 0}
-  _materialMappingTo:
-  - {fileID: 0}
+    - {fileID: 159286, guid: a73ad70bedc866b42829703092d71e7f, type: 2}
+    - {fileID: 152504, guid: dace7297c7bb39642965c8f8a506c965, type: 2}
+    - {fileID: 188468, guid: 428bfccca6cda0444be80908a00ceaf6, type: 2}
+    _variationWeights: 320000003200000032000000
+  _materialMappingFrom: []
+  _materialMappingTo: []
   coalesce: 1
   coalesceWithRotated: 0
   coalesceBrushGroup: 0
