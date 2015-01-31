@@ -48,7 +48,8 @@ namespace Assets.Libs.Input
             var camera = cameraInfo == null?
                 null : CameraManager.Instance.GetCamera(cameraInfo.CameraNumber);
 
-            if (UseMouse && camera != null && UnityEngine.Input.GetMouseButton(0))
+            if (UseMouse && camera != null && (UnityEngine.Input.GetMouseButton(0) ||
+                                               UnityEngine.Input.GetMouseButton(1)))
             {
                 var mouse = UnityEngine.Input.mousePosition;
                 mouse.z = (camera.transform.position - reference.transform.position).magnitude;
