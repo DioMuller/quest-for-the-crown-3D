@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         #region Aiming / LookAt Position
-        var aimValue = Input.GetTarget(_cameraTrack);
+        var aimValue = Input.GetTarget(_cameraTrack, gameObject);
 		bool aiming = false;
 
 		if (aimValue.sqrMagnitude > 0.1)

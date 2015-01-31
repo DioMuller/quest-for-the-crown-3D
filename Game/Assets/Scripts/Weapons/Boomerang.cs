@@ -5,33 +5,28 @@ using System;
 [RequireComponent(typeof(CameraTrack))]
 public class Boomerang : Weapon 
 {
-    public const float FlightDuration = 0.5f;
-    public const float ExtendFlightDuration = 0.5f;
-
     /// <summary>
     /// Player camera info.
     /// </summary>
     CameraTrack _cameraTrack;
-
-    bool _canControl;
-    BoomerangHitbox _hitbox;
-    float _flightDuration;
     PlayerMovement _playerController;
+
+    BoomerangHitbox _hitbox;
 
     /// <summary>
     /// Raises the attack event.
     /// </summary>
     public override void OnAttack(WeaponHitbox hitbox)
 	{
-        _canControl = true;
-        _hitbox = hitbox as BoomerangHitbox;
-        _flightDuration = FlightDuration;
-
-        if (_hitbox != null)
+        if (_cameraTrack == null || _playerController == null)
         {
-            _hitbox.Direction = _hitbox.Direction.RotateY(_hitbox.transform.localRotation.eulerAngles.y);
+            _playerController = Parent.GetComponent<PlayerMovement>();
+            _cameraTrack = Parent.GetComponent<CameraTrack>();
         }
-	}
+
+        _hitbox = hitbox as BoomerangHitbox;
+        _hitbox.StartFlight(_cameraTrack, _playerController);
+    }
 
     #region MonoBehaviour Methods
     /// <summary>
@@ -39,40 +34,6 @@ public class Boomerang : Weapon
     /// </summary>
     void Start()
     {
-        _playerController = Parent.GetComponent<PlayerMovement>();
-        _cameraTrack = GetComponent<CameraTrack>();
-    }
-
-    public void Update()
-    {
-        if (_hitbox == null)
-            return;
-
-        var target = _playerController.Input.GetTarget(_cameraTrack);
-        if (_canControl && target.magnitude > 0.5)
-        {
-            if (_flightDuration < 0)
-            {
-                if (!ParentStatus.UseMagic(Data.MagicConsumption))
-                {
-                    _canControl = false;
-                    return;
-                }
-                _flightDuration = ExtendFlightDuration;
-            }
-
-            _hitbox.Direction = target;
-            _hitbox.Direction.Normalize();
-        }
-        else if (_flightDuration < 0)
-        {
-            _hitbox.Direction = Parent.transform.position - _hitbox.transform.position;
-            _hitbox.Direction.Normalize();
-            _hitbox.Direction.y = 0;
-            return;
-        }
-
-        _flightDuration -= Time.deltaTime;
     }
 
     #endregion MonoBehaviour Methods
@@ -126,7 +87,6 @@ public class Boomerang : Weapon
 
     public void OnHit(Collider collider)
     {
-        _flightDuration = 0;
-        _canControl = false;
+        _hitbox.Return();
     }
 }

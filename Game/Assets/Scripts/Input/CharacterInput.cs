@@ -40,7 +40,7 @@ namespace Assets.Libs.Input
 		/// Gets the current input movement.
 		/// </summary>
 		/// <returns></returns>
-		public Vector3 GetTarget(CameraTrack cameraInfo)
+		public Vector3 GetTarget(CameraTrack cameraInfo, GameObject reference)
 		{
 			var mX = GetAxis("AimHorizontal");
 			var mZ = GetAxis("AimVertical");
@@ -48,15 +48,13 @@ namespace Assets.Libs.Input
             var camera = cameraInfo == null?
                 null : CameraManager.Instance.GetCamera(cameraInfo.CameraNumber);
 
-            if (UseMouse && camera != null)
+            if (UseMouse && camera != null && UnityEngine.Input.GetMouseButton(0))
             {
                 var mouse = UnityEngine.Input.mousePosition;
-                mouse.z = (camera.transform.position - cameraInfo.gameObject.transform.position).magnitude;
+                mouse.z = (camera.transform.position - reference.transform.position).magnitude;
 
-                var mouseTarget = camera.ScreenToWorldPoint(mouse) - cameraInfo.gameObject.transform.position;
-                //Debug.Log(mouse.z);
+                var mouseTarget = camera.ScreenToWorldPoint(mouse) - reference.transform.position;
                 mouseTarget.y = 0;
-                //Vector3.Normalize(mouseTarget);
                 return mouseTarget;
             }
 
