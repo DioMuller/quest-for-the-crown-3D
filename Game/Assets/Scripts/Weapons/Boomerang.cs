@@ -2,10 +2,16 @@
 using System.Collections;
 using System;
 
+[RequireComponent(typeof(CameraTrack))]
 public class Boomerang : Weapon 
 {
     public const float FlightDuration = 0.5f;
     public const float ExtendFlightDuration = 0.5f;
+
+    /// <summary>
+    /// Player camera info.
+    /// </summary>
+    CameraTrack _cameraTrack;
 
     bool _canControl;
     BoomerangHitbox _hitbox;
@@ -34,6 +40,7 @@ public class Boomerang : Weapon
     void Start()
     {
         _playerController = Parent.GetComponent<PlayerMovement>();
+        _cameraTrack = GetComponent<CameraTrack>();
     }
 
     public void Update()
@@ -41,7 +48,7 @@ public class Boomerang : Weapon
         if (_hitbox == null)
             return;
 
-        var target = _playerController.Input.GetTarget();
+        var target = _playerController.Input.GetTarget(_cameraTrack);
         if (_canControl && target.magnitude > 0.5)
         {
             if (_flightDuration < 0)
