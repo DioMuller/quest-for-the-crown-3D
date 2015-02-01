@@ -9,7 +9,7 @@ namespace Assets.Libs.Input
     public class CharacterInput : InputAggregator
     {
         static readonly Dictionary<IEnumerable<string>, CharacterInput> _loadedInputs = new Dictionary<IEnumerable<string>, CharacterInput>();
-
+        public readonly bool UseMouse;
 
         public static CharacterInput FromSchemas(IEnumerable<string> schemas)
         {
@@ -22,6 +22,7 @@ namespace Assets.Libs.Input
         private CharacterInput(IEnumerable<string> schemas)
             : base(schemas)
         {
+            UseMouse = schemas.Contains("Keyboard");
         }
 
         /// <summary>
@@ -39,10 +40,25 @@ namespace Assets.Libs.Input
 		/// Gets the current input movement.
 		/// </summary>
 		/// <returns></returns>
-		public Vector3 GetTarget()
+		public Vector3 GetTarget(CameraTrack cameraInfo, GameObject reference)
 		{
 			var mX = GetAxis("AimHorizontal");
 			var mZ = GetAxis("AimVertical");
+
+            var camera = cameraInfo == null?
+                null : CameraManager.Instance.GetCamera(cameraInfo.CameraNumber);
+
+            if (UseMouse && camera != null && (UnityEngine.Input.GetMouseButton(0) ||
+                                               UnityEngine.Input.GetMouseButton(1)))
+            {
+                var mouse = UnityEngine.Input.mousePosition;
+                mouse.z = (camera.transform.position - reference.transform.position).magnitude;
+
+                var mouseTarget = camera.ScreenToWorldPoint(mouse) - reference.transform.position;
+                mouseTarget.y = 0;
+                return mouseTarget;
+            }
+
 			return new Vector3(mX, 0, mZ);
 		}
     }

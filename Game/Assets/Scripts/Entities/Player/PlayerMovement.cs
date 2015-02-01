@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Assets.Libs.Input;
 
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(CapsuleCollider))]
+[RequireComponent(typeof(CameraTrack))]
 public class PlayerMovement : MonoBehaviour
 {
     #region Private Attributes
@@ -14,15 +14,15 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private Rigidbody _rigidbody;
 
-	/// <summary>
-	/// The collider component.
-	/// </summary>
-	//private CapsuleCollider _collider;
+    /// <summary>
+    /// Player camera info.
+    /// </summary>
+    private CameraTrack _cameraTrack;
 
-	/// <summary>
-	/// Can the entity move?
-	/// </summary>
-	private bool _canMove = true;
+    /// <summary>
+    /// Can the entity move?
+    /// </summary>
+    private bool _canMove = true;
     #endregion Private Attributes
 
     #region Properties
@@ -66,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _cameraTrack = GetComponent<CameraTrack>();
     }
 
     /// <summary>
@@ -73,8 +74,8 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-		#region Aiming / LookAt Position
-		var aimValue = Input.GetTarget();
+        #region Aiming / LookAt Position
+        var aimValue = Input.GetTarget(_cameraTrack, gameObject);
 		bool aiming = false;
 
 		if (aimValue.sqrMagnitude > 0.1)

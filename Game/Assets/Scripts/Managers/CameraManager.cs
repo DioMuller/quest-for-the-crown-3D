@@ -159,5 +159,12 @@ public class CameraManager : MonoBehaviour
             Player2StatusPanel.SetActive(false);
         }
     }
+
+    public Camera GetCamera(int number)
+    {
+        if (_split != true || number == 1)
+            return _camera1;
+        return _camera2;
+    }
     #endregion
 }
