@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6826a0feb5f5ff040b37d024fe5dc061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewGameScene: OverworldFields
+  NewGameScene: Forest
 --- !u!4 &1106648508
 Transform:
   m_ObjectHideFlags: 0
