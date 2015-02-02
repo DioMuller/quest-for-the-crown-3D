@@ -87,6 +87,7 @@ public class Boomerang : Weapon
 
     public void OnHit(Collider collider)
     {
-        _hitbox.Return();
+        if( _hitbox != null )
+            _hitbox.Return();
     }
 }
