@@ -10,6 +10,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/Options.unity
   - enabled: 1
-    path: Assets/Scenes/Game/OverworldFields.unity
+    path: Assets/Scenes/Game/Overworld/Forest.unity
   - enabled: 1
-    path: Assets/Scenes/Game/OverworldBeach.unity
+    path: Assets/Scenes/Game/Dungeons/DarkForest.unity

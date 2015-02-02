@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3356504}
   - 65: {fileID: 6556504}
   - 23: {fileID: 2356504}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Border - Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   - 33: {fileID: 3356506}
   - 65: {fileID: 6556506}
   - 23: {fileID: 2356506}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 456508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - 33: {fileID: 3356508}
   - 65: {fileID: 6556508}
   - 23: {fileID: 2356508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Border - Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - 33: {fileID: 3356510}
   - 65: {fileID: 6556510}
   - 23: {fileID: 2356510}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Border - Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
