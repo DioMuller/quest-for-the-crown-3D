@@ -3,38 +3,36 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(TargetSelector))]
-public class Seek : MovementBehaviour
+public class Seek : MonoBehaviour
 {
 	#region Private Attributes
 	/// <summary>
 	/// Current Target Selector.
 	/// </summary>
 	private TargetSelector _targetSelector;
+
+    private NavMeshAgent _agent;
 	#endregion Private Attributes
 
 	#region Methods
 	/// <summary>
 	/// Initializes the MonoBehaviour
 	/// </summary>
-    protected override void StartBehaviour()
+    void Start()
 	{
 		_targetSelector = GetComponent<TargetSelector>();
-        base.StartBehaviour();
+        _agent = GetComponent<NavMeshAgent>();
 	}
 
     /// <summary>
-    /// Returns the direction.
+    /// Sets the target..
     /// </summary>
-	public override Vector3? GetDirection()
+	void Update()
 	{
-		if (_targetSelector.CurrentTarget != null)
-		{
-			var direction = (_targetSelector.CurrentTarget.transform.position - transform.position);
-
-			return direction;
-		}
-
-        return null;
+        if(_targetSelector.CurrentTarget != null)
+        {
+            _agent.destination = _targetSelector.CurrentTarget.transform.position;
+        }
 	}
 	#endregion Methods
 }
