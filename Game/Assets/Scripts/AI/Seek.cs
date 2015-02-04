@@ -33,6 +33,10 @@ public class Seek : MonoBehaviour
         {
             _agent.destination = _targetSelector.CurrentTarget.transform.position;
         }
+        else
+        {
+            _agent.destination = transform.position;
+        }
 	}
 	#endregion Methods
 }
