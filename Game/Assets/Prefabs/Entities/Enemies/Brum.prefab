@@ -209,7 +209,7 @@ MonoBehaviour:
   TagsToTarget:
   - Player
   SecsToRecalculate: 3
-  MinDistanceFromTarget: 100
+  MinDistanceFromTarget: 5
 --- !u!114 &11447984
 MonoBehaviour:
   m_ObjectHideFlags: 1
