@@ -35,7 +35,7 @@ public class PlayerWeapons : MonoBehaviour
     /// <summary>
     /// Current Weapons Index.
     /// </summary>
-    int[] _currentWeapons = {0, 1};
+    int[] _currentWeapons = {0, -1};
 
     /// <summary>
     /// Switch weapon button is currently pressed.
@@ -184,9 +184,9 @@ public class PlayerWeapons : MonoBehaviour
 
         while( !Weapons[index].WeaponEnabled )
         {
-            index++;
+            index = (index + 1) % Weapons.Length;
 
-            if (Weapons[index].WeaponObject == oldWeapon) return;
+            if ( Weapons[index].WeaponObject == oldWeapon) return;
         }
 
         _currentWeapons[position] = index;
