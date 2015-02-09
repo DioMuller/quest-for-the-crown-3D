@@ -3,16 +3,8 @@ using UnityEngine;
 using System.Collections;
 using System.Linq;
 
-public class LocalizationManager : MonoBehaviour
+public class LocalizationManager : SingletonBehaviour<LocalizationManager>
 {
-    #region Singleton
-	/// <summary>
-	/// Gets the instance.
-	/// </summary>
-	/// <value>The singleton instance.</value>
-	public static LocalizationManager Instance { get; private set; }
-    #endregion Singleton
-
     #region Public Attributes
 	/// <summary>
 	/// The dialog localization data file.
@@ -24,16 +16,6 @@ public class LocalizationManager : MonoBehaviour
 	/// </summary>
 	public string DefaultLanguage = "English";
     #endregion Public Attributes
-
-    #region MonoBehaviour Methods
-    /// <summary>
-    /// Initializes MonoBehaviour.
-    /// </summary>
-	void Awake() 
-    {
-        Instance = this;
-    }
-    #endregion MonoBehaviour Methods
 
 	#region Localization Methods
 	public static string GetText(string key)

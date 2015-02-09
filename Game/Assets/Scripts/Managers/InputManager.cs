@@ -27,7 +27,8 @@ using System.Collections;
 		4 / R = UseItem 4
  */
 
-public class InputManager : MonoBehaviour {
+public class InputManager : SingletonBehaviour<InputManager>
+{
 
 	/// <summary>
 	/// Use this for initialization.

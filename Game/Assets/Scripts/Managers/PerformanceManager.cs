@@ -1,16 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PerformanceManager : MonoBehaviour 
+public class PerformanceManager : SingletonBehaviour<PerformanceManager> 
 {
-	#region Singleton
-	/// <summary>
-	/// Gets the instance.
-	/// </summary>
-	/// <value>The singleton instance.</value>
-	public static PerformanceManager Instance { get; private set; }
-	#endregion Singleton
-	
 	#region Public Attributes
 	/// <summary>
 	/// Current FPS.
@@ -19,14 +11,6 @@ public class PerformanceManager : MonoBehaviour
 	#endregion Public Attributes
 	
 	#region MonoBehaviour Methods
-	/// <summary>
-	/// Initializes MonoBehaviour.
-	/// </summary>
-	void Awake() 
-	{
-		Instance = this;
-	}
-
 	/// <summary>
 	/// Called once per frame.
 	/// </summary>

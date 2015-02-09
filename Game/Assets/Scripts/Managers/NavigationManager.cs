@@ -2,19 +2,11 @@
 using UnityEngine;
 using System.Collections;
 
-public class NavigationManager : MonoBehaviour 
+public class NavigationManager : SingletonBehaviour<NavigationManager> 
 {
-    public static NavigationManager Instance;
-
     public static string NextWaypoint = String.Empty;
     public Transform[] Waypoints;
     public GameObject Player;
-
-	// Use this for initialization
-	void Awake () 
-    {
-        Instance = this;
-	}
 
     void Start()
     {

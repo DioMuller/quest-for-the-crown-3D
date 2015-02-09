@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 
-public class CameraManager : MonoBehaviour
+public class CameraManager : SingletonBehaviour<CameraManager>
 {
     #region Constants
     // TODO: Split based on camera view
     public const float SplitDistanceX = 150;
     public const float SplitDistanceZ = 100;
-    #endregion
-
-    #region Static
-    public static CameraManager Instance { get; private set; }
     #endregion
 
     #region Private Attributes
@@ -39,14 +35,6 @@ public class CameraManager : MonoBehaviour
     #endregion
 
     #region MonoBehaviour Methods
-    /// <summary>
-    /// Initializes MonoBehaviour.
-    /// </summary>
-    void Awake()
-    {
-        Instance = this;
-    }
-
     // Use this for initialization
     void Start()
     {
