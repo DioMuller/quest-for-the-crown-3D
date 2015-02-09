@@ -47,6 +47,7 @@ GameObject:
   - 114: {fileID: 11446684}
   - 114: {fileID: 11446682}
   - 195: {fileID: 19546682}
+  - 114: {fileID: 11465928}
   m_Layer: 0
   m_Name: Catyprab
   m_TagString: Enemy
@@ -187,6 +188,21 @@ MonoBehaviour:
   MinimapSprite: {fileID: 2800000, guid: 9e04c86c2d8f8fd4fb480b11877cba3c, type: 3}
   SpriteColor: {r: 1, g: 0, b: 0, a: 1}
   Size: 1
+--- !u!114 &11465928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9735081d392e52745b8ab3d83dce4764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Targets:
+  - Player
+  - Enemy
+  AttackPower: 1
 --- !u!136 &13646682
 CapsuleCollider:
   m_ObjectHideFlags: 1
