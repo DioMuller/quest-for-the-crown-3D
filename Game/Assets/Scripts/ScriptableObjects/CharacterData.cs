@@ -23,5 +23,10 @@ public class CharacterData : ScriptableObject
     /// Character Magic Regen Quantity.
     /// </summary>
     public int MagicRegenQuantity = 1;
+
+    /// <summary>
+    /// Invulnerability time after hit.
+    /// </summary>
+    public float InvulnerabilityTime = 0.5f;
     #endregion Public Attributes
 }
