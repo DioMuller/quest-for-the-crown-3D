@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class CharacterStatus : MonoBehaviour
 {
-	#region Public Attributes
+
+    #region Private Attributes
+    private Rigidbody _rigidbody;
+    #endregion Private Attributes
+
+    #region Public Attributes
     public bool RemoveOnDestroy = true;
     public CharacterData Data;
 	#endregion Public Attributes
@@ -24,6 +29,8 @@ public class CharacterStatus : MonoBehaviour
         CurrentMagic = Data.MaxMagic;
 
         IsInvulnerable = false;
+
+        _rigidbody = GetComponent<Rigidbody>();
 
         IsDead = Data.MaxHealth <= 0;
 
@@ -57,10 +64,14 @@ public class CharacterStatus : MonoBehaviour
 		CurrentHealth -= amount;
 
         // TODO: Correct Knockback.
-        var knockbackDirection = (transform.position - attacker.position);
-        knockbackDirection.y = 0;
-        knockbackDirection.Normalize();
-        transform.position += (knockbackDirection);
+        if (_rigidbody != null)
+        {
+            var knockbackDirection = (transform.position - attacker.position);
+            knockbackDirection.y = 0;
+            knockbackDirection.Normalize();
+            _rigidbody.MovePosition(transform.position + knockbackDirection);
+        }
+
 
         if (CurrentHealth <= 0)
         {
