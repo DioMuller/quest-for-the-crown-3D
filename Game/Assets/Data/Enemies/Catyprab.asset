@@ -9,9 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e65f7651d71d493488f9acbdf2a8117e, type: 3}
-  m_Name: Brum
+  m_Name: Catyprab
   m_EditorClassIdentifier: 
-  MaxHealth: 2
-  MaxMagic: 0
-  MagicRegenTime: 0
-  MagicRegenQuantity: 0
+  MaxHealth: 1
+  MaxMagic: 1
+  MagicRegenTime: 1
+  MagicRegenQuantity: 1
+  InvulnerabilityTime: .100000001
