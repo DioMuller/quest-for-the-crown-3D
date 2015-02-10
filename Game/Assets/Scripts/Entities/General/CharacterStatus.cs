@@ -98,7 +98,7 @@ public class CharacterStatus : MonoBehaviour
 		IsDead = true;
 
         // Animation?
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.0f);
 
         if (RemoveOnDestroy)
             Destroy(gameObject);
