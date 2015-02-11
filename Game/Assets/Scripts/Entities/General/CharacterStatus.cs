@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CharacterStatus : MonoBehaviour
 {
-
     #region Private Attributes
     private Rigidbody _rigidbody;
     #endregion Private Attributes
