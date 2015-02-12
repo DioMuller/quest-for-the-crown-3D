@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: MainCharacter
+  m_Name: Player
   serializedVersion: 2
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -46,7 +46,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Idle
-  m_Speed: 1
+  m_Speed: .100000001
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 0ed487421b30451478b44d566ea0861c, type: 2}
