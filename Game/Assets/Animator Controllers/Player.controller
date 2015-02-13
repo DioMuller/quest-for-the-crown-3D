@@ -75,14 +75,14 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110219886}
   m_DstState: {fileID: 110288346}
-  m_TransitionDuration: .666666627
+  m_TransitionDuration: .0483250059
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
     m_EventTreshold: .300000012
     m_ExitTime: .333333373
-  m_Atomic: 1
+  m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
@@ -127,7 +127,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Running
-  m_Speed: 10
+  m_Speed: 5
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 78d7f125aa8d458459200e6d90516d84, type: 2}
