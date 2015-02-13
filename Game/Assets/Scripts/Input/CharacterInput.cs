@@ -33,7 +33,12 @@ namespace Assets.Libs.Input
         {
             var mX = GetAxis("MoveHorizontal");
 			var mZ = GetAxis("MoveVertical");
-            return new Vector3(mX, 0, mZ);
+            var input = new Vector3(mX, 0, mZ);
+
+            if( input.sqrMagnitude > 1.0 )
+                input.Normalize();
+
+            return input;
         }
 
 		/// <summary>
@@ -59,7 +64,10 @@ namespace Assets.Libs.Input
                 return mouseTarget;
             }
 
-			return new Vector3(mX, 0, mZ);
+            var input = new Vector3(mX, 0, mZ);
+            input.Normalize();
+
+            return input;
 		}
     }
 }

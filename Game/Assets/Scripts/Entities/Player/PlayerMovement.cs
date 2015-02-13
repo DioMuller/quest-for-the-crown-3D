@@ -56,7 +56,15 @@ public class PlayerMovement : MonoBehaviour
 	/// </summary>
 	public float MaxVelocityChange;
 
+    /// <summary>
+    /// Player Slope Limit
+    /// </summary>
 	public float SlopeLimit = 15.0f;
+
+    /// <summary>
+    /// Animator with controller.
+    /// </summary>
+    public Animator Animator = null;
     #endregion Public Attributes
 
     #region MonoBehaviour Methods
@@ -93,10 +101,14 @@ public class PlayerMovement : MonoBehaviour
 
 		#region New Position
 		var inputValue = Input.GetMovement();
-		inputValue.Normalize();
         var movementSpeed = inputValue * Speed * Time.fixedDeltaTime;
-
 		var newPos = transform.position + movementSpeed;
+
+        if (Animator != null)
+        {
+            var spd = movementSpeed.sqrMagnitude * 100.0f;
+            Animator.SetFloat("Speed", spd);
+        }
 
 	    if (!aiming)
 	    {

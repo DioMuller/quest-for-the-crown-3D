@@ -2791,6 +2791,7 @@ MonoBehaviour:
   - Joy1
   MaxVelocityChange: 0
   SlopeLimit: 35
+  Animator: {fileID: 9526888}
 --- !u!114 &11452164
 MonoBehaviour:
   m_ObjectHideFlags: 1
