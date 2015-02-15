@@ -10,6 +10,10 @@ public class CharacterStatus : MonoBehaviour
 
     #region Public Attributes
     public bool RemoveOnDestroy = true;
+
+	public Animator Animator = null;
+	public float AnimationTime = 1.0f;
+
     public CharacterData Data;
 	#endregion Public Attributes
 
@@ -38,8 +42,8 @@ public class CharacterStatus : MonoBehaviour
             InvokeRepeating("MagicRegen", Data.MagicRegenTime, Data.MagicRegenTime);
         }
 
-		if (IsDead && RemoveOnDestroy)
-            PlayDestruction(null);
+		if (IsDead)
+            StartCoroutine(PlayDestruction(null));
     }
 	#endregion MonoBehaviour Methods
 
@@ -108,9 +112,17 @@ public class CharacterStatus : MonoBehaviour
 		IsDead = true;
 
         // Animation?
-        yield return new WaitForSeconds(0.0f);
+		if (Animator != null)
+		{
+			Animator.SetBool("IsDead", true);
+			yield return new WaitForSeconds(AnimationTime);
+		}
+		else
+		{
+			yield return null;
+		}
 
-        if (RemoveOnDestroy)
+		if (RemoveOnDestroy)
             Destroy(gameObject);
     }
 
