@@ -112,26 +112,6 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110187954
-Transition:
-  serializedVersion: 2
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110219886}
-  m_DstState: {fileID: 110202598}
-  m_TransitionDuration: .666666627
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
-    m_ExitTime: .333333373
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
-  m_CanTransitionToSelf: 0
 --- !u!1101 &110195764
 Transition:
   serializedVersion: 2
@@ -187,18 +167,18 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1102 &110202598
+--- !u!1102 &110201032
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Spellcast
+  m_Name: SpellcastIdle
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 67cf3933bf377bd4390443017d421db3, type: 2}
+  - {fileID: 7400000, guid: 2ff9a3af00518fa45be2060a4fe70152, type: 2}
   m_ParentStateMachine: {fileID: 110786688}
-  m_Position: {x: 324, y: 84, z: 0}
+  m_Position: {x: 288, y: -24, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -217,6 +197,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110215492
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: BowIdle
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 429cf1dbbdf5332408f7140d499ca692, type: 2}
+  m_ParentStateMachine: {fileID: 110786688}
+  m_Position: {x: 288, y: 24, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1102 &110219886
 State:
   m_ObjectHideFlags: 3
@@ -229,6 +224,36 @@ State:
   - {fileID: 7400000, guid: 0ed487421b30451478b44d566ea0861c, type: 2}
   m_ParentStateMachine: {fileID: 110786688}
   m_Position: {x: 24, y: 84, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110246700
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: BowRunning
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 9f2e40cbb7b12de48b5a4efcad7a159e, type: 2}
+  m_ParentStateMachine: {fileID: 110786688}
+  m_Position: {x: 312, y: 252, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110279018
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: SpellcastRunning
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 737607defcc3fd644a9d3903ac3fe522, type: 2}
+  m_ParentStateMachine: {fileID: 110786688}
+  m_Position: {x: 312, y: 204, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -260,7 +285,10 @@ StateMachine:
   - {fileID: 110288346}
   - {fileID: 110200722}
   - {fileID: 110207658}
-  - {fileID: 110202598}
+  - {fileID: 110201032}
+  - {fileID: 110279018}
+  - {fileID: 110215492}
+  - {fileID: 110246700}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
@@ -272,7 +300,6 @@ StateMachine:
       first: {fileID: 110219886}
       second:
       - {fileID: 110174814}
-      - {fileID: 110187954}
     data:
       first: {fileID: 110288346}
       second:
