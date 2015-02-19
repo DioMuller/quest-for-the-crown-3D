@@ -2693,7 +2693,7 @@ Animator:
   m_GameObject: {fileID: 127048}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 571056e7ee804f64882dca6a87d20d91, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 58ba37bc1b47fa945a30c612e0fb9f98, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2829,6 +2829,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RemoveOnDestroy: 1
+  Animator: {fileID: 9526888}
+  AnimationTime: 3
   Data: {fileID: 11400000, guid: efcedeb9b12556a4484053f29787c81c, type: 2}
 --- !u!114 &11452170
 MonoBehaviour:
@@ -2878,7 +2880,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: .25
-  m_Height: 1
+  m_Height: 1.29999995
   m_Direction: 1
   m_Center: {x: 0, y: .529999971, z: 0}
 --- !u!137 &13726888
