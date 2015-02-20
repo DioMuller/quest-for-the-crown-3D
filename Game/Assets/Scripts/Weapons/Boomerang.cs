@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-[RequireComponent(typeof(CameraTrack))]
+//[RequireComponent(typeof(CameraTrack))]
 public class Boomerang : Weapon 
 {
     /// <summary>
