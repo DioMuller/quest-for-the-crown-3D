@@ -14,8 +14,15 @@ public class Seek : MonoBehaviour
     private NavMeshAgent _agent;
 	#endregion Private Attributes
 
-	#region Methods
-	/// <summary>
+    #region Public Attributes
+    /// <summary>
+    /// Entity Animator.
+    /// </summary>
+    public Animator Animator;
+    #endregion Public Attributes
+
+    #region Methods
+    /// <summary>
 	/// Initializes the MonoBehaviour
 	/// </summary>
     void Start()
@@ -36,6 +43,11 @@ public class Seek : MonoBehaviour
         else
         {
             _agent.destination = transform.position;
+        }
+
+        if( Animator != null )
+        {
+            Animator.SetFloat("Speed", _agent.speed);
         }
 	}
 	#endregion Methods
