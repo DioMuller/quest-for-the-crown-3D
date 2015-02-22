@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 
-public class HealthItem : ItemBase
+public class PotionItem : ItemBase
 {
-    public HealthItem()
+    public PotionItem()
         : base(Pickup, Use)
     {
     }
 
     public static void Pickup(PlayerInventory inventory, int amount)
     {
-        inventory.AddHealthItem(amount);
+        inventory.AddPotionItem(amount);
     }
 
     public static bool Use(GameObject player)
@@ -19,7 +19,7 @@ public class HealthItem : ItemBase
         var status = player.GetComponent<CharacterStatus>();
         if (status != null)
         {
-            return status.AddHealth(RestoreAmount) > 0;
+            return status.RestoreMagic(RestoreAmount) > 0;
         }
         return false;
     }

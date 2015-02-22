@@ -6,6 +6,9 @@ public class CharacterStatus : MonoBehaviour
 {
     #region Private Attributes
     private Rigidbody _rigidbody;
+
+    private int _currentHealth;
+    private int _currentMagic;
     #endregion Private Attributes
 
     #region Public Attributes
@@ -15,11 +18,19 @@ public class CharacterStatus : MonoBehaviour
 	public float AnimationTime = 1.0f;
 
     public CharacterData Data;
-	#endregion Public Attributes
+    #endregion Public Attributes
 
-	#region Properties
-	public int CurrentHealth { get; private set; }
-	public int CurrentMagic { get; private set; }
+    #region Properties
+    public int CurrentHealth
+    {
+        get { return _currentHealth; }
+        private set { _currentHealth = value; }
+    }
+	public int CurrentMagic
+    {
+        get { return _currentMagic; }
+        private set { _currentMagic = value; }
+    }
 	public bool IsDead { get; private set; }
     public bool IsInvulnerable { get; private set; }
 	#endregion Properties
@@ -45,18 +56,20 @@ public class CharacterStatus : MonoBehaviour
 		if (IsDead)
             StartCoroutine(PlayDestruction(null));
     }
-	#endregion MonoBehaviour Methods
+    #endregion MonoBehaviour Methods
 
-	#region Status Methods
-    public void AddHealth(int health)
+    #region Status Methods
+    public int AddHealth(int quantity)
     {
-		if (IsDead)
-            return;
-
-        CurrentHealth = Math.Min(CurrentHealth + health, Data.MaxHealth);
+        return Add(ref _currentHealth, quantity, Data.MaxHealth);
     }
 
-	public void RemoveHealth(int amount, Transform attacker)
+    public int RestoreMagic(int amount)
+    {
+        return Add(ref _currentMagic, amount, Data.MaxMagic);
+    }
+
+    public void RemoveHealth(int amount, Transform attacker)
     {
         if (IsInvulnerable) return;
 
@@ -87,18 +100,13 @@ public class CharacterStatus : MonoBehaviour
         }
     }
 
-	public bool UseMagic(int amount)
-	{
-		if( CurrentMagic < amount ) return false;
+    public bool UseMagic(int amount)
+    {
+        if (CurrentMagic < amount) return false;
 
-		CurrentMagic = CurrentMagic - amount;
-		return true;
-	}
-
-	public void RestoreMagic(int amount)
-	{
-        CurrentMagic = Math.Min(CurrentMagic + amount, Data.MaxMagic);
-	}
+        CurrentMagic = CurrentMagic - amount;
+        return true;
+    }
 
     public void MagicRegen()
     {
@@ -141,5 +149,17 @@ public class CharacterStatus : MonoBehaviour
     {
         // TODO: Blink or Hit effect.
     }
-	#endregion Event Methods
+    #endregion Event Methods
+
+    #region Private Methods
+    private int Add(ref int storage, int quantity, int max)
+    {
+        if (IsDead || storage >= max)
+            return 0;
+
+        int toUse = Math.Max(quantity, max - storage);
+        storage += toUse;
+        return toUse;
+    }
+    #endregion Private Methods
 }
