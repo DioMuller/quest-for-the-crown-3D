@@ -7,9 +7,9 @@ public class HealthItem : ItemBase
     {
     }
 
-    public static void Pickup(PlayerInventory inventory, int amount)
+    public static int Pickup(PlayerInventory inventory, int amount)
     {
-        inventory.AddHealthItem(amount);
+        return inventory.AddHealthItem(amount);
     }
 
     public static bool Use(GameObject player)

@@ -7,9 +7,9 @@ public class PotionItem : ItemBase
     {
     }
 
-    public static void Pickup(PlayerInventory inventory, int amount)
+    public static int Pickup(PlayerInventory inventory, int amount)
     {
-        inventory.AddPotionItem(amount);
+        return inventory.AddPotionItem(amount);
     }
 
     public static bool Use(GameObject player)

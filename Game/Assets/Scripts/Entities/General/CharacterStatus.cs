@@ -157,7 +157,7 @@ public class CharacterStatus : MonoBehaviour
         if (IsDead || storage >= max)
             return 0;
 
-        int toUse = Math.Max(quantity, max - storage);
+        int toUse = Math.Min(quantity, max - storage);
         storage += toUse;
         return toUse;
     }

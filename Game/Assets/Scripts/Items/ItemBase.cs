@@ -4,12 +4,12 @@ using System;
 
 public abstract class ItemBase : MonoBehaviour
 {
-    public int PickupAmount;
+    public int PickupAmount = 1;
 
-    private Action<PlayerInventory, int> _addToInventory;
+    private Func<PlayerInventory, int, int> _addToInventory;
     private Func<GameObject, bool> _useItem;
 
-    protected ItemBase(Action<PlayerInventory, int> addToInventory, Func<GameObject, bool> useItem)
+    protected ItemBase(Func<PlayerInventory, int, int> addToInventory, Func<GameObject, bool> useItem)
     {
         _addToInventory = addToInventory;
         _useItem = useItem;
@@ -32,7 +32,7 @@ public abstract class ItemBase : MonoBehaviour
         var inventory = player.GetComponent<PlayerInventory>();
         if (inventory != null)
         {
-            _addToInventory(inventory, PickupAmount);
+            PickupAmount -= _addToInventory(inventory, PickupAmount);
         }
         else
         {
@@ -40,6 +40,7 @@ public abstract class ItemBase : MonoBehaviour
             {
                 if (!_useItem(player.gameObject))
                     break;
+                PickupAmount--;
             }
         }
 

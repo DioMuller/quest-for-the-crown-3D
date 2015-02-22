@@ -3,6 +3,9 @@ using System;
 
 public class PlayerInventory : MonoBehaviour
 {
+    const int MaxHealthItems = 10;
+    const int MaxPotionItems = 10;
+
     PlayerMovement PlayerMovement;
     CharacterStatus CharacterStatus;
 
@@ -26,14 +29,14 @@ public class PlayerInventory : MonoBehaviour
             UsePotion();
     }
 
-    public void AddHealthItem(int amount)
+    public int AddHealthItem(int amount)
     {
-        HealthItems += amount;
+        return AddItem(ref HealthItems, amount, MaxHealthItems);
     }
 
-    public void AddPotionItem(int amount)
+    public int AddPotionItem(int amount)
     {
-        PotionItems += amount;
+        return AddItem(ref PotionItems, amount, MaxPotionItems);
     }
 
     public bool UsePotion()
@@ -44,6 +47,13 @@ public class PlayerInventory : MonoBehaviour
     public bool UseHealthItem()
     {
         return UseItem(ref HealthItems, HealthItem.Use);
+    }
+
+    int AddItem(ref int item, int amount, int max)
+    {
+        int toAdd = Math.Min(amount, max - item);
+        item += toAdd;
+        return toAdd;
     }
 
     bool UseItem(ref int item, Func<GameObject, bool> itemUse)
