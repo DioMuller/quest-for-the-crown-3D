@@ -137,7 +137,7 @@ Transform:
   m_GameObject: {fileID: 102612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 402614}
   - {fileID: 402616}
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe594de356f4a049acffe94eb5e8fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animator: {fileID: 0}
+  Animator: {fileID: 9502624}
 --- !u!114 &11439434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -274,6 +274,9 @@ MonoBehaviour:
   - Player
   - Enemy
   AttackPower: 1
+  Animator: {fileID: 9502624}
+  FlagName: IsAttacking
+  AttackState: WormAttacking
 --- !u!114 &11447978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,7 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RemoveOnDestroy: 1
-  Animator: {fileID: 0}
+  Animator: {fileID: 9502624}
   AnimationTime: 1
   Data: {fileID: 11400000, guid: 088b574b8cc7c5c4497a7eec94700d6d, type: 2}
 --- !u!136 &13647976
