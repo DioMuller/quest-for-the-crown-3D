@@ -112,6 +112,7 @@ public class PlayerWeapons : MonoBehaviour
     /// </summary>
     void Update()
     {
+        if (!_playerController.CanMove) return;
         if (_weaponActive) return;
 
         #region Weapon Change Controls

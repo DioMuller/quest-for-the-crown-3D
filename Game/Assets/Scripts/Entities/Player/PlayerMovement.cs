@@ -39,6 +39,14 @@ public class PlayerMovement : MonoBehaviour
     {
         get { return CharacterInput.FromSchemas(InputSchemas); }
     }
+
+    /// <summary>
+    /// Can the player move?
+    /// </summary>
+    public bool CanMove
+    {
+        get { return !_status.IsDead && _canMove; }
+    }
     #endregion Properties
 
     #region Public Attributes
@@ -89,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        if (_status.IsDead) return;
+        if (!CanMove) return;
 
         #region Aiming / LookAt Position
         var aimValue = Input.GetTarget(_cameraTrack, gameObject);
