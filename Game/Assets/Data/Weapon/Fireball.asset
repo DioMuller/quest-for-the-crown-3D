@@ -14,7 +14,7 @@ MonoBehaviour:
   AttackPower: 1
   MagicConsumption: 1
   LifeTime: 2
-  AnimationTime: .829999983
+  AnimationTime: .400000006
   AnimationFlag: UsingFireball
   DestroyOnContact: 1
   MoveWithPlayer: 0

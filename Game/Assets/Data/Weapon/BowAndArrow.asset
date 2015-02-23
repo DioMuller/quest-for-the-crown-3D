@@ -14,7 +14,7 @@ MonoBehaviour:
   AttackPower: 1
   MagicConsumption: 1
   LifeTime: 5
-  AnimationTime: .850000024
+  AnimationTime: .400000006
   AnimationFlag: UsingBow
   DestroyOnContact: 1
   MoveWithPlayer: 0

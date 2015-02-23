@@ -14,7 +14,7 @@ MonoBehaviour:
   AttackPower: 1
   MagicConsumption: 1
   LifeTime: 0
-  AnimationTime: .790000021
+  AnimationTime: .349999994
   AnimationFlag: UsingBoomerang
   DestroyOnContact: 0
   MoveWithPlayer: 0
