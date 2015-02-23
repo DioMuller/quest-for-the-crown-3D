@@ -146,7 +146,6 @@ public class PlayerWeapons : MonoBehaviour
             if (!_useWeaponPressed)
             {
                 StartCoroutine(ActivateWeapon(GetWeapon(0)));
-                GetWeapon(0).Attack();
                 _useWeaponPressed = true;
             }
         }
@@ -155,7 +154,6 @@ public class PlayerWeapons : MonoBehaviour
             if (!_useWeaponPressed)
             {
                 StartCoroutine(ActivateWeapon(GetWeapon(1)));
-                GetWeapon(1).Attack();
                 _useWeaponPressed = true;
             }
         }
@@ -230,6 +228,8 @@ public class PlayerWeapons : MonoBehaviour
         Animator.SetBool(weapon.Data.AnimationFlag, true);
 
         yield return new WaitForSeconds(weapon.Data.AnimationTime);
+
+        weapon.Attack();
 
         Animator.SetBool(weapon.Data.AnimationFlag, false);
         weapon.gameObject.SetActive(false);
