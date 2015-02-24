@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 999.356506, y: 1007.30347, z: 995.778442}
+  m_LocalPosition: {x: 997.945374, y: 1000, z: 1007.37933}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 477116}
@@ -82,7 +82,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177114}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: c7f3abdc3e8fa134bb2ca2ce45ab5703, type: 3}
   m_PlayOnAwake: 1
@@ -170,7 +170,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177116}
-  lengthInSec: 3
+  lengthInSec: 2
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -341,7 +341,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .100000001
+      scalar: .5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -413,8 +413,8 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     type: 4
-    radius: .00999999978
-    angle: 7
+    radius: .0500000007
+    angle: 15
     length: 5
     boxX: 1
     boxY: 1
