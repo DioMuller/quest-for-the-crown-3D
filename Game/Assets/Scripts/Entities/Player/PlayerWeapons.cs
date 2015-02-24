@@ -46,6 +46,11 @@ public class PlayerWeapons : MonoBehaviour
     /// Is the Use weapon button currently pressed?
     /// </summary>
     bool _useWeaponPressed = false;
+
+    /// <summary>
+    /// Is a weapon active?
+    /// </summary>
+    bool _weaponActive = false;
     #endregion Private Attributes
 
     #region Public Attributes
@@ -53,6 +58,11 @@ public class PlayerWeapons : MonoBehaviour
     /// Weapons list.
     /// </summary>
     public WeaponStatus[] Weapons;
+
+    /// <summary>
+    /// Character Animator.
+    /// </summary>
+    public Animator Animator;
     #endregion Public Attributes
 
     #region Weapon Instance Methods
@@ -102,6 +112,10 @@ public class PlayerWeapons : MonoBehaviour
     /// </summary>
     void Update()
     {
+        if (!_playerController.CanMove) return;
+        if (_weaponActive) return;
+
+        #region Weapon Change Controls
         if (_playerController.Input.GetButton("QuickChangePrimary"))
         {
             if (!_switchWeaponPressed)
@@ -109,42 +123,46 @@ public class PlayerWeapons : MonoBehaviour
                 NextWeapon(0);
                 _switchWeaponPressed = true;
             }
+
+            return;
         }
-        else if (_playerController.Input.GetButton("QuickChangeSecondary"))
+
+        if (_playerController.Input.GetButton("QuickChangeSecondary"))
         {
             if (!_switchWeaponPressed)
             {
                 NextWeapon(1);
                 _switchWeaponPressed = true;
             }
+
+            return;
+        }
+        #endregion Weapon Change Controls
+
+        #region Weapon Use Controls
+        _switchWeaponPressed = false;
+
+        if (GetWeaponIndex(0) >= 0 && _playerController.Input.GetButton("PrimaryAttack"))
+        {
+            if (!_useWeaponPressed)
+            {
+                StartCoroutine(ActivateWeapon(GetWeapon(0)));
+                _useWeaponPressed = true;
+            }
+        }
+        else if (GetWeaponIndex(1) >= 0 && _playerController.Input.GetButton("SecondaryAttack"))
+        {
+            if (!_useWeaponPressed)
+            {
+                StartCoroutine(ActivateWeapon(GetWeapon(1)));
+                _useWeaponPressed = true;
+            }
         }
         else
         {
-            _switchWeaponPressed = false;
-
-            if (GetWeaponIndex(0) >= 0 && _playerController.Input.GetButton("PrimaryAttack"))
-			{
-                if (!_useWeaponPressed)
-                {
-                    StartCoroutine(ActivateWeapon(GetWeapon(0)));
-                    GetWeapon(0).Attack();
-                    _useWeaponPressed = true;
-                }
-			}
-            else if (GetWeaponIndex(1) >= 0 && _playerController.Input.GetButton("SecondaryAttack"))
-            {
-                if (!_useWeaponPressed)
-                {
-                    StartCoroutine(ActivateWeapon(GetWeapon(1)));
-                    GetWeapon(1).Attack();
-                    _useWeaponPressed = true;
-                }
-            }
-            else
-            {
-                _useWeaponPressed = false;
-            }
+            _useWeaponPressed = false;
         }
+        #endregion Weapon Use Controls
     }
     #endregion MonoBehaviour Methods
 
@@ -204,9 +222,19 @@ public class PlayerWeapons : MonoBehaviour
 
     IEnumerator ActivateWeapon(Weapon weapon)
     {
+        if (Animator == null) yield return null;
+
+        _weaponActive = true;
         weapon.gameObject.SetActive(true);
+        Animator.SetBool(weapon.Data.AnimationFlag, true);
+
         yield return new WaitForSeconds(weapon.Data.AnimationTime);
+
+        weapon.Attack();
+
+        Animator.SetBool(weapon.Data.AnimationFlag, false);
         weapon.gameObject.SetActive(false);
+        _weaponActive = false;
     }
     #endregion Private Methods
 }

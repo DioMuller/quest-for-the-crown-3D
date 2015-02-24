@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +7,21 @@ public class EnemyHitbox : MonoBehaviour
 {
     public string[] Targets = { "Player", "Enemy" };
     public int AttackPower = 1;
+	public Animator Animator;
+	public string FlagName = "IsAttacking";
+	public string AttackState = "Attacking";
+
+	void Update()
+	{
+		if (Animator != null)
+		{
+			// Once transition has begun, reset the bool
+			if (Animator.GetNextAnimatorStateInfo(0).IsName(AttackState))
+			{
+				Animator.SetBool(FlagName, false);
+			}
+		}
+	}
 
 	protected void OnCollisionEnter(Collision other)
 	{
@@ -15,6 +30,11 @@ public class EnemyHitbox : MonoBehaviour
             var status = other.gameObject.GetComponent<CharacterStatus>();
 
             OnHit(status);
+
+	        if (Animator != null)
+	        {
+		        Animator.SetBool(FlagName, true);
+	        }
         }
 	}
 

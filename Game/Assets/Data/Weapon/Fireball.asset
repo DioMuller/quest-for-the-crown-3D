@@ -14,6 +14,8 @@ MonoBehaviour:
   AttackPower: 1
   MagicConsumption: 1
   LifeTime: 2
+  AnimationTime: .400000006
+  AnimationFlag: UsingFireball
   DestroyOnContact: 1
   MoveWithPlayer: 0
   Icon: {fileID: 2800000, guid: f35da9715c5cacd45acf1395f0b39825, type: 3}

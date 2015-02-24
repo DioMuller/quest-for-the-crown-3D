@@ -23,6 +23,11 @@ public class WeaponData : ScriptableObject
     public float AnimationTime = 1.0f;
 
     /// <summary>
+    /// Weapon Animation Flag.
+    /// </summary>
+    public string AnimationFlag = "";
+
+    /// <summary>
     /// Will the weapon be destroyed on contact?
     /// </summary>
 	public bool DestroyOnContact = false;

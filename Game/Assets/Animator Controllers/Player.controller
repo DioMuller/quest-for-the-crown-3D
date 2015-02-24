@@ -85,7 +85,7 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110219886}
   m_DstState: {fileID: 110201032}
-  m_TransitionDuration: .666666627
+  m_TransitionDuration: .0153011316
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
@@ -108,8 +108,8 @@ Transition:
   m_TransitionDuration: .171428561
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: UsingFireball
     m_EventTreshold: 0
     m_ExitTime: .828571439
   m_Atomic: 1
@@ -125,11 +125,11 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110279018}
   m_DstState: {fileID: 110288346}
-  m_TransitionDuration: .171428561
+  m_TransitionDuration: .122355588
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: UsingFireball
     m_EventTreshold: 0
     m_ExitTime: .828571439
   m_Atomic: 1
@@ -145,11 +145,11 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110246700}
   m_DstState: {fileID: 110288346}
-  m_TransitionDuration: .153846145
+  m_TransitionDuration: .126365244
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: UsingBow
     m_EventTreshold: 0
     m_ExitTime: .846153855
   m_Atomic: 1
@@ -165,7 +165,7 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110219886}
   m_DstState: {fileID: 110215492}
-  m_TransitionDuration: .666666627
+  m_TransitionDuration: .0214418843
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
@@ -185,11 +185,11 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110244856}
   m_DstState: {fileID: 110219886}
-  m_TransitionDuration: .101694919
+  m_TransitionDuration: .0818217248
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: UsingSword
     m_EventTreshold: 0
     m_ExitTime: .898305058
   m_Atomic: 1
@@ -225,11 +225,11 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110220352}
   m_DstState: {fileID: 110288346}
-  m_TransitionDuration: .101694919
+  m_TransitionDuration: .0495089665
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: UsingSword
     m_EventTreshold: 0
     m_ExitTime: .898305058
   m_Atomic: 1
@@ -265,7 +265,7 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110288346}
   m_DstState: {fileID: 110220352}
-  m_TransitionDuration: .101694919
+  m_TransitionDuration: .128088981
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
@@ -285,11 +285,11 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110222458}
   m_DstState: {fileID: 110219886}
-  m_TransitionDuration: .206896544
+  m_TransitionDuration: .149091914
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: UsingBoomerang
     m_EventTreshold: 0
     m_ExitTime: .793103456
   m_Atomic: 1
@@ -308,8 +308,8 @@ Transition:
   m_TransitionDuration: .176470578
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: UsingBoomerang
     m_EventTreshold: 0
     m_ExitTime: .823529422
   m_Atomic: 1
@@ -325,7 +325,7 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110288346}
   m_DstState: {fileID: 110279018}
-  m_TransitionDuration: .101694919
+  m_TransitionDuration: .135852084
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
@@ -348,8 +348,8 @@ Transition:
   m_TransitionDuration: .149999991
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: UsingBow
     m_EventTreshold: 0
     m_ExitTime: .850000024
   m_Atomic: 1
@@ -385,7 +385,7 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110219886}
   m_DstState: {fileID: 110244856}
-  m_TransitionDuration: .666666627
+  m_TransitionDuration: .0321289934
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
@@ -425,7 +425,7 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110219886}
   m_DstState: {fileID: 110222458}
-  m_TransitionDuration: .666666627
+  m_TransitionDuration: .00712462654
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
@@ -477,7 +477,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: SpellcastIdle
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 2ff9a3af00518fa45be2060a4fe70152, type: 2}
@@ -507,7 +507,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: BowIdle
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 98ebf67377de6c94192b6ae9fdd662c7, type: 2}
@@ -537,10 +537,10 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: SwordRunning
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 765ebef9d3fb5bd49b3bed88a34946ca, type: 2}
+  - {fileID: 7400000, guid: 79c1f34b69ad8b848a71b7c22a37d9df, type: 2}
   m_ParentStateMachine: {fileID: 110786688}
   m_Position: {x: 324, y: 216, z: 0}
   m_IKOnFeet: 0
@@ -552,7 +552,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: BoomerangIdle
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: b0e9f979ca87ac84facaba158bc7d7e6, type: 2}
@@ -567,7 +567,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: SwordIdle
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: cae0d947271c0a7419d7acb3c23c2f08, type: 2}
@@ -582,7 +582,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: BowRunning
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: d2bfb84fc53bc4d43b8f473a68cc2725, type: 2}
@@ -597,7 +597,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: BoomerangRunning
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 3a79ad183a2e339488fa6063c7be4636, type: 2}
@@ -612,7 +612,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: SpellcastRunning
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 737607defcc3fd644a9d3903ac3fe522, type: 2}
@@ -719,5 +719,5 @@ StateMachine:
       second:
       - {fileID: 110130722}
   m_MotionSetCount: 1
-  m_AnyStatePosition: {x: -252, y: 84, z: 0}
+  m_AnyStatePosition: {x: -264, y: 60, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

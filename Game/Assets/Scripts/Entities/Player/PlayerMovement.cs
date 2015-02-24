@@ -6,6 +6,7 @@ using Assets.Libs.Input;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CameraTrack))]
+[RequireComponent(typeof(CharacterStatus))]
 public class PlayerMovement : MonoBehaviour
 {
     #region Private Attributes
@@ -23,6 +24,11 @@ public class PlayerMovement : MonoBehaviour
     /// Can the entity move?
     /// </summary>
     private bool _canMove = true;
+
+    /// <summary>
+    /// Character status.
+    /// </summary>
+    private CharacterStatus _status;
     #endregion Private Attributes
 
     #region Properties
@@ -32,6 +38,14 @@ public class PlayerMovement : MonoBehaviour
     public CharacterInput Input
     {
         get { return CharacterInput.FromSchemas(InputSchemas); }
+    }
+
+    /// <summary>
+    /// Can the player move?
+    /// </summary>
+    public bool CanMove
+    {
+        get { return !_status.IsDead && _canMove; }
     }
     #endregion Properties
 
@@ -75,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _cameraTrack = GetComponent<CameraTrack>();
+        _status = GetComponent<CharacterStatus>();
     }
 
     /// <summary>
@@ -82,6 +97,8 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
+        if (!CanMove) return;
+
         #region Aiming / LookAt Position
         var aimValue = Input.GetTarget(_cameraTrack, gameObject);
 		bool aiming = false;
