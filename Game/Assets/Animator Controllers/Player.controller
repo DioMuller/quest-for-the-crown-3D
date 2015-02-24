@@ -385,7 +385,7 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110219886}
   m_DstState: {fileID: 110244856}
-  m_TransitionDuration: .0179135092
+  m_TransitionDuration: .0321289934
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
@@ -540,7 +540,7 @@ State:
   m_Speed: 3
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 765ebef9d3fb5bd49b3bed88a34946ca, type: 2}
+  - {fileID: 7400000, guid: 79c1f34b69ad8b848a71b7c22a37d9df, type: 2}
   m_ParentStateMachine: {fileID: 110786688}
   m_Position: {x: 324, y: 216, z: 0}
   m_IKOnFeet: 0
