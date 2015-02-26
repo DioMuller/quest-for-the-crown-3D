@@ -2753,6 +2753,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a1bfc0921d1ea4d9dec8aa66493392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Items:
+  - Label: Item 1
+    Value: 1
+  - Label: Item 2
+    Value: 2
+  - Label: Abacaxi
+    Value: 3
 --- !u!114 &1878483221
 MonoBehaviour:
   m_ObjectHideFlags: 0
