@@ -23,7 +23,7 @@ public class ComboBox : MonoBehaviour
     #endregion Component References
 
     #region MonoBehaviour Methods
-    void Start()
+    void Awake()
     {
         _label = GetComponentInChildren<Text>();
         _value = transform.Find("Options").GetComponentInChildren<Text>();
