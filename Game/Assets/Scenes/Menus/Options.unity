@@ -569,8 +569,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComboLanguage: {fileID: 1878483220}
-  ComboPlayer1Input: {fileID: 0}
-  ComboPlayer2Input: {fileID: 0}
+  ComboPlayer1Input: {fileID: 1650463870}
+  ComboPlayer2Input: {fileID: 747885318}
 --- !u!4 &273020909
 Transform:
   m_ObjectHideFlags: 0
