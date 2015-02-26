@@ -45,3 +45,7 @@ MonoBehaviour:
     Value: Controle
   - Key: Options.KeyboardController
     Value: Ambos
+  - Key: Options.English
+    Value: English
+  - Key: Options.Portuguese
+    Value: "Portugu\xEAs"

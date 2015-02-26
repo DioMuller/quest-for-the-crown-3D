@@ -48,4 +48,13 @@ public static class GameSettings
         }
     }
     #endregion Controller Options
+
+    #region Methods
+    public static string GetValueFor(string key)
+    {
+        if (!PlayerPrefs.HasKey(key)) return null;
+
+        return PlayerPrefs.GetString(key);
+    }
+    #endregion Methods
 }

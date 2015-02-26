@@ -19,17 +19,20 @@ public class ComboBox : MonoBehaviour
 
     #region Component References
     private Text _label;
-    private Text _value;
+    private LabelLocalization _value;
     #endregion Component References
 
     #region MonoBehaviour Methods
     void Awake()
     {
         _label = GetComponentInChildren<Text>();
-        _value = transform.Find("Options").GetComponentInChildren<Text>();
+        _value = transform.Find("Options").GetComponentInChildren<LabelLocalization>();
 
         _label.text = Label;
+    }
 
+    void Start()
+    {
         UpdateItem();
     }
     #endregion MonoBehaviour Methods
@@ -75,7 +78,7 @@ public class ComboBox : MonoBehaviour
 
         if (item != null)
         {
-            _value.text = item.Label;
+            _value.ChangeText( item.Label );
         }
     }
     #endregion Private Methods

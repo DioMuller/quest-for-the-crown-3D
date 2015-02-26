@@ -45,3 +45,7 @@ MonoBehaviour:
     Value: Gamepad
   - Key: Options.KeyboardController
     Value: Both
+  - Key: Options.English
+    Value: English
+  - Key: Options.Portuguese
+    Value: "Portugu\xEAs"
