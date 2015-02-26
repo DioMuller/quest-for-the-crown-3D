@@ -40,7 +40,7 @@ MonoBehaviour:
   - Key: Options.Player2Control
     Value: Dispositivo de Entrada (Jogador 2)
   - Key: Options.Keyboard
-    Value: Teclado
+    Value: Teclado e Mouse
   - Key: Options.Controller
     Value: Controle
   - Key: Options.KeyboardController

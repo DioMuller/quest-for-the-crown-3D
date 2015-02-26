@@ -2,10 +2,12 @@ using UnityEngine;
 using UnityEditor;
 using System;
 
-public class ScriptableObjectHelper : Editor {
+public class ScriptableObjectHelper : Editor 
+{
 	//path, isValidateFunction, Priority
 	[MenuItem("Assets/Create/Scriptable Object Asset", false, 10000)]
-	public static void CreateScriptableObjectAsset (){
+	public static void CreateScriptableObjectAsset ()
+    {
 		ScriptableObject asset = ScriptableObject.CreateInstance (Selection.activeObject.name);
 		AssetDatabase.CreateAsset (asset, String.Format ("Assets/{0}.asset", Selection.activeObject.name));
 		AssetDatabase.SaveAssets();
@@ -14,7 +16,8 @@ public class ScriptableObjectHelper : Editor {
 	}
 	
 	[MenuItem("Assets/Create/Scriptable Object Asset", true, 10000)]
-	public static bool CreateScriptableObjectAssetCheck (){
+	public static bool CreateScriptableObjectAssetCheck ()
+    {
 		if (Selection.activeObject == null || Selection.activeObject.GetType () != typeof(MonoScript))
 			return false;
 		MonoScript script = (MonoScript)Selection.activeObject;

@@ -16,7 +16,7 @@ MonoBehaviour:
   - Key: Dialog.TestDialog
     Value: This is a test dialog.
   - Key: Dialog.TestDialog2
-    Value: This is another test dialog.
+    Value: c
   - Key: Menu.NewGame
     Value: New Game
   - Key: Menu.LoadGame
