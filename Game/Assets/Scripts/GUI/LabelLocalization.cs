@@ -20,12 +20,12 @@ public class LabelLocalization : MonoBehaviour
 	/// </summary>
 	void Start() 
 	{
-		
         ChangeText(_text.text);
 	}
 
     public void ChangeText(string key)
     {
+        print("Getting : " + key);
         if (_text == null) return;
 
         var label = LocalizationManager.GetText(key);

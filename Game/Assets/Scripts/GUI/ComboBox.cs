@@ -75,6 +75,7 @@ public class ComboBox : MonoBehaviour
     private void UpdateItem()
     {
         var item = SelectedItem;
+        print("Updating Item: " + item);
 
         if (item != null)
         {
