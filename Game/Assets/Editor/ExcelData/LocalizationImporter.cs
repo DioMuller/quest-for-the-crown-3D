@@ -23,9 +23,7 @@ public class LocalizationImporter  : Editor
         var sheet = workbook.GetSheetAt(0);
 
         var columns = sheet.GetRow(0);
-        //var languages = columns.Cells.Where(c => c.StringCellValue != "Key").Select(cell => cell.StringCellValue);
 
-        //foreach (var language in languages)
         for( int i = 1; i < columns.Cells.Count; i++ )
         {
             LocalizationData asset = LocalizationData.CreateInstance("LocalizationData") as LocalizationData;
@@ -62,7 +60,6 @@ public class LocalizationImporter  : Editor
                 AssetDatabase.SaveAssets();
                 EditorUtility.FocusProjectWindow();
                 Selection.activeObject = asset;
-
             }
         }
     }
