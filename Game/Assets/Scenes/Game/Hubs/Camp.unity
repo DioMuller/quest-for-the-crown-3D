@@ -3980,7 +3980,7 @@ MonoBehaviour:
   m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 138a6a1b2601ffa4f965a0c8117b80cd, type: 3}
-    m_FontSize: 26
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -8650,6 +8650,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogLocalization:
-  - {fileID: 11400000, guid: 0d65e6227489d814ba6a4af9f432226f, type: 2}
-  - {fileID: 11400000, guid: 299d2df478e802a44a67af06ccefc175, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   DefaultLanguage: English

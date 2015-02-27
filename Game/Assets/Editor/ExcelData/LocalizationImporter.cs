@@ -1,5 +1,9 @@
-﻿using UnityEditor;
+﻿using UnityEngine;
+using UnityEditor;
+using System;
+using System.IO;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using NPOI.SS.UserModel; 
 using NPOI.XSSF.UserModel;
@@ -11,27 +15,55 @@ public class LocalizationImporter  : Editor
     {
         XSSFWorkbook workbook; 
 
-        using (var fs = File.OpenRead(@"Data\test.xls")) 
+        using (var fs = File.OpenRead(@"Assets\Localization\LanguageData.xlsx")) 
         { 
             workbook = new XSSFWorkbook(fs); 
         }
 
         var sheet = workbook.GetSheetAt(0);
 
-        var rows = sheet.GetRow(0);
+        var columns = sheet.GetRow(0);
+        //var languages = columns.Cells.Where(c => c.StringCellValue != "Key").Select(cell => cell.StringCellValue);
 
-        var languages = rows.Cells.Where(c => c.StringCellValue != "Key");
-
-        foreach (var language in languages)
+        //foreach (var language in languages)
+        for( int i = 1; i < columns.Cells.Count; i++ )
         {
-            LocalizationData asset = LocalizationData.CreateInstance("LocalizationData");
+            LocalizationData asset = LocalizationData.CreateInstance("LocalizationData") as LocalizationData;
+            var language = columns.GetCell(i).StringCellValue;
 
-            asset.Language = language;
+            if (asset != null)
+            {
+                asset.Language = language;
+                AssetDatabase.CreateAsset(asset, String.Format("Assets/Localization/LanguageData.{0}.asset", language));
 
-            AssetDatabase.CreateAsset(asset, String.Format("Assets/Localization/LocalizationData.{0}.asset", language));
-            AssetDatabase.SaveAssets();
-            EditorUtility.FocusProjectWindow();
-            Selection.activeObject = asset;
+                int currentRow = 1;
+                var row = sheet.GetRow(currentRow);
+
+                List<DictionaryEntry> entries = new List<DictionaryEntry>();
+
+                while( row != null )
+                {
+                    try
+                    {
+                        var entry = new DictionaryEntry() { Key = row.GetCell(0).StringCellValue, Value = row.GetCell(i).StringCellValue };
+                        entries.Add(entry);
+
+                        currentRow++;
+                        row = sheet.GetRow(currentRow);
+                    }
+                    catch // Row was not null, but cells are invalid.
+                    {
+                        break;
+                    }
+                }
+
+                asset.Entries = entries.ToArray();
+
+                AssetDatabase.SaveAssets();
+                EditorUtility.FocusProjectWindow();
+                Selection.activeObject = asset;
+
+            }
         }
     }
 }

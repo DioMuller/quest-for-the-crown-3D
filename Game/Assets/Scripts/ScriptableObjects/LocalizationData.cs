@@ -2,20 +2,20 @@
 using UnityEngine;
 using System.Linq;
 
+#region Structures
+/// <summary>
+/// Dictionary Entry Value.
+/// </summary>
+[System.Serializable]
+public class DictionaryEntry
+{
+    public string Key;
+    public string Value;
+}
+#endregion Structures
+
 public class LocalizationData : ScriptableObject
 {
-    #region Structures
-    /// <summary>
-    /// Dictionary Entry Value.
-    /// </summary>
-    [System.Serializable]
-    public class DictionaryEntry
-    {
-        public string Key;
-        public string Value;
-    }
-    #endregion Structures
-
     #region Public Attributes
 
 	/// <summary>

@@ -12,40 +12,4 @@ MonoBehaviour:
   m_Name: LanguageData.Portuguese
   m_EditorClassIdentifier: 
   Language: Portuguese
-  Entries:
-  - Key: Dialog.TestDialog
-    Value: "Este \xE9 um di\xE1logo teste."
-  - Key: Dialog.TestDialog2
-    Value: "Este \xE9 outro di\xE1logo teste."
-  - Key: Menu.NewGame
-    Value: Novo Jogo
-  - Key: Menu.LoadGame
-    Value: Carregar Jogo
-  - Key: Menu.Options
-    Value: "Op\xE7\xF5es"
-  - Key: Options.Title
-    Value: "Op\xE7\xF5es"
-  - Key: Options.Save
-    Value: Salvar
-  - Key: Options.Cancel
-    Value: Cancelar
-  - Key: Options.Language
-    Value: Idioma
-  - Key: Options.General
-    Value: Geral
-  - Key: Options.Controls
-    Value: Controles
-  - Key: Options.Player1Control
-    Value: Dispositivo de Entrada (Jogador 1)
-  - Key: Options.Player2Control
-    Value: Dispositivo de Entrada (Jogador 2)
-  - Key: Options.Keyboard
-    Value: Teclado e Mouse
-  - Key: Options.Controller
-    Value: Controle
-  - Key: Options.KeyboardController
-    Value: Ambos
-  - Key: Options.English
-    Value: English
-  - Key: Options.Portuguese
-    Value: "Portugu\xEAs"
+  Entries: []
