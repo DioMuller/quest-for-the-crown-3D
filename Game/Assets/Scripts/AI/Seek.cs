@@ -2,7 +2,6 @@ using System.Linq;
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(TargetSelector))]
 public class Seek : MonoBehaviour
 {
 	#region Private Attributes

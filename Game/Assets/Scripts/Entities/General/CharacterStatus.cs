@@ -6,6 +6,8 @@ public class CharacterStatus : MonoBehaviour
 {
     #region Private Attributes
     private Rigidbody _rigidbody;
+	private Renderer[] _renderers;
+	private bool _visible = true;
 
     private int _currentHealth;
     private int _currentMagic;
@@ -45,6 +47,7 @@ public class CharacterStatus : MonoBehaviour
         IsInvulnerable = false;
 
         _rigidbody = GetComponent<Rigidbody>();
+		_renderers = GetComponentsInChildren<Renderer>();
 
         IsDead = Data.MaxHealth <= 0;
 
@@ -137,18 +140,31 @@ public class CharacterStatus : MonoBehaviour
     IEnumerator SetInvulnerable()
     {
         IsInvulnerable = true;
-        InvokeRepeating("Blink", 0.1f, 0.3f);
+        InvokeRepeating("Blink", 0.1f, 0.1f);
 
         yield return new WaitForSeconds(Data.InvulnerabilityTime);
 
         CancelInvoke("Blink");
-        IsInvulnerable = false;
+	    SetVisibility(true);
+		IsInvulnerable = false;
     }
 
     void Blink()
     {
         // TODO: Blink or Hit effect.
+	    SetVisibility(!_visible);
+		print("Blink!");
     }
+
+	void SetVisibility(bool visibility)
+	{
+		_visible = visibility;
+
+		foreach (var childRenderer in _renderers)
+		{
+			childRenderer.enabled = visibility;
+		}
+	}
     #endregion Event Methods
 
     #region Private Methods
