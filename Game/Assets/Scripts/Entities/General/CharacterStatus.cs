@@ -140,7 +140,7 @@ public class CharacterStatus : MonoBehaviour
     IEnumerator SetInvulnerable()
     {
         IsInvulnerable = true;
-        InvokeRepeating("Blink", 0.1f, 0.1f);
+        InvokeRepeating("Blink", 0.0f, 0.1f);
 
         yield return new WaitForSeconds(Data.InvulnerabilityTime);
 
@@ -151,9 +151,7 @@ public class CharacterStatus : MonoBehaviour
 
     void Blink()
     {
-        // TODO: Blink or Hit effect.
 	    SetVisibility(!_visible);
-		print("Blink!");
     }
 
 	void SetVisibility(bool visibility)

@@ -15,4 +15,4 @@ MonoBehaviour:
   MaxMagic: 0
   MagicRegenTime: 0
   MagicRegenQuantity: 0
-  InvulnerabilityTime: .100000001
+  InvulnerabilityTime: 1
