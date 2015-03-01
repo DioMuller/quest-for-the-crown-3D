@@ -14,7 +14,7 @@ MonoBehaviour:
   AttackPower: 1
   MagicConsumption: 0
   LifeTime: .300000012
-  AnimationTime: .899999976
+  AnimationTime: .300000012
   AnimationFlag: UsingSword
   DestroyOnContact: 0
   MoveWithPlayer: 1
