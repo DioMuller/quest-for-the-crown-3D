@@ -40,8 +40,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogLocalization:
-  - {fileID: 11400000, guid: 0d65e6227489d814ba6a4af9f432226f, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 299d2df478e802a44a67af06ccefc175, type: 2}
+  DefaultLanguage: English
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

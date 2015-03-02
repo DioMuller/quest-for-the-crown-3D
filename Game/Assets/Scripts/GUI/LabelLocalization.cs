@@ -2,7 +2,6 @@
 using UnityEngine.UI;
 using System.Collections;
 
-[RequireComponent(typeof(Text))]
 public class LabelLocalization : MonoBehaviour 
 {
     private Text _text;
@@ -13,6 +12,13 @@ public class LabelLocalization : MonoBehaviour
     void Awake()
     {
         _text = GetComponent<Text>();
+
+        if( _text == null )
+        {
+            _text = GetComponentInChildren<Text>();
+        }
+
+        if (_text == null) throw new System.Exception("Error on LabelLocalization: Component or Children should have Text Component.");
     }
 
 	/// <summary>
