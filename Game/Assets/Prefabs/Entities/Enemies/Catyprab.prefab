@@ -15,6 +15,8 @@ GameObject:
   - 114: {fileID: 11446682}
   - 195: {fileID: 19546682}
   - 114: {fileID: 11465928}
+  - 114: {fileID: 11421932}
+  - 114: {fileID: 11421934}
   m_Layer: 0
   m_Name: Catyprab
   m_TagString: Enemy
@@ -954,7 +956,7 @@ Transform:
   m_GameObject: {fileID: 159132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 459130}
   - {fileID: 459128}
@@ -975,6 +977,32 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11421932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60cacfddbe03a94497db8c4e8ac90e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 458728, guid: fbc15eec10d52c248bcb40840caa9e93, type: 2}
+  Chance: 1
+--- !u!114 &11421934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60cacfddbe03a94497db8c4e8ac90e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 458728, guid: fbc15eec10d52c248bcb40840caa9e93, type: 2}
+  Chance: .25
 --- !u!114 &11446682
 MonoBehaviour:
   m_ObjectHideFlags: 1
