@@ -70,7 +70,7 @@ public class TileHelper
 
 		var prefab = PrefabUtility.CreateEmptyPrefab(path);
 
-		obj.renderer.material = mat;
+		obj.GetComponent<Renderer>().material = mat;
 
 		PrefabUtility.ReplacePrefab(obj, prefab);
 	}

@@ -27,7 +27,7 @@ public abstract class ItemBase : MonoBehaviour
         direction.Normalize();
         transform.position += new Vector3(direction.x, 0, direction.y);
         var oldPickup = CanPickup;
-        rigidbody.velocity = new Vector3(direction.x, 8, direction.y) * 2;
+        GetComponent<Rigidbody>().velocity = new Vector3(direction.x, 8, direction.y) * 2;
         yield return new WaitForSeconds(0.5f);
         CanPickup = oldPickup;
     }
