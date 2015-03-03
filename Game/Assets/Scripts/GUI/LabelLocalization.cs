@@ -31,7 +31,7 @@ public class LabelLocalization : MonoBehaviour
 
     public void ChangeText(string key)
     {
-        print("Getting : " + key);
+        //print("Getting : " + key);
         if (_text == null) return;
 
         var label = LocalizationManager.GetText(key);
