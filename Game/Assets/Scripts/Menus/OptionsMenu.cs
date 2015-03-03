@@ -13,7 +13,6 @@ public class OptionsMenu : MonoBehaviour
 
     // Input
     public ComboBox ComboPlayer1Input;
-    public ComboBox ComboPlayer2Input;
 
 	#endregion Public Attributes
 
@@ -36,16 +35,24 @@ public class OptionsMenu : MonoBehaviour
 		#endregion Language
 
         #region Input Methods
-        if (ComboPlayer1Input != null && ComboPlayer2Input != null)
+        if (ComboPlayer1Input != null)
         {
             string p1Input = ComboPlayer1Input.SelectedValue;
-            string p2Input = ComboPlayer2Input.SelectedValue;
+            string p2Input = "";
         
             GameSettings.Player1Input = p1Input;
 
-            if (p1Input.Contains("Joy1"))
+            if (!p1Input.Contains("Joy1"))
             {
-                p2Input = p2Input.Replace("Joy1", "Joy2");
+                p2Input = "Joy1";
+            }
+            else if (!p1Input.Contains("Keyboard"))
+            {
+                p2Input = "Keyboard";
+            }
+            else
+            {
+                p2Input = "Joy2";
             }
 
             GameSettings.Player2Input = p2Input;
