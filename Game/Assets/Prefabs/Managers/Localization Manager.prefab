@@ -42,7 +42,7 @@ MonoBehaviour:
   DialogLocalization:
   - {fileID: 0}
   - {fileID: 11400000, guid: 299d2df478e802a44a67af06ccefc175, type: 2}
-  DefaultLanguage: English
+  DefaultLanguage: Default
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -54,4 +54,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100302}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

@@ -11,43 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0315d32e4388c4aa3a8f43df5d2597, type: 3}
   m_Name: LanguageData.Default
   m_EditorClassIdentifier: 
-  Language: English
-  Entries:
-  - Key: Dialog.TestDialog
-    Value: This is a test dialog.
-  - Key: Dialog.TestDialog2
-    Value: This is a test dialog.
-  - Key: Menu.NewGame
-    Value: New Game
-  - Key: Menu.LoadGame
-    Value: Load Game
-  - Key: Menu.Options
-    Value: Options
-  - Key: Options.Title
-    Value: Options
-  - Key: Options.Save
-    Value: Save
-  - Key: Options.Cancel
-    Value: Cancel
-  - Key: Options.Language
-    Value: Language
-  - Key: Options.General
-    Value: General
-  - Key: Options.Controls
-    Value: Controls
-  - Key: Options.Player1Control
-    Value: Player 1 Input Method
-  - Key: Options.Player2Control
-    Value: Player 2 Input Method
-  - Key: Options.Keyboard
-    Value: Keyboard and Mouse
-  - Key: Options.Controller
-    Value: Gamepad
-  - Key: Options.KeyboardController
-    Value: Both
-  - Key: Options.English
-    Value: English
-  - Key: Options.Portuguese
-    Value: "Portugu\xEAs"
-  - Key: GameMenus.MissionSelection
-    Value: Mission Selection
+  Language: Default
+  Entries: []
