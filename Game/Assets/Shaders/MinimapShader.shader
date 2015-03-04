@@ -19,4 +19,4 @@
          SetTexture [_MainTex] {combine texture, previous}
       }
    }
-}
+} 
