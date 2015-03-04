@@ -3,6 +3,11 @@
 public class WeaponData : ScriptableObject
 {
     /// <summary>
+    /// Weapon Id.
+    /// </summary>
+    public string Id = "";
+
+    /// <summary>
     /// Weapon Attack Power.
     /// </summary>
 	public int AttackPower = 1;
