@@ -1843,12 +1843,12 @@ Prefab:
       propertyPath: m_Name
       value: Camera P1
       objectReference: {fileID: 0}
-    - target: {fileID: 442758, guid: df3a3ee09f2cc044baca44a520185308, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
+    - target: {fileID: 2042760, guid: df3a3ee09f2cc044baca44a520185308, type: 2}
+      propertyPath: m_ClearFlags
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 11466372, guid: df3a3ee09f2cc044baca44a520185308, type: 2}
-      propertyPath: m_Enabled
+    - target: {fileID: 2042760, guid: df3a3ee09f2cc044baca44a520185308, type: 2}
+      propertyPath: m_OcclusionCulling
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
