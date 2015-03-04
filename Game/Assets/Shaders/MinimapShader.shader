@@ -1,26 +1,22 @@
-﻿Shader "Custom/MinimapShader" {
-	Properties {
-		_MainTex ("Base (RGB)", 2D) = "white" {}
-	}
-	SubShader {
-		Tags { "RenderType" = "Opaque" }
-		LOD 200
-		
-		CGPROGRAM
-		#pragma surface surf Lambert
-
-		sampler2D _MainTex;
-
-		struct Input {
-			float2 uv_MainTex;
-		};
-
-		void surf (Input IN, inout SurfaceOutput o) {
-			half4 c = tex2D (_MainTex, IN.uv_MainTex);
-			o.Albedo = c.rgb * float3(1.0, 0.8, 0.8);
-			o.Alpha = c.a;
-		}
-		ENDCG
-	} 
-	FallBack "Diffuse"
+﻿Shader "Custom/MinimapShader"
+{
+   Properties
+   {
+      _MainTex ("Base (RGB)", 2D) = "white" {}
+      _Mask ("Culling Mask", 2D) = "white" {}
+      _Cutoff ("Alpha cutoff", Range (0,1)) = 0.1
+   }
+   SubShader
+   {
+      Tags {"Queue"="Transparent"}
+      Lighting Off
+      ZWrite Off
+      Blend SrcAlpha OneMinusSrcAlpha
+      AlphaTest GEqual [_Cutoff]
+      Pass
+      {
+         SetTexture [_Mask] {combine texture}
+         SetTexture [_MainTex] {combine texture, previous}
+      }
+   }
 }

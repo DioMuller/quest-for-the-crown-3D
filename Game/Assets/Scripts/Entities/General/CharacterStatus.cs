@@ -136,7 +136,7 @@ public class CharacterStatus : MonoBehaviour
 		if (RemoveOnDestroy)
             Destroy(gameObject);
 
-        BroadcastMessage("OnDeath");
+        //BroadcastMessage("OnDeath");
     }
 
     IEnumerator SetInvulnerable()
