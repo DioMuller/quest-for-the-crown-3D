@@ -6,6 +6,7 @@ public class MissionButton : MonoBehaviour
 {
     #region Private Attributes
     private Text _label;
+    private Button _button;
     #endregion Private Attributes
 
     #region Public Attributes
@@ -19,6 +20,7 @@ public class MissionButton : MonoBehaviour
     // Use this for initialization
 	void Start () 
     {
+        _button = GetComponent<Button>();
         _label = GetComponentInChildren<Text>();
 
         UpdateData();
