@@ -1341,6 +1341,50 @@ Prefab:
       propertyPath: m_Name
       value: PlayerGUI P1
       objectReference: {fileID: 0}
+    - target: {fileID: 11470648, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: Colors.key1.rgba
+      value: 4288322202
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470648, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: Colors.key2.rgba
+      value: 11494420
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470648, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: Colors.ctime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470648, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: Colors.m_NumColorKeys
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470648, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: Colors.ctime0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470648, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: Colors.key0.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470644, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: Colors.key0.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470644, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: Colors.ctime1
+      value: 37008
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470644, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: Colors.ctime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470644, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: Colors.key2.rgba
+      value: 855491
+      objectReference: {fileID: 0}
+    - target: {fileID: 11470644, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: Colors.m_NumColorKeys
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
   m_IsPrefabParent: 0
