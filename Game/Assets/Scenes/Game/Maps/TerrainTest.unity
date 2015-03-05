@@ -1341,49 +1341,30 @@ Prefab:
       propertyPath: m_Name
       value: PlayerGUI P1
       objectReference: {fileID: 0}
-    - target: {fileID: 11470648, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
-      propertyPath: Colors.key1.rgba
-      value: 4288322202
+    - target: {fileID: 11470640, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 53a33042356240d4da09a71ee7798f0a,
+        type: 3}
+    - target: {fileID: 22498012, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: .0500000007
       objectReference: {fileID: 0}
-    - target: {fileID: 11470648, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
-      propertyPath: Colors.key2.rgba
-      value: 11494420
+    - target: {fileID: 22498012, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: .0500000007
       objectReference: {fileID: 0}
-    - target: {fileID: 11470648, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
-      propertyPath: Colors.ctime1
-      value: 65535
+    - target: {fileID: 22498012, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: .949999988
       objectReference: {fileID: 0}
-    - target: {fileID: 11470648, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
-      propertyPath: Colors.m_NumColorKeys
-      value: 2
+    - target: {fileID: 22498012, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: .949999988
       objectReference: {fileID: 0}
-    - target: {fileID: 11470648, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
-      propertyPath: Colors.ctime0
+    - target: {fileID: 11470640, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_PreserveAspect
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11470648, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
-      propertyPath: Colors.key0.rgba
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 11470644, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
-      propertyPath: Colors.key0.rgba
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 11470644, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
-      propertyPath: Colors.ctime1
-      value: 37008
-      objectReference: {fileID: 0}
-    - target: {fileID: 11470644, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
-      propertyPath: Colors.ctime2
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 11470644, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
-      propertyPath: Colors.key2.rgba
-      value: 855491
-      objectReference: {fileID: 0}
-    - target: {fileID: 11470644, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
-      propertyPath: Colors.m_NumColorKeys
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
@@ -2089,6 +2070,34 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2042760, guid: df3a3ee09f2cc044baca44a520185308, type: 2}
       propertyPath: m_OcclusionCulling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042760, guid: df3a3ee09f2cc044baca44a520185308, type: 2}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 17d565aaa1d1aaa4fb9905c66b426775, type: 2}
+    - target: {fileID: 11466372, guid: df3a3ee09f2cc044baca44a520185308, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042760, guid: df3a3ee09f2cc044baca44a520185308, type: 2}
+      propertyPath: m_Depth
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042760, guid: df3a3ee09f2cc044baca44a520185308, type: 2}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042760, guid: df3a3ee09f2cc044baca44a520185308, type: 2}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042760, guid: df3a3ee09f2cc044baca44a520185308, type: 2}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042760, guid: df3a3ee09f2cc044baca44a520185308, type: 2}
+      propertyPath: m_NormalizedViewPortRect.height
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

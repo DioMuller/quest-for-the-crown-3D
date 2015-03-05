@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &158338
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22498012}
+  - 222: {fileID: 22255528}
+  - 114: {fileID: 11490094}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &170640
 GameObject:
   m_ObjectHideFlags: 1
@@ -317,9 +334,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: c5c8fce4da3d18d48a40a31f85887be5, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 99bd86f8f284eac478ab8da4b9b574ad, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -360,13 +377,13 @@ MonoBehaviour:
   Colors:
     key0:
       serializedVersion: 2
-      rgba: 4278750230
+      rgba: 4294967295
     key1:
       serializedVersion: 2
       rgba: 4280538330
     key2:
       serializedVersion: 2
-      rgba: 2347993
+      rgba: 855491
     key3:
       serializedVersion: 2
       rgba: 855491
@@ -383,8 +400,8 @@ MonoBehaviour:
       serializedVersion: 2
       rgba: 0
     ctime0: 0
-    ctime1: 34888
-    ctime2: 49151
+    ctime1: 37008
+    ctime2: 65535
     ctime3: 65535
     ctime4: 0
     ctime5: 0
@@ -398,7 +415,7 @@ MonoBehaviour:
     atime5: 0
     atime6: 0
     atime7: 0
-    m_NumColorKeys: 4
+    m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   CurrentValue: 1
   MaximumValue: 1
@@ -437,13 +454,13 @@ MonoBehaviour:
   Colors:
     key0:
       serializedVersion: 2
-      rgba: 4291789087
+      rgba: 4294967295
     key1:
       serializedVersion: 2
-      rgba: 4289684500
+      rgba: 4288322202
     key2:
       serializedVersion: 2
-      rgba: 255
+      rgba: 11494420
     key3:
       serializedVersion: 2
       rgba: 0
@@ -643,6 +660,32 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11490094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 94122364180bbb84a96651820ad70f0b, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Texture: {fileID: 8400000, guid: 17d565aaa1d1aaa4fb9905c66b426775, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &22255528
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158338}
 --- !u!222 &22270642
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -795,7 +838,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 22498012}
   m_Father: {fileID: 22470642}
   m_RootOrder: 0
   m_AnchorMin: {x: .800000012, y: .699999988}
@@ -964,6 +1008,23 @@ RectTransform:
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
+  m_Pivot: {x: .5, y: .5}
+--- !u!224 &22498012
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22470646}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .0299999993, y: .0700000003}
+  m_AnchorMax: {x: .800000012, y: .959999979}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
 Prefab:
