@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
@@ -6,12 +6,19 @@ using System.Collections;
 [RequireComponent(typeof(MissionButton))]
 public class MissionSelection : MonoBehaviour, ISelectHandler
 {
+	#region Private Attributes
+	/// <summary>
+	/// Mission Info.
+	/// </summary>
     private MissionButton _mission;
+	#endregion Private Attributes
 
+	#region Public Attributes
     public Text MissionTitle;
     public Text MissionPrizes;
     public Text MissionDescription;
     public Image MissionThumb;
+	#endregion Public Attributes
 
 	// Use this for initialization
 	void Start () 
@@ -21,7 +28,10 @@ public class MissionSelection : MonoBehaviour, ISelectHandler
 
     public void OnSelect(BaseEventData eventData)
     {
-        Debug.Log("test" + _mission.Data.MissionId);
+	    MissionTitle.text = LocalizationManager.GetText(_mission.Data.Title);
+		MissionDescription.text = LocalizationManager.GetText(_mission.Data.Description);
+		MissionPrizes.text = _mission.Data.MoneyPrize + " " + LocalizationManager.GetText("Common.Money");
+	    //MissionThumb.mainTexture = _mission.Data.Image;
     }
 
 }
