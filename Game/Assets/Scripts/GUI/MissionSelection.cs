@@ -8,6 +8,11 @@ public class MissionSelection : MonoBehaviour, ISelectHandler
 {
     private MissionButton _mission;
 
+    public Text MissionTitle;
+    public Text MissionPrizes;
+    public Text MissionDescription;
+    public Image MissionThumb;
+
 	// Use this for initialization
 	void Start () 
     {
