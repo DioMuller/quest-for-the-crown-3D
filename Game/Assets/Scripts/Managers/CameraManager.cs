@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using System;
@@ -15,7 +15,6 @@ public class CameraManager : SingletonBehaviour<CameraManager>
     bool? _split = null;
     Camera _camera1;
     Camera _camera2;
-    Camera _minimap2;
     CameraController _camera1Controller;
     CameraController _camera2Controller;
 
@@ -29,9 +28,9 @@ public class CameraManager : SingletonBehaviour<CameraManager>
 
     public Rect Bounds = new Rect(-10, -10, 10, 10);
 
-    public RectTransform Player1Dialog;
+    public RectTransform Dialog;
+	public GameObject Player1StatusPanel;
     public GameObject Player2StatusPanel;
-    public GameObject Player2MinimapBg;
     #endregion
 
     #region MonoBehaviour Methods
@@ -43,8 +42,6 @@ public class CameraManager : SingletonBehaviour<CameraManager>
 
         _camera1 = CameraController1.FindChild("Game Camera").GetComponent<Camera>();
         _camera2 = CameraController2.FindChild("Game Camera").GetComponent<Camera>();
-
-        _minimap2 = CameraController2.FindChild("Minimap Camera").GetComponent<Camera>();
 
         if(Player2StatusPanel != null)
             Player2StatusPanel.SetActive(_player2 != null);
@@ -85,15 +82,10 @@ public class CameraManager : SingletonBehaviour<CameraManager>
         if (_split != false)
         {
             _camera2.enabled = false;
-            _minimap2.enabled = false;
 
             _camera1.rect = new Rect(0, 0, 1, 1);
             _camera2Controller.enabled = false;
             _split = false;
-
-            Player2MinimapBg.SetActive(false);
-            Player1Dialog.offsetMin = new Vector2(0, 0);
-            Player1Dialog.offsetMax = new Vector2(0, 0);
         }
     }
 
@@ -105,16 +97,11 @@ public class CameraManager : SingletonBehaviour<CameraManager>
         if (_split != true)
         {
             _camera2.enabled = true;
-            _minimap2.enabled = true;
 
             _camera1.rect = new Rect(0, 0.5f, 1, 0.5f);
             _camera2.rect = new Rect(0, 0, 1, 0.5f);
             _camera2Controller.enabled = true;
             _split = true;
-
-            Player2MinimapBg.SetActive(true);
-            Player1Dialog.offsetMin = new Vector2(0, 270);
-            Player1Dialog.offsetMax = new Vector2(0, -270);
         }
     }
     #endregion Private Methods

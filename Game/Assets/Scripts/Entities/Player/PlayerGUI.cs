@@ -10,7 +10,7 @@ public class PlayerGUI : MonoBehaviour
 	/// <summary>
 	/// The player GUI.
 	/// </summary>
-	public Canvas PlayerCanvas;
+	public Transform PlayerUI;
 	#endregion Public Attributes
 
 	#region Private Attributes (Player Component Instances)
@@ -72,13 +72,11 @@ public class PlayerGUI : MonoBehaviour
 		#endregion Player Scripts
 
 		#region GUI Components
-		if( PlayerCanvas != null )
+		if (PlayerUI != null)
 		{
-			var statusPanel = PlayerCanvas.transform.FindChild("StatusPanel");
-
             #region Life and Magic bars
-            var lifeBar = statusPanel.transform.FindChild("LifeBar");
-			var magicBar = statusPanel.transform.FindChild("MagicBar");
+			var lifeBar = PlayerUI.transform.FindChild("LifeBar");
+			var magicBar = PlayerUI.transform.FindChild("MagicBar");
 
 			_healthBar = lifeBar.GetComponent<CircleBar>();
 			_magicBar = magicBar.GetComponent<CircleBar>();
@@ -91,8 +89,8 @@ public class PlayerGUI : MonoBehaviour
             #endregion Life and Magic bars
 
             #region Equiped Weapons
-            _primaryWeapon = statusPanel.transform.FindChild("PrimaryItem").FindChild("Item").GetComponent<Image>();
-            _secondaryWeapon = statusPanel.transform.FindChild("SecondaryItem").FindChild("Item").GetComponent<Image>();
+			_primaryWeapon = PlayerUI.transform.FindChild("PrimaryItem").FindChild("Item").GetComponent<Image>();
+			_secondaryWeapon = PlayerUI.transform.FindChild("SecondaryItem").FindChild("Item").GetComponent<Image>();
             #endregion Equiped Weapons
         }
 		#endregion GUI Components
