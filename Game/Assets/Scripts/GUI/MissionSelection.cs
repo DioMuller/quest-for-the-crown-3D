@@ -34,4 +34,8 @@ public class MissionSelection : MonoBehaviour, ISelectHandler
 	    //MissionThumb.mainTexture = _mission.Data.Image;
     }
 
+    public void OnClick()
+    {
+        Application.LoadLevel(_mission.Data.Scene);
+    }
 }
