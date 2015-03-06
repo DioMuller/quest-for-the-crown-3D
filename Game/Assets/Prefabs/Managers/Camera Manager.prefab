@@ -41,9 +41,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraController1: {fileID: 0}
   CameraController2: {fileID: 0}
-  Player1Dialog: {fileID: 0}
+  Bounds:
+    serializedVersion: 2
+    x: -90
+    y: -90
+    width: 90
+    height: 90
+  Dialog: {fileID: 0}
+  Player1StatusPanel: {fileID: 0}
   Player2StatusPanel: {fileID: 0}
-  Player2MinimapBg: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -55,4 +61,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 115518}
   m_IsPrefabParent: 1
-  m_IsExploded: 1
