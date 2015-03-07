@@ -182,7 +182,7 @@ GameObject:
   - 218: {fileID: 96149532}
   - 154: {fileID: 96149531}
   m_Layer: 9
-  m_Name: ForestTerrain
+  m_Name: PlainsTerrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

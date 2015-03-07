@@ -1,0 +1,194 @@
+fileFormatVersion: 2
+guid: 1f4545d788ea1284895620e2d9791204
+timeCreated: 1425733773
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: pCylinder13
+    100002: pCylinder6
+    100004: pCylinder7
+    100006: pCylinder9
+    100008: pPlane25
+    100010: pPlane26
+    100012: pPlane27
+    100014: pPlane28
+    100016: pPlane29
+    100018: pPlane31
+    100020: pPlane32
+    100022: pPlane33
+    100024: pPlane34
+    100026: pPlane35
+    100028: pPlane36
+    100030: pPlane37
+    100032: pPlane38
+    100034: pPlane39
+    100036: pPlane40
+    100038: pPlane41
+    100040: pPlane42
+    100042: pPlane43
+    100044: pPlane44
+    100046: pPlane45
+    100048: pPlane46
+    100050: pPlane47
+    100052: pPlane48
+    100054: pPlane49
+    100056: pPlane50
+    100058: pPlane51
+    100060: pPlane52
+    100062: transform19
+    100064: transform20
+    100066: transform21
+    100068: transform22
+    100070: transform23
+    100072: transform24
+    100074: transform25
+    100076: transform26
+    100078: transform27
+    100080: transform28
+    100082: transform29
+    100084: transform30
+    100086: transform31
+    100088: transform32
+    100090: transform33
+    100092: transform34
+    100094: transform35
+    100096: transform36
+    100098: transform37
+    100100: transform38
+    100102: transform39
+    100104: transform40
+    100106: transform41
+    100108: transform42
+    100110: transform43
+    100112: transform44
+    100114: transform45
+    100116: transform46
+    100118: transform47
+    100120: transform48
+    100122: //RootNode
+    400000: pCylinder13
+    400002: pCylinder6
+    400004: pCylinder7
+    400006: pCylinder9
+    400008: pPlane25
+    400010: pPlane26
+    400012: pPlane27
+    400014: pPlane28
+    400016: pPlane29
+    400018: pPlane31
+    400020: pPlane32
+    400022: pPlane33
+    400024: pPlane34
+    400026: pPlane35
+    400028: pPlane36
+    400030: pPlane37
+    400032: pPlane38
+    400034: pPlane39
+    400036: pPlane40
+    400038: pPlane41
+    400040: pPlane42
+    400042: pPlane43
+    400044: pPlane44
+    400046: pPlane45
+    400048: pPlane46
+    400050: pPlane47
+    400052: pPlane48
+    400054: pPlane49
+    400056: pPlane50
+    400058: pPlane51
+    400060: pPlane52
+    400062: transform19
+    400064: transform20
+    400066: transform21
+    400068: transform22
+    400070: transform23
+    400072: transform24
+    400074: transform25
+    400076: transform26
+    400078: transform27
+    400080: transform28
+    400082: transform29
+    400084: transform30
+    400086: transform31
+    400088: transform32
+    400090: transform33
+    400092: transform34
+    400094: transform35
+    400096: transform36
+    400098: transform37
+    400100: transform38
+    400102: transform39
+    400104: transform40
+    400106: transform41
+    400108: transform42
+    400110: transform43
+    400112: transform44
+    400114: transform45
+    400116: transform46
+    400118: transform47
+    400120: transform48
+    400122: //RootNode
+    2300000: pCylinder13
+    3300000: pCylinder13
+    4300000: pCylinder13
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 20
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
