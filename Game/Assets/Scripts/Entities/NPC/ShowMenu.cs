@@ -1,10 +1,26 @@
+using System.Collections.Generic;
+using System.Linq;
 using Assets.Code.Libs.Input;
 using System;
 using UnityEngine;
 
-public class ShowMenu : MonoBehaviour, EventAction
+public class ShowMenu : MonoBehaviour
 {
+	private List<PlayerMovement> _players = new List<PlayerMovement>();
+
 	#region MonoBehaviour Methods
+
+	void Update()
+	{
+		if (_players.Count > 0) // So Wont search the list if its empty.
+		{
+			if (_players.Any(p => p.Input.GetButton("Action")))
+			{
+				OptionSelection.Instance.OpenMissionSelection();
+			}
+		}
+	}
+
 	/// <summary>
 	/// Called when any objects collides with this.
 	/// </summary>
@@ -13,13 +29,7 @@ public class ShowMenu : MonoBehaviour, EventAction
 	{
 		if (other.tag == "Player")
 		{
-			print("Player Contacted.");
-			var interaction = other.GetComponent<PlayerInteraction>();
-
-			if(interaction != null)
-			{
-				interaction.SetAction(this);
-			}			
+			_players.Add(other.gameObject.GetComponent<PlayerMovement>());
 		}
 	}
 
@@ -31,24 +41,8 @@ public class ShowMenu : MonoBehaviour, EventAction
 	{
 		if (other.tag == "Player")
 		{
-			print("Player Is Out.");
-			var interaction = other.GetComponent<PlayerInteraction>();
-			
-			if(interaction != null)
-			{
-                interaction.ClearAction(this);
-			}			
+			_players.Remove(other.gameObject.GetComponent<PlayerMovement>());
 		}
 	}
 	#endregion MonoBehaviour Methods
-
-	#region Public Methods
-    public bool Activate()
-    {
-	    if (OptionSelection.Instance == null) return false;
-
-	    OptionSelection.Instance.OpenMissionSelection();
-	    return true;
-    }
-    #endregion Methods
 }

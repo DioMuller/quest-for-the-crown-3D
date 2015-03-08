@@ -14,7 +14,6 @@ public class OptionSelection : SingletonBehaviour<OptionSelection>
 
 	public void CloseAll()
 	{
-		print("Deactivating all UIs.");
 		if (ActionSelectionUI != null) ActionSelectionUI.SetActive(false);
 		if (MissionSelectionUI != null) MissionSelectionUI.SetActive(false);
 		if (ShopUI != null ) ShopUI.SetActive(false);
@@ -57,11 +56,11 @@ public class OptionSelection : SingletonBehaviour<OptionSelection>
 
 	public void EnablePlayerMovement()
 	{
-		
+		Time.timeScale = 1.0f;
 	}
 
 	public void DisablePlayerMovement()
 	{
-		
+		Time.timeScale = 0.0f;
 	}
 }
