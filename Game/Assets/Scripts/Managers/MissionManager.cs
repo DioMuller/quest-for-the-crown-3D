@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+using System;
+using UnityEngine;
 using System.Collections;
 
-public class MissionManager : MonoBehaviour 
+public class MissionManager : SingletonBehaviour<MissionManager>
 {
     public MissionData[] Missions;
 
