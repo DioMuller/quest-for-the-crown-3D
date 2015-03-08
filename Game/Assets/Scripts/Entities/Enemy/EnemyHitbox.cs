@@ -3,13 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class EnemyHitbox : MonoBehaviour 
+[RequireComponent(typeof(CharacterStatus))]
+public class EnemyHitbox : MonoBehaviour
 {
+	private CharacterStatus _characterStatus;
+
     public string[] Targets = { "Player", "Enemy" };
     public int AttackPower = 1;
 	public Animator Animator;
 	public string FlagName = "IsAttacking";
 	public string AttackState = "Attacking";
+
+	void Start()
+	{
+		_characterStatus = GetComponent<CharacterStatus>();
+	}
 
 	void Update()
 	{
@@ -25,6 +33,8 @@ public class EnemyHitbox : MonoBehaviour
 
 	protected void OnCollisionEnter(Collision other)
 	{
+		if (_characterStatus.IsInvulnerable) return;
+
         if (Targets.Contains(other.transform.tag))
         {
             var status = other.gameObject.GetComponent<CharacterStatus>();

@@ -2,6 +2,9 @@ using System.Linq;
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(TargetSelector))]
+[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(CharacterStatus))]
 public class Seek : MonoBehaviour
 {
 	#region Private Attributes
@@ -10,6 +13,14 @@ public class Seek : MonoBehaviour
 	/// </summary>
 	private TargetSelector _targetSelector;
 
+	/// <summary>
+	/// Character Status.
+	/// </summary>
+	private CharacterStatus _characterStatus;
+
+	/// <summary>
+	/// NavMesh Agent.
+	/// </summary>
     private NavMeshAgent _agent;
 	#endregion Private Attributes
 
@@ -27,6 +38,7 @@ public class Seek : MonoBehaviour
     void Start()
 	{
 		_targetSelector = GetComponent<TargetSelector>();
+	    _characterStatus = GetComponent<CharacterStatus>();
         _agent = GetComponent<NavMeshAgent>();
 	}
 
@@ -34,7 +46,8 @@ public class Seek : MonoBehaviour
     /// Sets the target..
     /// </summary>
 	void Update()
-	{
+    {
+	    if (_characterStatus.IsInvulnerable) return;
         if(_targetSelector.CurrentTarget != null)
         {
             _agent.destination = _targetSelector.CurrentTarget.transform.position;
