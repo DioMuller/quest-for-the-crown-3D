@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -65,6 +65,8 @@ namespace Xft
         protected VertexPool mVertexPool;
         protected VertexPool.VertexSegment mVertexSegment;
         protected bool mInited = false;
+
+	    private MeshRenderer _meshRenderer;
 
         #endregion
 
@@ -413,6 +415,9 @@ namespace Xft
             mMeshObj = new GameObject("_XWeaponTrailMesh: " + gameObject.name);
             mMeshObj.layer = gameObject.layer;
             mMeshObj.SetActive(true);
+
+			_meshRenderer = mMeshObj.GetComponent<MeshRenderer>();
+
             MeshFilter mf = mMeshObj.AddComponent<MeshFilter>();
             MeshRenderer mr = mMeshObj.AddComponent<MeshRenderer>();
             mr.castShadows = false;
@@ -431,7 +436,15 @@ namespace Xft
 
         #endregion
 
+	    void OnDisable()
+	    {
+			Destroy(mMeshObj);
+		    mMeshObj = null;
+	    }
 
+	    void OnEnable()
+	    {
+	    }
     }
 
 }

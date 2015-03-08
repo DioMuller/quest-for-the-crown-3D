@@ -100,7 +100,7 @@ MonoBehaviour:
   MaxFrame: 14
   Granularity: 60
   Fps: 60
-  MyColor: {r: 1, g: 1, b: 1, a: 1}
+  MyColor: {r: 1, g: 1, b: 1, a: .286274523}
   MyMaterial: {fileID: 2100000, guid: 75f756109f216ad409ff1a5ea7dd7b2c, type: 2}
 --- !u!1001 &100100000
 Prefab:

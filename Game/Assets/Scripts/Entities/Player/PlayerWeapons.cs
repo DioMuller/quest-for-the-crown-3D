@@ -17,6 +17,11 @@ public class WeaponStatus
     /// </summary>
     public Weapon WeaponObject = null;
 
+	/// <summary>
+	/// Weapon Model.
+	/// </summary>
+	public GameObject WeaponModel = null;
+
     /// <summary>
     /// Is the weapon enabled?
     /// </summary>
@@ -83,12 +88,12 @@ public class PlayerWeapons : MonoBehaviour
     /// </summary>
     /// <param name="position">Weapon Index.</param>
     /// <returns>Weapon instance (null if not exists).</returns>
-    public Weapon GetWeapon(int position)
+    public WeaponStatus GetWeapon(int position)
     {
         var index = GetWeaponIndex(position);
         if( index < 0 || index > Weapons.Length ) return null;
         
-        return Weapons[index].WeaponObject;
+        return Weapons[index];
     }
     #endregion Weapon Instance Methods
 
@@ -104,6 +109,8 @@ public class PlayerWeapons : MonoBehaviour
         {
             weapon.WeaponObject.Parent = transform;
             weapon.WeaponObject.gameObject.SetActive(false);
+
+			if( weapon.WeaponModel != null ) weapon.WeaponModel.SetActive(false);
         }
     }
 
@@ -196,7 +203,7 @@ public class PlayerWeapons : MonoBehaviour
 
     void SetWeapon(int position, int index)
     {
-        var oldWeapon = GetWeapon(position);
+        var oldWeapon = GetWeapon(position).WeaponObject;
 
         if( index >= Weapons.Length ) index = 0;
 
@@ -220,11 +227,16 @@ public class PlayerWeapons : MonoBehaviour
         }
     }
 
-    IEnumerator ActivateWeapon(Weapon weapon)
+    IEnumerator ActivateWeapon(WeaponStatus weaponStatus)
     {
+	    var weapon = weaponStatus.WeaponObject;
+	    var model = weaponStatus.WeaponModel;
+
         if (Animator == null) yield return null;
 
         _weaponActive = true;
+		
+		if( model != null ) model.SetActive(true);
         weapon.gameObject.SetActive(true);
         Animator.SetBool(weapon.Data.AnimationFlag, true);
 
@@ -234,6 +246,8 @@ public class PlayerWeapons : MonoBehaviour
 
         Animator.SetBool(weapon.Data.AnimationFlag, false);
         weapon.gameObject.SetActive(false);
+		if (model != null) model.SetActive(false);
+
         _weaponActive = false;
     }
     #endregion Private Methods

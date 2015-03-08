@@ -3249,12 +3249,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Weapons:
   - WeaponObject: {fileID: 11484614}
+    WeaponModel: {fileID: 112604}
     WeaponEnabled: 1
   - WeaponObject: {fileID: 11408644}
+    WeaponModel: {fileID: 0}
     WeaponEnabled: 1
   - WeaponObject: {fileID: 11414738}
+    WeaponModel: {fileID: 112636}
     WeaponEnabled: 1
   - WeaponObject: {fileID: 11496338}
+    WeaponModel: {fileID: 112590}
     WeaponEnabled: 1
   Animator: {fileID: 9512532}
 --- !u!114 &11414738

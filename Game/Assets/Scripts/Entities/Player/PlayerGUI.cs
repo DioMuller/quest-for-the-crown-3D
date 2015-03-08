@@ -116,7 +116,7 @@ public class PlayerGUI : MonoBehaviour
 
             if (_primaryWeaponIndex >= 0)
             {
-                var weapon = _playerWeapons.GetWeapon(0);
+                var weapon = _playerWeapons.GetWeapon(0).WeaponObject;
                 _primaryWeapon.enabled = true;
                 _primaryWeapon.sprite = Sprite.Create(weapon.Data.Icon,
                     new Rect(0, 0, weapon.Data.Icon.width, weapon.Data.Icon.height),
@@ -135,7 +135,7 @@ public class PlayerGUI : MonoBehaviour
 
             if (_secondaryWeaponIndex >= 0)
             {
-                var weapon = _playerWeapons.GetWeapon(1);
+                var weapon = _playerWeapons.GetWeapon(1).WeaponObject;
                 _secondaryWeapon.enabled = true;
                 _secondaryWeapon.sprite = Sprite.Create(weapon.Data.Icon,
                     new Rect(0, 0, weapon.Data.Icon.width, weapon.Data.Icon.height),
