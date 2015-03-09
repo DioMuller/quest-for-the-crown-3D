@@ -14,6 +14,7 @@ public class Firefly : MonoBehaviour
 
     public float IntensityChange = 0.5f;
     public float IntensityCyclesPerSecond = 1.0f;
+    public float RandomIntensityPerFrame = 0.3f;
 
     public Vector3 WanderDistance = new Vector3(10.0f, 0.5f, 10.0f);
 
@@ -142,7 +143,8 @@ public class Firefly : MonoBehaviour
 
                 if (AllowIntensityChange)
                 {
-                    FireflyLight.intensity = _initialIntensity + (Mathf.Cos(Mathf.PI * _currentValue) * IntensityChange);
+                    var random = Random.Range(-RandomIntensityPerFrame, RandomIntensityPerFrame);
+                    FireflyLight.intensity = _initialIntensity + (Mathf.Cos(Mathf.PI * _currentValue) * IntensityChange) + random;
                 }
 
                 if (AllowMovement)

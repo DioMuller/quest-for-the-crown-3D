@@ -4637,7 +4637,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: .806896567, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 40
   m_SpotAngle: 30
@@ -4645,7 +4645,7 @@ Light:
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
-    m_Strength: 1
+    m_Strength: .600000024
     m_Bias: .0500000007
     m_NormalBias: .400000006
   m_Cookie: {fileID: 0}
@@ -4672,13 +4672,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FireflyLight: {fileID: 1856317447}
-  HueChange: 1.5
-  IntensityChange: .300000012
+  HueChange: 1
+  IntensityChange: .100000001
   IntensityCyclesPerSecond: 2
+  RandomIntensityPerFrame: .100000001
   WanderDistance: {x: 0, y: 0, z: 0}
   AllowMovement: 0
-  AllowColorChange: 1
-  AllowIntensityChange: 0
+  AllowColorChange: 0
+  AllowIntensityChange: 1
 --- !u!4 &1941072987
 Transform:
   m_PrefabParentObject: {fileID: 498970, guid: 0b647dc21e5ed4040a0a1201d1ef9d9b, type: 2}
