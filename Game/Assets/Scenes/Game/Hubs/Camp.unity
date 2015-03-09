@@ -4672,13 +4672,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FireflyLight: {fileID: 1856317447}
-  HueChange: 1
+  HueChange: 1.5
   IntensityChange: .300000012
-  IntensityCyclesPerSecond: 1.5
+  IntensityCyclesPerSecond: 2
   WanderDistance: {x: 0, y: 0, z: 0}
   AllowMovement: 0
-  AllowColorChange: 0
-  AllowIntensityChange: 1
+  AllowColorChange: 1
+  AllowIntensityChange: 0
 --- !u!4 &1941072987
 Transform:
   m_PrefabParentObject: {fileID: 498970, guid: 0b647dc21e5ed4040a0a1201d1ef9d9b, type: 2}
