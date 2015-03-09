@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Assets.Code.Libs.Input;
 using System.Collections;
 using System.Collections.Generic;
@@ -203,7 +203,8 @@ public class PlayerWeapons : MonoBehaviour
 
     void SetWeapon(int position, int index)
     {
-        var oldWeapon = GetWeapon(position).WeaponObject;
+	    var ow = GetWeapon(position);
+        var oldWeapon = ow != null ?  ow.WeaponObject : null;
 
         if( index >= Weapons.Length ) index = 0;
 
