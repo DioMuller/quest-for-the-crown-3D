@@ -34,8 +34,6 @@ public class ObjectiveManager : SingletonBehaviour<ObjectiveManager>
 
 	public void CompleteMission()
 	{
-		print("Mission Complete!");
-		//TODO: Show a Mission Complete Screen?
-		Application.LoadLevel("Camp");
+		WindowManager.Instance.OpenWindow(0);
 	}
 }
