@@ -4674,7 +4674,7 @@ MonoBehaviour:
   FireflyLight: {fileID: 1856317447}
   HueChange: 1
   IntensityChange: .300000012
-  IntensityCyclesPerSecond: 1
+  IntensityCyclesPerSecond: 1.5
   WanderDistance: {x: 0, y: 0, z: 0}
   AllowMovement: 0
   AllowColorChange: 0
