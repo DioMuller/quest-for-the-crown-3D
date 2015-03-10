@@ -44,7 +44,7 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _OcclusionMap
+          name: _SpecGlossMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -66,6 +66,13 @@ Material:
       data:
         first:
           name: _DetailAlbedoMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _OcclusionMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -101,7 +108,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .5
+        second: .326999992
       data:
         first:
           name: _BumpScale
@@ -120,11 +127,11 @@ Material:
         second: 0
       data:
         first:
-          name: _EmissionScaleUI
+          name: _Mode
         second: 0
       data:
         first:
-          name: _Mode
+          name: _EmissionScaleUI
         second: 0
       data:
         first:
@@ -139,6 +146,10 @@ Material:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 1}
       data:
         first:
           name: _EmissionColorUI
