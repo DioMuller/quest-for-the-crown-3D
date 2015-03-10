@@ -67,7 +67,7 @@ Material:
         first:
           name: _ShoreTex
         second:
-          m_Texture: {fileID: 2800000, guid: 36dd0b22da8874ed38075789055ca664, type: 3}
+          m_Texture: {fileID: 2800000, guid: df850279c4b8ea04eab2f34ac1da2ec4, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 1, y: 1}
       data:
@@ -258,6 +258,14 @@ Material:
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
+          name: _Displacement
+        second: {r: 6.6371665, g: 20.3539829, b: -1, a: -.681415975}
+      data:
+        first:
+          name: _ShoreTiling
+        second: {r: 1, g: 1, b: .100000001, a: .100000001}
+      data:
+        first:
           name: _RefrColor
         second: {r: .523390472, g: .947761178, b: .912149608, a: 1}
       data:
@@ -311,7 +319,7 @@ Material:
       data:
         first:
           name: _BaseColor
-        second: {r: .153709054, g: .268130153, b: .298507452, a: .819999993}
+        second: {r: .0899653956, g: .321012884, b: .382352948, a: .819607854}
       data:
         first:
           name: _ReflectionColor
@@ -323,7 +331,7 @@ Material:
       data:
         first:
           name: _WorldLightDir
-        second: {r: -.0303751379, g: -.201390833, b: -.979039967, a: 0}
+        second: {r: -.821087062, g: -.201390862, b: -.534095585, a: 0}
       data:
         first:
           name: _Foam
@@ -372,14 +380,6 @@ Material:
         first:
           name: _WaveScale4
         second: {r: .100000001, g: .100000001, b: .00999999978, a: .00999999978}
-      data:
-        first:
-          name: _Displacement
-        second: {r: 6.6371665, g: 20.3539829, b: -1, a: -.681415975}
-      data:
-        first:
-          name: _ShoreTiling
-        second: {r: 1, g: 1, b: .100000001, a: .100000001}
       data:
         first:
           name: _DisplacementXz
