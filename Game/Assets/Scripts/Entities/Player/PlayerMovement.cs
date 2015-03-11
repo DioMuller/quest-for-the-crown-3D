@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Assets.Libs.Input;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(CapsuleCollider))]
 [RequireComponent(typeof(CameraTrack))]
 [RequireComponent(typeof(CharacterStatus))]
 public class PlayerMovement : MonoBehaviour
@@ -29,6 +30,16 @@ public class PlayerMovement : MonoBehaviour
     /// Character status.
     /// </summary>
     private CharacterStatus _status;
+
+    /// <summary>
+    /// Body collider.
+    /// </summary>
+    private CapsuleCollider _collider;
+
+    /// <summary>
+    /// Character Last Position.
+    /// </summary>
+    private Vector3 _lastPosition;
     #endregion Private Attributes
 
     #region Properties
@@ -90,6 +101,9 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _cameraTrack = GetComponent<CameraTrack>();
         _status = GetComponent<CharacterStatus>();
+        _collider = GetComponent<CapsuleCollider>();
+
+        _lastPosition = transform.position;
     }
 
     /// <summary>
