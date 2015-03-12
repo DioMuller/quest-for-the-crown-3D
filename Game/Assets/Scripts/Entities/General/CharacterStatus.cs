@@ -83,7 +83,7 @@ public class CharacterStatus : MonoBehaviour
 		CurrentHealth -= amount;
 
         // TODO: Correct Knockback.
-        if (_rigidbody != null)
+        if (_rigidbody != null && attacker != null)
         {
             var knockbackDirection = (transform.position - attacker.position);
             knockbackDirection.y = 0;

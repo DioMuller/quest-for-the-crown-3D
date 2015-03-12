@@ -9,6 +9,7 @@ TagManager:
   - NPC
   - Weapon
   - Checkpoint
+  - Water
   layers:
   - Default
   - TransparentFX
