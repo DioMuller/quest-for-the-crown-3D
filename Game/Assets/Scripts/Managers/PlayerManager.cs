@@ -5,17 +5,18 @@ using System.Linq;
 
 public class PlayerManager : SingletonBehaviour<PlayerManager>
 {
-    private static int playerCount = 0;
+    private static int playerCount = 1;
 
     private List<PlayerRegister> _players = new List<PlayerRegister>();
 
     public bool RegisterPlayer( PlayerRegister playerData )
     {
-        if (playerNumber > playerCount || playerNumber < 0) return false;
+        if (playerData.PlayerNumber > playerCount || playerData.PlayerNumber <= 0) return false;
         if( _players.Contains(playerData) ) return true;
-        if( _players.Count( p => p.PlayerNumber == playerData.PlayerNumber ) return false;
+        if( _players.Count( p => p.PlayerNumber == playerData.PlayerNumber ) > 0 ) return false;
 
-        return _players.Add(playerData);
+        _players.Add(playerData);
+        return true;
     }
 
     public bool KillPlayer( PlayerRegister playerData )
