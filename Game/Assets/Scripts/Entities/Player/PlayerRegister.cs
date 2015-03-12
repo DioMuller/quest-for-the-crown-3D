@@ -5,6 +5,8 @@ public class PlayerRegister : MonoBehaviour
 {
     public int PlayerNumber = 1;
 
+    public Vector3 Checkpoint { get; private set; }
+
 	// Use this for initialization
 	void Awake() 
     {
@@ -12,6 +14,8 @@ public class PlayerRegister : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        Checkpoint = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -19,4 +23,17 @@ public class PlayerRegister : MonoBehaviour
     {
 	
 	}
+
+    void OnDestroy()
+    {
+        PlayerManager.Instance.KillPlayer(this);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if( other.tag == "Checkpoint" )
+        {
+            Checkpoint = transform.position;
+        }
+    }
 }
