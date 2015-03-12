@@ -6,35 +6,35 @@ AnimationClip:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Running
-  serializedVersion: 4
-  m_AnimationType: 2
+  serializedVersion: 6
+  m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
   m_RotationCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: .0416666679
         value: {x: -.266864836, y: 0, z: -0, w: .963733971}
         inSlope: {x: .0297131538, y: 0, z: 0, w: .00820684433}
         outSlope: {x: .0297131538, y: 0, z: 0, w: .00820684433}
-        tangentMode: 1068029772
-      - time: .666666687
-        value: {x: -.0573529117, y: 0, z: -0, w: .998353958}
-        inSlope: {x: .451086462, y: 0, z: 0, w: .0259752311}
-        outSlope: {x: .451086462, y: 0, z: 0, w: .0259752311}
-        tangentMode: 1063245252
-      - time: 1.33333337
+        tangentMode: 0
+      - time: .708333373
+        value: {x: -.0573529229, y: 0, z: -0, w: .998354018}
+        inSlope: {x: .451086402, y: 0, z: 0, w: .0259752311}
+        outSlope: {x: .451086402, y: 0, z: 0, w: .0259752311}
+        tangentMode: 0
+      - time: 1.375
         value: {x: .0879558176, y: -0, z: -0, w: .996124387}
-        inSlope: {x: -.157946602, y: 0, z: 0, w: .013789407}
-        outSlope: {x: -.157946602, y: 0, z: 0, w: .013789407}
-        tangentMode: 1063696351
-      - time: 1.91666675
-        value: {x: -.122203112, y: 0, z: -0, w: .992505133}
+        inSlope: {x: -.157946512, y: 0, z: 0, w: .0137901222}
+        outSlope: {x: -.157946512, y: 0, z: 0, w: .0137901222}
+        tangentMode: 0
+      - time: 1.95833337
+        value: {x: -.122203104, y: 0, z: -0, w: .992505133}
         inSlope: {x: -.430449814, y: 0, z: 0, w: -.0529282615}
         outSlope: {x: -.430449814, y: 0, z: 0, w: -.0529282615}
-        tangentMode: 877133824
-      - time: 2.45833325
+        tangentMode: 0
+      - time: 2.5
         value: {x: -.266864836, y: 0, z: -0, w: .963733971}
         inSlope: {x: -.0277863611, y: 0, z: 0, w: -.00767615391}
         outSlope: {x: -.0277863611, y: 0, z: 0, w: -.00767615391}
@@ -45,27 +45,27 @@ AnimationClip:
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: .0416666679
         value: {x: .0596523918, y: -0, z: -0, w: .998219252}
-        inSlope: {x: -.0303734243, y: 0, z: 0, w: .0017952919}
-        outSlope: {x: -.0303734243, y: 0, z: 0, w: .0017952919}
-        tangentMode: 1065353216
-      - time: .666666687
-        value: {x: -.149748862, y: 0, z: -0, w: .988724053}
-        inSlope: {x: -.440970123, y: 0, z: 0, w: -.0667276531}
-        outSlope: {x: -.440970123, y: 0, z: 0, w: -.0667276531}
+        inSlope: {x: -.0303735137, y: 0, z: 0, w: .0017952919}
+        outSlope: {x: -.0303735137, y: 0, z: 0, w: .0017952919}
         tangentMode: 0
-      - time: 1.33333337
+      - time: .708333373
+        value: {x: -.149748892, y: 0, z: -0, w: .988724113}
+        inSlope: {x: -.440970123, y: 0, z: 0, w: -.0667269379}
+        outSlope: {x: -.440970123, y: 0, z: 0, w: -.0667269379}
+        tangentMode: 0
+      - time: 1.375
         value: {x: -.28967464, y: 0, z: -0, w: .957125187}
         inSlope: {x: .14983131, y: 0, z: 0, w: .0451876819}
         outSlope: {x: .14983131, y: 0, z: 0, w: .0451876819}
-        tangentMode: 1063696351
-      - time: 1.91666675
-        value: {x: -.0859256387, y: 0, z: -0, w: .996301591}
-        inSlope: {x: .426493108, y: 0, z: 0, w: .0368521549}
-        outSlope: {x: .426493108, y: 0, z: 0, w: .0368521549}
         tangentMode: 0
-      - time: 2.45833325
+      - time: 1.95833337
+        value: {x: -.0859256312, y: 0, z: -0, w: .996301591}
+        inSlope: {x: .426493287, y: 0, z: 0, w: .0368514396}
+        outSlope: {x: .426493287, y: 0, z: 0, w: .0368514396}
+        tangentMode: 0
+      - time: 2.5
         value: {x: .0596523918, y: -0, z: -0, w: .998219252}
         inSlope: {x: .0284044333, y: 0, z: 0, w: -.00167942687}
         outSlope: {x: .0284044333, y: 0, z: 0, w: -.00167942687}
@@ -77,19 +77,50 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
+        value: {x: .0678165704, y: .0515214056, z: .00350676826, w: .996360481}
+        inSlope: {x: .000723838806, y: -.0368751884, z: -.00251433067, w: .00183820724}
+        outSlope: {x: .000723838806, y: -.0368751884, z: -.00251433067, w: .00183820724}
+        tangentMode: 0
+      - time: .541666687
+        value: {x: .0678616166, y: -.0633033738, z: -.00431272155, w: .995675087}
+        inSlope: {x: -.00247031334, y: -.131978661, z: -.00890405755, w: -.00810384378}
+        outSlope: {x: -.00247031334, y: -.131978661, z: -.00890405755, w: -.00810384378}
+        tangentMode: 0
+      - time: 1
+        value: {x: .0677834749, y: -.0591237023, z: -.00403319299, w: .99593854}
+        inSlope: {x: .000169068488, y: .0484688766, z: .0032699462, w: .00287532667}
+        outSlope: {x: .000169068488, y: .0484688766, z: .0032699462, w: .00287532667}
+        tangentMode: 0
+      - time: 1.91666675
+        value: {x: .0679411441, y: .00891294517, z: .000608396134, w: .997649312}
+        inSlope: {x: -.000276803912, y: .106775939, z: .00725582894, w: -.000910520379}
+        outSlope: {x: -.000276803912, y: .106775939, z: .00725582894, w: -.000910520379}
+        tangentMode: 0
+      - time: 2.08333349
+        value: {x: .0678942651, y: .0194554627, z: .00132422254, w: .99750191}
+        inSlope: {x: -.000117301715, y: .0192959532, z: .00130908319, w: -.000363349216}
+        outSlope: {x: -.000117301715, y: .0192959532, z: .00130908319, w: -.000363349216}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: .0416666679
         value: {x: -1.01590394e-19, y: 0, z: -0, w: 1}
         inSlope: {x: -.00271528261, y: 0, z: 0, w: 0}
         outSlope: {x: -.00271528261, y: 0, z: 0, w: 0}
-        tangentMode: 1065353216
-      - time: 1.58333337
+        tangentMode: 0
+      - time: 1.625
         value: {x: -.0254476722, y: 0, z: -0, w: .999676168}
         inSlope: {x: .0326537117, y: 0, z: 0, w: .000829696306}
         outSlope: {x: .0326537117, y: 0, z: 0, w: .000829696306}
         tangentMode: 0
-      - time: 2.45833325
+      - time: 2.5
         value: {x: 0, y: -0, z: -0, w: 1}
-        inSlope: {x: .00253926148, y: -0, z: 0, w: 0}
-        outSlope: {x: .00253926148, y: -0, z: 0, w: 0}
+        inSlope: {x: .00253926171, y: -0, z: 0, w: 0}
+        outSlope: {x: .00253926171, y: -0, z: 0, w: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -97,77 +128,77 @@ AnimationClip:
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: .0416666679
         value: {x: .148623601, y: -.162407935, z: .58983767, w: .776933849}
         inSlope: {x: -.0211361647, y: .0289678574, z: .00539588928, w: .00596666336}
         outSlope: {x: -.0211361647, y: .0289678574, z: .00539588928, w: .00596666336}
-        tangentMode: -1512346171
-      - time: .625
-        value: {x: .0112473117, y: .0210591406, z: .608170629, w: .793447256}
-        inSlope: {x: -.331190228, y: .431213498, z: .00554179866, w: -.0109620038}
-        outSlope: {x: -.331190228, y: .431213498, z: .00554179866, w: -.0109620038}
-        tangentMode: 1065353216
-      - time: 1.29166675
-        value: {x: -.112948634, y: .179216042, z: .597684324, w: .77323842}
-        inSlope: {x: .0798404962, y: -.0994465724, z: .0147314211, w: .0231099352}
-        outSlope: {x: .0798404962, y: -.0994465724, z: .0147314211, w: .0231099352}
         tangentMode: 0
-      - time: 1.87500012
-        value: {x: .0314754136, y: -.00537405163, z: .607495964, w: .793680727}
+      - time: .666666687
+        value: {x: .0112473117, y: .0210591424, z: .608170629, w: .793447256}
+        inSlope: {x: -.331190199, y: .431213439, z: .00554179866, w: -.0109620038}
+        outSlope: {x: -.331190199, y: .431213439, z: .00554179866, w: -.0109620038}
+        tangentMode: 0
+      - time: 1.33333337
+        value: {x: -.112948634, y: .179216042, z: .597684324, w: .77323842}
+        inSlope: {x: .0798404068, y: -.0994463935, z: .0147321364, w: .0231106505}
+        outSlope: {x: .0798404068, y: -.0994463935, z: .0147321364, w: .0231106505}
+        tangentMode: 0
+      - time: 1.91666675
+        value: {x: .0314754173, y: -.00537405536, z: .607495964, w: .793680727}
         inSlope: {x: .317610323, y: -.416549265, z: -.0158686601, w: -.00320578134}
         outSlope: {x: .317610323, y: -.416549265, z: -.0158686601, w: -.00320578134}
         tangentMode: 0
-      - time: 2.45833325
+      - time: 2.5
         value: {x: .148623601, y: -.162407935, z: .58983767, w: .776933849}
         inSlope: {x: .0197654516, y: -.0270896982, z: -.00504686357, w: -.00558044668}
         outSlope: {x: .0197654516, y: -.0270896982, z: -.00504686357, w: -.00558044668}
-        tangentMode: 55
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine/Hero17:cinto:Character1_Spine1/Hero17:cinto:Character1_Spine2/Hero17:cinto:Character1_LeftShoulder/Hero17:cinto:Character1_LeftArm
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
-        value: {x: 0, y: .466656208, z: -0, w: .884438813}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 1634885992
       - time: .0416666679
         value: {x: 0, y: .466656208, z: -0, w: .884438813}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 1952670066
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: 0, y: .466656208, z: -0, w: .884438813}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine/Hero17:cinto:Character1_Spine1/Hero17:cinto:Character1_Spine2/Hero17:cinto:Character1_LeftShoulder/Hero17:cinto:Character1_LeftArm/Hero17:cinto:Character1_LeftForeArm
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: .0416666679
         value: {x: -.0392561369, y: -.0542662591, z: -.58480072, w: .808407307}
         inSlope: {x: .0170556307, y: .0235770643, z: -.00113296509, w: .00156784058}
         outSlope: {x: .0170556307, y: .0235770643, z: -.00113296509, w: .00156784058}
         tangentMode: 0
-      - time: .666666687
-        value: {x: .0784552842, y: .108453743, z: -.580842197, w: .802935183}
+      - time: .708333373
+        value: {x: .0784552693, y: .108453728, z: -.580842197, w: .802935183}
         inSlope: {x: .248303324, y: .343245506, z: .0335061625, w: -.0463178307}
         outSlope: {x: .248303324, y: .343245506, z: .0335061625, w: -.0463178307}
         tangentMode: 0
-      - time: 1.33333337
-        value: {x: .157393292, y: .21757479, z: -.564588547, w: .780466735}
+      - time: 1.375
+        value: {x: .157393306, y: .217574805, z: -.564588606, w: .780466795}
         inSlope: {x: -.084710896, y: -.117101237, z: -.0235304683, w: .0325276628}
         outSlope: {x: -.084710896, y: -.117101237, z: -.0235304683, w: .0325276628}
-        tangentMode: 1065353216
-      - time: 1.91666675
+        tangentMode: 0
+      - time: 1.95833337
         value: {x: .0425407588, y: .0588068068, z: -.584570885, w: .808089674}
         inSlope: {x: -.239856318, y: -.331568718, z: -.0174923111, w: .0241806731}
         outSlope: {x: -.239856318, y: -.331568718, z: -.0174923111, w: .0241806731}
-        tangentMode: -2147483648
-      - time: 2.45833325
+        tangentMode: 0
+      - time: 2.5
         value: {x: -.0392561369, y: -.0542662591, z: -.58480072, w: .808407307}
-        inSlope: {x: -.0159499068, y: -.0220485572, z: .00106144359, w: -.00146771036}
-        outSlope: {x: -.0159499068, y: -.0220485572, z: .00106144359, w: -.00146771036}
+        inSlope: {x: -.0159499962, y: -.0220486466, z: .00106001308, w: -.00146627985}
+        outSlope: {x: -.0159499962, y: -.0220486466, z: .00106001308, w: -.00146627985}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -175,16 +206,16 @@ AnimationClip:
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
-        value: {x: 0, y: -.463686079, z: -0, w: .88599956}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 1918986307
       - time: .0416666679
         value: {x: 0, y: -.463686079, z: -0, w: .88599956}
         inSlope: {x: 0, y: 0, z: 0, w: 0}
         outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 3242240
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: 0, y: -.463686079, z: -0, w: .88599956}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine/Hero17:cinto:Character1_Spine1/Hero17:cinto:Character1_Spine2/Hero17:cinto:Character1_RightShoulder/Hero17:cinto:Character1_RightArm/Hero17:cinto:Character1_RightForeArm
@@ -193,32 +224,32 @@ AnimationClip:
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: .0416666679
         value: {x: -.13730143, y: -.0704085901, z: .00703521166}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
-      - time: 2.45833325
+      - time: 2.5
         value: {x: -.13730143, y: -.0704085901, z: .00703521166}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: -1106292575
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_LeftUpLeg
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: .0416666679
         value: {x: .129704073, y: -.0704085901, z: .00703521166}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
-      - time: 2.45833325
+      - time: 2.5
         value: {x: .129704073, y: -.0704085901, z: .00703521166}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: -1114906067
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_RightUpLeg
@@ -226,79 +257,95 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
+        value: {x: -0, y: .0776602924, z: .00229980028}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 2.08333325
+        value: {x: -0, y: .0776602924, z: .00229980028}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: .0416666679
         value: {x: -0, y: .126666665, z: .0183707736}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
-      - time: 2.45833325
+      - time: 2.5
         value: {x: -0, y: .126666665, z: .0183707736}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: -1106292575
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine/Hero17:cinto:Character1_Spine1/Hero17:cinto:Character1_Spine2
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: .0416666679
         value: {x: -.173637703, y: 1.37399991e-06, z: 8.881784e-18}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
-      - time: 2.45833325
+      - time: 2.5
         value: {x: -.173637703, y: 1.37399991e-06, z: 8.881784e-18}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: -1106292575
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine/Hero17:cinto:Character1_Spine1/Hero17:cinto:Character1_Spine2/Hero17:cinto:Character1_LeftShoulder/Hero17:cinto:Character1_LeftArm
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: .0416666679
         value: {x: -.302650869, y: 0, z: -8.881784e-18}
         inSlope: {x: -5.32907052e-15, y: -0, z: -9.86076132e-32}
         outSlope: {x: -5.32907052e-15, y: -0, z: -9.86076132e-32}
-        tangentMode: 1869901417
-      - time: .0416666679
+        tangentMode: 0
+      - time: .0833333358
         value: {x: -.302650869, y: 0, z: -8.881784e-18}
         inSlope: {x: -2.28388755e-15, y: -0, z: -4.22604061e-32}
         outSlope: {x: -2.28388755e-15, y: -0, z: -4.22604061e-32}
-        tangentMode: 15
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine/Hero17:cinto:Character1_Spine1/Hero17:cinto:Character1_Spine2/Hero17:cinto:Character1_LeftShoulder/Hero17:cinto:Character1_LeftArm/Hero17:cinto:Character1_LeftForeArm
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: .0416666679
         value: {x: .153254449, y: 4.33200012e-06, z: -.015663296}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
-      - time: 2.45833325
+      - time: 2.5
         value: {x: .153254449, y: 4.33200012e-06, z: -.015663296}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: -1106292575
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine/Hero17:cinto:Character1_Spine1/Hero17:cinto:Character1_Spine2/Hero17:cinto:Character1_RightShoulder/Hero17:cinto:Character1_RightArm
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: .0416666679
         value: {x: .309832662, y: 8.52651264e-16, z: .00278274389}
         inSlope: {x: 7.10542736e-15, y: -0, z: 2.77555756e-17}
         outSlope: {x: 7.10542736e-15, y: -0, z: 2.77555756e-17}
-        tangentMode: 1869901417
-      - time: .0416666679
+        tangentMode: 0
+      - time: .0833333358
         value: {x: .309832662, y: 8.52651264e-16, z: .00278274389}
         inSlope: {x: 3.04518318e-15, y: -0, z: 1.18952468e-17}
         outSlope: {x: 3.04518318e-15, y: -0, z: 1.18952468e-17}
-        tangentMode: 15
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine/Hero17:cinto:Character1_Spine1/Hero17:cinto:Character1_Spine2/Hero17:cinto:Character1_RightShoulder/Hero17:cinto:Character1_RightArm/Hero17:cinto:Character1_RightForeArm
@@ -306,32 +353,32 @@ AnimationClip:
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: .0416666679
         value: {x: 1, y: 1, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
-      - time: 2.45833325
+      - time: 2.5
         value: {x: 1, y: 1, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: -1106292575
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_LeftUpLeg
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: .0416666679
         value: {x: 1, y: 1, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
-      - time: 2.45833325
+      - time: 2.5
         value: {x: 1, y: 1, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: -1114906067
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_RightUpLeg
@@ -343,75 +390,91 @@ AnimationClip:
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
-      - time: 2.45833325
+      - time: 2.08333349
         value: {x: 1, y: 1, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: -1106292575
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: .0416666679
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 2.5
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine/Hero17:cinto:Character1_Spine1/Hero17:cinto:Character1_Spine2
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: .0416666679
         value: {x: 1, y: 1, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
-      - time: 2.45833325
+      - time: 2.5
         value: {x: 1, y: 1, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: -1106292575
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine/Hero17:cinto:Character1_Spine1/Hero17:cinto:Character1_Spine2/Hero17:cinto:Character1_LeftShoulder/Hero17:cinto:Character1_LeftArm
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
-        value: {x: 1, y: 1, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 1869901417
       - time: .0416666679
         value: {x: 1, y: 1, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 15
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine/Hero17:cinto:Character1_Spine1/Hero17:cinto:Character1_Spine2/Hero17:cinto:Character1_LeftShoulder/Hero17:cinto:Character1_LeftArm/Hero17:cinto:Character1_LeftForeArm
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
+      - time: .0416666679
         value: {x: 1, y: 1, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
-      - time: 2.45833325
+      - time: 2.5
         value: {x: 1, y: 1, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: -1106292575
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine/Hero17:cinto:Character1_Spine1/Hero17:cinto:Character1_Spine2/Hero17:cinto:Character1_RightShoulder/Hero17:cinto:Character1_RightArm
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 0
-        value: {x: 1, y: 1, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 1869901417
       - time: .0416666679
         value: {x: 1, y: 1, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 15
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_Spine/Hero17:cinto:Character1_Spine1/Hero17:cinto:Character1_Spine2/Hero17:cinto:Character1_RightShoulder/Hero17:cinto:Character1_RightArm/Hero17:cinto:Character1_RightForeArm
@@ -431,6 +494,12 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - path: 764660504
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1576473810
       attribute: 2
       script: {fileID: 0}
       classID: 4
@@ -461,6 +530,12 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - path: 764660504
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1576473810
       attribute: 1
       script: {fileID: 0}
       classID: 4
@@ -515,6 +590,12 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - path: 764660504
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1576473810
       attribute: 3
       script: {fileID: 0}
       classID: 4
@@ -554,12 +635,12 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 2.45833325
+    m_StopTime: 2.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_LoopTime: 1
-    m_LoopBlend: 1
+    m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
@@ -570,4 +651,7 @@ AnimationClip:
     m_Mirror: 0
   m_EditorCurves: []
   m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
   m_Events: []
