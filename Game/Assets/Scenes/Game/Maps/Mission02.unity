@@ -248,8 +248,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 230386888}
-  m_LocalRotation: {x: -.422618389, y: 0, z: 0, w: .906307697}
-  m_LocalPosition: {x: 0, y: -5.83994675, z: -3}
+  m_LocalRotation: {x: -.422618359, y: 0, z: 0, w: .906307757}
+  m_LocalPosition: {x: 0, y: -4.83994675, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 733273766}
@@ -998,6 +998,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 480982, guid: 5e9de091f5a094446b8cc70a821b6659, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 480982, guid: 5e9de091f5a094446b8cc70a821b6659, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9de091f5a094446b8cc70a821b6659, type: 2}
   m_IsPrefabParent: 0
@@ -1449,6 +1457,50 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11427600, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 56f8ad786f166aa4098157a9b4fa3716,
+        type: 3}
+    - target: {fileID: 11427600, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427600, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427600, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460944, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460944, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460944, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460944, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a484699ab1b82c4d810f7e8b2fc4827,
+        type: 3}
+    - target: {fileID: 11475152, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e088c71ebb855c14da5a90d626999719,
+        type: 3}
+    - target: {fileID: 11450130, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5f056580a80623346b7f21fd5d5fa2be,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
   m_IsPrefabParent: 0
