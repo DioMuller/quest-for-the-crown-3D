@@ -604,6 +604,52 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 447976, guid: 5638370a6e2e60847a8f9f92880a29b3, type: 2}
   m_PrefabInternal: {fileID: 359400924}
+--- !u!1001 &395867102
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 464911228}
+    m_Modifications:
+    - target: {fileID: 492490, guid: b304f37d726c6cb45b6be59b9bd7068f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.55999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 492490, guid: b304f37d726c6cb45b6be59b9bd7068f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.14999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 492490, guid: b304f37d726c6cb45b6be59b9bd7068f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -9.46999931
+      objectReference: {fileID: 0}
+    - target: {fileID: 492490, guid: b304f37d726c6cb45b6be59b9bd7068f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492490, guid: b304f37d726c6cb45b6be59b9bd7068f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492490, guid: b304f37d726c6cb45b6be59b9bd7068f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492490, guid: b304f37d726c6cb45b6be59b9bd7068f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 492490, guid: b304f37d726c6cb45b6be59b9bd7068f, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b304f37d726c6cb45b6be59b9bd7068f, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &395867103
+Transform:
+  m_PrefabParentObject: {fileID: 492490, guid: b304f37d726c6cb45b6be59b9bd7068f, type: 2}
+  m_PrefabInternal: {fileID: 395867102}
 --- !u!1 &426917528
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +862,7 @@ Transform:
   - {fileID: 2094150405}
   - {fileID: 2092042185}
   - {fileID: 2126738492}
+  - {fileID: 395867103}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!1001 &467133408
