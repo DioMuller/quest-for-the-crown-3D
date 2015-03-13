@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
+public enum Weapons
+{
+    Bow,
+    Fireball,
+    Boomerang
+}
+
 public enum Items
 {
     HealthPotion,
@@ -86,6 +93,22 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
                 return true;
             default:
                 return false;
+        }
+    }
+
+    public void ObtainWeapon(Weapons weapon)
+    {
+        switch(weapon)
+        {
+            case Weapons.Bow:
+                HasBow = true;
+                break;
+            case Weapons.Fireball:
+                HasFireball = true;
+                break;
+            case Weapons.Boomerang:
+                HasBoomerang = true;
+                break;
         }
     }
 }
