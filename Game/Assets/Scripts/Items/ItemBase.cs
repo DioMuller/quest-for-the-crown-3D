@@ -29,33 +29,18 @@ public abstract class ItemBase : MonoBehaviour
     /// <param name="other"></param>
     void OnTriggerEnter(Collider other)
     {
-	    print("Pickup enter! ");
         if (!CanPickup)
             return;
 
         if (other.tag == "Player")
         {
-			print("Pickup get! ");
             OnPlayerTouch(other);
         }
     }
 
     void OnPlayerTouch(Collider player)
     {
-        var inventory = player.GetComponent<PlayerInventory>();
-        if (inventory != null)
-        {
-            PickupAmount -= Pickup(PickupAmount);
-        }
-        else
-        {
-            while (PickupAmount > 0)
-            {
-                if (!Use(player.gameObject))
-                    break;
-                PickupAmount--;
-            }
-        }
+        PickupAmount -= Pickup(PickupAmount);
 
         if (PickupAmount <= 0)
             Destroy(gameObject);

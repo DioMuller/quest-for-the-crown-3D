@@ -628,6 +628,7 @@ GameObject:
   - 223: {fileID: 22310622}
   - 114: {fileID: 11498348}
   - 114: {fileID: 11470476}
+  - 114: {fileID: 11407282}
   m_Layer: 5
   m_Name: ItemPanel
   m_TagString: Untagged
@@ -858,6 +859,21 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11407282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e018746297493bd408958bce29a6b948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPotionLabel: {fileID: 11475502}
+  MagicPotionLabel: {fileID: 11441600}
+  BombLabel: {fileID: 11491224}
+  MedalLabel: {fileID: 11498276}
 --- !u!114 &11415066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -975,8 +991,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 7f571c441d5ca9d4199ec342d88985bd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 56f8ad786f166aa4098157a9b4fa3716, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1273,7 +1289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 333843a93cbe2bf4a8c5c3c7fafb84f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f056580a80623346b7f21fd5d5fa2be, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1361,8 +1377,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 5c37aa0380d56944995e0863e5257afb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 4a484699ab1b82c4d810f7e8b2fc4827, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1724,7 +1740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 333843a93cbe2bf4a8c5c3c7fafb84f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e088c71ebb855c14da5a90d626999719, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
