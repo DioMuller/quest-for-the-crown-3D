@@ -7,14 +7,20 @@ public class HealthPotionItem : ItemBase
         return PlayerManager.ObtainItem( Items.HealthPotion, amount);
     }
 
-	public override bool Use(GameObject player)
+	public static new bool Use(CharacterStatus status)
     {
-        const int RestoreAmount = 1;
+        const int RestoreAmount = 3;
 
-        var status = player.GetComponent<CharacterStatus>();
         if (status != null)
         {
-            return status.AddHealth(RestoreAmount) > 0;
+			if( PlayerManager.HealthPotions > 0 )
+			{
+				if (status.AddHealth(RestoreAmount) > 0)
+				{
+					PlayerManager.UseItem(Items.HealthPotion);
+					return true;
+				}
+			}
         }
         return false;
     }

@@ -7,14 +7,17 @@ public class MagicPotionItem : ItemBase
 	    return PlayerManager.ObtainItem(Items.MagicPotion, amount);
     }
 
-	public override bool Use(GameObject player)
+	public static new bool Use(CharacterStatus status)
     {
-        const int RestoreAmount = 1;
+        const int RestoreAmount = 10;
 
-        var status = player.GetComponent<CharacterStatus>();
         if (status != null)
         {
-            return status.RestoreMagic(RestoreAmount) > 0;
+			if (status.RestoreMagic(RestoreAmount) > 0 )
+			{
+				PlayerManager.UseItem(Items.MagicPotion);
+				return true;
+			}
         }
         return false;
     }

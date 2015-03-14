@@ -51,7 +51,7 @@ public abstract class ItemBase : MonoBehaviour
 		return amount;
 	}
 
-	public virtual bool Use(GameObject obj)
+	public static bool Use(CharacterStatus status)
 	{
 		return true;
 	}

@@ -71,30 +71,30 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
         Medals = 0;
     }
 
-	//public static bool UseItem(Items item)
-	//{
-	//	switch(item)
-	//	{
-	//		case Items.HealthPotion:
-	//			if (HealthPotions <= 0) return false;
-	//			HealthPotions--;
-	//			return true;
-	//		case Items.MagicPotion:
-	//			if (MagicPotions <= 0) return false;
-	//			MagicPotions--;
-	//			return true;
-	//		case Items.Bomb:
-	//			if (Bombs <= 0) return false;
-	//			Bombs--;
-	//			return true;
-	//		case Items.Medal:
-	//			if (Medals <= 0) return false;
-	//			Medals--;
-	//			return true;
-	//		default:
-	//			return false;
-	//	}
-	//}
+	public static bool UseItem(Items item)
+	{
+		switch(item)
+		{
+			case Items.HealthPotion:
+				if (HealthPotions <= 0) return false;
+				HealthPotions--;
+				return true;
+			case Items.MagicPotion:
+				if (MagicPotions <= 0) return false;
+				MagicPotions--;
+				return true;
+			case Items.Bomb:
+				if (Bombs <= 0) return false;
+				Bombs--;
+				return true;
+			case Items.Medal:
+				if (Medals <= 0) return false;
+				Medals--;
+				return true;
+			default:
+				return false;
+		}
+	}
 
 	public static int ObtainItem(Items item, int quantity)
 	{

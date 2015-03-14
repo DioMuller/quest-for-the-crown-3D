@@ -68,10 +68,10 @@ public class InputManager : SingletonBehaviour<InputManager>
 		cInput.SetKey("Keyboard_QuickChangePrimary", "Q");
 		cInput.SetKey("Keyboard_QuickChangeSecondary", "E");
 
-		cInput.SetKey("Keyboard_UseItem1", "1");
-		cInput.SetKey("Keyboard_UseItem2", "2");
-		cInput.SetKey("Keyboard_UseItem3", "3");
-		cInput.SetKey("Keyboard_UseItem4", "4");
+		cInput.SetKey("Keyboard_UseItem1", Keys.Alpha1);
+		cInput.SetKey("Keyboard_UseItem2", Keys.Alpha2);
+		cInput.SetKey("Keyboard_UseItem3", Keys.Alpha3);
+		cInput.SetKey("Keyboard_UseItem4", Keys.Alpha4);
 
 		//Axis
 		cInput.SetAxis("Keyboard_MoveHorizontal", "Keyboard_MoveLeft", "Keyboard_MoveRight");
