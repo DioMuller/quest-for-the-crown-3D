@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System;
 
 public class PlayerInventory : MonoBehaviour
@@ -23,30 +23,40 @@ public class PlayerInventory : MonoBehaviour
     void Update()
     {
         if (PlayerMovement.Input.GetButton("UseItem1"))
-            UseHealthItem();
+            UseHealthPotion();
 
         if (PlayerMovement.Input.GetButton("UseItem2"))
-            UsePotion();
+            UseMagicPotion();
     }
 
-    public int AddHealthItem(int amount)
+    public int AddHealthPotions(int amount)
     {
-        return AddItem(ref HealthItems, amount, MaxHealthItems);
+	    return PlayerManager.ObtainItem(Items.HealthPotion, amount);
     }
 
-    public int AddPotionItem(int amount)
+    public int AddMagicPotions(int amount)
     {
-        return AddItem(ref PotionItems, amount, MaxPotionItems);
+		return PlayerManager.ObtainItem(Items.MagicPotion, amount);
     }
 
-    public bool UsePotion()
+	public int AddBombs(int amount)
+	{
+		return PlayerManager.ObtainItem(Items.Bomb, amount);
+	}
+
+	public int AddMedals(int amount)
+	{
+		return PlayerManager.ObtainItem(Items.Medal, amount);
+	}
+
+    public bool UseHealthPotion()
     {
-        return UseItem(ref PotionItems, PotionItem.Use);
+		return UseItem(Items.HealthPotion, HealthPotionItem.Use);
     }
 
-    public bool UseHealthItem()
+    public bool UseMagicPotion()
     {
-        return UseItem(ref HealthItems, HealthItem.Use);
+		return UseItem(Items.MagicPotion, HealthPotionItem.Use);
     }
 
     int AddItem(ref int item, int amount, int max)
@@ -56,13 +66,17 @@ public class PlayerInventory : MonoBehaviour
         return toAdd;
     }
 
-    bool UseItem(ref int item, Func<GameObject, bool> itemUse)
+    bool UseItem(Items item, Func<GameObject, bool> itemUse)
     {
-        if (item > 0 && itemUse(gameObject))
+        if (PlayerManager.GetQuantity(item) > 0 && itemUse(gameObject) )
         {
-            item--;
-            return true;
+	        if (itemUse(gameObject))
+	        {
+		        ItemGUI.Instance.UpdateItems();
+		        return true;
+	        }
         }
+
         return false;
     }
 }

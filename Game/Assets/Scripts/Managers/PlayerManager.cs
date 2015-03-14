@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,14 +24,14 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
 
     #region Weapons and Items
     // Hard-Coded for time constrains.
-    public bool HasBow { get; private set; }
-    public bool HasFireball { get; private set; }
-    public bool HasBoomerang { get; private set; }
+    public static bool HasBow { get; private set; }
+	public static bool HasFireball { get; private set; }
+	public static bool HasBoomerang { get; private set; }
 
-    public int HealthPotions { get; private set; }
-    public int MagicPotions { get; private set; }
-    public int Bombs { get; private set; }
-    public int Medals { get; private set; }
+	public static int HealthPotions { get; private set; }
+	public static int MagicPotions { get; private set; }
+	public static int Bombs { get; private set; }
+	public static int Medals { get; private set; }
     #endregion Weapons and Items
 
     private List<PlayerRegister> _players = new List<PlayerRegister>();
@@ -57,7 +57,7 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
         else playerCount++;
     }
 
-    public void ResetGame()
+    public static void ResetGame()
     {
         playerCount = 1;
 
@@ -71,32 +71,74 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
         Medals = 0;
     }
 
-    public bool UseItem(Items item)
-    {
-        switch(item)
-        {
-            case Items.HealthPotion:
-                if (HealthPotions <= 0) return false;
-                HealthPotions--;
-                return true;
-            case Items.MagicPotion:
-                if (MagicPotions <= 0) return false;
-                MagicPotions--;
-                return true;
-            case Items.Bomb:
-                if (Bombs <= 0) return false;
-                Bombs--;
-                return true;
-            case Items.Medal:
-                if (Medals <= 0) return false;
-                Medals--;
-                return true;
-            default:
-                return false;
-        }
-    }
+	//public static bool UseItem(Items item)
+	//{
+	//	switch(item)
+	//	{
+	//		case Items.HealthPotion:
+	//			if (HealthPotions <= 0) return false;
+	//			HealthPotions--;
+	//			return true;
+	//		case Items.MagicPotion:
+	//			if (MagicPotions <= 0) return false;
+	//			MagicPotions--;
+	//			return true;
+	//		case Items.Bomb:
+	//			if (Bombs <= 0) return false;
+	//			Bombs--;
+	//			return true;
+	//		case Items.Medal:
+	//			if (Medals <= 0) return false;
+	//			Medals--;
+	//			return true;
+	//		default:
+	//			return false;
+	//	}
+	//}
 
-    public void ObtainWeapon(Weapons weapon)
+	public static int ObtainItem(Items item, int quantity)
+	{
+		switch (item)
+		{
+			case Items.HealthPotion:
+				HealthPotions = (HealthPotions + quantity) % 9;
+				ItemGUI.Instance.UpdateItems();
+				return HealthPotions;
+			case Items.MagicPotion:
+				MagicPotions = (MagicPotions + quantity) % 9;
+				ItemGUI.Instance.UpdateItems();
+				return MagicPotions;
+			case Items.Bomb:
+				Bombs = (Bombs + quantity) % 9;
+				ItemGUI.Instance.UpdateItems();
+				return Bombs;
+			case Items.Medal:
+				Medals = (Medals + quantity) % 9;
+				ItemGUI.Instance.UpdateItems();
+				return Medals;
+			default:
+				return 0;
+		}
+	}
+
+	public static int GetQuantity(Items item)
+	{
+		switch (item)
+		{
+			case Items.HealthPotion:
+				return HealthPotions;
+			case Items.MagicPotion:
+				return MagicPotions;
+			case Items.Bomb:
+				return Bombs;
+			case Items.Medal:
+				return Medals;
+			default:
+				return 0;
+		}
+	}
+
+	public static void ObtainWeapon(Weapons weapon)
     {
         switch(weapon)
         {

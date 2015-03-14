@@ -1,11 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class DropItem : MonoBehaviour {
 
     public Transform Item;
     public float Chance;
 
-    public void OnDeath()
+    void OnDestroy()
     {
         if (Random.value <= Chance)
         {

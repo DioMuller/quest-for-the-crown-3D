@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class MainMenu : MonoBehaviour 
@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 
 	public void OnNewGameClick()
 	{
+		PlayerManager.ResetGame();
         Application.LoadLevel(NewGameScene);
 	}
 

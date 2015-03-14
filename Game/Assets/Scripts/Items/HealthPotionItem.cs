@@ -1,15 +1,15 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class HealthItem : ItemBase
+public class HealthPotionItem : ItemBase
 {
-    public HealthItem()
+	public HealthPotionItem()
         : base(Pickup, Use)
     {
     }
 
     public static int Pickup(PlayerInventory inventory, int amount)
     {
-        return inventory.AddHealthItem(amount);
+        return inventory.AddHealthPotions(amount);
     }
 
     public static bool Use(GameObject player)

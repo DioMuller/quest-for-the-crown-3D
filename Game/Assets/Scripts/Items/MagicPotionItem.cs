@@ -1,15 +1,15 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class PotionItem : ItemBase
+public class MagicPotionItem : ItemBase
 {
-    public PotionItem()
+	public MagicPotionItem()
         : base(Pickup, Use)
     {
     }
 
     public static int Pickup(PlayerInventory inventory, int amount)
     {
-        return inventory.AddPotionItem(amount);
+        return inventory.AddMagicPotions(amount);
     }
 
     public static bool Use(GameObject player)
