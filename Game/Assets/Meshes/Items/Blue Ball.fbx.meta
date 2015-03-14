@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: d8bc7548e7be09344b41fa46fe3a90db
+timeCreated: 1426349195
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: dragField1
+    100004: dragField2
+    100006: dragField3
+    100008: dragField4
+    100010: emitter1
+    100012: emitter2
+    100014: emitter3
+    100016: emitter4
+    100018: gravityField1
+    100020: gravityField2
+    100022: gravityField3
+    100024: gravityField4
+    100026: group1
+    100028: group2
+    100030: group3
+    100032: group4
+    100034: particle1
+    100036: particle2
+    100038: particle3
+    100040: particle4
+    100042: particle5
+    100044: particleShape1_fireDirection
+    100046: particleShape1_fireOrientation
+    100048: particleShape2_fireDirection
+    100050: particleShape2_fireOrientation
+    100052: particleShape3_fireDirection
+    100054: particleShape3_fireOrientation
+    100056: particleShape4_fireDirection
+    100058: particleShape4_fireOrientation
+    100060: place3dTexture1
+    100062: place3dTexture2
+    100064: place3dTexture3
+    100066: place3dTexture4
+    100068: pSphere1
+    100070: turbulenceField1
+    100072: turbulenceField2
+    100074: turbulenceField3
+    100076: turbulenceField4
+    400000: //RootNode
+    400002: dragField1
+    400004: dragField2
+    400006: dragField3
+    400008: dragField4
+    400010: emitter1
+    400012: emitter2
+    400014: emitter3
+    400016: emitter4
+    400018: gravityField1
+    400020: gravityField2
+    400022: gravityField3
+    400024: gravityField4
+    400026: group1
+    400028: group2
+    400030: group3
+    400032: group4
+    400034: particle1
+    400036: particle2
+    400038: particle3
+    400040: particle4
+    400042: particle5
+    400044: particleShape1_fireDirection
+    400046: particleShape1_fireOrientation
+    400048: particleShape2_fireDirection
+    400050: particleShape2_fireOrientation
+    400052: particleShape3_fireDirection
+    400054: particleShape3_fireOrientation
+    400056: particleShape4_fireDirection
+    400058: particleShape4_fireOrientation
+    400060: place3dTexture1
+    400062: place3dTexture2
+    400064: place3dTexture3
+    400066: place3dTexture4
+    400068: pSphere1
+    400070: turbulenceField1
+    400072: turbulenceField2
+    400074: turbulenceField3
+    400076: turbulenceField4
+    2300000: pSphere1
+    3300000: pSphere1
+    4300000: pSphere1
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 30
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

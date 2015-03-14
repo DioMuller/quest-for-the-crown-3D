@@ -2,17 +2,12 @@ using UnityEngine;
 
 public class MagicPotionItem : ItemBase
 {
-	public MagicPotionItem()
-        : base(Pickup, Use)
+    public override int Pickup(int amount)
     {
+	    return PlayerManager.ObtainItem(Items.MagicPotion, amount);
     }
 
-    public static int Pickup(PlayerInventory inventory, int amount)
-    {
-        return inventory.AddMagicPotions(amount);
-    }
-
-    public static bool Use(GameObject player)
+	public override bool Use(GameObject player)
     {
         const int RestoreAmount = 1;
 

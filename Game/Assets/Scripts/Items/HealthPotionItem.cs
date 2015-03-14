@@ -2,17 +2,12 @@ using UnityEngine;
 
 public class HealthPotionItem : ItemBase
 {
-	public HealthPotionItem()
-        : base(Pickup, Use)
+    public override int Pickup(int amount)
     {
+        return PlayerManager.ObtainItem( Items.HealthPotion, amount);
     }
 
-    public static int Pickup(PlayerInventory inventory, int amount)
-    {
-        return inventory.AddHealthPotions(amount);
-    }
-
-    public static bool Use(GameObject player)
+	public override bool Use(GameObject player)
     {
         const int RestoreAmount = 1;
 

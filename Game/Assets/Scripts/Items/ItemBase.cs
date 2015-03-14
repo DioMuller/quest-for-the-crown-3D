@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System;
 
@@ -6,15 +6,6 @@ public abstract class ItemBase : MonoBehaviour
 {
     public bool CanPickup = true;
     public int PickupAmount = 1;
-
-    private Func<PlayerInventory, int, int> _addToInventory;
-    private Func<GameObject, bool> _useItem;
-
-    protected ItemBase(Func<PlayerInventory, int, int> addToInventory, Func<GameObject, bool> useItem)
-    {
-        _addToInventory = addToInventory;
-        _useItem = useItem;
-    }
 
     public void Start()
     {
@@ -36,14 +27,15 @@ public abstract class ItemBase : MonoBehaviour
     /// Called when any objects collides with this.
     /// </summary>
     /// <param name="other"></param>
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
+	    print("Pickup enter! ");
         if (!CanPickup)
             return;
 
-        var other = collision.collider;
         if (other.tag == "Player")
         {
+			print("Pickup get! ");
             OnPlayerTouch(other);
         }
     }
@@ -53,13 +45,13 @@ public abstract class ItemBase : MonoBehaviour
         var inventory = player.GetComponent<PlayerInventory>();
         if (inventory != null)
         {
-            PickupAmount -= _addToInventory(inventory, PickupAmount);
+            PickupAmount -= Pickup(PickupAmount);
         }
         else
         {
             while (PickupAmount > 0)
             {
-                if (!_useItem(player.gameObject))
+                if (!Use(player.gameObject))
                     break;
                 PickupAmount--;
             }
@@ -68,4 +60,14 @@ public abstract class ItemBase : MonoBehaviour
         if (PickupAmount <= 0)
             Destroy(gameObject);
     }
+
+	public virtual int Pickup(int amount)
+	{
+		return amount;
+	}
+
+	public virtual bool Use(GameObject obj)
+	{
+		return true;
+	}
 }

@@ -101,24 +101,26 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
 		switch (item)
 		{
 			case Items.HealthPotion:
-				HealthPotions = (HealthPotions + quantity) % 9;
+				HealthPotions = (HealthPotions + quantity);
 				ItemGUI.Instance.UpdateItems();
-				return HealthPotions;
+				break;
 			case Items.MagicPotion:
-				MagicPotions = (MagicPotions + quantity) % 9;
+				MagicPotions = (MagicPotions + quantity);
 				ItemGUI.Instance.UpdateItems();
-				return MagicPotions;
+				break;
 			case Items.Bomb:
-				Bombs = (Bombs + quantity) % 9;
+				Bombs = (Bombs + quantity);
 				ItemGUI.Instance.UpdateItems();
-				return Bombs;
+				break;
 			case Items.Medal:
-				Medals = (Medals + quantity) % 9;
+				Medals = (Medals + quantity);
 				ItemGUI.Instance.UpdateItems();
-				return Medals;
+				break;
 			default:
-				return 0;
+				break;
 		}
+
+		return quantity;
 	}
 
 	public static int GetQuantity(Items item)

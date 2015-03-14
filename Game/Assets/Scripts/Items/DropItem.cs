@@ -1,15 +1,30 @@
 using UnityEngine;
 
-public class DropItem : MonoBehaviour {
+[RequireComponent(typeof(CharacterStatus))]
+public class DropItem : MonoBehaviour 
+{
 
     public Transform Item;
     public float Chance;
 
-    void OnDestroy()
+	private CharacterStatus _status;
+	private bool _spawned = false;
+
+	void Start()
+	{
+		_status = GetComponent<CharacterStatus>();
+	}
+
+    void Update()
     {
-        if (Random.value <= Chance)
-        {
-            Instantiate(Item, transform.position, Quaternion.identity);
-        }
+		if (!_spawned && _status.IsDead)
+		{
+			_spawned = true;
+
+		    if (Random.value <= Chance)
+		    {
+			    Instantiate(Item, transform.position, Quaternion.identity);
+		    }
+	    }
     }
 }
