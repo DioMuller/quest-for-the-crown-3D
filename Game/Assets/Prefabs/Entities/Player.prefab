@@ -1605,6 +1605,7 @@ GameObject:
   - 23: {fileID: 2314218}
   - 136: {fileID: 13684128}
   - 114: {fileID: 11468534}
+  - 114: {fileID: 11460340}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3249,16 +3250,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapons:
-  - WeaponObject: {fileID: 11484614}
+  - WeaponType: 0
+    WeaponObject: {fileID: 11484614}
     WeaponModel: {fileID: 112604}
     WeaponEnabled: 1
-  - WeaponObject: {fileID: 11408644}
+  - WeaponType: 2
+    WeaponObject: {fileID: 11408644}
     WeaponModel: {fileID: 0}
     WeaponEnabled: 1
-  - WeaponObject: {fileID: 11414738}
+  - WeaponType: 1
+    WeaponObject: {fileID: 11414738}
     WeaponModel: {fileID: 112636}
     WeaponEnabled: 1
-  - WeaponObject: {fileID: 11496338}
+  - WeaponType: 3
+    WeaponObject: {fileID: 11496338}
     WeaponModel: {fileID: 112590}
     WeaponEnabled: 1
   Animator: {fileID: 9512532}
@@ -3377,6 +3382,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerUI: {fileID: 0}
+--- !u!114 &11460340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae05f1ad5fc50124bb6618cf019df004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11468534
 MonoBehaviour:
   m_ObjectHideFlags: 1
