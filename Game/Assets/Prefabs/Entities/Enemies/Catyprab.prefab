@@ -12,11 +12,11 @@ GameObject:
   - 114: {fileID: 11446688}
   - 114: {fileID: 11446686}
   - 114: {fileID: 11446684}
-  - 114: {fileID: 11446682}
   - 195: {fileID: 19546682}
   - 114: {fileID: 11465928}
   - 114: {fileID: 11421932}
   - 114: {fileID: 11421934}
+  - 114: {fileID: 11472570}
   m_Layer: 0
   m_Name: Catyprab
   m_TagString: Enemy
@@ -528,7 +528,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 14}
+  m_LocalPosition: {x: .669067383, y: 9.99816895, z: -14.2384033}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 459132}
@@ -975,6 +975,8 @@ Animator:
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11421932
@@ -988,8 +990,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f60cacfddbe03a94497db8c4e8ac90e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item: {fileID: 458728, guid: fbc15eec10d52c248bcb40840caa9e93, type: 2}
-  Chance: 1
+  Item: {fileID: 450740, guid: 697d7bdfdcc561b46917546742a4517f, type: 2}
+  Chance: .300000012
 --- !u!114 &11421934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1003,18 +1005,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Item: {fileID: 458728, guid: fbc15eec10d52c248bcb40840caa9e93, type: 2}
   Chance: .25
---- !u!114 &11446682
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 146688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fe594de356f4a049acffe94eb5e8fc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animator: {fileID: 9559068}
 --- !u!114 &11446684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1077,6 +1067,20 @@ MonoBehaviour:
   Animator: {fileID: 9559068}
   FlagName: IsAttacking
   AttackState: Attacking
+--- !u!114 &11472570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0966650d3b333a44a8f5133948605cd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 0}
+  ShootingDistance: 7
+  PanicDistance: 3
 --- !u!136 &13646682
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1099,15 +1103,19 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 95aaa3cd345b7de498809d990468e6cf, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   serializedVersion: 2
@@ -1159,7 +1167,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 146688}
   m_Enabled: 1
   m_Radius: .5
-  m_Speed: 2
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 1080
@@ -1182,4 +1190,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 146688}
   m_IsPrefabParent: 1
-  m_IsExploded: 1
