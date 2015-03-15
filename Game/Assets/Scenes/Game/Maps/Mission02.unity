@@ -248,8 +248,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 230386888}
-  m_LocalRotation: {x: .248256624, y: .248543382, z: .0660676062, w: -.933932483}
-  m_LocalPosition: {x: 85.6031494, y: -64.7756195, z: -62.619812}
+  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
+  m_LocalPosition: {x: 0, y: -651.839966, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 733273766}
@@ -2231,6 +2231,18 @@ Prefab:
       propertyPath: CameraManager
       value: 
       objectReference: {fileID: 2094150404}
+    - target: {fileID: 11408646, guid: 9f1a17b43cde5ca468a1a9fe33a953fe, type: 2}
+      propertyPath: Weapons.Array.data[1].WeaponType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11408646, guid: 9f1a17b43cde5ca468a1a9fe33a953fe, type: 2}
+      propertyPath: Weapons.Array.data[2].WeaponType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11408646, guid: 9f1a17b43cde5ca468a1a9fe33a953fe, type: 2}
+      propertyPath: Weapons.Array.data[3].WeaponType
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f1a17b43cde5ca468a1a9fe33a953fe, type: 2}
   m_IsPrefabParent: 0

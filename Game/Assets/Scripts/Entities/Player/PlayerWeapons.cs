@@ -12,6 +12,11 @@ using System.Linq;
 [Serializable]
 public class WeaponStatus
 {
+	/// <summary>
+	/// Weapon Name/Id.
+	/// </summary>
+	public Weapons WeaponType;
+
     /// <summary>
     /// Weapon Object.
     /// </summary>
@@ -111,6 +116,8 @@ public class PlayerWeapons : MonoBehaviour
             weapon.WeaponObject.gameObject.SetActive(false);
 
 			if( weapon.WeaponModel != null ) weapon.WeaponModel.SetActive(false);
+
+	        weapon.WeaponEnabled = PlayerManager.IsWeaponActive(weapon.WeaponType);
         }
     }
 

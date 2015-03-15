@@ -5,6 +5,7 @@ using System.Linq;
 
 public enum Weapons
 {
+	Sword,
     Bow,
     Fireball,
     Boomerang
@@ -155,4 +156,21 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
                 break;
         }
     }
+
+	public static bool IsWeaponActive(Weapons weapon)
+	{
+		switch (weapon)
+		{
+			case Weapons.Bow:
+				return HasBow;
+			case Weapons.Fireball:
+				return HasFireball;
+			case Weapons.Boomerang:
+				return HasBoomerang;
+			case Weapons.Sword:
+				return true;
+			default:
+				return false;
+		}
+	}
 }
