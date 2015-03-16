@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10872159bc287a4439f612dd3ecf948f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponToUnlock: 0
+  WeaponToUnlock: 1
   ObjectiveObject: {fileID: 161744}
 --- !u!135 &13587472
 SphereCollider:

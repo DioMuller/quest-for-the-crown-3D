@@ -7,8 +7,8 @@ public class CameraManager : SingletonBehaviour<CameraManager>
 {
     #region Constants
     // TODO: Split based on camera view
-    public const float SplitDistanceX = 150;
-    public const float SplitDistanceZ = 100;
+    public float SplitDistanceX = 5;
+    public float SplitDistanceZ = 5;
     #endregion
 
     #region Private Attributes

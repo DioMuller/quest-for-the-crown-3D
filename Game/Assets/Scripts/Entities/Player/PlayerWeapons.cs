@@ -110,15 +110,7 @@ public class PlayerWeapons : MonoBehaviour
     {
         _playerController = GetComponent<PlayerMovement>();
 
-        foreach(WeaponStatus weapon in Weapons)
-        {
-            weapon.WeaponObject.Parent = transform;
-            weapon.WeaponObject.gameObject.SetActive(false);
-
-			if( weapon.WeaponModel != null ) weapon.WeaponModel.SetActive(false);
-
-	        weapon.WeaponEnabled = PlayerManager.IsWeaponActive(weapon.WeaponType);
-        }
+		UpdateWeapons();
     }
 
     /// <summary>
@@ -200,6 +192,31 @@ public class PlayerWeapons : MonoBehaviour
             wp.WeaponEnabled = false;
         }
     }
+
+	public void UpdateWeapons()
+	{
+		for( int i = 0; i < Weapons.Length; i++ )
+		{
+			Weapons[i].WeaponObject.Parent = transform;
+			Weapons[i].WeaponObject.gameObject.SetActive(false);
+
+			if (Weapons[i].WeaponModel != null) Weapons[i].WeaponModel.SetActive(false);
+
+			Weapons[i].WeaponEnabled = PlayerManager.IsWeaponActive(Weapons[i].WeaponType);
+
+			if (Weapons[i].WeaponEnabled)
+			{
+				for (int j = 0; j < _currentWeapons.Length; j++)
+				{
+					if (_currentWeapons[j] == -1 || _currentWeapons[j] == i)
+					{
+						_currentWeapons[j] = i;
+						break;
+					}
+				}
+			}
+		}
+	}
     #endregion Public Methods
 
     #region Private Methods

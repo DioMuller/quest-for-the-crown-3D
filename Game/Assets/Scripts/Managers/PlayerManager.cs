@@ -21,7 +21,7 @@ public enum Items
 
 public class PlayerManager : SingletonBehaviour<PlayerManager>
 {
-    private static int playerCount = 1;
+    private static int playerCount = 2;
 
     #region Weapons and Items
     // Hard-Coded for time constrains.
@@ -58,9 +58,9 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
         else playerCount++;
     }
 
-    public static void ResetGame()
+    public static void ResetGame(int players = 1)
     {
-        playerCount = 1;
+		playerCount = players;
 
         HasBow = false;
         HasFireball = false;
@@ -143,6 +143,7 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
 
 	public static void ObtainWeapon(Weapons weapon)
     {
+		print("Activating " + weapon);
         switch(weapon)
         {
             case Weapons.Bow:
@@ -155,7 +156,17 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
                 HasBoomerang = true;
                 break;
         }
+
+		Instance.RefreshPlayerWeapons();
     }
+
+	public void RefreshPlayerWeapons()
+	{
+		foreach (var playerRegister in _players)
+		{
+			playerRegister.GetComponent<PlayerWeapons>().UpdateWeapons();
+		}
+	}
 
 	public static bool IsWeaponActive(Weapons weapon)
 	{
