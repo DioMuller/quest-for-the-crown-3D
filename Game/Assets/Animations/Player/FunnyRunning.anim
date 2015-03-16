@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Running
+  m_Name: FunnyRunning
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -15,29 +15,29 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: .0416666679
-        value: {x: -.382688969, y: -.00123310857, z: -.00829607807, w: .923839211}
-        inSlope: {x: .0379579067, y: .000648996793, z: -.000584095716, w: .0156798363}
-        outSlope: {x: .0379579067, y: .000648996793, z: -.000584095716, w: .0156798363}
+        value: {x: -.26663062, y: -.0111783464, z: -.0403685756, w: .962888122}
+        inSlope: {x: .0296924114, y: .000495515764, z: .00198984146, w: .00829124451}
+        outSlope: {x: .0296924114, y: .000495515764, z: .00198984146, w: .00829124451}
         tangentMode: 0
-      - time: .666666687
-        value: {x: -.134075835, y: .00169470604, z: -.0131464312, w: .990882397}
-        inSlope: {x: .60237813, y: .00379026402, z: -.0138314636, w: .0813545734}
-        outSlope: {x: .60237813, y: .00379026402, z: -.0138314636, w: .0813545734}
+      - time: .708333373
+        value: {x: -.057234332, y: -.00536181452, z: -.027900042, w: .997956455}
+        inSlope: {x: .450816631, y: .0172228143, z: .0234969612, w: .0266661681}
+        outSlope: {x: .450816631, y: .0172228143, z: .0234969612, w: .0266661681}
         tangentMode: 0
-      - time: 1.29166675
-        value: {x: .0970164686, y: .00186254818, z: -.0189715065, w: .9951002}
-        inSlope: {x: -.0560816973, y: -.000591255375, z: .00115951919, w: .0054252157}
-        outSlope: {x: -.0560816973, y: -.000591255375, z: .00115951919, w: .0054252157}
+      - time: 1.375
+        value: {x: .0879366323, y: .0018491908, z: -.017838994, w: .995964646}
+        inSlope: {x: -.157949194, y: -.00135070481, z: .0091163544, w: .0139546301}
+        outSlope: {x: -.157949194, y: -.00135070481, z: .0091163544, w: .0139546301}
         tangentMode: 0
-      - time: 1.91666675
-        value: {x: -.104088828, y: -.000942594663, z: -.0156968068, w: .994443715}
-        inSlope: {x: -.437147826, y: -.00741962809, z: .00508385617, w: -.045646891}
-        outSlope: {x: -.437147826, y: -.00741962809, z: .00508385617, w: -.045646891}
+      - time: 1.95833337
+        value: {x: -.12220262, y: -.00140690641, z: -.0142557537, w: .992401779}
+        inSlope: {x: -.430383295, y: -.00769324927, z: .00174467801, w: -.0529110953}
+        outSlope: {x: -.430383295, y: -.00769324927, z: .00174467801, w: -.0529110953}
         tangentMode: 0
       - time: 2.5
         value: {x: -.266834706, y: -.00401044311, z: -.0144829899, w: .963625133}
-        inSlope: {x: -.027777778, y: -.00056818343, z: 8.59874781e-05, w: -.0076747234}
-        outSlope: {x: -.027777778, y: -.00056818343, z: 8.59874781e-05, w: -.0076747234}
+        inSlope: {x: -.0277792085, y: -.000487862155, z: -.000205435645, w: -.00767901493}
+        outSlope: {x: -.0277792085, y: -.000487862155, z: -.000205435645, w: -.00767901493}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -46,80 +46,33 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: .0416666679
-        value: {x: .235255972, y: -0, z: -0, w: .971933484}
-        inSlope: {x: -.0145289898, y: 0, z: 0, w: .00351047516}
-        outSlope: {x: -.0145289898, y: 0, z: 0, w: .00351047516}
+        value: {x: .0596191511, y: -.00199105334, z: .0333181582, w: .997663021}
+        inSlope: {x: -.0303379297, y: .00169298518, z: .000380963087, w: .00178384781}
+        outSlope: {x: -.0303379297, y: .00169298518, z: .000380963087, w: .00178384781}
         tangentMode: 0
-      - time: .75
-        value: {x: .171589673, y: -0, z: -0, w: .985168517}
-        inSlope: {x: -.0675557405, y: 0, z: 0, w: .0117688207}
-        outSlope: {x: -.0675557405, y: 0, z: 0, w: .0117688207}
+      - time: .708333373
+        value: {x: -.149573788, y: .00875363499, z: .0390088148, w: .98794204}
+        inSlope: {x: -.440529704, y: .0200831555, z: .0183727778, w: -.0675387532}
+        outSlope: {x: -.440529704, y: .0200831555, z: .0183727778, w: -.0675387532}
         tangentMode: 0
-      - time: 1.25
-        value: {x: .150803074, y: -0, z: -0, w: .988563836}
-        inSlope: {x: -.0046459483, y: 0, z: 0, w: .00070953439}
-        outSlope: {x: -.0046459483, y: 0, z: 0, w: .00070953439}
+      - time: 1.375
+        value: {x: -.289329857, y: .0143543649, z: .0461980477, w: .956006289}
+        inSlope: {x: .149599925, y: -.00513897464, z: -.00897707976, w: .0456275642}
+        outSlope: {x: .149599925, y: -.00513897464, z: -.00897707976, w: .0456275642}
         tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_LeftUpLeg/Hero17:cinto:Character1_LeftLeg
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: .0416666679
-        value: {x: .0596426241, y: .0010796031, z: -.0180660058, w: .998055756}
-        inSlope: {x: -.0368860066, y: .00310914125, z: .00478041172, w: .00225734711}
-        outSlope: {x: -.0368860066, y: .00310914125, z: .00478041172, w: .00225734711}
-        tangentMode: 0
-      - time: .666666687
-        value: {x: -.172192305, y: .013328555, z: .0151912067, w: .984856009}
-        inSlope: {x: -.540373147, y: .0107769649, z: .0838192105, w: -.09588857}
-        outSlope: {x: -.540373147, y: .0107769649, z: .0838192105, w: -.09588857}
-        tangentMode: 0
-      - time: 1.33333337
-        value: {x: -.36866501, y: .0108366134, z: .0475164689, w: .928283811}
-        inSlope: {x: .122190118, y: -.00186420418, z: -.00676972326, w: .0487139672}
-        outSlope: {x: .122190118, y: -.00186420418, z: -.00676972326, w: .0487139672}
-        tangentMode: 0
-      - time: 1.91666675
-        value: {x: -.139257923, y: .00520560751, z: .0376410522, w: .989526808}
-        inSlope: {x: .523195803, y: -.0168006793, z: -.0160699114, w: .0743822604}
-        outSlope: {x: .523195803, y: -.0168006793, z: -.0160699114, w: .0743822604}
+      - time: 1.95833337
+        value: {x: -.0858136714, y: .00567288697, z: .0368367098, w: .995613813}
+        inSlope: {x: .426093906, y: -.0211022496, z: -.0136109721, w: .0374193564}
+        outSlope: {x: .426093906, y: -.0211022496, z: -.0136109721, w: .0374193564}
         tangentMode: 0
       - time: 2.5
         value: {x: .0596184395, y: -.00201221765, z: .0336723179, w: .9976511}
-        inSlope: {x: .0345858745, y: -.00136508199, z: -.000315607787, w: -.002034195}
-        outSlope: {x: .0345858745, y: -.00136508199, z: -.000315607787, w: -.002034195}
+        inSlope: {x: .0283714421, y: -.00157489022, z: -.0003278566, w: -.00167227432}
+        outSlope: {x: .0283714421, y: -.00157489022, z: -.0003278566, w: -.00167227432}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_RightUpLeg
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: .0416666679
-        value: {x: .332091928, y: -0, z: -0, w: .94324702}
-        inSlope: {x: -.00966525078, y: 0, z: 0, w: .00340175629}
-        outSlope: {x: -.00966525078, y: 0, z: 0, w: .00340175629}
-        tangentMode: 0
-      - time: 1.08333337
-        value: {x: .201803833, y: -0, z: -0, w: .979425967}
-        inSlope: {x: -.125455081, y: 0, z: 0, w: .0258779787}
-        outSlope: {x: -.125455081, y: 0, z: 0, w: .0258779787}
-        tangentMode: 0
-      - time: 2.41666675
-        value: {x: .152080372, y: -0, z: -0, w: .988368154}
-        inSlope: {x: -.00088172988, y: 0, z: 0, w: .000135898328}
-        outSlope: {x: -.00088172988, y: 0, z: 0, w: .000135898328}
-        tangentMode: 0
-      - time: 2.5
-        value: {x: .152048752, y: -0, z: -0, w: .988373041}
-        inSlope: {x: -.000165224701, y: 0, z: 0, w: 2.57493048e-05}
-        outSlope: {x: -.000165224701, y: 0, z: 0, w: 2.57493048e-05}
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_RightUpLeg/Hero17:cinto:Character1_RightLeg
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -334,22 +287,6 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: .0416666679
-        value: {x: -3.5527136e-17, y: -.3842583, z: -.0031752931}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      - time: 1.25
-        value: {x: -3.5527136e-17, y: -.3842583, z: -.0031752931}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_LeftUpLeg/Hero17:cinto:Character1_LeftLeg
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: .0416666679
         value: {x: .129704073, y: -.0704085901, z: .00703521166}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -362,22 +299,6 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_RightUpLeg
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: .0416666679
-        value: {x: 2.71599987e-08, y: -.3842583, z: -.00317090284}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      - time: 2.5
-        value: {x: 2.71599987e-08, y: -.3842583, z: -.00317090284}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_RightUpLeg/Hero17:cinto:Character1_RightLeg
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -515,22 +436,6 @@ AnimationClip:
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
-      - time: 1.25
-        value: {x: 1, y: 1, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_LeftUpLeg/Hero17:cinto:Character1_LeftLeg
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: .0416666679
-        value: {x: 1, y: 1, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
       - time: 2.5
         value: {x: 1, y: 1, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
@@ -539,22 +444,6 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_RightUpLeg
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: .0416666679
-        value: {x: 1, y: 1, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      - time: 2.5
-        value: {x: 1, y: 1, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    path: Hero17:cinto:Character1_Reference/Hero17:cinto:Character1_Hips/Hero17:cinto:Character1_RightUpLeg/Hero17:cinto:Character1_RightLeg
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -682,19 +571,7 @@ AnimationClip:
       classID: 4
       customType: 0
       isPPtrCurve: 0
-    - path: 1654095948
-      attribute: 2
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
     - path: 764660504
-      attribute: 2
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - path: 2696126083
       attribute: 2
       script: {fileID: 0}
       classID: 4
@@ -736,19 +613,7 @@ AnimationClip:
       classID: 4
       customType: 0
       isPPtrCurve: 0
-    - path: 1654095948
-      attribute: 1
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
     - path: 764660504
-      attribute: 1
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - path: 2696126083
       attribute: 1
       script: {fileID: 0}
       classID: 4
@@ -814,19 +679,7 @@ AnimationClip:
       classID: 4
       customType: 0
       isPPtrCurve: 0
-    - path: 1654095948
-      attribute: 3
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
     - path: 764660504
-      attribute: 3
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - path: 2696126083
       attribute: 3
       script: {fileID: 0}
       classID: 4
@@ -883,7 +736,7 @@ AnimationClip:
     m_Level: 0
     m_CycleOffset: 0
     m_LoopTime: 1
-    m_LoopBlend: 0
+    m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0

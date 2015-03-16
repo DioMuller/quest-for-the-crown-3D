@@ -143,7 +143,6 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
 
 	public static void ObtainWeapon(Weapons weapon)
     {
-		print("Activating " + weapon);
         switch(weapon)
         {
             case Weapons.Bow:
