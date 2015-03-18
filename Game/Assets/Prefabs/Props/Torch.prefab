@@ -8,6 +8,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 439966}
+  - 114: {fileID: 11438414}
+  - 65: {fileID: 6571420}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
@@ -88,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 986.973022, y: 1010.86102, z: 982.54303}
+  m_LocalPosition: {x: -18.2399998, y: 10.8599997, z: -17.0100002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 433186}
@@ -162,6 +164,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .405112714, y: 1.49581623, z: .405112714}
   m_Center: {x: 0, y: -.245696634, z: 0}
+--- !u!65 &6571420
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .5, y: 1.5, z: .5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &9504252
 Animator:
   serializedVersion: 3
@@ -211,6 +225,19 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11438414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631c98f211c2a4a46b8e08ad0ee18f64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TorchLight: {fileID: 113480}
+  Active: 0
 --- !u!114 &11487144
 MonoBehaviour:
   m_ObjectHideFlags: 1
