@@ -1,11 +1,15 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class WindowManager : SingletonBehaviour<WindowManager>
 {
 	public GameObject[] Windows;
+	public EventSystem EventSystem;
 
 	void Start()
 	{
@@ -29,6 +33,16 @@ public class WindowManager : SingletonBehaviour<WindowManager>
 		CloseWindow();
 
 		Windows[window].SetActive(true);
+		try
+		{
+			Windows[window].GetComponentInChildren<Button>().Select();
+		}
+		catch (Exception)
+		{
+			Debug.LogWarning("Active UI does not have a button to focus.");
+			throw;
+		}
+
 		DisablePlayerMovement();
 	}
 
