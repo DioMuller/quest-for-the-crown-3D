@@ -539,7 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 958017093}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &344690612
@@ -1035,10 +1035,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 426917529}
     m_Modifications:
-    - target: {fileID: 11467178, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
-      propertyPath: Windows.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 468584, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1070,30 +1066,6 @@ Prefab:
     - target: {fileID: 468584, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11431664, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11431664, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11431664, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11467178, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
-      propertyPath: Windows.Array.data[1]
-      value: 
-      objectReference: {fileID: 1313782063}
-    - target: {fileID: 11495068, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToTitle
-      objectReference: {fileID: 0}
-    - target: {fileID: 11428100, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
-      propertyPath: m_Text
-      value: Mission.Complete01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
@@ -1647,6 +1619,10 @@ Transform:
   - {fileID: 1016402062}
   m_Father: {fileID: 1277360304}
   m_RootOrder: 4
+--- !u!1 &958017093
+GameObject:
+  m_PrefabParentObject: {fileID: 132094, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
+  m_PrefabInternal: {fileID: 504178453}
 --- !u!1 &1016402061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,10 +1965,6 @@ Transform:
   - {fileID: 916323548}
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!1 &1313782063
-GameObject:
-  m_PrefabParentObject: {fileID: 176540, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
-  m_PrefabInternal: {fileID: 504178453}
 --- !u!1001 &1323110926
 Prefab:
   m_ObjectHideFlags: 0
