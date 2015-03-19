@@ -55,15 +55,10 @@ public class SeekAndShoot : MonoBehaviour
 	/// </summary>
 	public float CooldownTime = 2.0f;
 
-    /// <summary>
-    /// Projectile to be launched
-    /// </summary>
-    public GameObject Projectile = null;
-
-    /// <summary>
-    /// Projectile launch position
-    /// </summary>
-    public Transform LaunchPosition = null;
+	/// <summary>
+	/// Projectile to be launched/Weapon.
+	/// </summary>
+	public Fireball Fireball;
     #endregion Public Attributes
 
     #region Methods
@@ -127,7 +122,7 @@ public class SeekAndShoot : MonoBehaviour
 
     void Fire()
     {
-        Instantiate(Projectile, LaunchPosition.position, transform.rotation);
+        Fireball.Attack();
     }
 
 	IEnumerator Cooldown()
