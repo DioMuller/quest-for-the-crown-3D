@@ -50,6 +50,11 @@ public class SeekAndShoot : MonoBehaviour
 	/// </summary>
 	public int PanicDistance = 3;
 
+	/// <summary>
+	/// Cooldown time for fireball.
+	/// </summary>
+	public float CooldownTime = 2.0f;
+
     /// <summary>
     /// Projectile to be launched
     /// </summary>
@@ -105,7 +110,7 @@ public class SeekAndShoot : MonoBehaviour
                 if( !_cooldown )
                 {
                     Fire();
-                    _cooldown = true;
+	                StartCoroutine(Cooldown());
                 }
 	        }
         }
@@ -124,5 +129,12 @@ public class SeekAndShoot : MonoBehaviour
     {
         Instantiate(Projectile, LaunchPosition.position, transform.rotation);
     }
+
+	IEnumerator Cooldown()
+	{
+		_cooldown = true;
+		yield return new WaitForSeconds(CooldownTime);
+		_cooldown = false;
+	}
 	#endregion Methods
 }

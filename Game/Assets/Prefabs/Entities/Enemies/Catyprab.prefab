@@ -543,7 +543,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .577000022, z: .381999999}
+  m_LocalPosition: {x: 0, y: .699999988, z: .5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 446688}
@@ -1109,6 +1109,7 @@ MonoBehaviour:
   Animator: {fileID: 0}
   ShootingDistance: 7
   PanicDistance: 3
+  CooldownTime: 2
   Projectile: {fileID: 118294, guid: a834006a45cccc142b00faacb5d60f4e, type: 2}
   LaunchPosition: {fileID: 427458}
 --- !u!136 &13646682

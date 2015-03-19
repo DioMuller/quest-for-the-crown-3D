@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,11 +19,13 @@ public class WeaponHitbox : MonoBehaviour
 
     void OnDestroy()
     {
+		print("Destroy.");
         if( ParentWeapon != null ) ParentWeapon.OnHitboxDestroyed();
     }
 	
 	protected void OnTriggerEnter(Collider other)
 	{
+		print("Hit: " + other.tag);
         if (Targets.Contains(other.tag))
         {
             var status = other.GetComponent<CharacterStatus>();
