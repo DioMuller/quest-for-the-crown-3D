@@ -27,6 +27,11 @@ public class SeekAndShoot : MonoBehaviour
 	/// Is the enemy running?
 	/// </summary>
 	private bool _running = false;
+
+    /// <summary>
+    /// Is the enemy on cooldown?
+    /// </summary>
+    private bool _cooldown = false;
 	#endregion Private Attributes
 
     #region Public Attributes
@@ -44,6 +49,16 @@ public class SeekAndShoot : MonoBehaviour
 	/// Enemy panic distance, where it'll run.
 	/// </summary>
 	public int PanicDistance = 3;
+
+    /// <summary>
+    /// Projectile to be launched
+    /// </summary>
+    public GameObject Projectile = null;
+
+    /// <summary>
+    /// Projectile launch position
+    /// </summary>
+    public Transform LaunchPosition = null;
     #endregion Public Attributes
 
     #region Methods
@@ -85,6 +100,13 @@ public class SeekAndShoot : MonoBehaviour
 	        {
 		        // Lookat and shoot.
 				_agent.destination = entityPos;
+                transform.LookAt(targetPos);
+
+                if( !_cooldown )
+                {
+                    Fire();
+                    _cooldown = true;
+                }
 	        }
         }
         else
@@ -97,5 +119,10 @@ public class SeekAndShoot : MonoBehaviour
             Animator.SetFloat("Speed", _agent.speed);
         }
 	}
+
+    void Fire()
+    {
+        Instantiate(Projectile, LaunchPosition.position, transform.rotation);
+    }
 	#endregion Methods
 }
