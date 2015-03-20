@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &105644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 438534}
+  - 33: {fileID: 3394990}
+  - 23: {fileID: 2315560}
+  - 95: {fileID: 9521202}
+  m_Layer: 0
+  m_Name: Worm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &147976
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,24 +42,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &170878
-GameObject:
-  m_ObjectHideFlags: 0
+--- !u!4 &438534
+Transform:
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 474426}
-  - 33: {fileID: 3335382}
-  - 23: {fileID: 2387108}
-  - 95: {fileID: 9579508}
-  m_Layer: 0
-  m_Name: Worm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_GameObject: {fileID: 105644}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: .0569844581, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 447976}
+  m_RootOrder: 0
 --- !u!4 &447976
 Transform:
   m_ObjectHideFlags: 1
@@ -52,27 +64,15 @@ Transform:
   m_LocalPosition: {x: 1, y: 10.2799997, z: 4.86999989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 474426}
+  - {fileID: 438534}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!4 &474426
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170878}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 447976}
-  m_RootOrder: 0
---- !u!23 &2387108
+--- !u!23 &2315560
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170878}
+  m_GameObject: {fileID: 105644}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -91,26 +91,26 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3335382
+--- !u!33 &3394990
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170878}
+  m_GameObject: {fileID: 105644}
   m_Mesh: {fileID: 4300000, guid: 12d7f10855e5bb748a11ad06b7e8a0db, type: 3}
---- !u!95 &9579508
+--- !u!95 &9521202
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170878}
+  m_GameObject: {fileID: 105644}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 12d7f10855e5bb748a11ad06b7e8a0db, type: 3}
-  m_Controller: {fileID: 9100000, guid: 8ed5a5f0ac595074097fdfa23dbe1393, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe594de356f4a049acffe94eb5e8fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animator: {fileID: 9579508}
+  Animator: {fileID: 0}
 --- !u!114 &11437730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,7 +167,7 @@ MonoBehaviour:
   - Player
   - Enemy
   AttackPower: 1
-  Animator: {fileID: 9579508}
+  Animator: {fileID: 0}
   FlagName: IsAttacking
   AttackState: WormAttacking
 --- !u!114 &11447978
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RemoveOnDestroy: 1
-  Animator: {fileID: 9579508}
+  Animator: {fileID: 0}
   AnimationTime: 1
   Data: {fileID: 11400000, guid: 088b574b8cc7c5c4497a7eec94700d6d, type: 2}
 --- !u!136 &13647976
