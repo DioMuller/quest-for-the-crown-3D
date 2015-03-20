@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +19,7 @@ public class WeaponHitbox : MonoBehaviour
 
     void OnDestroy()
     {
-        ParentWeapon.OnHitboxDestroyed();
+        if( ParentWeapon != null ) ParentWeapon.OnHitboxDestroyed();
     }
 	
 	protected void OnTriggerEnter(Collider other)
@@ -31,7 +31,7 @@ public class WeaponHitbox : MonoBehaviour
             OnHit(status);
         }
 		
-		if( ParentWeapon.Data.DestroyOnContact )
+		if( ParentWeapon == null || ParentWeapon.Data.DestroyOnContact )
 		{
 			Destroy(gameObject);
 		}

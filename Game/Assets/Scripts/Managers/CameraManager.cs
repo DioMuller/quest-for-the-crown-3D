@@ -131,7 +131,8 @@ public class CameraManager : SingletonBehaviour<CameraManager>
         else if (_player2 == player)
         {
             _player2 = null;
-            Player2StatusPanel.SetActive(false);
+			if( Player2StatusPanel != null )
+	            Player2StatusPanel.SetActive(false);
         }
     }
 

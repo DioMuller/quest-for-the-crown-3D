@@ -24,6 +24,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &150292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 427458}
+  m_Layer: 0
+  m_Name: FireballEmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &159068
 GameObject:
   m_ObjectHideFlags: 1
@@ -521,6 +536,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &427458
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150292}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .699999988, z: .5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 446688}
+  m_RootOrder: 1
 --- !u!4 &446688
 Transform:
   m_ObjectHideFlags: 1
@@ -528,10 +555,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .669067383, y: 9.99816895, z: -14.2384033}
+  m_LocalPosition: {x: 4.30000019, y: 10, z: -14.1999998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 459132}
+  - {fileID: 427458}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &459068
@@ -1081,6 +1109,9 @@ MonoBehaviour:
   Animator: {fileID: 0}
   ShootingDistance: 7
   PanicDistance: 3
+  CooldownTime: 2
+  Projectile: {fileID: 118294, guid: a834006a45cccc142b00faacb5d60f4e, type: 2}
+  LaunchPosition: {fileID: 427458}
 --- !u!136 &13646682
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1091,9 +1122,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: .300000012
-  m_Height: 1
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Height: 1.14999998
+  m_Direction: 1
+  m_Center: {x: .00999999978, y: .560000002, z: -.170000002}
 --- !u!137 &13759068
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1166,7 +1197,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146688}
   m_Enabled: 1
-  m_Radius: .5
+  m_Radius: .340000004
   m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
