@@ -123,8 +123,8 @@ public class InputManager : SingletonBehaviour<InputManager>
 			//cInput.SetKey("Joy" + i + "_UseItem2", "Joy" + i + " Axis 7-");
 			//cInput.SetKey("Joy" + i + "_UseItem3", "Joy" + i + " Axis 6+");
 			//cInput.SetKey("Joy" + i + "_UseItem4", "Joy" + i + " Axis 7+");
-			cInput.SetKey("Joy" + i + "_UseItem1", "Joy" + i + "Button4");
-			cInput.SetKey("Joy" + i + "_UseItem2", "Joy" + i + "Button5");
+			cInput.SetKey("Joy" + i + "_UseItem1", "Joystick" + i + "Button4");
+			cInput.SetKey("Joy" + i + "_UseItem2", "Joystick" + i + "Button5");
 
 			//Axis
 			cInput.SetAxis("Joy" + i + "_MoveHorizontal", "Joy" + i + "_MoveLeft", "Joy" + i + "_MoveRight");
