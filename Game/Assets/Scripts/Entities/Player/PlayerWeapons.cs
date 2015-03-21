@@ -122,31 +122,58 @@ public class PlayerWeapons : MonoBehaviour
         if (_weaponActive) return;
 
         #region Weapon Change Controls
-        if (_playerController.Input.GetButton("QuickChangePrimary"))
+
+		#region Primary
+        if (_playerController.Input.GetButton("QuickChangePrimaryUp"))
         {
             if (!_switchWeaponPressed)
             {
-                NextWeapon(0);
+                NextWeaponUp(0);
                 _switchWeaponPressed = true;
             }
 
             return;
         }
+		if (_playerController.Input.GetButton("QuickChangePrimaryDown"))
+		{
+			if (!_switchWeaponPressed)
+			{
+				NextWeaponDown(0);
+				_switchWeaponPressed = true;
+			}
 
-        if (_playerController.Input.GetButton("QuickChangeSecondary"))
+			return;
+		}
+		#endregion Primary
+
+		#region Secondary
+		if (_playerController.Input.GetButton("QuickChangeSecondaryUp"))
         {
             if (!_switchWeaponPressed)
             {
-                NextWeapon(1);
+                NextWeaponUp(1);
                 _switchWeaponPressed = true;
             }
 
             return;
-        }
-        #endregion Weapon Change Controls
+		}
 
-        #region Weapon Use Controls
-        _switchWeaponPressed = false;
+		if (_playerController.Input.GetButton("QuickChangeSecondaryDown"))
+		{
+			if (!_switchWeaponPressed)
+			{
+				NextWeaponDown(1);
+				_switchWeaponPressed = true;
+			}
+
+			return;
+		}
+		#endregion Secondary
+
+		#endregion Weapon Change Controls
+
+		#region Weapon Use Controls
+		_switchWeaponPressed = false;
 
         if (GetWeaponIndex(0) >= 0 && _playerController.Input.GetButton("PrimaryAttack"))
         {
@@ -220,21 +247,28 @@ public class PlayerWeapons : MonoBehaviour
     #endregion Public Methods
 
     #region Private Methods
-    void NextWeapon(int position)
+    void NextWeaponUp(int position)
     {
         SetWeapon(position, _currentWeapons[position] + 1);       
     }
 
+	void NextWeaponDown(int position)
+	{
+		SetWeapon(position, _currentWeapons[position] - 1);
+	}
+
     void SetWeapon(int position, int index)
     {
+	    var diff = _currentWeapons[position] < index ? 1 : -1;
 	    var ow = GetWeapon(position);
         var oldWeapon = ow != null ?  ow.WeaponObject : null;
 
         if( index >= Weapons.Length ) index = 0;
+	    if (index < 0) index = Weapons.Length - 1;
 
         while( !Weapons[index].WeaponEnabled )
         {
-            index = (index + 1) % Weapons.Length;
+			index = (index + diff) % Weapons.Length;
 
             if ( Weapons[index].WeaponObject == oldWeapon) return;
         }

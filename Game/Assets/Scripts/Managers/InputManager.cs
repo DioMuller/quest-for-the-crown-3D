@@ -65,8 +65,10 @@ public class InputManager : SingletonBehaviour<InputManager>
 		cInput.SetKey("Keyboard_PrimaryAttack", Keys.Mouse0, Keys.LeftControl);
 		cInput.SetKey("Keyboard_SecondaryAttack", Keys.Mouse1, Keys.LeftAlt);
 
-		cInput.SetKey("Keyboard_QuickChangePrimary", "Q");
-		cInput.SetKey("Keyboard_QuickChangeSecondary", "E");
+		cInput.SetKey("Keyboard_QuickChangePrimaryDown", "Q");
+		cInput.SetKey("Keyboard_QuickChangePrimaryUp", "E");
+		cInput.SetKey("Keyboard_QuickChangeSecondaryDown", "Z");
+		cInput.SetKey("Keyboard_QuickChangeSecondaryUp", "C");
 
 		cInput.SetKey("Keyboard_UseItem1", Keys.Alpha1);
 		cInput.SetKey("Keyboard_UseItem2", Keys.Alpha2);
@@ -110,13 +112,19 @@ public class InputManager : SingletonBehaviour<InputManager>
 			cInput.SetKey("Joy" + i + "_PrimaryAttack", "Joy" + i + " Axis 3-", "Joystick" + i + "Button2");
 			cInput.SetKey("Joy" + i + "_SecondaryAttack", "Joy" + i + " Axis 3+", "Joystick" + i + "Button3");
 
-			cInput.SetKey("Joy" + i + "_QuickChangePrimary", "Joystick" + i + "Button4");
-			cInput.SetKey("Joy" + i + "_QuickChangeSecondary", "Joystick" + i + "Button5");
+			//cInput.SetKey("Joy" + i + "_QuickChangePrimary", "Joystick" + i + "Button4");
+			//cInput.SetKey("Joy" + i + "_QuickChangeSecondary", "Joystick" + i + "Button5");
+			cInput.SetKey("Joy" + i + "_QuickChangePrimaryUp", "Joystick" + i + " Axis 6+");
+			cInput.SetKey("Joy" + i + "_QuickChangePrimaryDown", "Joystick" + i + " Axis 6-");
+			cInput.SetKey("Joy" + i + "_QuickChangeSecondaryUp", "Joystick" + i + " Axis 7-");
+			cInput.SetKey("Joy" + i + "_QuickChangeSecondaryDown", "Joystick" + i + " Axis 7+");
 
-			cInput.SetKey("Joy" + i + "_UseItem1", "Joy" + i + " Axis 6-");
-			cInput.SetKey("Joy" + i + "_UseItem2", "Joy" + i + " Axis 7-");
-			cInput.SetKey("Joy" + i + "_UseItem3", "Joy" + i + " Axis 6+");
-			cInput.SetKey("Joy" + i + "_UseItem4", "Joy" + i + " Axis 7+");
+			//cInput.SetKey("Joy" + i + "_UseItem1", "Joy" + i + " Axis 6-");
+			//cInput.SetKey("Joy" + i + "_UseItem2", "Joy" + i + " Axis 7-");
+			//cInput.SetKey("Joy" + i + "_UseItem3", "Joy" + i + " Axis 6+");
+			//cInput.SetKey("Joy" + i + "_UseItem4", "Joy" + i + " Axis 7+");
+			cInput.SetKey("Joy" + i + "_UseItem1", "Joy" + i + "Button4");
+			cInput.SetKey("Joy" + i + "_UseItem2", "Joy" + i + "Button5");
 
 			//Axis
 			cInput.SetAxis("Joy" + i + "_MoveHorizontal", "Joy" + i + "_MoveLeft", "Joy" + i + "_MoveRight");
