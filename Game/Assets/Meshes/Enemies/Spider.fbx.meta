@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: d9a04c47686b101408ea364d7887084b
-timeCreated: 1425477244
+guid: 3b6d6c4cc514ef1408c3ab0e089fd301
+timeCreated: 1426963064
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -57,20 +57,20 @@ ModelImporter:
     100098: Character1_Neck
     100100: Character1_Reference
     100102: Character1_Spine2
-    100104: //RootNode
-    100106: joint1
-    100108: joint1 1
-    100110: joint2
-    100112: joint2 1
-    100114: joint3
-    100116: joint3 1
-    100118: joint4
-    100120: joint4 1
-    100122: joint5
-    100124: joint5 1
-    100126: pCube1
-    100128: pCube2
-    100130: polySurface2
+    100104: joint1
+    100106: joint1 1
+    100108: joint2
+    100110: joint2 1
+    100112: joint3
+    100114: joint3 1
+    100116: joint4
+    100118: joint4 1
+    100120: joint5
+    100122: joint5 1
+    100124: pCube1
+    100126: pCube2
+    100128: polySurface2
+    100130: //RootNode
     100132: transform1
     100134: transform2
     400000: back
@@ -125,20 +125,20 @@ ModelImporter:
     400098: Character1_Neck
     400100: Character1_Reference
     400102: Character1_Spine2
-    400104: //RootNode
-    400106: joint1
-    400108: joint1 1
-    400110: joint2
-    400112: joint2 1
-    400114: joint3
-    400116: joint3 1
-    400118: joint4
-    400120: joint4 1
-    400122: joint5
-    400124: joint5 1
-    400126: pCube1
-    400128: pCube2
-    400130: polySurface2
+    400104: joint1
+    400106: joint1 1
+    400108: joint2
+    400110: joint2 1
+    400112: joint3
+    400114: joint3 1
+    400116: joint4
+    400118: joint4 1
+    400120: joint5
+    400122: joint5 1
+    400124: pCube1
+    400126: pCube2
+    400128: polySurface2
+    400130: //RootNode
     400132: transform1
     400134: transform2
     4300000: pCube2
