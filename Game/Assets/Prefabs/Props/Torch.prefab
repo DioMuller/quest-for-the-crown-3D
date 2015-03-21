@@ -106,7 +106,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.2399998, y: 10.8599997, z: -17.0100002}
+  m_LocalPosition: {x: -9.23999977, y: 10.8599997, z: -25.2199993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 433186}
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 631c98f211c2a4a46b8e08ad0ee18f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TorchLight: {fileID: 144530}
+  TorchLight: {fileID: 113480}
   LightSwitch: {fileID: 194814}
   Active: 0
 --- !u!114 &11487144

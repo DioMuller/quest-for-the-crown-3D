@@ -3136,16 +3136,16 @@ Transform:
   - {fileID: 746845658}
   - {fileID: 303353627}
   - {fileID: 537134867}
-  - {fileID: 1411881838}
   - {fileID: 849445121}
+  - {fileID: 1411881838}
   - {fileID: 408243959}
   - {fileID: 1346819270}
   - {fileID: 947855192}
   - {fileID: 542806459}
   - {fileID: 1103983231}
   - {fileID: 152450092}
-  - {fileID: 1148617557}
   - {fileID: 1517440036}
+  - {fileID: 1148617557}
   - {fileID: 1304138791}
   - {fileID: 427465460}
   m_Father: {fileID: 561115306}
@@ -3739,7 +3739,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439966, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_Name
@@ -5018,7 +5018,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439966, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_Name
@@ -6195,7 +6195,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439966, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_Name
@@ -6414,7 +6414,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439966, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_Name
@@ -7975,6 +7975,10 @@ Prefab:
     - target: {fileID: 11461460, guid: f340186dbf976054e8832aa915cc5927, type: 2}
       propertyPath: WeaponToUnlock
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444388, guid: f340186dbf976054e8832aa915cc5927, type: 2}
+      propertyPath: Objective
+      value: Objective.GetFireball
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f340186dbf976054e8832aa915cc5927, type: 2}
