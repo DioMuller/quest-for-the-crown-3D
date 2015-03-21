@@ -222,8 +222,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 230386888}
-  m_LocalRotation: {x: .433952421, y: .0822407454, z: .0398183353, w: -.896290302}
-  m_LocalPosition: {x: 1.09490967, y: -48.147686, z: -67.9074707}
+  m_LocalRotation: {x: .205054149, y: .412326694, z: .0958097354, w: -.882473767}
+  m_LocalPosition: {x: 51.2501221, y: -33.9437065, z: -37.8430786}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 733273766}
@@ -1709,7 +1709,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11473824, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
       propertyPath: Objectives.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 403672, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1745,11 +1745,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11473824, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
       propertyPath: Objectives.Array.data[1].Name
-      value: Objective.GetBow
+      value: Objective.KillMagyplus
       objectReference: {fileID: 0}
     - target: {fileID: 11473824, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
       propertyPath: Objectives.Array.data[1].QuantityNeeded
-      value: 1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473824, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
+      propertyPath: Objectives.Array.data[0].Name
+      value: Objective.GetBoomerang
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473824, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
+      propertyPath: Objectives.Array.data[2].Name
+      value: Objective.KillBrum
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473824, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
+      propertyPath: Objectives.Array.data[2].QuantityNeeded
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}

@@ -526,14 +526,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11438414, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
-      propertyPath: Active
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19846600, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
-      propertyPath: prewarm
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
   m_IsPrefabParent: 0
@@ -3153,8 +3145,8 @@ Transform:
   - {fileID: 1103983231}
   - {fileID: 152450092}
   - {fileID: 1148617557}
-  - {fileID: 1304138791}
   - {fileID: 1517440036}
+  - {fileID: 1304138791}
   - {fileID: 427465460}
   m_Father: {fileID: 561115306}
   m_RootOrder: 2
@@ -5651,7 +5643,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439966, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_Name
@@ -6368,11 +6360,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11473824, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
       propertyPath: Objectives.Array.data[1].Name
-      value: Objective.GetBow
+      value: Objective.LightTorches
       objectReference: {fileID: 0}
     - target: {fileID: 11473824, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
       propertyPath: Objectives.Array.data[1].QuantityNeeded
-      value: 1
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473824, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
+      propertyPath: Objectives.Array.data[0].Name
+      value: Objective.GetFireball
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
@@ -6418,7 +6414,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439966, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_Name
@@ -8261,6 +8257,10 @@ Prefab:
     - target: {fileID: 11461460, guid: f340186dbf976054e8832aa915cc5927, type: 2}
       propertyPath: WeaponToUnlock
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444388, guid: f340186dbf976054e8832aa915cc5927, type: 2}
+      propertyPath: Objective
+      value: Objective.GetFireball
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f340186dbf976054e8832aa915cc5927, type: 2}
