@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 using System.Linq;
 
@@ -14,6 +14,7 @@ public class DictionaryEntry
 }
 #endregion Structures
 
+[System.Serializable]
 public class LocalizationData : ScriptableObject
 {
     #region Public Attributes

@@ -11,6 +11,8 @@ public class WindowManager : SingletonBehaviour<WindowManager>
 	public GameObject[] Windows;
 	public EventSystem EventSystem;
 
+	private bool _activeWindow = false;
+
 	void Start()
 	{
 		CloseWindow();
@@ -22,6 +24,8 @@ public class WindowManager : SingletonBehaviour<WindowManager>
 		{
 			window.SetActive(false);
 		}
+
+		_activeWindow = false;
 
 		EnablePlayerMovement();
 	}
@@ -43,6 +47,7 @@ public class WindowManager : SingletonBehaviour<WindowManager>
 			throw;
 		}
 
+		_activeWindow = true;
 		DisablePlayerMovement();
 	}
 
@@ -54,5 +59,16 @@ public class WindowManager : SingletonBehaviour<WindowManager>
 	public void DisablePlayerMovement()
 	{
 		Time.timeScale = 0.0f;
+	}
+
+	void Update()
+	{
+		if (_activeWindow)
+		{
+			if (Input.GetButton("Submit"))
+			{
+				Windows.First((w) => w.activeSelf).GetComponentInChildren<Button>().onClick.Invoke();
+			}
+		}
 	}
 }
