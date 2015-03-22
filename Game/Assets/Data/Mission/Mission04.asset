@@ -14,7 +14,7 @@ MonoBehaviour:
   MissionId: 4
   Title: Mission.Title04
   Description: Mission.Description04
-  Image: {fileID: 0}
+  Image: {fileID: 2800000, guid: 96e9ca65f5c4c2e4e8b5122f39cd3863, type: 3}
   MoneyPrize: 200
   PrerequisiteMissions: 
   Scene: Mission04

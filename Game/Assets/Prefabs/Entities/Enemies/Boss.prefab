@@ -417,11 +417,9 @@ GameObject:
   - 114: {fileID: 11456082}
   - 114: {fileID: 11475028}
   - 114: {fileID: 11429370}
-  - 114: {fileID: 11464012}
   - 195: {fileID: 19584878}
   - 114: {fileID: 11473620}
-  - 114: {fileID: 11415578}
-  - 114: {fileID: 11405284}
+  - 114: {fileID: 11451214}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -1375,7 +1373,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.05599999, z: 1.21700001}
+  m_LocalPosition: {x: 0, y: 1.66999996, z: .48300001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 421810}
@@ -2020,32 +2018,6 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11405284
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f60cacfddbe03a94497db8c4e8ac90e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Item: {fileID: 458728, guid: fbc15eec10d52c248bcb40840caa9e93, type: 2}
-  Chance: .25
---- !u!114 &11415578
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f60cacfddbe03a94497db8c4e8ac90e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Item: {fileID: 458728, guid: fbc15eec10d52c248bcb40840caa9e93, type: 2}
-  Chance: 1
 --- !u!114 &11429370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2061,6 +2033,22 @@ MonoBehaviour:
   - Player
   SecsToRecalculate: .300000012
   MinDistanceFromTarget: 10
+--- !u!114 &11451214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3a8545dfa11a1418eb8968470c58dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 9584850}
+  ShootingDistance: 5
+  PanicDistance: 3
+  CooldownTime: 2
+  Fireball: {fileID: 0}
 --- !u!114 &11456082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2074,19 +2062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinimapSprite: {fileID: 2800000, guid: 9e04c86c2d8f8fd4fb480b11877cba3c, type: 3}
   SpriteColor: {r: 1, g: 0, b: 0, a: 1}
-  Size: 3
---- !u!114 &11464012
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fe594de356f4a049acffe94eb5e8fc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animator: {fileID: 9584850}
+  Size: 2
 --- !u!114 &11473620
 MonoBehaviour:
   m_ObjectHideFlags: 1

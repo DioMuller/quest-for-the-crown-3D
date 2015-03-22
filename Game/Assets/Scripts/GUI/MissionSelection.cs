@@ -17,7 +17,7 @@ public class MissionSelection : MonoBehaviour, ISelectHandler
     public Text MissionTitle;
     public Text MissionPrizes;
     public Text MissionDescription;
-    public Image MissionThumb;
+    public RawImage MissionThumb;
 	#endregion Public Attributes
 
 	// Use this for initialization
@@ -31,7 +31,7 @@ public class MissionSelection : MonoBehaviour, ISelectHandler
 	    MissionTitle.text = LocalizationManager.GetText(_mission.Data.Title);
 		MissionDescription.text = LocalizationManager.GetText(_mission.Data.Description);
 		MissionPrizes.text = _mission.Data.MoneyPrize + " " + LocalizationManager.GetText("Common.Money");
-	    //MissionThumb.mainTexture = _mission.Data.Image;
+	    MissionThumb.texture = _mission.Data.Image;
     }
 
     public void OnClick()

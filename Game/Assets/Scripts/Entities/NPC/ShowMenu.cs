@@ -3,6 +3,7 @@ using System.Linq;
 using Assets.Code.Libs.Input;
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShowMenu : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class ShowMenu : MonoBehaviour
 			if (_players.Any(p => p.Input.GetButton("Action")))
 			{
 				OptionSelection.Instance.OpenMissionSelection();
+				OptionSelection.Instance.GetComponentInChildren<Button>().Select();
 			}
 		}
 	}
