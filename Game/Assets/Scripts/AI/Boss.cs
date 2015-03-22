@@ -39,7 +39,7 @@ public class Boss : MonoBehaviour
 	private int _currentOrder = 0;
 
 	/// <summary>
-	/// Current enemy checkpoint instance.
+	/// Current checkpoint for the enemy.
 	/// </summary>
 	private EnemyCheckpoint _currentCheckpoint = null;
 	#endregion Private Attributes
@@ -126,18 +126,39 @@ public class Boss : MonoBehaviour
         {
             _agent.destination = transform.position;
         }
-
-        if( Animator != null )
-        {
-            Animator.SetFloat("Speed", _agent.speed);
-        }
 		*/
 		#endregion Found Player
 
 		#region Follow Path
 
-		#endregion Follow Path
-	}
+		if (_currentCheckpoint == null )
+		    _currentCheckpoint = WaypointManager.GetCheckpoint(_currentOrder);
+
+		if (_currentCheckpoint != null)
+	    {
+			_agent.destination = _currentCheckpoint.Position;
+
+		    if ((_currentCheckpoint.Position - transform.position).magnitude < 0.1)
+		    {
+			    _currentOrder++;
+			    _currentCheckpoint = null;
+		    }
+	    }
+	    else
+	    {
+		    // If Checkpoint was null, it doesn't exist.
+		    _currentOrder = 0;
+	    }
+
+	    #endregion Follow Path
+
+		#region Animation
+		if (Animator != null)
+		{
+			Animator.SetFloat("Speed", _agent.speed);
+		}
+		#endregion Animation
+    }
 
     void Fire()
     {

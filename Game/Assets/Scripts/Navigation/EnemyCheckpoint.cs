@@ -9,6 +9,7 @@ public class EnemyCheckpoint : MonoBehaviour
 
 	void Start()
 	{
+		WaypointManager.RegisterWaypoint(this);
 		Position = transform.position;
 	}
 }

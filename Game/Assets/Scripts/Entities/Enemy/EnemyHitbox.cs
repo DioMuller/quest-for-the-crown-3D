@@ -48,6 +48,14 @@ public class EnemyHitbox : MonoBehaviour
         }
 	}
 
+	protected void OnCollisionExit(Collision other)
+	{
+		if (Animator != null)
+		{
+			Animator.SetBool(FlagName, false);
+		}
+	}
+
 	public bool OnHit(CharacterStatus other)
 	{
 		if(other == null) return false;
