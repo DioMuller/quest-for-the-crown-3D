@@ -225,6 +225,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &112904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 432662}
+  - 114: {fileID: 11448088}
+  m_Layer: 0
+  m_Name: FireballEmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &115422
 GameObject:
   m_ObjectHideFlags: 1
@@ -1404,6 +1420,18 @@ Transform:
   - {fileID: 480270}
   m_Father: {fileID: 458640}
   m_RootOrder: 0
+--- !u!4 &432662
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .879999995, y: .699999988, z: 1.05999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 485238}
+  m_RootOrder: 1
 --- !u!4 &432866
 Transform:
   m_ObjectHideFlags: 1
@@ -1830,6 +1858,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 421810}
+  - {fileID: 432662}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &485316
@@ -2033,6 +2062,19 @@ MonoBehaviour:
   - Player
   SecsToRecalculate: .300000012
   MinDistanceFromTarget: 10
+--- !u!114 &11448088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c129911cdf86d1a4e9ca4a634cefafe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hitbox: {fileID: 487672, guid: a834006a45cccc142b00faacb5d60f4e, type: 2}
+  Data: {fileID: 11400000, guid: 14d42e71a47d3544986d598b50245dba, type: 2}
 --- !u!114 &11451214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2048,7 +2090,7 @@ MonoBehaviour:
   ShootingDistance: 5
   PanicDistance: 3
   CooldownTime: 2
-  Fireball: {fileID: 0}
+  Fireball: {fileID: 11448088}
 --- !u!114 &11456082
 MonoBehaviour:
   m_ObjectHideFlags: 1

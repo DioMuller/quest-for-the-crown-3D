@@ -90,7 +90,7 @@ public class Boss : MonoBehaviour
 	    if (_characterStatus.IsInvulnerable) return;
 		
 		#region Found Player
-		/*
+		
         if(_targetSelector.CurrentTarget != null )
         {
 	        Vector3 targetPos = _targetSelector.CurrentTarget.transform.position;
@@ -124,33 +124,33 @@ public class Boss : MonoBehaviour
         }
         else
         {
-            _agent.destination = transform.position;
+			#region Follow Path
+
+			if (_currentCheckpoint == null)
+				_currentCheckpoint = WaypointManager.GetCheckpoint(_currentOrder);
+
+			if (_currentCheckpoint != null)
+			{
+				_agent.destination = _currentCheckpoint.Position;
+
+				if ((_currentCheckpoint.Position - transform.position).magnitude < 0.1)
+				{
+					_currentOrder++;
+					_currentCheckpoint = null;
+				}
+			}
+			else
+			{
+				// If Checkpoint was null, it doesn't exist.
+				_currentOrder = 0;
+			}
+
+			#endregion Follow Path
         }
-		*/
+		
 		#endregion Found Player
 
-		#region Follow Path
 
-		if (_currentCheckpoint == null )
-		    _currentCheckpoint = WaypointManager.GetCheckpoint(_currentOrder);
-
-		if (_currentCheckpoint != null)
-	    {
-			_agent.destination = _currentCheckpoint.Position;
-
-		    if ((_currentCheckpoint.Position - transform.position).magnitude < 0.1)
-		    {
-			    _currentOrder++;
-			    _currentCheckpoint = null;
-		    }
-	    }
-	    else
-	    {
-		    // If Checkpoint was null, it doesn't exist.
-		    _currentOrder = 0;
-	    }
-
-	    #endregion Follow Path
 
 		#region Animation
 		if (Animator != null)
