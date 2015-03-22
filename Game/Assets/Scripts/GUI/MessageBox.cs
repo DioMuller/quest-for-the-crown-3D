@@ -25,7 +25,7 @@ public class MessageBox : SingletonBehaviour<MessageBox>
 		_image.enabled = false;
 	}
 
-	void FixedUpdate()
+	void Update()
 	{
 		if (_enabled)
 		{
@@ -47,7 +47,7 @@ public class MessageBox : SingletonBehaviour<MessageBox>
 	#region Methods
 	public void ShowMessage(string message)
 	{
-		_text.text = message;
+		_text.text = LocalizationManager.GetText(message);
 		_text.enabled = true;
 		_image.enabled = true;
 

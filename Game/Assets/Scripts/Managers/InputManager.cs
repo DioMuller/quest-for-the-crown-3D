@@ -114,10 +114,10 @@ public class InputManager : SingletonBehaviour<InputManager>
 
 			//cInput.SetKey("Joy" + i + "_QuickChangePrimary", "Joystick" + i + "Button4");
 			//cInput.SetKey("Joy" + i + "_QuickChangeSecondary", "Joystick" + i + "Button5");
-			cInput.SetKey("Joy" + i + "_QuickChangePrimaryUp", "Joystick" + i + " Axis 6+");
-			cInput.SetKey("Joy" + i + "_QuickChangePrimaryDown", "Joystick" + i + " Axis 6-");
-			cInput.SetKey("Joy" + i + "_QuickChangeSecondaryUp", "Joystick" + i + " Axis 7-");
-			cInput.SetKey("Joy" + i + "_QuickChangeSecondaryDown", "Joystick" + i + " Axis 7+");
+			cInput.SetKey("Joy" + i + "_QuickChangePrimaryUp", "Joy" + i + " Axis 6+");
+			cInput.SetKey("Joy" + i + "_QuickChangePrimaryDown", "Joy" + i + " Axis 6-");
+			cInput.SetKey("Joy" + i + "_QuickChangeSecondaryUp", "Joy" + i + " Axis 7-");
+			cInput.SetKey("Joy" + i + "_QuickChangeSecondaryDown", "Joy" + i + " Axis 7+");
 
 			//cInput.SetKey("Joy" + i + "_UseItem1", "Joy" + i + " Axis 6-");
 			//cInput.SetKey("Joy" + i + "_UseItem2", "Joy" + i + " Axis 7-");

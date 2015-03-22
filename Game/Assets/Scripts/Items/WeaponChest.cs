@@ -19,8 +19,9 @@ public class WeaponChest : MonoBehaviour
 			if (player.Input.GetButton("Action"))
 			{
 				_open = true;
+				MessageBox.Instance.ShowMessage(GetMessage());
 				PlayerManager.ObtainWeapon(WeaponToUnlock);
-				Destroy(ObjectiveObject);
+				Destroy(ObjectiveObject);				
 			}
 		}
 	}
@@ -38,6 +39,25 @@ public class WeaponChest : MonoBehaviour
 		if (other.tag == "Player")
 		{
 			_players.Remove(other.GetComponent<PlayerMovement>());
+		}
+	}
+
+	string GetMessage()
+	{
+		if (PlayerManager.IsWeaponActive(WeaponToUnlock)) return "ItemGet.Already";
+
+		switch (WeaponToUnlock)
+		{
+				case Weapons.Boomerang:
+					return "ItemGet.Boomerang";
+				case Weapons.Bow:
+					return "ItemGet.Bow";
+				case Weapons.Fireball:
+					return "ItemGet.Fireball";
+				case Weapons.Sword:
+					return "ItemGet.Sword";
+				default:
+					return "ItemGet.Unknown";
 		}
 	}
 }
