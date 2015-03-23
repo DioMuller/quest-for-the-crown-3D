@@ -17,6 +17,7 @@ GameObject:
   - 114: {fileID: 11421932}
   - 114: {fileID: 11421934}
   - 114: {fileID: 11472570}
+  - 114: {fileID: 11436574}
   m_Layer: 0
   m_Name: Catyprab
   m_TagString: Enemy
@@ -33,6 +34,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 427458}
   - 114: {fileID: 11471760}
+  - 114: {fileID: 11453972}
   m_Layer: 0
   m_Name: FireballEmitter
   m_TagString: Untagged
@@ -1034,6 +1036,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Item: {fileID: 458728, guid: fbc15eec10d52c248bcb40840caa9e93, type: 2}
   Chance: .25
+--- !u!114 &11436574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 852f361e0ee7ab840bdcea482e9a6fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Objective: Objective.KillMagyplus
 --- !u!114 &11446684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1078,6 +1092,19 @@ MonoBehaviour:
   MinimapSprite: {fileID: 2800000, guid: 9e04c86c2d8f8fd4fb480b11877cba3c, type: 3}
   SpriteColor: {r: 1, g: 0, b: 0, a: 1}
   Size: 1
+--- !u!114 &11453972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c129911cdf86d1a4e9ca4a634cefafe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hitbox: {fileID: 487672, guid: a834006a45cccc142b00faacb5d60f4e, type: 2}
+  Data: {fileID: 11400000, guid: 14d42e71a47d3544986d598b50245dba, type: 2}
 --- !u!114 &11465928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1124,7 +1151,7 @@ MonoBehaviour:
   ShootingDistance: 7
   PanicDistance: 3
   CooldownTime: 2
-  Fireball: {fileID: 11471760}
+  Fireball: {fileID: 11453972}
 --- !u!136 &13646682
 CapsuleCollider:
   m_ObjectHideFlags: 1

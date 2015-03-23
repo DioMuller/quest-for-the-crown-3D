@@ -447,7 +447,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 230386888}
   m_LocalRotation: {x: -.36201781, y: .357511818, z: .152763411, w: .847225904}
-  m_LocalPosition: {x: -16.1981201, y: -4.51330566, z: 38.8987312}
+  m_LocalPosition: {x: -17.9807129, y: -5.81408691, z: 37.1626472}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 733273766}
@@ -1985,18 +1985,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 432662, guid: 3ed5f6f9541888d41be54a3003615dc0, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: .25999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 432662, guid: 3ed5f6f9541888d41be54a3003615dc0, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 1.24000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 432662, guid: 3ed5f6f9541888d41be54a3003615dc0, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.11000001
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ed5f6f9541888d41be54a3003615dc0, type: 2}
   m_IsPrefabParent: 0
@@ -2345,7 +2333,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11473824, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
       propertyPath: Objectives.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 403672, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2389,7 +2377,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11473824, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
       propertyPath: Objectives.Array.data[0].Name
-      value: Objective.GetBoomerang
+      value: Objective.KillBoss
       objectReference: {fileID: 0}
     - target: {fileID: 11473824, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
       propertyPath: Objectives.Array.data[2].Name
