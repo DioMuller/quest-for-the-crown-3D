@@ -9,6 +9,11 @@ public class ItemGUI : SingletonBehaviour<ItemGUI>
 	public Text BombLabel;
 	public Text MedalLabel;
 
+	void Start()
+	{
+		UpdateItems();
+	}
+
 	public void UpdateItems()
 	{
 		HealthPotionLabel.text = PlayerManager.HealthPotions.ToString();

@@ -37,6 +37,12 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
 
     private List<PlayerRegister> _players = new List<PlayerRegister>();
 
+	protected override void OnAwake()
+	{
+		DontDestroyOnLoad(this);
+		_players = new List<PlayerRegister>();
+	}
+
     public bool RegisterPlayer( PlayerRegister playerData )
     {
         if (playerData.PlayerNumber > playerCount || playerData.PlayerNumber <= 0) return false;

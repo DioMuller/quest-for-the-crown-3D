@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class SingletonBehaviour<T> : MonoBehaviour where T : SingletonBehaviour<T>
@@ -8,6 +8,12 @@ public class SingletonBehaviour<T> : MonoBehaviour where T : SingletonBehaviour<
 	// Use this for initialization
 	void Awake () 
     {
-        Instance = this as T; 
+        Instance = this as T;
+		OnAwake();
+    }
+
+	protected virtual void OnAwake()
+	{
+		
 	}
 }
