@@ -17,3 +17,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game/Maps/Mission01.unity
   - enabled: 1
     path: Assets/Scenes/Game/Maps/Mission02.unity
+  - enabled: 1
+    path: Assets/Scenes/Game/Maps/Mission03.unity
+  - enabled: 1
+    path: Assets/Scenes/Game/Maps/Mission04.unity
+  - enabled: 1
+    path: Assets/Scenes/Game/Maps/Mission05.unity
