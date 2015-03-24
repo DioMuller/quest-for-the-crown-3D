@@ -11,6 +11,7 @@ GameObject:
   - 65: {fileID: 6585200}
   - 135: {fileID: 13587472}
   - 114: {fileID: 11461460}
+  - 114: {fileID: 11417070}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -72,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123724}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: 30.5799999, y: 10.3000002, z: 33.3699989}
+  m_LocalPosition: {x: -16.1069946, y: 10.257019, z: -16.7999878}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 481206}
@@ -166,6 +167,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: -.550000012, y: 1, z: .589999974}
   m_Center: {x: -.0399999991, y: 0, z: 0}
+--- !u!114 &11417070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ebdba2e7d5569c4db4ba2a00975fd72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinimapSprite: {fileID: 2800000, guid: 9e04c86c2d8f8fd4fb480b11877cba3c, type: 3}
+  SpriteColor: {r: 1, g: .931034446, b: 0, a: 1}
+  Size: 1
 --- !u!114 &11444388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -177,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852f361e0ee7ab840bdcea482e9a6fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Objective: Objective.GetBow
+  Objective: Objective.GetFireball
 --- !u!114 &11461460
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10872159bc287a4439f612dd3ecf948f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponToUnlock: 1
+  WeaponToUnlock: 2
   ObjectiveObject: {fileID: 161744}
 --- !u!135 &13587472
 SphereCollider:

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Firefly : MonoBehaviour 
@@ -144,7 +144,7 @@ public class Firefly : MonoBehaviour
                 if (AllowIntensityChange)
                 {
                     var random = Random.Range(-RandomIntensityPerFrame, RandomIntensityPerFrame);
-                    FireflyLight.intensity = _initialIntensity + (Mathf.Cos(Mathf.PI * _currentValue) * IntensityChange) + random;
+                    FireflyLight.intensity = _initialIntensity + Time.timeScale * ((Mathf.Cos(Mathf.PI * _currentValue) * IntensityChange) + random);
                 }
 
                 if (AllowMovement)
