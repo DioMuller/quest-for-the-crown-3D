@@ -55,7 +55,11 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
 
     public bool KillPlayer( PlayerRegister playerData )
     {
-        return _players.Remove(playerData);
+        var result =  _players.Remove(playerData);
+
+		if(_players.Count <= 0) WindowManager.Instance.OpenWindow(1);
+
+	    return result;
     }
 
     public void AddPlayer()
