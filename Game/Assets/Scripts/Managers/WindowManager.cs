@@ -37,15 +37,13 @@ public class WindowManager : SingletonBehaviour<WindowManager>
 		CloseWindow();
 
 		Windows[window].SetActive(true);
-		try
-		{
-			Windows[window].GetComponentInChildren<Button>().Select();
-		}
-		catch (Exception)
-		{
-			Debug.LogWarning("Active UI does not have a button to focus.");
-			throw;
-		}
+
+
+            var button = Windows[window].GetComponentInChildren<Button>();
+            if(button != null)
+	    		button.Select();
+            else
+    			Debug.Log("Active UI does not have a button to focus.");
 
 		_activeWindow = true;
 		DisablePlayerMovement();

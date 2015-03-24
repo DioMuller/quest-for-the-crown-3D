@@ -57,7 +57,7 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
     {
         var result =  _players.Remove(playerData);
 
-		if(_players.Count <= 0) WindowManager.Instance.OpenWindow(1);
+        if (_players.Count <= 0 && WindowManager.Instance != null) WindowManager.Instance.OpenWindow(1);
 
 	    return result;
     }
