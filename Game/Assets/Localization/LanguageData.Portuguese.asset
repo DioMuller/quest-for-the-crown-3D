@@ -12,4 +12,162 @@ MonoBehaviour:
   m_Name: LanguageData.Portuguese
   m_EditorClassIdentifier: 
   Language: Portuguese
-  Entries: []
+  Entries:
+  - Key: Dialog.TestDialog
+    Value: "Este \xE9 um di\xE1logo teste."
+  - Key: Dialog.TestDialog2
+    Value: "Este \xE9 outro di\xE1logo teste."
+  - Key: Menu.NewGame
+    Value: Novo Jogo
+  - Key: Menu.LoadGame
+    Value: Carregar Jogo
+  - Key: Menu.Options
+    Value: "Op\xE7\xF5es"
+  - Key: Options.Title
+    Value: "Op\xE7\xF5es"
+  - Key: Options.Save
+    Value: Salvar
+  - Key: Options.Cancel
+    Value: Cancelar
+  - Key: Options.Language
+    Value: Idioma
+  - Key: Options.General
+    Value: Geral
+  - Key: Options.Controls
+    Value: Controles
+  - Key: Options.Player1Control
+    Value: Dispositivo de Entrada (Jogador 1)
+  - Key: Options.Player2Control
+    Value: Dispositivo de Entrada (Jogador 2)
+  - Key: Options.Keyboard
+    Value: Teclado e Mouse
+  - Key: Options.Controller
+    Value: Controle
+  - Key: Options.KeyboardController
+    Value: Ambos
+  - Key: Options.English
+    Value: English
+  - Key: Options.Portuguese
+    Value: "Portugu\xEAs"
+  - Key: GameMenus.MissionSelection
+    Value: "Sele\xE7\xE3o de Miss\xE3o"
+  - Key: Mission.Tutorial
+    Value: Tutorial
+  - Key: Mission.Description.Tutorial
+    Value: "Aprenda como ser um ca\xE7ador de tesouros."
+  - Key: UI.Prizes
+    Value: 'Recompensas:'
+  - Key: Common.Money
+    Value: Ouro
+  - Key: Common.HealthPotion
+    Value: "Po\xE7\xE3o de Vida"
+  - Key: Common.MagicPotion
+    Value: "Po\xE7\xE3o de Magia"
+  - Key: Common.Bomb
+    Value: Bomba
+  - Key: Common.ReturnMedal
+    Value: Medalha do Retorno
+  - Key: Mission.Title01
+    Value: Mate algumas Minhocas
+  - Key: Mission.Description01
+    Value: Minhocas atacaram a floresta. Mate-as.
+  - Key: Mission.Complete01
+    Value: "Voc\xEA matou 15 Minhocas!"
+  - Key: Mission.Title02
+    Value: Obtenha seu arco!
+  - Key: Mission.Description02
+    Value: Obtenha seu arco e mate alguns inimigos com ataques de longo alcance.
+  - Key: Mission.Complete02
+    Value: "Voc\xEA obteve o arco!"
+  - Key: Mission.Title04
+    Value: Aprenda a usar a Bola de Fogo!
+  - Key: Mission.Description04
+    Value: "Obtenha a magia da bola de fogo e use-a para explorar as ru\xEDnas na
+      floresta."
+  - Key: Mission.Complete04
+    Value: "Voc\xEA aprendeu a usar a bola de fogo!"
+  - Key: Mission.Title03
+    Value: Obtenha o bumerangue
+  - Key: Mission.Description03
+    Value: "Obtenha o bumerangue na floresta negra, e aprenda a control\xE1-lo para
+      destruir inimigos."
+  - Key: Mission.Complete03
+    Value: "Voc\xEA obteve o bumerangue!"
+  - Key: Mission.Title05
+    Value: Mate o chefe
+  - Key: Mission.Description05
+    Value: Use suas armas e conhecimento para matar o chefe.
+  - Key: Mission.Complete05
+    Value: Chefe morto!
+  - Key: Dialog.WhatToDo
+    Value: O que farei agora?
+  - Key: Dialog.GoToMission
+    Value: "Fazer uma Miss\xE3o"
+  - Key: Dialog.Shop
+    Value: Comprar Suprimentos
+  - Key: Dialog.StayCamp
+    Value: Ficar no Acampamento
+  - Key: Objective.KillBrum
+    Value: Mate Minhocas
+  - Key: Dialog.MissionComplete
+    Value: "Miss\xE3o Conclu\xEDda!"
+  - Key: Dialog.BackToCamp
+    Value: Voltar ao Acampamento
+  - Key: Dialog.GameOver
+    Value: Fim de Jogo
+  - Key: Dialog.BackToTitle
+    Value: "Voltar \xE0 Tela de Titulo"
+  - Key: Objective.GetBow
+    Value: "Obter Arco M\xE1gico"
+  - Key: Objective.KillMagyplus
+    Value: Mate Magotorrincos
+  - Key: Objective.GetFireball
+    Value: Obtenha a magia Bola de Fogo
+  - Key: Objective.GetBoomerang
+    Value: Obtenha o bumerangue
+  - Key: Objective.KillBoss
+    Value: "Mate a Aberra\xE7\xE3o"
+  - Key: OldMission.Title03
+    Value: "Pr\xE1tica de Arco e Flecha"
+  - Key: OldMission.Description03
+    Value: Mate inimigos distantes com seu arco.
+  - Key: OldMission.Title04
+    Value: Aprenda magia!
+  - Key: OldMission.Description04
+    Value: Obtenha a magia da bola de fogo nas catacombas.
+  - Key: OldMission.Title05
+    Value: Pratique magia!
+  - Key: OldMission.Description05
+    Value: "Explore um calabou\xE7o escuro e mate alguns inimigos com sua magia."
+  - Key: OldMission.Title06
+    Value: Bumerangue mal-assombrado.
+  - Key: OldMission.Description06
+    Value: Rumores dizem que a floresta negra guarda um grande tesouro. Investigue!
+  - Key: OldMission.Title07
+    Value: "Pr\xE1tica de Bumerangue"
+  - Key: OldMission.Description07
+    Value: Mate hordas de inimigos com a ajuda do seu bumerangue!
+  - Key: OldMission.Title08
+    Value: Criptas Reais
+  - Key: OldMission.Description08
+    Value: Ache o segredo das criptas reais abandonadas.
+  - Key: OldMission.Title09
+    Value: Recupere a coroa!
+  - Key: OldMission.Description09
+    Value: Mate os monstros e recupere a coroa!
+  - Key: Objective.LightTorches
+    Value: Acenda as tochas
+  - Key: ItemGet.Sword
+    Value: "Voc\xEA obteve a espada!"
+  - Key: ItemGet.Boomerang
+    Value: "Voc\xEA obteve o bumerangue!"
+  - Key: ItemGet.Bow
+    Value: "Voc\xEA obteve o arco!"
+  - Key: ItemGet.Fireball
+    Value: "Voc\xEA obteve a magia bola de fogo!"
+  - Key: ItemGet.Already
+    Value: "Voc\xEA j\xE1 tinha esta arma!"
+  - Key: ItemGet.Unknown
+    Value: "Voc\xEA obteve um item desconhecido!"
+  - Key: UI.Objectives
+    Value: Objetivos

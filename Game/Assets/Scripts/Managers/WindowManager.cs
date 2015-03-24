@@ -34,16 +34,26 @@ public class WindowManager : SingletonBehaviour<WindowManager>
 	{
 		if (window < 0 || window >= Windows.Length) return;
 		if (Windows[window] == null) return;
-		CloseWindow();
+
+        CloseWindow();
 
 		Windows[window].SetActive(true);
 
 
+        try
+        {
             var button = Windows[window].GetComponentInChildren<Button>();
-            if(button != null)
-	    		button.Select();
+
+            if (button != null)
+                button.Select();
             else
-    			Debug.Log("Active UI does not have a button to focus.");
+                Debug.Log("Active UI does not have a button to focus.");
+        }
+        catch
+        {
+            Debug.Log("Error: Invalid window ( " + window + "/" + Windows.Length + ").");
+        }
+
 
 		_activeWindow = true;
 		DisablePlayerMovement();

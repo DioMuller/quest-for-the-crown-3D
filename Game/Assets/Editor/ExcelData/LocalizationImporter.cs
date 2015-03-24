@@ -60,6 +60,7 @@ public class LocalizationImporter  : Editor
                 AssetDatabase.SaveAssets();
                 EditorUtility.FocusProjectWindow();
                 Selection.activeObject = asset;
+                EditorUtility.SetDirty(asset);
             }
         }
     }

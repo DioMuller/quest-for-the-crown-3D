@@ -12,4 +12,162 @@ MonoBehaviour:
   m_Name: LanguageData.Default
   m_EditorClassIdentifier: 
   Language: Default
-  Entries: []
+  Entries:
+  - Key: Dialog.TestDialog
+    Value: This is a test dialog.
+  - Key: Dialog.TestDialog2
+    Value: This is a test dialog.
+  - Key: Menu.NewGame
+    Value: New Game
+  - Key: Menu.LoadGame
+    Value: Load Game
+  - Key: Menu.Options
+    Value: Options
+  - Key: Options.Title
+    Value: Options
+  - Key: Options.Save
+    Value: Save
+  - Key: Options.Cancel
+    Value: Cancel
+  - Key: Options.Language
+    Value: Language
+  - Key: Options.General
+    Value: General
+  - Key: Options.Controls
+    Value: Controls
+  - Key: Options.Player1Control
+    Value: Player 1 Input Method
+  - Key: Options.Player2Control
+    Value: Player 2 Input Method
+  - Key: Options.Keyboard
+    Value: Keyboard and Mouse
+  - Key: Options.Controller
+    Value: Gamepad
+  - Key: Options.KeyboardController
+    Value: Both
+  - Key: Options.English
+    Value: English
+  - Key: Options.Portuguese
+    Value: "Portugu\xEAs"
+  - Key: GameMenus.MissionSelection
+    Value: Mission Selection
+  - Key: Mission.Tutorial
+    Value: Tutorial
+  - Key: Mission.Description.Tutorial
+    Value: Learn the basics of being a treasure hunter.
+  - Key: UI.Prizes
+    Value: 'Prizes:'
+  - Key: Common.Money
+    Value: Gold
+  - Key: Common.HealthPotion
+    Value: Health Potion
+  - Key: Common.MagicPotion
+    Value: Magic Potion
+  - Key: Common.Bomb
+    Value: Bomb
+  - Key: Common.ReturnMedal
+    Value: Return Medal
+  - Key: Mission.Title01
+    Value: Kill Some Worms
+  - Key: Mission.Description01
+    Value: Worms Attacked the Forest. Kill them.
+  - Key: Mission.Complete01
+    Value: You killed 15 worms!
+  - Key: Mission.Title02
+    Value: Get your bow!
+  - Key: Mission.Description02
+    Value: Get your bow and kill a few long ranged enemies.
+  - Key: Mission.Complete02
+    Value: You got your bow!
+  - Key: Mission.Title04
+    Value: Learn how to use the fireball!
+  - Key: Mission.Description04
+    Value: Get the fireball spell, and use it to explore the abandoned ruins in the
+      forest.
+  - Key: Mission.Complete04
+    Value: You learned how to use the fireball!
+  - Key: Mission.Title03
+    Value: Get the Boomerang
+  - Key: Mission.Description03
+    Value: Get the boomerang on the dark forest, and learn how to control it to defeat
+      enemies.
+  - Key: Mission.Complete03
+    Value: You got the boomerang!
+  - Key: Mission.Title05
+    Value: Kill the boss
+  - Key: Mission.Description05
+    Value: Use all your weapons and knowledge to kill the boss.
+  - Key: Mission.Complete05
+    Value: Boss killed!
+  - Key: Dialog.WhatToDo
+    Value: What to do now?
+  - Key: Dialog.GoToMission
+    Value: Do a Mission
+  - Key: Dialog.Shop
+    Value: Shop
+  - Key: Dialog.StayCamp
+    Value: Stay at Camp
+  - Key: Objective.KillBrum
+    Value: Kill Worms
+  - Key: Dialog.MissionComplete
+    Value: Mission Complete!
+  - Key: Dialog.BackToCamp
+    Value: Back to Camp
+  - Key: Dialog.GameOver
+    Value: Game Over
+  - Key: Dialog.BackToTitle
+    Value: Back to Title Screen
+  - Key: Objective.GetBow
+    Value: Get Magic Bow
+  - Key: Objective.KillMagyplus
+    Value: Kill Magyplus
+  - Key: Objective.GetFireball
+    Value: Obtain Fireball magic
+  - Key: Objective.GetBoomerang
+    Value: Obtain Boomerang
+  - Key: Objective.KillBoss
+    Value: Kill the Aberration
+  - Key: OldMission.Title03
+    Value: Bow Practice
+  - Key: OldMission.Description03
+    Value: Kill long-ranged enemies with the bow.
+  - Key: OldMission.Title04
+    Value: Learn some Magic!
+  - Key: OldMission.Description04
+    Value: Get the fireball spell on the catacombs.
+  - Key: OldMission.Title05
+    Value: Do some magic!
+  - Key: OldMission.Description05
+    Value: Explore a dark dungeon and kill some enemies with your magic.
+  - Key: OldMission.Title06
+    Value: Haunted Boomerang.
+  - Key: OldMission.Description06
+    Value: People say the dark forest guards a treasure. Investigate it!
+  - Key: OldMission.Title07
+    Value: Boomerang practice
+  - Key: OldMission.Description07
+    Value: Kill waves after waves of enemies with the help of your boomerang!
+  - Key: OldMission.Title08
+    Value: The Royal Crypts
+  - Key: OldMission.Description08
+    Value: Find the secret of the abandoned royal crypts.
+  - Key: OldMission.Title09
+    Value: Get the crown!
+  - Key: OldMission.Description09
+    Value: Kill the monsters and recover the crown!
+  - Key: Objective.LightTorches
+    Value: Light up torches
+  - Key: ItemGet.Sword
+    Value: You got the sword!
+  - Key: ItemGet.Boomerang
+    Value: You got the boomerang!
+  - Key: ItemGet.Bow
+    Value: You got the bow!
+  - Key: ItemGet.Fireball
+    Value: You got the fireball spell!
+  - Key: ItemGet.Already
+    Value: You already had this weapon!
+  - Key: ItemGet.Unknown
+    Value: You got an unknown item!
+  - Key: UI.Objectives
+    Value: Objectives
