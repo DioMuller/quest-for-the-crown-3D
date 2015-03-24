@@ -257,6 +257,7 @@ GameObject:
   - 223: {fileID: 22337516}
   - 114: {fileID: 11436438}
   - 114: {fileID: 11479540}
+  - 114: {fileID: 11443884}
   m_Layer: 5
   m_Name: ObjectiveMenu
   m_TagString: Untagged
@@ -975,6 +976,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11443884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31153b45a0d042448949ba2d8624163e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11443902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1162,8 +1174,8 @@ MonoBehaviour:
   Index: 3
   Label: {fileID: 11473492}
   Quantity: {fileID: 11401802}
-  TodoColor: {r: 1, g: 0, b: 0, a: 1}
-  DoneColor: {r: 0, g: 1, b: 0, a: 1}
+  TodoColor: {r: .720588207, g: 0, b: 0, a: 1}
+  DoneColor: {r: 0, g: .639705896, b: 0, a: 1}
 --- !u!114 &11468952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1178,8 +1190,8 @@ MonoBehaviour:
   Index: 2
   Label: {fileID: 11407112}
   Quantity: {fileID: 11466640}
-  TodoColor: {r: 1, g: 0, b: 0, a: 1}
-  DoneColor: {r: 0, g: 1, b: 0, a: 1}
+  TodoColor: {r: .720588207, g: 0, b: 0, a: 1}
+  DoneColor: {r: 0, g: .639705896, b: 0, a: 1}
 --- !u!114 &11470230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1426,8 +1438,8 @@ MonoBehaviour:
   Index: 0
   Label: {fileID: 11475992}
   Quantity: {fileID: 11486084}
-  TodoColor: {r: 1, g: 0, b: 0, a: 1}
-  DoneColor: {r: 0, g: 1, b: 0, a: 1}
+  TodoColor: {r: .720588207, g: 0, b: 0, a: 1}
+  DoneColor: {r: 0, g: .639705896, b: 0, a: 1}
 --- !u!114 &11495068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1516,8 +1528,8 @@ MonoBehaviour:
   Index: 1
   Label: {fileID: 11430358}
   Quantity: {fileID: 11443902}
-  TodoColor: {r: 1, g: 0, b: 0, a: 1}
-  DoneColor: {r: 0, g: 1, b: 0, a: 1}
+  TodoColor: {r: .720588207, g: 0, b: 0, a: 1}
+  DoneColor: {r: 0, g: .639705896, b: 0, a: 1}
 --- !u!114 &11499882
 MonoBehaviour:
   m_ObjectHideFlags: 1

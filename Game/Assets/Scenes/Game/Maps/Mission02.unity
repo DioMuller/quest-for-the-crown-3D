@@ -298,8 +298,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 230386888}
-  m_LocalRotation: {x: .0591132306, y: .940646887, z: .225113317, w: -.247008204}
-  m_LocalPosition: {x: -1.08074951, y: -19.6154594, z: -9.11968994}
+  m_LocalRotation: {x: -.422618359, y: 0, z: 0, w: .906307757}
+  m_LocalPosition: {x: 0, y: -4.83994675, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 733273766}
@@ -787,6 +787,10 @@ Prefab:
     - target: {fileID: 468584, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11428100, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
+      propertyPath: m_Text
+      value: Mission.Complete02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d1c095aebad6af4784f4e6c9e58ea9a, type: 2}
@@ -2153,10 +2157,10 @@ Transform:
   - {fileID: 801647294}
   - {fileID: 1865747757}
   - {fileID: 1416714483}
-  - {fileID: 641242979}
   - {fileID: 1963876643}
-  - {fileID: 1170489943}
+  - {fileID: 641242979}
   - {fileID: 1741915190}
+  - {fileID: 1170489943}
   - {fileID: 996939222}
   - {fileID: 1210887606}
   - {fileID: 244167247}
