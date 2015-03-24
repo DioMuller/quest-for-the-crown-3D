@@ -25,19 +25,19 @@ Material:
       data:
         first:
           name: _Cutoff
-        second: .5
+        second: .433999985
       data:
         first:
           name: _Occlusion
-        second: 7.5
+        second: 7.80000019
       data:
         first:
           name: _BaseLight
-        second: .349999994
+        second: .400999993
       data:
         first:
           name: _AO
-        second: 2.4000001
+        second: 5.17999983
       data:
         first:
           name: _SquashAmount

@@ -33,11 +33,11 @@ Material:
       data:
         first:
           name: _BaseLight
-        second: .349999994
+        second: .356999993
       data:
         first:
           name: _AO
-        second: 2.4000001
+        second: 6.34000015
       data:
         first:
           name: _SquashAmount

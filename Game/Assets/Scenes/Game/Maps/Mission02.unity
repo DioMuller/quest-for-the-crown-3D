@@ -299,7 +299,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 230386888}
   m_LocalRotation: {x: .087172322, y: .899590552, z: .210452542, w: -.372622699}
-  m_LocalPosition: {x: 2.43231201, y: -2.1586113, z: -12.9732666}
+  m_LocalPosition: {x: 22.7302246, y: -12.8210869, z: -17.1291504}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 733273766}
@@ -2700,6 +2700,10 @@ Prefab:
     - target: {fileID: 11461460, guid: f340186dbf976054e8832aa915cc5927, type: 2}
       propertyPath: WeaponToUnlock
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444388, guid: f340186dbf976054e8832aa915cc5927, type: 2}
+      propertyPath: Objective
+      value: Objective.GetBow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f340186dbf976054e8832aa915cc5927, type: 2}
