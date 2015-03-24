@@ -43,11 +43,13 @@ public class ObjectiveMenu : SingletonBehaviour<ObjectiveMenu>
 
 		_canvas.enabled = true;
 		_visible = true;
+		Time.timeScale = 0.0f;
 	}
 
 	public void Hide()
 	{
 		_canvas.enabled = false;
 		_visible = false;
+		Time.timeScale = 1.0f;
 	}
 }
