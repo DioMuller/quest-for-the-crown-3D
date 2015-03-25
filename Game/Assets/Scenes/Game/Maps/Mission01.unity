@@ -1108,7 +1108,7 @@ Prefab:
     - target: {fileID: 11472392, guid: 487f2eb7f25dad248bfad01dd7bfd8c0, type: 2}
       propertyPath: PlayerUI
       value: 
-      objectReference: {fileID: 504142441}
+      objectReference: {fileID: 1623954895}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 487f2eb7f25dad248bfad01dd7bfd8c0, type: 2}
   m_IsPrefabParent: 0
@@ -2420,6 +2420,11 @@ RectTransform:
 --- !u!1 &1623954894
 GameObject:
   m_PrefabParentObject: {fileID: 157214, guid: c24c4a8e515688a4d9445b8f84f1f2cc, type: 2}
+  m_PrefabInternal: {fileID: 1346440406}
+--- !u!224 &1623954895
+RectTransform:
+  m_PrefabParentObject: {fileID: 22495786, guid: c24c4a8e515688a4d9445b8f84f1f2cc,
+    type: 2}
   m_PrefabInternal: {fileID: 1346440406}
 --- !u!1001 &1639556184
 Prefab:
