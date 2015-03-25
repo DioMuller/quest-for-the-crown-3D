@@ -18,7 +18,7 @@ MonoBehaviour:
   - Key: Dialog.TestDialog2
     Value: This is a test dialog.
   - Key: Menu.NewGame
-    Value: New Game
+    Value: Start Game
   - Key: Menu.LoadGame
     Value: Load Game
   - Key: Menu.Options
@@ -171,3 +171,11 @@ MonoBehaviour:
     Value: You got an unknown item!
   - Key: UI.Objectives
     Value: Objectives
+  - Key: Menu.TwoPlayers
+    Value: Two Players
+  - Key: Menu.OnePlayer
+    Value: One Player
+  - Key: Menu.Back
+    Value: Back
+  - Key: Menu.About
+    Value: Credits

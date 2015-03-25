@@ -18,7 +18,7 @@ MonoBehaviour:
   - Key: Dialog.TestDialog2
     Value: "Este \xE9 outro di\xE1logo teste."
   - Key: Menu.NewGame
-    Value: Novo Jogo
+    Value: "Come\xE7ar Jogo"
   - Key: Menu.LoadGame
     Value: Carregar Jogo
   - Key: Menu.Options
@@ -171,3 +171,11 @@ MonoBehaviour:
     Value: "Voc\xEA obteve um item desconhecido!"
   - Key: UI.Objectives
     Value: Objetivos
+  - Key: Menu.TwoPlayers
+    Value: Dois Jogadores
+  - Key: Menu.OnePlayer
+    Value: Um Jogador
+  - Key: Menu.Back
+    Value: Voltar
+  - Key: Menu.About
+    Value: "Cr\xE9ditos"
