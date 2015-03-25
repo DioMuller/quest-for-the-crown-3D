@@ -51,7 +51,8 @@ public class WindowManager : SingletonBehaviour<WindowManager>
         }
         catch
         {
-            Debug.Log("Error: Invalid window ( " + window + "/" + Windows.Length + ").");
+			// Will be called on destroy too, no need to show every time.
+            // Debug.Log("Error: Invalid window ( " + (window + 1) + "/" + Windows.Length + ").");
         }
 
 
