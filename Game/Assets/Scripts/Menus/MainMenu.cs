@@ -58,7 +58,7 @@ public class MainMenu : MonoBehaviour
 		}
 		#endregion Input Methods
 
-		OnCancelClick();
+		Application.LoadLevel("Title");
 	}
 
 	public void OnCancelClick()
