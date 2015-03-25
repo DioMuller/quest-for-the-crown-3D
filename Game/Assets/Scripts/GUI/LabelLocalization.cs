@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+using System;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
 public class LabelLocalization : MonoBehaviour 
 {
     private Text _text;
+
+	public bool Upper = false;
 
     /// <summary>
     /// First initialization.
@@ -36,8 +39,8 @@ public class LabelLocalization : MonoBehaviour
         var label = LocalizationManager.GetText(key);
 
         if (label != null)
-            _text.text = label;
+            _text.text = Upper ? label.ToUpper() : label;
         else
-            _text.text = key;
+            _text.text = Upper ? key.ToUpper() : key;
     }
 }
