@@ -21,7 +21,7 @@ public enum Items
 
 public class PlayerManager : SingletonBehaviour<PlayerManager>
 {
-    private static int playerCount = 2;
+    private static int playerCount = 1;
 
     #region Weapons and Items
     // Hard-Coded for time constrains.

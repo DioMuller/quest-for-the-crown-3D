@@ -16,11 +16,16 @@ public class MainMenu : MonoBehaviour
 	// Input
 	public ComboBox ComboPlayer1Input;
 
+	// Options Menu
+	public GameObject MainPanel;
+	public GameObject PlayersPanel;
+
 	#endregion Public Attributes
 
 	void Awake()
 	{
 		OptionsCanvas.enabled = false;
+		PlayersPanel.SetActive(false);
 	}
 
 	#region Event Handlers
@@ -71,8 +76,22 @@ public class MainMenu : MonoBehaviour
 	
 	public void OnNewGameClick()
 	{
+		MainPanel.SetActive(false);
+		PlayersPanel.SetActive(true);
+
+		PlayersPanel.GetComponentInChildren<Button>().Select();
+	}
+
+	public void OnSinglePlayerClick()
+	{
 		PlayerManager.ResetGame();
-        Application.LoadLevel(NewGameScene);
+		Application.LoadLevel(NewGameScene);
+	}
+
+	public void OnMultiplayerClick()
+	{
+		PlayerManager.ResetGame(2);
+		Application.LoadLevel(NewGameScene);
 	}
 
 	public void LoadGameClick()
