@@ -21,7 +21,7 @@ public enum Items
 
 public class PlayerManager : SingletonBehaviour<PlayerManager>
 {
-    private static int playerCount = 1;
+    private static int playerCount = 2;
 
     #region Weapons and Items
     // Hard-Coded for time constrains.
@@ -48,6 +48,13 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
         if (playerData.PlayerNumber > playerCount || playerData.PlayerNumber <= 0) return false;
         if( _players.Contains(playerData) ) return true;
         if( _players.Count( p => p.PlayerNumber == playerData.PlayerNumber ) > 0 ) return false;
+
+	    string[] schemas;
+
+	    if (playerData.PlayerNumber == 1) schemas = GameSettings.Player1Input.Split(';');
+		else schemas = GameSettings.Player2Input.Split(';');
+
+		playerData.GetComponent<PlayerMovement>().InputSchemas = schemas;
 
         _players.Add(playerData);
         return true;
