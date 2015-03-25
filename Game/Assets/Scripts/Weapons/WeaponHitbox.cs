@@ -48,7 +48,7 @@ public class WeaponHitbox : MonoBehaviour
 		if(other == null) return false;
 		if( ParentWeapon == null ) return false;
 		
-		other.RemoveHealth( ParentWeapon.Data.AttackPower, ParentWeapon.Parent );
+		other.RemoveHealth( ParentWeapon.Data.AttackPower, ParentWeapon.Parent, tag == "Fire" );
 		return true;
 	}
 }

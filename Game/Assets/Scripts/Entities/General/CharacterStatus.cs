@@ -9,6 +9,9 @@ public class CharacterStatus : MonoBehaviour
 	private Renderer[] _renderers;
 	private bool _visible = true;
 
+    private PlayerMovement _playerMovement;
+    private NavMeshAgent _agent;
+
     private int _currentHealth;
     private int _currentMagic;
     #endregion Private Attributes
@@ -49,6 +52,9 @@ public class CharacterStatus : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
 		_renderers = GetComponentsInChildren<Renderer>();
 
+        _playerMovement = GetComponent<PlayerMovement>();
+        _agent = GetComponent<NavMeshAgent>();
+
         IsDead = Data.MaxHealth <= 0;
 
         if (Data.MagicRegenTime > 0.0f)
@@ -72,7 +78,7 @@ public class CharacterStatus : MonoBehaviour
         return Add(ref _currentMagic, amount, Data.MaxMagic);
     }
 
-    public void RemoveHealth(int amount, Transform attacker)
+    public void RemoveHealth(int amount, Transform attacker, bool slowdown = false)
     {
         if (IsInvulnerable) return;
 
@@ -100,6 +106,11 @@ public class CharacterStatus : MonoBehaviour
         if (Data.InvulnerabilityTime > 0.0)
         {
             StartCoroutine(SetInvulnerable());
+        }
+
+        if( slowdown )
+        {
+            StartCoroutine(Slowdown());
         }
     }
 
@@ -154,6 +165,18 @@ public class CharacterStatus : MonoBehaviour
             SetVisibility(true);
             IsInvulnerable = false;
         }
+    }
+
+    IEnumerator Slowdown()
+    {
+        if (_agent != null) _agent.speed *= 0.5f;
+        else if (_playerMovement != null) _playerMovement.Speed *= 0.5f;
+
+        yield return new WaitForSeconds(1.0f);
+
+        // TODO: Add Flames?
+        if (_agent != null) _agent.speed *= 2.0f;
+        else if (_playerMovement != null) _playerMovement.Speed *= 2.0f;
     }
 
     void Blink()
