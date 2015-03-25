@@ -142,13 +142,18 @@ public class CharacterStatus : MonoBehaviour
     IEnumerator SetInvulnerable()
     {
         IsInvulnerable = true;
-        InvokeRepeating("Blink", 0.0f, 0.1f);
 
-        yield return new WaitForSeconds(Data.InvulnerabilityTime);
+        if (!IsDead)
+        {
 
-        CancelInvoke("Blink");
-	    SetVisibility(true);
-		IsInvulnerable = false;
+            InvokeRepeating("Blink", 0.0f, 0.1f);
+
+            yield return new WaitForSeconds(Data.InvulnerabilityTime);
+
+            CancelInvoke("Blink");
+            SetVisibility(true);
+            IsInvulnerable = false;
+        }
     }
 
     void Blink()

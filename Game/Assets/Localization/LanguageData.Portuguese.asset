@@ -188,3 +188,5 @@ MonoBehaviour:
     Value: Voltar
   - Key: Menu.About
     Value: "Cr\xE9ditos"
+  - Key: UI.OpenMissionSelection
+    Value: "Pressione o bot\xE3o [A\xC7\xC3O] para abrir a Sele\xE7\xE3o de Miss\xF5es."

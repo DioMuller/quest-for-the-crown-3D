@@ -186,3 +186,5 @@ MonoBehaviour:
     Value: Back
   - Key: Menu.About
     Value: Credits
+  - Key: UI.OpenMissionSelection
+    Value: Press the [ACTION] button to open the Mission Selection.

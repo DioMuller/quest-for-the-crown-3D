@@ -9,7 +9,14 @@ public class ShowMenu : MonoBehaviour
 {
 	private List<PlayerMovement> _players = new List<PlayerMovement>();
 
+    public GameObject HelperText = null;
+
 	#region MonoBehaviour Methods
+
+    void Start()
+    {
+        HelperText.SetActive(true);
+    }
 
 	void Update()
 	{
@@ -32,6 +39,7 @@ public class ShowMenu : MonoBehaviour
 		if (other.tag == "Player")
 		{
 			_players.Add(other.gameObject.GetComponent<PlayerMovement>());
+            HelperText.SetActive(true);
 		}
 	}
 
@@ -44,6 +52,7 @@ public class ShowMenu : MonoBehaviour
 		if (other.tag == "Player")
 		{
 			_players.Remove(other.gameObject.GetComponent<PlayerMovement>());
+            HelperText.SetActive(_players.Count > 0);
 		}
 	}
 	#endregion MonoBehaviour Methods
