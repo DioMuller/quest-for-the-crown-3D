@@ -70,35 +70,44 @@ MonoBehaviour:
   - Key: Mission.Title01
     Value: Mate algumas Minhocas
   - Key: Mission.Description01
-    Value: Minhocas atacaram a floresta. Mate-as.
+    Value: "Minhocas Gigantes invadiram a floresta ao norte do reino. Algumas pessoas
+      est\xE3o preocupadas, pois as minhocas nunca foram t\xE3o agressivas. Alguns
+      dizem que a causa pode ser m\xE1gica, quem sabe seja a coroa?"
   - Key: Mission.Complete01
-    Value: "Voc\xEA matou 15 Minhocas!"
+    Value: "Voc\xEA controlou a popula\xE7\xE3o de minhocas agressivas!"
   - Key: Mission.Title02
-    Value: Obtenha seu arco!
+    Value: Obtenha um arco!
   - Key: Mission.Description02
-    Value: Obtenha seu arco e mate alguns inimigos com ataques de longo alcance.
+    Value: "Alguns alde\xF5es lhe contam uma lenda, que diz que ao leste da floresta
+      est\xE1 um arco que n\xE3o necessita de flechas - ele cria flechas usando mag\xEDa!
+      Investigue, mas tenha cuidado, pois criatoras m\xE1gicas habitam esta \xE1rea."
   - Key: Mission.Complete02
-    Value: "Voc\xEA obteve o arco!"
+    Value: "Voc\xEA obteve o arco m\xE1gico!"
   - Key: Mission.Title04
     Value: Aprenda a usar a Bola de Fogo!
   - Key: Mission.Description04
-    Value: "Obtenha a magia da bola de fogo e use-a para explorar as ru\xEDnas na
-      floresta."
+    Value: "Nas profundezas da floresta, voc\xEA acha algumas ru\xEDnas esquecidas.
+      As inscri\xE7\xF5es na entrada dizem: \"Aprenda a Magia que aqui est\xE1, e
+      ilumine o caminho para a verdade\". Quem sabe as ru\xEDnas guardam alguma pista
+      para achar a coroa?"
   - Key: Mission.Complete04
     Value: "Voc\xEA aprendeu a usar a bola de fogo!"
   - Key: Mission.Title03
     Value: Obtenha o bumerangue
   - Key: Mission.Description03
-    Value: "Obtenha o bumerangue na floresta negra, e aprenda a control\xE1-lo para
-      destruir inimigos."
+    Value: "Nas profundezas da floresta, est\xE1 um bumerangue possuido, que pode
+      ser controlado com m\xE1gica. Adicione-o ao seu arsenal, e investigue a floresta
+      escura."
   - Key: Mission.Complete03
     Value: "Voc\xEA obteve o bumerangue!"
   - Key: Mission.Title05
-    Value: Mate o chefe
+    Value: "Mate a Aberra\xE7\xE3o"
   - Key: Mission.Description05
-    Value: Use suas armas e conhecimento para matar o chefe.
+    Value: "Nas ru\xEDnas, voc\xEA acha uma passagem secreta para a parte mais profunda
+      da floresta. Ali vive uma criatura grotesca, que possivelmente \xE9 a causa
+      de todos os problemas na floresta. Livre-se dela e salve a floresta."
   - Key: Mission.Complete05
-    Value: Chefe morto!
+    Value: "Aberra\xE7\xE3o Morta!"
   - Key: Dialog.WhatToDo
     Value: O que farei agora?
   - Key: Dialog.GoToMission

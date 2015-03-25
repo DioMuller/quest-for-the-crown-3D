@@ -70,35 +70,42 @@ MonoBehaviour:
   - Key: Mission.Title01
     Value: Kill Some Worms
   - Key: Mission.Description01
-    Value: Worms Attacked the Forest. Kill them.
+    Value: Giant Worms Attacked the Forest to the north of the kingdom. People are
+      worried, since the worms never were so agressive. Some say the cause may be
+      magical, maybe it's the crown?
   - Key: Mission.Complete01
-    Value: You killed 15 worms!
+    Value: You controlled the Giant Worm population!
   - Key: Mission.Title02
-    Value: Get your bow!
+    Value: Get a bow!
   - Key: Mission.Description02
-    Value: Get your bow and kill a few long ranged enemies.
+    Value: Some villagers tell a legend, that to the east of the forest there is a
+      bow that doesn't need arrows - it creates arrows using magic! Investigate it,
+      but beware, since magic creatures roam the area.
   - Key: Mission.Complete02
-    Value: You got your bow!
+    Value: You got the magic bow!
   - Key: Mission.Title04
     Value: Learn how to use the fireball!
   - Key: Mission.Description04
-    Value: Get the fireball spell, and use it to explore the abandoned ruins in the
-      forest.
+    Value: Deep in the forest you found some forgotten ruins. The inscriptions on
+      the entrance say "Learn the Spell here inside, and light the path to the truth".
+      Maybe the ruins hold a clue on how to find the crown?
   - Key: Mission.Complete04
     Value: You learned how to use the fireball!
   - Key: Mission.Title03
     Value: Get the Boomerang
   - Key: Mission.Description03
-    Value: Get the boomerang on the dark forest, and learn how to control it to defeat
-      enemies.
+    Value: Deep in the dark forest, lies a possessed boomerang, that can be controled
+      with magic. Add it to your arsenal, and investigate the deep forest.
   - Key: Mission.Complete03
     Value: You got the boomerang!
   - Key: Mission.Title05
-    Value: Kill the boss
+    Value: Kill the aberration
   - Key: Mission.Description05
-    Value: Use all your weapons and knowledge to kill the boss.
+    Value: On the ruins, you found a secret passage to the deepest part of the forest.
+      There lives a grotesque creature, that is probably the cause of all the troubles
+      on the forest. Get rid of it, and save the forest.
   - Key: Mission.Complete05
-    Value: Boss killed!
+    Value: Aberration Killed!
   - Key: Dialog.WhatToDo
     Value: What to do now?
   - Key: Dialog.GoToMission
