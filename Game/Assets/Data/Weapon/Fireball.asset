@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: Fireball
   AttackPower: 1
-  MagicConsumption: 1
-  LifeTime: 2
+  MagicConsumption: 3
+  LifeTime: 1
   AnimationTime: .400000006
   AnimationFlag: UsingFireball
   DestroyOnContact: 1

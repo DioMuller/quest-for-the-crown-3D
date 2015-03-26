@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Boomerang
   m_EditorClassIdentifier: 
   Id: Boomerang
-  AttackPower: 2
-  MagicConsumption: 1
+  AttackPower: 1
+  MagicConsumption: 2
   LifeTime: 0
   AnimationTime: .349999994
   AnimationFlag: UsingBoomerang
