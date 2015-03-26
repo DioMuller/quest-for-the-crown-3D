@@ -1599,7 +1599,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -2366,7 +2366,7 @@ RectTransform:
   - {fileID: 22489322}
   - {fileID: 22476528}
   m_Father: {fileID: 22470642}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -10}
@@ -2662,7 +2662,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .100000001, y: .100000001}
   m_AnchorMax: {x: .600000024, y: .949999988}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -3}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &22461644
@@ -2784,10 +2784,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 22470646}
-  - {fileID: 22470654}
   - {fileID: 22403512}
   - {fileID: 22495786}
   - {fileID: 22488304}
+  - {fileID: 22470654}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
@@ -2825,11 +2825,11 @@ RectTransform:
   m_Children:
   - {fileID: 22470656}
   m_Father: {fileID: 22470642}
-  m_RootOrder: 1
-  m_AnchorMin: {x: .00999999978, y: .00999999978}
-  m_AnchorMax: {x: .99000001, y: .300000012}
+  m_RootOrder: 4
+  m_AnchorMin: {x: 0, y: .5}
+  m_AnchorMax: {x: 1, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -16, y: 40}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22470656
 RectTransform:
@@ -2986,7 +2986,7 @@ RectTransform:
   - {fileID: 22484526}
   - {fileID: 22428686}
   m_Father: {fileID: 22470642}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -50, y: 30}
@@ -3063,7 +3063,7 @@ RectTransform:
   - {fileID: 22448888}
   - {fileID: 22400668}
   m_Father: {fileID: 22470642}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 10, y: 130}
