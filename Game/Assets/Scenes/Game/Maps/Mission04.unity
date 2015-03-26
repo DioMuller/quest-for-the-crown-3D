@@ -650,7 +650,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439966, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_Name
@@ -741,50 +741,6 @@ Prefab:
     - target: {fileID: 439966, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11438414, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
-      propertyPath: Active
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 185930, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 113480, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 144530, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 185930, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 113480, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 144530, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 194814, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 194814, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
-      propertyPath: m_NavMeshLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
@@ -4749,9 +4705,9 @@ Transform:
   - {fileID: 159692434}
   - {fileID: 1152081105}
   - {fileID: 1142419416}
+  - {fileID: 746845658}
   - {fileID: 1131231675}
   - {fileID: 1894983489}
-  - {fileID: 746845658}
   - {fileID: 1411881838}
   - {fileID: 537134867}
   - {fileID: 303353627}
@@ -4761,10 +4717,10 @@ Transform:
   - {fileID: 1346819270}
   - {fileID: 947855192}
   - {fileID: 1103983231}
-  - {fileID: 152450092}
   - {fileID: 1517440036}
-  - {fileID: 1148617557}
+  - {fileID: 152450092}
   - {fileID: 1304138791}
+  - {fileID: 1148617557}
   - {fileID: 427465460}
   m_Father: {fileID: 561115306}
   m_RootOrder: 2
@@ -5425,7 +5381,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439966, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_Name
@@ -8103,7 +8059,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439966, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_Name
@@ -8578,7 +8534,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439966, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_Name
@@ -9679,7 +9635,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439966, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_Name
@@ -10877,7 +10833,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439966, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_Name
@@ -13269,7 +13225,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439966, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 105202, guid: e8d1333f67e39c04c9f8a0fc24667ee6, type: 2}
       propertyPath: m_Name
