@@ -1,8 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
-public class MinimapEntity : MonoBehaviour 
+public class MinimapEntity : MonoBehaviour
 {
+	private GameObject _minimap;
+
 	#region Public Attributes
 	/// <summary>
 	/// Minimap sprite.
@@ -32,9 +34,9 @@ public class MinimapEntity : MonoBehaviour
 	void Start () 
 	{
 		// Create GameObject.
-		GameObject minimap = new GameObject();
-		minimap.transform.name = "MinimapSprite";
-		minimap.layer = LayerMask.NameToLayer("Minimap");
+		_minimap = new GameObject();
+		_minimap.transform.name = "MinimapSprite";
+		_minimap.layer = LayerMask.NameToLayer("Minimap");
 
 		// Create Sprite.
 		var sprite = Sprite.Create(MinimapSprite,
@@ -42,18 +44,18 @@ public class MinimapEntity : MonoBehaviour
 			new Vector2(0.5f, 0.5f), MinimapSprite.height / (Size * Zoom) );
 
 		// Create SpriteRenderer Component.
-		var component = minimap.AddComponent<SpriteRenderer>();
+		var component = _minimap.AddComponent<SpriteRenderer>();
 
 		component.sprite = sprite;
 		component.color = SpriteColor;
 
 		// Add Children to this Object.
-		minimap.transform.parent = this.transform;
+		_minimap.transform.parent = this.transform;
 
 		// Transform Position
-		minimap.transform.localPosition = new Vector3(0.0f, 1.0f, 0.0f);
-		minimap.transform.localScale = Vector3.one;
-		minimap.transform.localRotation = Quaternion.Euler(90, 0, 0);
+		_minimap.transform.localPosition = new Vector3(0.0f, 1.0f, 0.0f);
+		_minimap.transform.localScale = Vector3.one;
+		_minimap.transform.localRotation = Quaternion.Euler(90, 0, 0);
 	}
 
 	/// <summary>
@@ -62,6 +64,11 @@ public class MinimapEntity : MonoBehaviour
 	private void Update()
 	{
 		//Debug.Log(1.0f / Time.deltaTime);
+	}
+
+	public void SetVisible(bool visible)
+	{
+		_minimap.SetActive(visible);
 	}
 
 	#endregion MonoBehaviour Methods

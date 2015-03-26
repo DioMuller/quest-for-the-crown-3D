@@ -7,9 +7,12 @@ public class Torch : MonoBehaviour
 	public GameObject LightSwitch = null;
     public bool Active = false;
 
+	private MinimapEntity _minimapBlip;
+
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+	{
+		_minimapBlip = GetComponent<MinimapEntity>();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +23,7 @@ public class Torch : MonoBehaviour
         {
 	        TorchLight.SetActive(true);
 			if(LightSwitch != null) Destroy(LightSwitch);
+			if (_minimapBlip != null) _minimapBlip.SetVisible(false);
         }
 	}
 
