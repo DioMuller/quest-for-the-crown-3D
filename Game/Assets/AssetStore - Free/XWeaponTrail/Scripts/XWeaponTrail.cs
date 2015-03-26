@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Rendering;
 
 namespace Xft
 {
@@ -66,7 +67,7 @@ namespace Xft
         protected VertexPool.VertexSegment mVertexSegment;
         protected bool mInited = false;
 
-	    private MeshRenderer _meshRenderer;
+	    //private MeshRenderer _meshRenderer;
 
         #endregion
 
@@ -416,11 +417,11 @@ namespace Xft
             mMeshObj.layer = gameObject.layer;
             mMeshObj.SetActive(true);
 
-			_meshRenderer = mMeshObj.GetComponent<MeshRenderer>();
+			//_meshRenderer = mMeshObj.GetComponent<MeshRenderer>();
 
             MeshFilter mf = mMeshObj.AddComponent<MeshFilter>();
             MeshRenderer mr = mMeshObj.AddComponent<MeshRenderer>();
-            mr.castShadows = false;
+            mr.shadowCastingMode = ShadowCastingMode.Off;
             mr.receiveShadows = false;
             mr.GetComponent<Renderer>().sharedMaterial = MyMaterial;
             mf.sharedMesh = new Mesh();

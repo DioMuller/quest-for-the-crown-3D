@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,9 @@ public class PlayerData : ScriptableObject
 
 public class GlobalPlayerData 
 {
-    private List<PlayerData> _players = new List<PlayerData>();
+	// The correct way to do it. Unfortunately, no time to adapt all the code to that.
+
+    /*private List<PlayerData> _players = new List<PlayerData>();
 
     public PlayerData[] GetPlayers()
     {
@@ -78,5 +80,5 @@ public class GlobalPlayerData
                 ObtainedWeapons = activeWeapons
             };
         }
-    }
+    }*/
 }

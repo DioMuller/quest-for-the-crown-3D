@@ -15,7 +15,7 @@ public class ShowMenu : MonoBehaviour
 
     void Start()
     {
-        HelperText.SetActive(true);
+        HelperText.SetActive(false);
     }
 
 	void Update()

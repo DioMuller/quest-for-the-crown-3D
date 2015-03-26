@@ -34,12 +34,12 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>
     /// Body collider.
     /// </summary>
-    private CapsuleCollider _collider;
+    //private CapsuleCollider _collider;
 
     /// <summary>
     /// Character Last Position.
     /// </summary>
-    private Vector3 _lastPosition;
+    //private Vector3 _lastPosition;
     #endregion Private Attributes
 
     #region Properties
@@ -101,9 +101,9 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _cameraTrack = GetComponent<CameraTrack>();
         _status = GetComponent<CharacterStatus>();
-        _collider = GetComponent<CapsuleCollider>();
+        //_collider = GetComponent<CapsuleCollider>();
 
-        _lastPosition = transform.position;
+        //_lastPosition = transform.position;
     }
 
     /// <summary>
