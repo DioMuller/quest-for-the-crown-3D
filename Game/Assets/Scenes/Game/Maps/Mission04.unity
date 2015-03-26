@@ -12029,18 +12029,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11452160, guid: 9f1a17b43cde5ca468a1a9fe33a953fe, type: 2}
-      propertyPath: CameraManager
-      value: 
-      objectReference: {fileID: 2094150404}
     - target: {fileID: 11452170, guid: 9f1a17b43cde5ca468a1a9fe33a953fe, type: 2}
       propertyPath: PlayerUI
       value: 
       objectReference: {fileID: 504142441}
-    - target: {fileID: 152396, guid: 9f1a17b43cde5ca468a1a9fe33a953fe, type: 2}
-      propertyPath: m_Name
-      value: Player 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f1a17b43cde5ca468a1a9fe33a953fe, type: 2}
   m_IsPrefabParent: 0
@@ -14349,10 +14341,6 @@ BoxCollider:
 Transform:
   m_PrefabParentObject: {fileID: 423044, guid: daa496644bdc76446a4aebdab8d9e996, type: 2}
   m_PrefabInternal: {fileID: 1640769612}
---- !u!1 &2094150404
-GameObject:
-  m_PrefabParentObject: {fileID: 115518, guid: a699ee6ffb7a6ae45bd110cae91892f5, type: 2}
-  m_PrefabInternal: {fileID: 467133408}
 --- !u!4 &2094150405
 Transform:
   m_PrefabParentObject: {fileID: 415518, guid: a699ee6ffb7a6ae45bd110cae91892f5, type: 2}

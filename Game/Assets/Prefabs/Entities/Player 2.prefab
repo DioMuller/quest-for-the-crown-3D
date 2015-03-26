@@ -2639,7 +2639,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .860000014, y: 10.4799995, z: .600000024}
+  m_LocalPosition: {x: -14.9967041, y: 10, z: -23.5028076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 461946}
@@ -3566,8 +3566,8 @@ MonoBehaviour:
   Animator: {fileID: 9592810}
   AnimationTime: 3
   Data: {fileID: 11400000, guid: efcedeb9b12556a4484053f29787c81c, type: 2}
-  OnHitAudio: {fileID: 0}
-  OnDieAudio: {fileID: 0}
+  OnHitAudio: {fileID: 8300000, guid: cc0ffb56ba54bd7468d6ceaa2c937771, type: 3}
+  OnDieAudio: {fileID: 8300000, guid: 2ca394c9e2e05714e918740a9b52bca8, type: 3}
 --- !u!114 &11441184
 MonoBehaviour:
   m_ObjectHideFlags: 1
