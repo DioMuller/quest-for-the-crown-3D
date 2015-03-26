@@ -24,6 +24,10 @@ public class WeaponHitbox : MonoBehaviour
 	
 	protected void OnTriggerEnter(Collider other)
 	{
+        if (other == null) return;
+        if (ParentWeapon == null) return;
+        if (other.transform == ParentWeapon.Parent) return;
+
         if (Targets.Contains(other.tag))
         {
             var status = other.GetComponent<CharacterStatus>();
