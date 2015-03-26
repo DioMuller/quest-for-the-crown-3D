@@ -39,14 +39,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443a9ba1e235167478f142ae111ce0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SplitDistanceX: 5
+  SplitDistanceZ: 5
   CameraController1: {fileID: 0}
   CameraController2: {fileID: 0}
   Bounds:
     serializedVersion: 2
-    x: -90
-    y: -90
-    width: 90
-    height: 90
+    x: -35
+    y: -35
+    width: 35
+    height: 35
   Dialog: {fileID: 0}
   Player1StatusPanel: {fileID: 0}
   Player2StatusPanel: {fileID: 0}

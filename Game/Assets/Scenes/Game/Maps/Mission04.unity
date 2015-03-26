@@ -3257,19 +3257,19 @@ Prefab:
       objectReference: {fileID: 1623954894}
     - target: {fileID: 11415518, guid: a699ee6ffb7a6ae45bd110cae91892f5, type: 2}
       propertyPath: Bounds.x
-      value: -50
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 11415518, guid: a699ee6ffb7a6ae45bd110cae91892f5, type: 2}
       propertyPath: Bounds.y
-      value: -50
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: 11415518, guid: a699ee6ffb7a6ae45bd110cae91892f5, type: 2}
       propertyPath: Bounds.width
-      value: 100
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11415518, guid: a699ee6ffb7a6ae45bd110cae91892f5, type: 2}
       propertyPath: Bounds.height
-      value: 100
+      value: 17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a699ee6ffb7a6ae45bd110cae91892f5, type: 2}
