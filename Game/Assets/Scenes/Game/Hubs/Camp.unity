@@ -267,6 +267,42 @@ Prefab:
       propertyPath: m_Name
       value: Water
       objectReference: {fileID: 0}
+    - target: {fileID: 2044594, guid: b544816461f324e56a39767fdeb5b114, type: 2}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 439920, guid: b544816461f324e56a39767fdeb5b114, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: .298529685
+      objectReference: {fileID: 0}
+    - target: {fileID: 439920, guid: b544816461f324e56a39767fdeb5b114, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: .477876633
+      objectReference: {fileID: 0}
+    - target: {fileID: 439920, guid: b544816461f324e56a39767fdeb5b114, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: .176776335
+      objectReference: {fileID: 0}
+    - target: {fileID: 439920, guid: b544816461f324e56a39767fdeb5b114, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -.807009399
+      objectReference: {fileID: 0}
+    - target: {fileID: 439920, guid: b544816461f324e56a39767fdeb5b114, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 46.9724846
+      objectReference: {fileID: 0}
+    - target: {fileID: 439920, guid: b544816461f324e56a39767fdeb5b114, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -271.066895
+      objectReference: {fileID: 0}
+    - target: {fileID: 439920, guid: b544816461f324e56a39767fdeb5b114, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.79299641
+      objectReference: {fileID: 0}
+    - target: {fileID: 439920, guid: b544816461f324e56a39767fdeb5b114, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b544816461f324e56a39767fdeb5b114, type: 2}
   m_IsPrefabParent: 0
