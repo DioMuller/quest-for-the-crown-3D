@@ -437,6 +437,7 @@ GameObject:
   - 114: {fileID: 11473620}
   - 114: {fileID: 11451214}
   - 114: {fileID: 11428068}
+  - 82: {fileID: 8297522}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -1999,6 +2000,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 477584}
   m_RootOrder: 0
+--- !u!82 &8297522
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135304}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9584850
 Animator:
   serializedVersion: 3
@@ -2151,6 +2221,8 @@ MonoBehaviour:
   Animator: {fileID: 9584850}
   AnimationTime: 1
   Data: {fileID: 11400000, guid: b13ab5cc8fbe7b84cbe3ea5c6a3d51ac, type: 2}
+  OnHitAudio: {fileID: 8300000, guid: 64f16cf9605e796459399b654e3af0e4, type: 3}
+  OnDieAudio: {fileID: 8300000, guid: 4b955187d5caaf84c839633be6e4d284, type: 3}
 --- !u!136 &13663692
 CapsuleCollider:
   m_ObjectHideFlags: 1

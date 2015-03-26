@@ -11,6 +11,7 @@ public class CharacterStatus : MonoBehaviour
 
     private PlayerMovement _playerMovement;
     private NavMeshAgent _agent;
+	private AudioSource _audio;
 
     private int _currentHealth;
     private int _currentMagic;
@@ -23,6 +24,9 @@ public class CharacterStatus : MonoBehaviour
 	public float AnimationTime = 1.0f;
 
     public CharacterData Data;
+
+	public AudioClip OnHitAudio = null;
+	public AudioClip OnDieAudio = null;
     #endregion Public Attributes
 
     #region Properties
@@ -54,6 +58,7 @@ public class CharacterStatus : MonoBehaviour
 
         _playerMovement = GetComponent<PlayerMovement>();
         _agent = GetComponent<NavMeshAgent>();
+	    _audio = GetComponent<AudioSource>();
 
         IsDead = Data.MaxHealth <= 0;
 
@@ -107,6 +112,16 @@ public class CharacterStatus : MonoBehaviour
         {
             StartCoroutine(SetInvulnerable());
         }
+
+		if (!IsDead && OnHitAudio != null && _audio != null)
+		{
+			_audio.PlayOneShot(OnHitAudio);
+		}
+		else if (IsDead && OnDieAudio != null && _audio != null)
+		{
+			_audio.PlayOneShot(OnDieAudio);
+		}
+
 
         if( slowdown )
         {

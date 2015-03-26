@@ -78,6 +78,7 @@ public class SeekAndShoot : MonoBehaviour
 	void Update()
     {
 	    if (_characterStatus.IsInvulnerable) return;
+	    if (_characterStatus.IsDead) return;
         if(_targetSelector.CurrentTarget != null )
         {
 	        Vector3 targetPos = _targetSelector.CurrentTarget.transform.position;
@@ -93,7 +94,7 @@ public class SeekAndShoot : MonoBehaviour
 	        }
 			else if (distance < PanicDistance || _running)
 			{
-				_agent.destination = entityPos - difference;
+				_agent.destination = targetPos;//entityPos - difference;
 				_running = true;
 			}
 	        else if( !_running )
