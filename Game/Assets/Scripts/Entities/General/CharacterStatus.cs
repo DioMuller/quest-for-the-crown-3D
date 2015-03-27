@@ -85,9 +85,9 @@ public class CharacterStatus : MonoBehaviour
         return Add(ref _currentHealth, quantity, Data.MaxHealth, OnLifeHealParticles);
     }
 
-    public int RestoreMagic(int amount)
+    public int RestoreMagic(int amount, bool useParticles = true)
     {
-        return Add(ref _currentMagic, amount, Data.MaxMagic, OnMagicHealParticles);
+        return Add(ref _currentMagic, amount, Data.MaxMagic, useParticles ? OnMagicHealParticles : null);
     }
 
     public void RemoveHealth(int amount, Transform attacker, bool slowdown = false)
@@ -148,7 +148,7 @@ public class CharacterStatus : MonoBehaviour
 
     public void MagicRegen()
     {
-        RestoreMagic(Data.MagicRegenQuantity);
+        RestoreMagic(Data.MagicRegenQuantity, false);
     }
 	#endregion Status Methods
 
