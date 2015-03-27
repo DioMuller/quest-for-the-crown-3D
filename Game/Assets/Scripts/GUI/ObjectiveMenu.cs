@@ -1,5 +1,8 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using System.Linq;
 
 public class ObjectiveMenu : SingletonBehaviour<ObjectiveMenu>
 {
@@ -44,6 +47,7 @@ public class ObjectiveMenu : SingletonBehaviour<ObjectiveMenu>
 		_canvas.enabled = true;
 		_visible = true;
 		Time.timeScale = 0.0f;
+		GetComponentInChildren<Button>().Select();
 	}
 
 	public void Hide()
@@ -51,5 +55,12 @@ public class ObjectiveMenu : SingletonBehaviour<ObjectiveMenu>
 		_canvas.enabled = false;
 		_visible = false;
 		Time.timeScale = 1.0f;
+
+		EventSystem.current.SetSelectedGameObject(null);
+	}
+
+	public void ToCamp()
+	{
+		Application.LoadLevel("Camp");
 	}
 }

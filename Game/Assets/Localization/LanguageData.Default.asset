@@ -188,3 +188,7 @@ MonoBehaviour:
     Value: Credits
   - Key: UI.OpenMissionSelection
     Value: Press the [ACTION] button to open the Mission Selection.
+  - Key: Option.BackToGame
+    Value: Continue Mission
+  - Key: Option.BackToCamp
+    Value: Back to Camp
