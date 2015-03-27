@@ -95,6 +95,24 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
         MagicPotions = 0;
         Bombs = 0;
         Medals = 0;
+
+        nextMission = 1;
+    }
+
+    public static void DemoMode(int players = 1)
+    {
+        playerCount = players;
+
+        HasBow = true;
+        HasFireball = true;
+        HasBoomerang = true;
+
+        HealthPotions = 10;
+        MagicPotions = 10;
+        Bombs = 10;
+        Medals = 10;
+
+        nextMission = 5;
     }
 
 	public static bool UseItem(Items item)

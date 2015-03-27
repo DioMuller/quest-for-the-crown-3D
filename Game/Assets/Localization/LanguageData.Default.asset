@@ -192,3 +192,9 @@ MonoBehaviour:
     Value: Continue Mission
   - Key: Option.BackToCamp
     Value: Back to Camp
+  - Key: Menu.Exit
+    Value: Quit Game
+  - Key: Menu.DemoMode
+    Value: Demo Mode
+  - Key: Menu.About
+    Value: About

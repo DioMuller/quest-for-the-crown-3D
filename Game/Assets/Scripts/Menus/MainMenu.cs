@@ -82,6 +82,14 @@ public class MainMenu : MonoBehaviour
 		PlayersPanel.GetComponentInChildren<Button>().Select();
 	}
 
+    public void OnBackPlayerClick()
+    {
+        MainPanel.SetActive(true);
+        PlayersPanel.SetActive(false);
+
+        MainPanel.GetComponentInChildren<Button>().Select();
+    }
+
 	public void OnSinglePlayerClick()
 	{
 		PlayerManager.ResetGame();
@@ -93,6 +101,12 @@ public class MainMenu : MonoBehaviour
 		PlayerManager.ResetGame(2);
 		Application.LoadLevel(NewGameScene);
 	}
+
+    public void OnDemoModeClick()
+    {
+        PlayerManager.DemoMode(1);
+        Application.LoadLevel(NewGameScene);
+    }
 
 	public void LoadGameClick()
 	{

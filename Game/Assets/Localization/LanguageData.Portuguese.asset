@@ -194,3 +194,9 @@ MonoBehaviour:
     Value: "Continuar Miss\xE3o"
   - Key: Option.BackToCamp
     Value: Voltar ao Acampamento
+  - Key: Menu.Exit
+    Value: Sair do Jogo
+  - Key: Menu.DemoMode
+    Value: "Modo Demonstra\xE7\xE3o"
+  - Key: Menu.About
+    Value: Sobre
