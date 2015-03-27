@@ -23,6 +23,8 @@ public class MissionButton : MonoBehaviour
         //_button = GetComponent<Button>();
         _label = GetComponentInChildren<Text>();
 
+		gameObject.SetActive(Data.MissionId <= PlayerManager.MaxMission);
+
         UpdateData();
 	}
     #endregion MonoBehaviour Methods

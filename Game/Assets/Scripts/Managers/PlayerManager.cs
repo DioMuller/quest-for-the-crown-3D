@@ -22,6 +22,9 @@ public enum Items
 public class PlayerManager : SingletonBehaviour<PlayerManager>
 {
     private static int playerCount = 1;
+	private static int nextMission = 1;
+
+	public static int MaxMission { get { return nextMission; } }
 
     #region Weapons and Items
     // Hard-Coded for time constrains.
@@ -74,6 +77,11 @@ public class PlayerManager : SingletonBehaviour<PlayerManager>
         if (playerCount >= 2) return;
         else playerCount++;
     }
+
+	public static void ClearMission(int mission)
+	{
+		if (mission == nextMission) nextMission++;
+	}
 
     public static void ResetGame(int players = 1)
     {
