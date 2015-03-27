@@ -21,8 +21,12 @@ public class TargetSelector : MonoBehaviour
 	public float MinDistanceFromTarget = 100.0f;
 	#endregion Public Attributes
 
-	#region Properties
-	/// <summary>
+    #region Private Attributes
+    private bool _isTargetFixed = false;
+    #endregion Private Attributes
+
+    #region Properties
+    /// <summary>
 	/// Current Target.
 	/// </summary>
 	public GameObject CurrentTarget { get; private set; }
@@ -40,7 +44,13 @@ public class TargetSelector : MonoBehaviour
 		CancelInvoke("FindNextTarget");
 	}
 
-	#region Internal Methods
+	#region Methods
+    public void SetTarget(GameObject target)
+    {
+        _isTargetFixed = true;
+        CurrentTarget = target;
+    }
+
 	/// <summary>
 	/// Finds nearest GameObject and sets as target.
 	/// </summary>
@@ -49,6 +59,9 @@ public class TargetSelector : MonoBehaviour
 	{
 		if (TagsToTarget.Length < 1) return;
 
+        if (_isTargetFixed && CurrentTarget != null && CurrentTarget.activeInHierarchy) return;
+
+        _isTargetFixed = false;
 		CurrentTarget = null;
 		float minDist = MinDistanceFromTarget;
 
@@ -71,5 +84,5 @@ public class TargetSelector : MonoBehaviour
 		}
 
 	}
-	#endregion Internal Methods
+	#endregion Methods
 }

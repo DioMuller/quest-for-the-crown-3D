@@ -15,6 +15,8 @@ public class CharacterStatus : MonoBehaviour
 
     private int _currentHealth;
     private int _currentMagic;
+
+    private TargetSelector _targetSelector;
     #endregion Private Attributes
 
     #region Public Attributes
@@ -63,6 +65,8 @@ public class CharacterStatus : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
 	    _audio = GetComponent<AudioSource>();
 
+        _targetSelector = GetComponent<TargetSelector>();
+
         IsDead = Data.MaxHealth <= 0;
 
         if (Data.MagicRegenTime > 0.0f)
@@ -93,6 +97,8 @@ public class CharacterStatus : MonoBehaviour
         if (attacker == transform) return;
 		if (IsDead)
             return;
+
+        if (_targetSelector != null) _targetSelector.SetTarget(attacker.gameObject);
 
 		CurrentHealth -= amount;
 
