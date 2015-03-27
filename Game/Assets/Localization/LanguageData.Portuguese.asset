@@ -200,3 +200,11 @@ MonoBehaviour:
     Value: "Modo Demonstra\xE7\xE3o"
   - Key: Menu.About
     Value: Sobre
+  - Key: About.Title
+    Value: "Cr\xE9ditos"
+  - Key: About.Programmers
+    Value: "Programa\xE7\xE3o"
+  - Key: About.Artists
+    Value: Arte
+  - Key: About.Musician
+    Value: "M\xFAsica por Mois\xE9s Santana"

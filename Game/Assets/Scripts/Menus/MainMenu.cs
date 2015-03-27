@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
 
 	public Canvas MenuCanvas = null;
 	public Canvas OptionsCanvas = null;
+	public Canvas AboutCanvas = null;
 	
 	// General
 	public ComboBox ComboLanguage;
@@ -25,6 +26,8 @@ public class MainMenu : MonoBehaviour
 	void Awake()
 	{
 		OptionsCanvas.enabled = false;
+		AboutCanvas.enabled = false;
+
 		PlayersPanel.SetActive(false);
 	}
 
@@ -70,6 +73,7 @@ public class MainMenu : MonoBehaviour
 	{
 		MenuCanvas.enabled = true;
 		OptionsCanvas.enabled = false;
+		AboutCanvas.enabled = false;
 
 		MenuCanvas.GetComponentInChildren<Button>().Select();
 	}
@@ -116,8 +120,18 @@ public class MainMenu : MonoBehaviour
 	{
 		MenuCanvas.enabled = false;
 		OptionsCanvas.enabled = true;
+		AboutCanvas.enabled = false;
 
 		OptionsCanvas.GetComponentInChildren<Button>().Select();
+	}
+
+	public void AboutClick()
+	{
+		MenuCanvas.enabled = false;
+		OptionsCanvas.enabled = false;
+		AboutCanvas.enabled = true;
+
+		AboutCanvas.GetComponentInChildren<Button>().Select();
 	}
 
     public void QuitClick()

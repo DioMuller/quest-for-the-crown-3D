@@ -198,3 +198,13 @@ MonoBehaviour:
     Value: Demo Mode
   - Key: Menu.About
     Value: About
+  - Key: About.Title
+    Value: Credits
+  - Key: About.Programmers
+    Value: Programming
+  - Key: About.Artists
+    Value: Art
+  - Key: About.Musician
+    Value: "Music by Mois\xE9s Santana"
+  - Key: 
+    Value: 
