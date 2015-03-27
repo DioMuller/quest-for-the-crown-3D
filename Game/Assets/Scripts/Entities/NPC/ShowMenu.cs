@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Assets.Code.Libs.Input;
@@ -10,6 +11,8 @@ public class ShowMenu : MonoBehaviour
 	private List<PlayerMovement> _players = new List<PlayerMovement>();
 
     public GameObject HelperText = null;
+
+	private bool _buttonPressed = false;
 
 	#region MonoBehaviour Methods
 
@@ -24,8 +27,19 @@ public class ShowMenu : MonoBehaviour
 		{
 			if (_players.Any(p => p.Input.GetButton("Action")))
 			{
-				OptionSelection.Instance.OpenMissionSelection();
-				OptionSelection.Instance.GetComponentInChildren<Button>().Select();
+				if (!_buttonPressed)
+				{
+					_buttonPressed = true;
+					OptionSelection.Instance.OpenMissionSelection();
+					OptionSelection.Instance.GetComponentInChildren<Button>().Select();
+
+					_players.Clear();
+					HelperText.SetActive(false);
+				}
+			}
+			else
+			{
+				_buttonPressed = false;
 			}
 		}
 	}

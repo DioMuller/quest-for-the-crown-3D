@@ -7,6 +7,10 @@ public class OptionSelection : SingletonBehaviour<OptionSelection>
 	public GameObject MissionSelectionUI;
 	public GameObject ShopUI;
 
+	private bool _uiOpen = false;
+
+	public bool IsUIActive { get { return _uiOpen; } }
+
 	void Start()
 	{
 		CloseAll();
@@ -17,6 +21,8 @@ public class OptionSelection : SingletonBehaviour<OptionSelection>
 		if (ActionSelectionUI != null) ActionSelectionUI.SetActive(false);
 		if (MissionSelectionUI != null) MissionSelectionUI.SetActive(false);
 		if (ShopUI != null ) ShopUI.SetActive(false);
+
+		_uiOpen = false;
 
 		EnablePlayerMovement();
 	}
@@ -29,6 +35,8 @@ public class OptionSelection : SingletonBehaviour<OptionSelection>
 		if (MissionSelectionUI != null) MissionSelectionUI.SetActive(false);
 		if (ShopUI != null) ShopUI.SetActive(false);
 
+		_uiOpen = true;
+
 		DisablePlayerMovement();
 	}
 
@@ -40,6 +48,8 @@ public class OptionSelection : SingletonBehaviour<OptionSelection>
 		if (MissionSelectionUI != null) MissionSelectionUI.SetActive(true);
 		if (ShopUI != null) ShopUI.SetActive(false);
 
+		_uiOpen = true;
+
 		DisablePlayerMovement();
 	}
 
@@ -50,6 +60,8 @@ public class OptionSelection : SingletonBehaviour<OptionSelection>
 		if (ActionSelectionUI != null) ActionSelectionUI.SetActive(false);
 		if (MissionSelectionUI != null) MissionSelectionUI.SetActive(false);
 		if (ShopUI != null) ShopUI.SetActive(true);
+
+		_uiOpen = true;
 
 		DisablePlayerMovement();
 	}
