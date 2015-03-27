@@ -77,8 +77,12 @@ public class SeekAndShoot : MonoBehaviour
     /// </summary>
 	void Update()
     {
+        float velocity = 0.0f;
+
 	    if (_characterStatus.IsInvulnerable) return;
 	    if (_characterStatus.IsDead) return;
+        if (_cooldown) return;
+
         if(_targetSelector.CurrentTarget != null )
         {
 	        Vector3 targetPos = _targetSelector.CurrentTarget.transform.position;
@@ -90,11 +94,13 @@ public class SeekAndShoot : MonoBehaviour
 			if ( distance > ShootingDistance )
 	        {
 		        _agent.destination = _targetSelector.CurrentTarget.transform.position;
+                velocity = 1.0f;
 				_running = false;	        
 	        }
 			else if (distance < PanicDistance || _running)
 			{
-				_agent.destination = targetPos;//entityPos - difference;
+                velocity = 1.0f;
+				_agent.destination = entityPos - difference;
 				_running = true;
 			}
 	        else if( !_running )
@@ -105,8 +111,12 @@ public class SeekAndShoot : MonoBehaviour
 
                 if( !_cooldown )
                 {
-                    Fire();
+                    if (!Animator.GetBool("IsAttacking"))
+                        Animator.SetBool("IsAttacking", true);
+
 	                StartCoroutine(Cooldown());
+
+                    return;
                 }
 	        }
         }
@@ -117,7 +127,8 @@ public class SeekAndShoot : MonoBehaviour
 
         if( Animator != null )
         {
-            Animator.SetFloat("Speed", _agent.speed);
+            if( !Animator.GetBool( "IsAttacking" ) )
+                Animator.SetFloat("Speed", velocity);
         }
 	}
 
@@ -130,6 +141,8 @@ public class SeekAndShoot : MonoBehaviour
 	{
 		_cooldown = true;
 		yield return new WaitForSeconds(CooldownTime);
+        Fire();
+        Animator.SetBool("IsAttacking", false);
 		_cooldown = false;
 	}
 	#endregion Methods

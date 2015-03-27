@@ -709,7 +709,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .670000017, y: 10, z: 25.7700005}
+  m_LocalPosition: {x: .669067383, y: 9.99816895, z: -14.2384033}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 427458}
@@ -1114,7 +1114,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 3955ee863ada1ac4db22d522b66e5bf5, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1248,7 +1248,7 @@ MonoBehaviour:
   Animator: {fileID: 9594544}
   ShootingDistance: 7
   PanicDistance: 3
-  CooldownTime: 2
+  CooldownTime: 1
   Fireball: {fileID: 11471760}
 --- !u!136 &13646682
 CapsuleCollider:
