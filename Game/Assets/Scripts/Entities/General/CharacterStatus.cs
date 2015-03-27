@@ -27,6 +27,9 @@ public class CharacterStatus : MonoBehaviour
 
 	public AudioClip OnHitAudio = null;
 	public AudioClip OnDieAudio = null;
+
+    public ParticleSystem OnLifeHealParticles = null;
+    public ParticleSystem OnMagicHealParticles = null;
     #endregion Public Attributes
 
     #region Properties
@@ -75,12 +78,12 @@ public class CharacterStatus : MonoBehaviour
     #region Status Methods
     public int AddHealth(int quantity)
     {
-        return Add(ref _currentHealth, quantity, Data.MaxHealth);
+        return Add(ref _currentHealth, quantity, Data.MaxHealth, OnLifeHealParticles);
     }
 
     public int RestoreMagic(int amount)
     {
-        return Add(ref _currentMagic, amount, Data.MaxMagic);
+        return Add(ref _currentMagic, amount, Data.MaxMagic, OnMagicHealParticles);
     }
 
     public void RemoveHealth(int amount, Transform attacker, bool slowdown = false)
@@ -211,13 +214,19 @@ public class CharacterStatus : MonoBehaviour
     #endregion Event Methods
 
     #region Private Methods
-    private int Add(ref int storage, int quantity, int max)
+    private int Add(ref int storage, int quantity, int max, ParticleSystem effect = null )
     {
         if (IsDead || storage >= max)
             return 0;
 
         int toUse = Math.Min(quantity, max - storage);
         storage += toUse;
+
+        if( effect != null )
+        {
+            effect.Play(true);
+        }
+
         return toUse;
     }
     #endregion Private Methods
