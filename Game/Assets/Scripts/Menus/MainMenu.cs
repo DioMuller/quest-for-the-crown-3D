@@ -105,5 +105,10 @@ public class MainMenu : MonoBehaviour
 
 		OptionsCanvas.GetComponentInChildren<Button>().Select();
 	}
+
+    public void QuitClick()
+    {
+        Application.Quit();
+    }
 	#endregion EventHandlers
 }
