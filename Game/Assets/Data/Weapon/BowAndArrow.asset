@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: BowAndArrow
   m_EditorClassIdentifier: 
   Id: Bow
-  AttackPower: 1
+  AttackPower: 2
   MagicConsumption: 1
   LifeTime: 5
   AnimationTime: .400000006

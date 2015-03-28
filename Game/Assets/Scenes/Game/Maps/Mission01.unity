@@ -2407,7 +2407,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11473824, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}
       propertyPath: Objectives.Array.data[0].QuantityNeeded
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7add9324e5fd58458c1e9cbfb385b40, type: 2}

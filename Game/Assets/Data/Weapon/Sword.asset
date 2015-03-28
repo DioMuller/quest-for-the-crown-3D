@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   Id: Sword
-  AttackPower: 1
+  AttackPower: 3
   MagicConsumption: 0
   LifeTime: .300000012
   AnimationTime: .300000012
