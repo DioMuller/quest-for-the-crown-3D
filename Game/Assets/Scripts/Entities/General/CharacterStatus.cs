@@ -29,6 +29,7 @@ public class CharacterStatus : MonoBehaviour
 
 	public AudioClip OnHitAudio = null;
 	public AudioClip OnDieAudio = null;
+	public AudioClip OnHealAudio = null;
 
     public ParticleSystem OnLifeHealParticles = null;
     public ParticleSystem OnMagicHealParticles = null;
@@ -82,12 +83,14 @@ public class CharacterStatus : MonoBehaviour
     #region Status Methods
     public int AddHealth(int quantity)
     {
+		if (OnHealAudio != null) _audio.PlayOneShot(OnHealAudio);
         return Add(ref _currentHealth, quantity, Data.MaxHealth, OnLifeHealParticles);
     }
 
-    public int RestoreMagic(int amount, bool useParticles = true)
+    public int RestoreMagic(int amount, bool byItem = true)
     {
-        return Add(ref _currentMagic, amount, Data.MaxMagic, useParticles ? OnMagicHealParticles : null);
+		if (OnHealAudio != null && byItem) _audio.PlayOneShot(OnHealAudio);
+		return Add(ref _currentMagic, amount, Data.MaxMagic, byItem ? OnMagicHealParticles : null);
     }
 
     public void RemoveHealth(int amount, Transform attacker, bool slowdown = false)
