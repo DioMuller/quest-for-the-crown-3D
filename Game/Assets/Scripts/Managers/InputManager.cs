@@ -109,8 +109,8 @@ public class InputManager : SingletonBehaviour<InputManager>
 
 			cInput.SetKey("Joy" + i + "_Map", "Joystick" + i + "Button8");
 
-			cInput.SetKey("Joy" + i + "_PrimaryAttack", "Joy" + i + " Axis 3-", "Joystick" + i + "Button2");
-			cInput.SetKey("Joy" + i + "_SecondaryAttack", "Joy" + i + " Axis 3+", "Joystick" + i + "Button3");
+			cInput.SetKey("Joy" + i + "_PrimaryAttack", "Joy" + i + " Axis 3+", "Joystick" + i + "Button2");
+			cInput.SetKey("Joy" + i + "_SecondaryAttack", "Joy" + i + " Axis 3-", "Joystick" + i + "Button3");
 
 			//cInput.SetKey("Joy" + i + "_QuickChangePrimary", "Joystick" + i + "Button4");
 			//cInput.SetKey("Joy" + i + "_QuickChangeSecondary", "Joystick" + i + "Button5");
