@@ -111,7 +111,7 @@ public class SeekAndShoot : MonoBehaviour
 
                 if( !_cooldown )
                 {
-                    if (!Animator.GetBool("IsAttacking"))
+                    if (!Animator.GetBool("IsAttacking") &&  !_characterStatus.IsDead)
                         Animator.SetBool("IsAttacking", true);
 
 	                StartCoroutine(Cooldown());
@@ -127,7 +127,7 @@ public class SeekAndShoot : MonoBehaviour
 
         if( Animator != null )
         {
-            if( !Animator.GetBool( "IsAttacking" ) )
+            if( !Animator.GetBool( "IsAttacking" ) && !_characterStatus.IsDead )
                 Animator.SetFloat("Speed", velocity);
         }
 	}
@@ -139,11 +139,20 @@ public class SeekAndShoot : MonoBehaviour
 
 	IEnumerator Cooldown()
 	{
-		_cooldown = true;
+		if (!_characterStatus.IsDead)
+			_cooldown = true;
+		else
+			Animator.SetBool("IsAttacking", false);
+
 		yield return new WaitForSeconds(CooldownTime);
-        Fire();
-        Animator.SetBool("IsAttacking", false);
-		_cooldown = false;
+
+		Animator.SetBool("IsAttacking", false);
+		if (!_characterStatus.IsDead)
+		{
+			Fire();
+			
+			_cooldown = false;
+		}
 	}
 	#endregion Methods
 }
